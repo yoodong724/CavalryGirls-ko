@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "segment",
+  "description": "게임 한글화 키트 v1.0.0 데이터 계약",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "language": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "internal_key",
+                "record",
+                "byte_span",
+                "json_pointer",
+                "xml_path",
+                "line",
+                "asset_region"
+              ]
+            },
+            "value": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        "text_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "text",
+        "language",
+        "file",
+        "locator",
+        "text_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "text_type": {
+          "enum": [
+            "dialogue",
+            "narration",
+            "choice",
+            "ui",
+            "system",
+            "item",
+            "skill",
+            "subtitle",
+            "image_text",
+            "unknown"
+          ]
+        },
+        "speaker_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "addressee_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "route_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phase_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scene_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "order": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "previous_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "next_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "usage_context_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "text_type",
+        "speaker_id",
+        "addressee_ids",
+        "route_id",
+        "phase_id",
+        "scene_id",
+        "order",
+        "previous_ids",
+        "next_ids",
+        "usage_context_ids"
+      ],
+      "additionalProperties": false
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "protected_tokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "token_patterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "token_order": {
+          "enum": [
+            "ordered",
+            "multiset"
+          ]
+        },
+        "encoding": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "max_bytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "max_codepoints": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "max_lines": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "newline_policy": {
+          "enum": [
+            "preserve",
+            "engine_defined"
+          ]
+        },
+        "allow_empty": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "protected_tokens",
+        "token_patterns",
+        "token_order",
+        "encoding",
+        "max_bytes",
+        "max_codepoints",
+        "max_lines",
+        "newline_policy",
+        "allow_empty"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "source_revision",
+    "source",
+    "context",
+    "constraints",
+    "evidence",
+    "notes"
+  ],
+  "additionalProperties": false
+}

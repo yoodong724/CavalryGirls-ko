@@ -1,0 +1,17 @@
+{
+  "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+  "files": [
+    {
+      "path": "AssetBundles/fonts_assets_all.bundle",
+      "copy_sha256": "8c278b63786f5477ed82229a52184e8fdae81b8aedbf4f0434a1843423da4146"
+    },
+    {
+      "path": "CavalryGirls_Data/resources.assets",
+      "copy_sha256": "d275481b891eef752e5d4279c587b564db4c5ef5e0291cc80af82a089d793838"
+    },
+    {
+      "path": "CavalryGirls_Data/resources.assets.resS",
+      "copy_sha256": "8d60f1b9828c759f6483fa1998def795c9ed84dd0cd653950e2ee12b2acc6026"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+jsonschema==4.26.0
+UnityPy==1.25.3
+fonttools==4.63.0
+Pillow==12.2.0

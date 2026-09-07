@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "review",
+  "description": "게임 한글화 키트 v1.0.0 데이터 계약",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "review_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "stage": {
+      "enum": [
+        "l1",
+        "l2"
+      ]
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "context_pack_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "context_pack_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reviewed_translation_revision": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "reviewed_translation_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reviewer_role": {
+      "type": "string"
+    },
+    "reviewer_model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewer_effort": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verdict": {
+      "enum": [
+        "pending",
+        "accept",
+        "changes_required",
+        "blocked"
+      ]
+    },
+    "reviewed_areas": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "meaning",
+          "naturalness",
+          "terminology",
+          "voice",
+          "timeline",
+          "technical"
+        ]
+      }
+    },
+    "issue_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "suggested_ko": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "review_id",
+    "id",
+    "stage",
+    "source_revision",
+    "source_sha256",
+    "context_pack_id",
+    "context_pack_digest",
+    "reviewed_translation_revision",
+    "reviewed_translation_sha256",
+    "reviewer_role",
+    "reviewer_model",
+    "reviewer_effort",
+    "verdict",
+    "reviewed_areas",
+    "issue_ids",
+    "suggested_ko",
+    "notes"
+  ],
+  "additionalProperties": false
+}

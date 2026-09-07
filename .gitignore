@@ -1,0 +1,13 @@
+/work/
+/.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.zip
+*.assets
+*.resS
+*.bundle
+*.dll
+*.ttf
+*.otf

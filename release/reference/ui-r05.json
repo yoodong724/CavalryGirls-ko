@@ -1,0 +1,764 @@
+{
+  "schema_version": "1.0.0",
+  "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+  "patch_revision": "r05",
+  "localized_record_count": 4,
+  "runtime_verified": false,
+  "raw_font": {
+    "path_id": 9108,
+    "name": "SourceHanSansKR-Regular",
+    "sha256": "061c9a55b6b731af2a4667f06efb82ed7c80ba99d5350c1bba76f80472ea304f"
+  },
+  "objects": [
+    {
+      "path_id": 312174,
+      "kind": "raw_text",
+      "source_sha256": "f4d1b6b99187a82e4e8a42e4579a52d1b384b38290258a7363d9b7912061cbf6",
+      "source_hex": "00000000f5a40100000000000100000001000000fa0300000000000000000000000000000000000000000000a426183fa426183fa426183f0000803f010000000100000000000000000000009923000000000000100000000000000000000000010000002800000004000000000000000100000000000000010000000000803f21000000e5a48de588b6e6aca1e695b0efbc9a330ae789a9e59381e7ad89e7baa7efbc9a32000000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 128,
+          "before": "复制次数：3\n物品等级：2",
+          "after": "복제 횟수: 3\n아이템 레벨: 2"
+        },
+        {
+          "type": "pptr",
+          "offset": 72,
+          "before": [
+            0,
+            9113
+          ],
+          "after": [
+            0,
+            9108
+          ]
+        }
+      ],
+      "font_size": 16,
+      "rect_width": 132.87295532226562
+    },
+    {
+      "path_id": 313244,
+      "kind": "tmp_text",
+      "source_sha256": "95a7bb6bdc7605bdb5e8c71638c2b05b52c0abff3e4e1dad61eaaeed91f9ef48",
+      "source_hex": "00000000495c01000000000001000000010000006509000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f01000000010000000000000015000000e58d87e7baa7e58f8ae694b9e980a0e59e8be58fb70000000000000000000000b9b50400000000000000000090000000000000000000000000000000000000000000000000000000909090ffdae7103fdae7103fdae7103f0000803f00000000030000000000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f00000000000000000000000000000000e2b504000000000000000000000000000000000000000000f35075b900000000ffffffff000088410000884190010000000000000000904100009042000000000200000000020000ffff000000000000000000000000000000000000000000000000000001000000cdcccc3e000000000000000000000000000000000000000000000000000000000100000000000000000000000100000001000000010000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 72,
+          "before": "升级及改造型号",
+          "after": "업그레이드 및 개조 모델"
+        }
+      ]
+    },
+    {
+      "path_id": 329595,
+      "kind": "raw_text",
+      "source_sha256": "ef433441f9a00e4e94e7777dca6bbedad2b8c62b7cbcf770c70f5f6d6bb7396e",
+      "source_hex": "00000000fb0a0100000000000100000001000000fa0300000000000000000000000000000000000000000000a426183fa426183fa426183f0000803f010000000100000000000000000000009923000000000000100000000000000000000000010000002800000004000000000000000100000000000000010000000000803f21000000e5a48de588b6e6aca1e695b0efbc9a330ae789a9e59381e7ad89e7baa7efbc9a32000000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 128,
+          "before": "复制次数：3\n物品等级：2",
+          "after": "복제 횟수: 3\n아이템 레벨: 2"
+        },
+        {
+          "type": "pptr",
+          "offset": 72,
+          "before": [
+            0,
+            9113
+          ],
+          "after": [
+            0,
+            9108
+          ]
+        }
+      ],
+      "font_size": 16,
+      "rect_width": 132.87295532226562
+    },
+    {
+      "path_id": 331992,
+      "kind": "tmp_text",
+      "source_sha256": "1b7df5355a363355401e76b61607034effaeac3b1991346e3d808f003ba2bfc2",
+      "source_hex": "00000000244200000000000001000000010000006509000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f01000000010000000000000015000000e58d87e7baa7e58f8ae694b9e980a0e59e8be58fb70000000000000000000000b9b50400000000000000000090000000000000000000000000000000000000000000000000000000909090ffdae7103fdae7103fdae7103f0000803f00000000030000000000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f00000000000000000000000000000000e2b504000000000000000000000000000000000000000000f35075b900000000ffffffff000088410000884190010000000000000000904100009042000000000200000000020000ffff000000000000000000000000000000000000000000000000000001000000cdcccc3e000000000000000000000000000000000000000000000000000000000100000000000000000000000100000001000000010000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 72,
+          "before": "升级及改造型号",
+          "after": "업그레이드 및 개조 모델"
+        }
+      ]
+    },
+    {
+      "path_id": 323048,
+      "kind": "layout",
+      "source_sha256": "3abbb9128118abd15eb5b5e03e74ff84ded40febece743aaab76052049bb757d",
+      "source_hex": "0000000094b80000000000000100000001000000fa03000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f000000000100000000000000030000007627000000000000110000000000000000000000010000001400000000000000000000000100000000000000000000009a99993f48000000e6ada6e599a8e88081e58c96e7a88be5baa6efbc9a3630250a0a3c73697a653d31323ee59391e5bcb9e78e87efbc9a3230250ae58da1e5a3b3e78e87efbc9a35253c2f73697a653e",
+      "path": "ItemBreifUI/TargetSub/ExtendPanel/Pannel2/PlusText",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ]
+    },
+    {
+      "path_id": 349023,
+      "kind": "layout",
+      "source_sha256": "b591065bd73070fdbe9882660319355f942ff6161e6fc601d38b617434904acd",
+      "source_hex": "00000000dbb20100000000000100000001000000fa03000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f000000000100000000000000030000007627000000000000110000000000000000000000010000001400000000000000000000000100000000000000000000009a99993f48000000e6ada6e599a8e88081e58c96e7a88be5baa6efbc9a3630250a0a3c73697a653d31323ee59391e5bcb9e78e87efbc9a3230250ae58da1e5a3b3e78e87efbc9a35253c2f73697a653e",
+      "path": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel2/PlusText",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ]
+    },
+    {
+      "path_id": 337984,
+      "kind": "layout",
+      "source_sha256": "440662640510e2463987a1cac74b0327d0cd162ebc8c0c306a49c31f4be51249",
+      "source_hex": "0000000014b30000000000000100000001000000fa03000000000000000000000000000000000000000000000ac65b3f0ac65b3f0ac65b3f0000803f0100000001000000000000000300000076270000000000001100000000000000000000000f0000001200000000000000000000000100000000000000000000009a99993fcd000000e6b2a1e69c89e789b9e6ae8ae69588e69e9cefbc8ce4bd86e698afe58fafe4bba5e4b88ee5a49ae7a78de58583e7b4a0e69588e69e9ce58f8de5ba94e380820a0a2be586b7e586bb3de586bbe7bb930a2be78783e783a73de892b8e6b1bde78886e782b80a2be9ab98e6b8a93de892b8e58f91efbc88e6b0b4e5b19ee680a7e78886e782b8efbc890a2be794b5e7a3813de6849fe794b5efbc88e794b5e5bca7e5b08fe4bca4e5aeb3efbc890a2be6b2b9e885bb3de6b885e699b0efbc88e5b19ee680a7e6b688e999a4efbc89000000",
+      "path": "ItemBreifUI/TargetSub/ExtendPanel/Pannel5/HintText1",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ]
+    },
+    {
+      "path_id": 312291,
+      "kind": "layout",
+      "source_sha256": "c67d3335bedcae6206dd7284fc2014159a17fd6fefdc8acb235663fbe80a2b72",
+      "source_hex": "000000009ea90100000000000100000001000000fa03000000000000000000000000000000000000000000000ac65b3f0ac65b3f0ac65b3f0000803f0100000001000000000000000300000076270000000000001100000000000000000000000f0000001200000000000000000000000100000000000000000000009a99993fcd000000e6b2a1e69c89e789b9e6ae8ae69588e69e9cefbc8ce4bd86e698afe58fafe4bba5e4b88ee5a49ae7a78de58583e7b4a0e69588e69e9ce58f8de5ba94e380820a0a2be586b7e586bb3de586bbe7bb930a2be78783e783a73de892b8e6b1bde78886e782b80a2be9ab98e6b8a93de892b8e58f91efbc88e6b0b4e5b19ee680a7e78886e782b8efbc890a2be794b5e7a3813de6849fe794b5efbc88e794b5e5bca7e5b08fe4bca4e5aeb3efbc890a2be6b2b9e885bb3de6b885e699b0efbc88e5b19ee680a7e6b688e999a4efbc89000000",
+      "path": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel5/HintText1",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ]
+    },
+    {
+      "path_id": 325914,
+      "kind": "layout",
+      "source_sha256": "45be831e760a72a7fd8b3e5290814a0350777afab25cc728cb6f07f4331b865f",
+      "source_hex": "00000000e8690100000000000100000001000000fa03000000000000000000000000000000000000000000000ac65b3f0ac65b3f0ac65b3f0000803f0100000001000000000000000300000076270000000000001100000000000000000000000f0000001200000000000000000000000100000000000000000000009a99993fcd000000e6b2a1e69c89e789b9e6ae8ae69588e69e9cefbc8ce4bd86e698afe58fafe4bba5e4b88ee5a49ae7a78de58583e7b4a0e69588e69e9ce58f8de5ba94e380820a0a2be586b7e586bb3de586bbe7bb930a2be78783e783a73de892b8e6b1bde78886e782b80a2be9ab98e6b8a93de892b8e58f91efbc88e6b0b4e5b19ee680a7e78886e782b8efbc890a2be794b5e7a3813de6849fe794b5efbc88e794b5e5bca7e5b08fe4bca4e5aeb3efbc890a2be6b2b9e885bb3de6b885e699b0efbc88e5b19ee680a7e6b688e999a4efbc89000000",
+      "path": "ItemBreifUI/TargetSub/ExtendPanel/Pannel7/HintText2",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ]
+    },
+    {
+      "path_id": 340986,
+      "kind": "layout",
+      "source_sha256": "7c74dc05e269fac6ef0bac3f0097a866a5170958d61eedf3e8f3394a5c759d96",
+      "source_hex": "0000000033dc0000000000000100000001000000fa03000000000000000000000000000000000000000000000ac65b3f0ac65b3f0ac65b3f0000803f0100000001000000000000000300000076270000000000001100000000000000000000000f0000001200000000000000000000000100000000000000000000009a99993fcd000000e6b2a1e69c89e789b9e6ae8ae69588e69e9cefbc8ce4bd86e698afe58fafe4bba5e4b88ee5a49ae7a78de58583e7b4a0e69588e69e9ce58f8de5ba94e380820a0a2be586b7e586bb3de586bbe7bb930a2be78783e783a73de892b8e6b1bde78886e782b80a2be9ab98e6b8a93de892b8e58f91efbc88e6b0b4e5b19ee680a7e78886e782b8efbc890a2be794b5e7a3813de6849fe794b5efbc88e794b5e5bca7e5b08fe4bca4e5aeb3efbc890a2be6b2b9e885bb3de6b885e699b0efbc88e5b19ee680a7e6b688e999a4efbc89000000",
+      "path": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel7/HintText2",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ]
+    },
+    {
+      "path_id": 338491,
+      "kind": "layout",
+      "source_sha256": "d717ef2d1e5c86986f104ca220ebc2c3272e5b52eb40b3a1aabd05aeae12b81b",
+      "source_hex": "00000000f4510100000000000100000001000000c703000000000000000000002a0000002a0000001e000000050000000100000000009041010000000000000001000000010000000000000001000000",
+      "path": "ItemBreifUI/TargetSub/Pannel1",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 52,
+          "before": 18.0,
+          "after": 8.0
+        }
+      ]
+    },
+    {
+      "path_id": 313127,
+      "kind": "layout",
+      "source_sha256": "4d8178007ae2806b9c43cca9396e903ecc0e980c43c60ac80826511d0fb7f0c6",
+      "source_hex": "0000000084600000000000000100000001000000c703000000000000000000000a0000000a0000000a000000f6ffffff0100000000009041010000000000000001000000010000000000000001000000",
+      "path": "ItemBreifUISimple/TargetSub/Pannel1",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 52,
+          "before": 18.0,
+          "after": 8.0
+        }
+      ]
+    },
+    {
+      "path_id": 349586,
+      "kind": "layout",
+      "source_sha256": "e0afc164f19cf660eae850f9318272ef43859d7740f25879a373c6b05365cb39",
+      "source_hex": "000000005c9701000000000001000000010000006509000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f0100000001000000000000002c060000e4bdbfe794a8e99abee5baa6efbc9ae280bb5c6ee58fafe4bba5e59ca8e58991e5bda2e68081e5928ce69eaae5bda2e68081e58887e68da2e79a84e6ada6e599a8e38082e58991e5bda2e68081e7a0b4e7bbbde8be83e5b08fefbc8ce69eaae5bda2e68081e694bbe587bbe58a9be69bb4e5bcbae38082e5bda2e68081e79a84e58887e68da2e99c80e8a681e4bdbfe794a8e2809ce58f98e5bda2e696a9e2809de8bf99e4b880e58aa8e4bd9cefbc8ce58f98e59e8be696a9e58fafe4bba5e59ca8e4bbbbe6848fe999a4e4ba86e58f98e59e8be696a9e79a84e58aa8e4bd9ce79a84e694b6e68b9be983a8e58886e6b4bee7949fe380825c6e3c623ee58991e5bda2e680813c2f623e5c6e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463eefbc9ae696bde5b195e5bfabe9809fe79a84e4b889e8bf9ee587bbe38082e694bbe587bbe697b6e68c89e4bd8fe5898de8bf9be5afb9e5ba94e696b9e59091e58fafe4bba5e7a7bbe58aa8e69bb4e8bf9ce79a84e8b79de7a6bbe380825c6e3c737072697465206e616d653d226d6f757365522220636f6c6f723d234646464646463eefbc9a3c753ee6a0bce68ca13c2f753ee69da5e887aae99da2e5898de79a84e694bbe587bbefbc8ce99c80e8a681e6b688e88097e4bd93e58a9be38082e6a0bce68ca1e694bbe587bbe4b98be5908eefbc8ce58fafe4bba5e6b4bee7949fe5a881e58a9be8be83e9ab98e79a84e8bfbde587bbe696a9e380825c6e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f757365522220636f6c6f723d234646464646463eefbc88e5908ce697b6efbc89efbc9ae58f98e59e8be696a9efbc8ce4bdbfe794a8e6ada4e58aa8e4bd9ce5908ee4bc9ae58f98e4b8bae69eaae5bda2e68081e38082e59ca8e8bf9ee587bbe79a84e7acace4b889e6aeb5e4bba5e58f8ae5bcb9e58f8de68890e58a9fe5908eefbc8ce5b086e6b4bee7949fe5a881e58a9be8be83e9ab98e79a84e9ab98e587bae58a9be58f98e59e8be696a9efbc8ce585b6e4bb96e68385e586b5e5b086e6b4bee7949fe58fafe4bba5e59091e4bbbbe6848fe696b9e59091e7a7bbe58aa8e79a84e699aee9809ae58f98e5bda2e696a9e380825c6e3c623ee69eaae5bda2e680813c2f623e5c6e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463eefbc9ae696bde5b195e5a881e58a9be8be83e9ab98e79a84e8bf9ee587bbe38082e694bbe587bbe697b6e68c89e4bd8fe5898de8bf9be5afb9e5ba94e696b9e59091e58fafe4bba5e7a7bbe58aa8e69bb4e8bf9ce79a84e8b79de7a6bbe380825c6e3c737072697465206e616d653d226d6f757365522220636f6c6f723d234646464646463eefbc88e995bfe68c89efbc89efbc9ae6978be9a38ee696a9efbc8ce68c81e7bbade68c89e4bd8fe58fb3e994aee58fafe4bba5e4bf9de68c81e6978be9a38ee696a9e79a84e58aa8e4bd9ce38082e99c80e8a681e6b688e88097e4bd93e58a9be380825c6e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f757365522220636f6c6f723d234646464646463eefbc88e5908ce697b6efbc89efbc9ae58f98e59e8be59b9ee6978be7aa81e588baefbc8ce4bdbfe794a8e6ada4e58aa8e4bd9ce5908ee4bc9ae58f98e4b8bae58991e5bda2e68081e38082e6ada4e58aa8e4bd9ce5bc80e5a78be697b6e4bc9ae88eb7e5be97e4b880e5b08fe6aeb53c753ee997aae981bf3c2f753ee588a4e5ae9aefbc8ce99c80e8a681e6b688e88097e4bd93e58a9be380825c6e3c636f6c6f723d234646433543353ee38090e8ada6e5918aefbc9a4169e697a0e6b395e4bdbfe794a8e8afa5e6ada6e599a8e380913c2f636f6c6f723e0a0000000000000000b9b50400000000000000000090000000000000000000000000000000000000000000000000000000ffffffff0000803f0000803f0000803f0000803f00000000030000000000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f00000000000000000000000000000000e2b504000000000000000000000000000000000000000000f35075b900000000ffffffff0000a0410000a04190010000000000000000904100009042000000000100000000020000ffff000000000000000000000000000000000000000000000000000001000000cdcccc3e000000000000000000000000000000000000000000000000000000000100000000000000000000000100000001000000010000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "path": "ItemBreifUI/TargetSub/Pannel1/ContentText",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 1896,
+          "before": 0.0,
+          "after": -21.42964744567871
+        }
+      ]
+    },
+    {
+      "path_id": 323591,
+      "kind": "layout",
+      "source_sha256": "b70c41cba70fd4865471ad47b47cc4b4bd1208f273016203dc4bd31dd288276c",
+      "source_hex": "0000000043a000000000000001000000010000006509000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f01000000010000000000000009000000e6a1a3e6a188e5aea40000000000000000000000b9b50400000000000000000090000000000000000000000000000000000000000000000000000000ffffffff0000803f0000803f0000803f0000803f00000000030000000000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f00000000000000000000000000000000e2b504000000000000000000000000000000000000000000f35075b900000000ffffffff0000a0410000a04190010000000000000000904100009042000000000100000000020000ffff000000000000000000000000000000000000000000000000000001000000cdcccc3e000000000000000000000000000000000000000000000000000000000100000000000000000000000100000001000000010000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "path": "ItemBreifUISimple/TargetSub/Pannel1/ContentText",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 328,
+          "before": 0.0,
+          "after": -21.42964744567871
+        }
+      ]
+    }
+  ],
+  "translation_validation": {
+    "source": [
+      {
+        "schema_version": "1.0.0",
+        "id": "cg:UnityUI:resources:312174:m_Text",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source": {
+          "text": "复制次数：3\n物品等级：2",
+          "language": "zh-Hans",
+          "file": "resources.assets::MonoBehaviour[path_id=312174]",
+          "locator": {
+            "kind": "record",
+            "value": "MonoBehaviour[path_id=312174].m_Text"
+          },
+          "text_sha256": "3bf3c45bea4eeb80a2e1cc24d90156f80080d908edec49c0b0241cb115b6839e"
+        },
+        "context": {
+          "text_type": "ui",
+          "speaker_id": null,
+          "addressee_ids": [],
+          "route_id": null,
+          "phase_id": null,
+          "scene_id": null,
+          "order": null,
+          "previous_ids": [],
+          "next_ids": [],
+          "usage_context_ids": []
+        },
+        "constraints": {
+          "protected_tokens": [
+            "3",
+            "2"
+          ],
+          "token_patterns": [
+            "[0-9]+"
+          ],
+          "token_order": "ordered",
+          "encoding": "utf-8",
+          "max_bytes": null,
+          "max_codepoints": null,
+          "max_lines": 2,
+          "newline_policy": "preserve",
+          "allow_empty": false
+        },
+        "evidence": [
+          "work/r04/ui-originals.json",
+          "docs/screenshot-findings-2026-09-06.md"
+        ],
+        "notes": [
+          "원본 초기값의 수치 3과 2 및 실제 줄바꿈을 그대로 보존. 재주조 객체에도 복제 횟수라고 쓰인 사실을 임의 변경하지 않음."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "id": "cg:UnityUI:resources:313244:m_Text",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source": {
+          "text": "升级及改造型号",
+          "language": "zh-Hans",
+          "file": "resources.assets::MonoBehaviour[path_id=313244]",
+          "locator": {
+            "kind": "record",
+            "value": "MonoBehaviour[path_id=313244].m_Text"
+          },
+          "text_sha256": "ec486f97220b18a99f1d2fcf28848584b91a380fa804cf7e88df00c3c562ef25"
+        },
+        "context": {
+          "text_type": "ui",
+          "speaker_id": null,
+          "addressee_ids": [],
+          "route_id": null,
+          "phase_id": null,
+          "scene_id": null,
+          "order": null,
+          "previous_ids": [],
+          "next_ids": [],
+          "usage_context_ids": []
+        },
+        "constraints": {
+          "protected_tokens": [],
+          "token_patterns": [],
+          "token_order": "ordered",
+          "encoding": "utf-8",
+          "max_bytes": null,
+          "max_codepoints": null,
+          "max_lines": 1,
+          "newline_policy": "preserve",
+          "allow_empty": false
+        },
+        "evidence": [
+          "work/r04/ui-originals.json",
+          "docs/screenshot-findings-2026-09-06.md"
+        ],
+        "notes": [
+          "아이템 상세창 업그레이드 및 개조 모델 목록 제목. 높이17.01 글자크기17 너비524."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "id": "cg:UnityUI:resources:329595:m_Text",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source": {
+          "text": "复制次数：3\n物品等级：2",
+          "language": "zh-Hans",
+          "file": "resources.assets::MonoBehaviour[path_id=329595]",
+          "locator": {
+            "kind": "record",
+            "value": "MonoBehaviour[path_id=329595].m_Text"
+          },
+          "text_sha256": "3bf3c45bea4eeb80a2e1cc24d90156f80080d908edec49c0b0241cb115b6839e"
+        },
+        "context": {
+          "text_type": "ui",
+          "speaker_id": null,
+          "addressee_ids": [],
+          "route_id": null,
+          "phase_id": null,
+          "scene_id": null,
+          "order": null,
+          "previous_ids": [],
+          "next_ids": [],
+          "usage_context_ids": []
+        },
+        "constraints": {
+          "protected_tokens": [
+            "3",
+            "2"
+          ],
+          "token_patterns": [
+            "[0-9]+"
+          ],
+          "token_order": "ordered",
+          "encoding": "utf-8",
+          "max_bytes": null,
+          "max_codepoints": null,
+          "max_lines": 2,
+          "newline_policy": "preserve",
+          "allow_empty": false
+        },
+        "evidence": [
+          "work/r04/ui-originals.json",
+          "docs/screenshot-findings-2026-09-06.md"
+        ],
+        "notes": [
+          "원본 초기값의 수치 3과 2 및 실제 줄바꿈을 그대로 보존. 재주조 객체에도 복제 횟수라고 쓰인 사실을 임의 변경하지 않음."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "id": "cg:UnityUI:resources:331992:m_Text",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source": {
+          "text": "升级及改造型号",
+          "language": "zh-Hans",
+          "file": "resources.assets::MonoBehaviour[path_id=331992]",
+          "locator": {
+            "kind": "record",
+            "value": "MonoBehaviour[path_id=331992].m_Text"
+          },
+          "text_sha256": "ec486f97220b18a99f1d2fcf28848584b91a380fa804cf7e88df00c3c562ef25"
+        },
+        "context": {
+          "text_type": "ui",
+          "speaker_id": null,
+          "addressee_ids": [],
+          "route_id": null,
+          "phase_id": null,
+          "scene_id": null,
+          "order": null,
+          "previous_ids": [],
+          "next_ids": [],
+          "usage_context_ids": []
+        },
+        "constraints": {
+          "protected_tokens": [],
+          "token_patterns": [],
+          "token_order": "ordered",
+          "encoding": "utf-8",
+          "max_bytes": null,
+          "max_codepoints": null,
+          "max_lines": 1,
+          "newline_policy": "preserve",
+          "allow_empty": false
+        },
+        "evidence": [
+          "work/r04/ui-originals.json",
+          "docs/screenshot-findings-2026-09-06.md"
+        ],
+        "notes": [
+          "아이템 상세창 업그레이드 및 개조 모델 목록 제목. 높이17.01 글자크기17 너비524."
+        ]
+      }
+    ],
+    "translations": [
+      {
+        "schema_version": "1.0.0",
+        "id": "cg:UnityUI:resources:312174:m_Text",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "3bf3c45bea4eeb80a2e1cc24d90156f80080d908edec49c0b0241cb115b6839e",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "translation_revision": "r04-a01",
+        "ko": "복제 횟수: 3\n아이템 레벨: 2",
+        "status": "l1_approved",
+        "translator_role": "translator",
+        "notes": [
+          "수치 3과 2 및 실제 줄바꿈을 보존함."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "id": "cg:UnityUI:resources:313244:m_Text",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "ec486f97220b18a99f1d2fcf28848584b91a380fa804cf7e88df00c3c562ef25",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "translation_revision": "r04-a01",
+        "ko": "업그레이드 및 개조 모델",
+        "status": "l1_approved",
+        "translator_role": "translator",
+        "notes": [
+          "아이템 상세창의 업그레이드 및 개조 모델 목록 제목."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "id": "cg:UnityUI:resources:329595:m_Text",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "3bf3c45bea4eeb80a2e1cc24d90156f80080d908edec49c0b0241cb115b6839e",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "translation_revision": "r04-a01",
+        "ko": "복제 횟수: 3\n아이템 레벨: 2",
+        "status": "l1_approved",
+        "translator_role": "translator",
+        "notes": [
+          "수치 3과 2 및 실제 줄바꿈을 보존함."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "id": "cg:UnityUI:resources:331992:m_Text",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "ec486f97220b18a99f1d2fcf28848584b91a380fa804cf7e88df00c3c562ef25",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "translation_revision": "r04-a01",
+        "ko": "업그레이드 및 개조 모델",
+        "status": "l1_approved",
+        "translator_role": "translator",
+        "notes": [
+          "아이템 상세창의 업그레이드 및 개조 모델 목록 제목."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "schema_version": "1.0.0",
+        "review_id": "r04-l1-a01:00001",
+        "id": "cg:UnityUI:resources:312174:m_Text",
+        "stage": "l1",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "3bf3c45bea4eeb80a2e1cc24d90156f80080d908edec49c0b0241cb115b6839e",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "reviewed_translation_revision": "r04-a01",
+        "reviewed_translation_sha256": "f3062f03f072727c9ffbaf045b80978f0a6e073250d884f13f02bb5e3ef60053",
+        "reviewer_role": "reviewer_l1",
+        "reviewer_model": null,
+        "reviewer_effort": null,
+        "verdict": "accept",
+        "reviewed_areas": [
+          "meaning",
+          "naturalness",
+          "terminology",
+          "technical"
+        ],
+        "issue_ids": [],
+        "suggested_ko": null,
+        "notes": [
+          "복제 횟수와 아이템 레벨의 의미, 수치 3/2, 순서와 실제 줄바꿈이 보존됨."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "review_id": "r04-l1-a01:00002",
+        "id": "cg:UnityUI:resources:313244:m_Text",
+        "stage": "l1",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "ec486f97220b18a99f1d2fcf28848584b91a380fa804cf7e88df00c3c562ef25",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "reviewed_translation_revision": "r04-a01",
+        "reviewed_translation_sha256": "d7363fae029f7f5522903b25fc8d1ab16554c3e3480876f3632431dc3d3cda89",
+        "reviewer_role": "reviewer_l1",
+        "reviewer_model": null,
+        "reviewer_effort": null,
+        "verdict": "accept",
+        "reviewed_areas": [
+          "meaning",
+          "naturalness",
+          "terminology",
+          "technical"
+        ],
+        "issue_ids": [],
+        "suggested_ko": null,
+        "notes": [
+          "업그레이드 및 개조 모델 목록 제목이라는 문맥과 일치하며 한 줄 UI 문구로 자연스러움."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "review_id": "r04-l1-a01:00003",
+        "id": "cg:UnityUI:resources:329595:m_Text",
+        "stage": "l1",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "3bf3c45bea4eeb80a2e1cc24d90156f80080d908edec49c0b0241cb115b6839e",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "reviewed_translation_revision": "r04-a01",
+        "reviewed_translation_sha256": "f3062f03f072727c9ffbaf045b80978f0a6e073250d884f13f02bb5e3ef60053",
+        "reviewer_role": "reviewer_l1",
+        "reviewer_model": null,
+        "reviewer_effort": null,
+        "verdict": "accept",
+        "reviewed_areas": [
+          "meaning",
+          "naturalness",
+          "terminology",
+          "technical"
+        ],
+        "issue_ids": [],
+        "suggested_ko": null,
+        "notes": [
+          "복제 횟수와 아이템 레벨의 의미, 수치 3/2, 순서와 실제 줄바꿈이 보존됨."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "review_id": "r04-l1-a01:00004",
+        "id": "cg:UnityUI:resources:331992:m_Text",
+        "stage": "l1",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "ec486f97220b18a99f1d2fcf28848584b91a380fa804cf7e88df00c3c562ef25",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "reviewed_translation_revision": "r04-a01",
+        "reviewed_translation_sha256": "d7363fae029f7f5522903b25fc8d1ab16554c3e3480876f3632431dc3d3cda89",
+        "reviewer_role": "reviewer_l1",
+        "reviewer_model": null,
+        "reviewer_effort": null,
+        "verdict": "accept",
+        "reviewed_areas": [
+          "meaning",
+          "naturalness",
+          "terminology",
+          "technical"
+        ],
+        "issue_ids": [],
+        "suggested_ko": null,
+        "notes": [
+          "업그레이드 및 개조 모델 목록 제목이라는 문맥과 일치하며 한 줄 UI 문구로 자연스러움."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "review_id": "r04-l2-a01:00001",
+        "id": "cg:UnityUI:resources:312174:m_Text",
+        "stage": "l2",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "3bf3c45bea4eeb80a2e1cc24d90156f80080d908edec49c0b0241cb115b6839e",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "reviewed_translation_revision": "r04-a01",
+        "reviewed_translation_sha256": "f3062f03f072727c9ffbaf045b80978f0a6e073250d884f13f02bb5e3ef60053",
+        "reviewer_role": "reviewer_l2",
+        "reviewer_model": null,
+        "reviewer_effort": null,
+        "verdict": "accept",
+        "reviewed_areas": [
+          "meaning",
+          "naturalness",
+          "terminology",
+          "technical"
+        ],
+        "issue_ids": [],
+        "suggested_ko": null,
+        "notes": [
+          "총괄 L2: 동일 원문의 두 UI 변형이 같은 한국어를 사용하고 승인 용어 복제 횟수/아이템 레벨과 일치함. 원본의 초기 수치 및 줄바꿈을 보존하며 재주조 동작을 추측해 문구를 변경하지 않음. 실제 갱신·화면 표시는 별도 검증."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "review_id": "r04-l2-a01:00002",
+        "id": "cg:UnityUI:resources:313244:m_Text",
+        "stage": "l2",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "ec486f97220b18a99f1d2fcf28848584b91a380fa804cf7e88df00c3c562ef25",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "reviewed_translation_revision": "r04-a01",
+        "reviewed_translation_sha256": "d7363fae029f7f5522903b25fc8d1ab16554c3e3480876f3632431dc3d3cda89",
+        "reviewer_role": "reviewer_l2",
+        "reviewer_model": null,
+        "reviewer_effort": null,
+        "verdict": "accept",
+        "reviewed_areas": [
+          "meaning",
+          "naturalness",
+          "terminology",
+          "technical"
+        ],
+        "issue_ids": [],
+        "suggested_ko": null,
+        "notes": [
+          "총괄 L2: 升级 및 改造와 모델 목록이라는 의미를 모두 보존한 짧은 제목. 상세창 두 변형의 문구가 일치함. 화면 검증 별도."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "review_id": "r04-l2-a01:00003",
+        "id": "cg:UnityUI:resources:329595:m_Text",
+        "stage": "l2",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "3bf3c45bea4eeb80a2e1cc24d90156f80080d908edec49c0b0241cb115b6839e",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "reviewed_translation_revision": "r04-a01",
+        "reviewed_translation_sha256": "f3062f03f072727c9ffbaf045b80978f0a6e073250d884f13f02bb5e3ef60053",
+        "reviewer_role": "reviewer_l2",
+        "reviewer_model": null,
+        "reviewer_effort": null,
+        "verdict": "accept",
+        "reviewed_areas": [
+          "meaning",
+          "naturalness",
+          "terminology",
+          "technical"
+        ],
+        "issue_ids": [],
+        "suggested_ko": null,
+        "notes": [
+          "총괄 L2: 동일 원문의 두 UI 변형이 같은 한국어를 사용하고 승인 용어 복제 횟수/아이템 레벨과 일치함. 원본의 초기 수치 및 줄바꿈을 보존하며 재주조 동작을 추측해 문구를 변경하지 않음. 실제 갱신·화면 표시는 별도 검증."
+        ]
+      },
+      {
+        "schema_version": "1.0.0",
+        "review_id": "r04-l2-a01:00004",
+        "id": "cg:UnityUI:resources:331992:m_Text",
+        "stage": "l2",
+        "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+        "source_sha256": "ec486f97220b18a99f1d2fcf28848584b91a380fa804cf7e88df00c3c562ef25",
+        "context_pack_id": "r04-static-ui-context-a01",
+        "context_pack_digest": "8b67b84875773bf0093c3136a314776f31e914a127cd90dfbfc8c59d0c8c284a",
+        "reviewed_translation_revision": "r04-a01",
+        "reviewed_translation_sha256": "d7363fae029f7f5522903b25fc8d1ab16554c3e3480876f3632431dc3d3cda89",
+        "reviewer_role": "reviewer_l2",
+        "reviewer_model": null,
+        "reviewer_effort": null,
+        "verdict": "accept",
+        "reviewed_areas": [
+          "meaning",
+          "naturalness",
+          "terminology",
+          "technical"
+        ],
+        "issue_ids": [],
+        "suggested_ko": null,
+        "notes": [
+          "총괄 L2: 升级 및 改造와 모델 목록이라는 의미를 모두 보존한 짧은 제목. 상세창 두 변형의 문구가 일치함. 화면 검증 별도."
+        ]
+      }
+    ],
+    "context_file_bytes": "{\n  \"context_pack_id\": \"r04-static-ui-context-a01\",\n  \"source_revision\": \"f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a\",\n  \"segments\": [\n    {\n      \"id\": \"cg:UnityUI:resources:312174:m_Text\",\n      \"source_revision\": \"f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a\",\n      \"source_sha256\": \"3bf3c45bea4eeb80a2e1cc24d90156f80080d908edec49c0b0241cb115b6839e\",\n      \"text\": \"复制次数：3\\n物品等级：2\",\n      \"path_id\": 312174,\n      \"context\": \"ReforgeInfo2\",\n      \"notes\": \"원본 초기값의 수치 3과 2 및 실제 줄바꿈을 그대로 보존. 재주조 객체에도 복제 횟수라고 쓰인 사실을 임의 변경하지 않음.\"\n    },\n    {\n      \"id\": \"cg:UnityUI:resources:313244:m_Text\",\n      \"source_revision\": \"f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a\",\n      \"source_sha256\": \"ec486f97220b18a99f1d2fcf28848584b91a380fa804cf7e88df00c3c562ef25\",\n      \"text\": \"升级及改造型号\",\n      \"path_id\": 313244,\n      \"context\": \"Text\",\n      \"notes\": \"아이템 상세창 업그레이드 및 개조 모델 목록 제목. 높이17.01 글자크기17 너비524.\"\n    },\n    {\n      \"id\": \"cg:UnityUI:resources:329595:m_Text\",\n      \"source_revision\": \"f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a\",\n      \"source_sha256\": \"3bf3c45bea4eeb80a2e1cc24d90156f80080d908edec49c0b0241cb115b6839e\",\n      \"text\": \"复制次数：3\\n物品等级：2\",\n      \"path_id\": 329595,\n      \"context\": \"DuplicateInfo2\",\n      \"notes\": \"원본 초기값의 수치 3과 2 및 실제 줄바꿈을 그대로 보존. 재주조 객체에도 복제 횟수라고 쓰인 사실을 임의 변경하지 않음.\"\n    },\n    {\n      \"id\": \"cg:UnityUI:resources:331992:m_Text\",\n      \"source_revision\": \"f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a\",\n      \"source_sha256\": \"ec486f97220b18a99f1d2fcf28848584b91a380fa804cf7e88df00c3c562ef25\",\n      \"text\": \"升级及改造型号\",\n      \"path_id\": 331992,\n      \"context\": \"Text\",\n      \"notes\": \"아이템 상세창 업그레이드 및 개조 모델 목록 제목. 높이17.01 글자크기17 너비524.\"\n    }\n  ],\n  \"terminology\": {\n    \"复制次数\": \"복제 횟수\",\n    \"物品等级\": \"아이템 레벨\"\n  },\n  \"scope\": \"Translate serialized UI defaults only. Preserve numbers and actual newline. No invented mechanics.\"\n}\n"
+  },
+  "known_debt": [
+    "r05 calibrated detail line spacing requires human checks for overlap and clipping; other r04 fixes user reports okay."
+  ],
+  "layout": {
+    "scope": "ItemBreifUI and ItemBreifUISimple detail popups; may also be used by non-weapon items. No global font metrics changed.",
+    "main_text_line_spacing": {
+      "before": 0,
+      "after": -21.42964744567871,
+      "prior_r04": -5,
+      "target_visual_line_ratio": 1.125,
+      "calibration": {
+        "screenshot": "screenshot/20260906203108_1.jpg",
+        "screenshot_sha256": "dbff043d0b457019069450d916ccfd55c3067c2b9e6e6aaf84312b18ad42fc19",
+        "pixel_dimensions": [
+          2560,
+          1440
+        ],
+        "observed_line_advance_px": 41.07142857142857,
+        "observed_median_ink_height_px": 22,
+        "target_line_advance_px": 24.75,
+        "korean_face_line_height_em": 1.4482421875,
+        "assumed_base_point_size": 32,
+        "prior_estimated_advance_em": 1.2919921875,
+        "formula": "base_point_size * (target_visual_ratio * observed_ink_height / observed_advance * prior_estimated_advance_em - korean_face_line_height_em)",
+        "estimated_final_advance_px": 24.74999929810559,
+        "runtime_font_and_rich_text_assumptions_unverified": true
+      },
+      "rationale": "r04 absolute -5 adjustment insufficient in user screenshot; calibrate to the observed baseline/ink ratio, not nominal font metrics alone."
+    },
+    "supplementary_text_line_spacing": {
+      "before": 1.2,
+      "after": 1.0
+    },
+    "title_body_gap": {
+      "before": 18,
+      "after": 8
+    },
+    "paragraph_spacing": "unchanged at 0",
+    "research_report_sha256": "46fda6fb4d067339b748dbca05bb9124fc9de3040cec12d9d9e864b2bfef2f56",
+    "final_metrics_check_sha256": "02647eed8a57f7b44db840e2cdef64c88518aebd3a69a79dfa396b54bda13a30"
+  }
+}

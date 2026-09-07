@@ -1,0 +1,24 @@
+{
+  "version": "3.2.0",
+  "official_release": "https://github.com/jmacd/xdelta/releases/tag/v3.2.0",
+  "archive_sha256": "af8ef036cb077a48df080c9a8ac1be4a6e7511c32d11f8bec89b6803a9e52576",
+  "published_archive_digest_verified": true,
+  "files": {
+    "xdelta3.exe": {
+      "sha256": "53d90226615f217d3380c39892833311b4e24acd863e1ca01f14b5e772e2e6d0",
+      "size": 336896
+    },
+    "README.md": {
+      "sha256": "577abe9ba3726bf00bd37f9d2c88e3d6efb3acb450fd40bcaef57bb937c61d12",
+      "size": 2316
+    },
+    "xdelta3decode.exe": {
+      "sha256": "e3a62e37b2fb517a2f99f2ae562e19c9c71fdcd28ff3d45f62af3815c14ca5b0",
+      "size": 47104
+    },
+    "LICENSE": {
+      "sha256": "6cf63d87586c7c25c3ab8e62eef5c75bbaa982b0a6f9c00c59e2720255aac9ec",
+      "size": 9156
+    }
+  }
+}
