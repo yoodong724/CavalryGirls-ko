@@ -1,6 +1,7 @@
 # 철기 소녀 한글패치
 
 Steam Cavalry Girls 2.6.2859 / 빌드 24639430 / Windows x64용 비공식 한국어 패치입니다. 일본어 언어 슬롯을 한국어로 대체합니다.
+
 Codex를 이용하여 제작된 패치이며, 26/09/07 시점에는 검수가 완료되지 않은 상태임을 밝힙니다.
 
 설치 파일은 이 저장소의 **Releases**에서 `CavalryGirls-Korean-2.6.2859-build24639430-r05-public1.zip`을 내려받으세요. GitHub의 자동 생성 `Source code (zip)`은 설치 파일이 아닙니다.
