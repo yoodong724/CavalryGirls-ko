@@ -25,6 +25,34 @@ class TitleSpriteError(RuntimeError):
     """Raised when the fixed Sprite or its full-rect donor violates the contract."""
 
 
+def _title_contract(profile: dict[str, Any] | None) -> dict[str, Any]:
+    if profile is None:
+        return {
+            "sprite_path_id": SPRITE_PATH_ID,
+            "texture_path_id": TEXTURE_PATH_ID,
+            "quad_donor_path_id": QUAD_DONOR_PATH_ID,
+            "original_object_sha256": ORIGINAL_OBJECT_SHA256,
+            "patched_object_sha256": PATCHED_OBJECT_SHA256,
+            "texture_stream_offset": 2_307_466_956,
+            "texture_stream_size": 230_400,
+            "quad_donor_name": "24_10_8_Chinese",
+        }
+    if not isinstance(profile, dict):
+        raise TitleSpriteError("title profile must be a mapping")
+    section = profile.get("title", profile)
+    if not isinstance(section, dict):
+        raise TitleSpriteError("title profile section must be a mapping")
+    required = {
+        "sprite_path_id", "texture_path_id", "quad_donor_path_id",
+        "original_object_sha256", "patched_object_sha256",
+        "texture_stream_offset", "texture_stream_size", "quad_donor_name",
+    }
+    missing = sorted(required - section.keys())
+    if missing:
+        raise TitleSpriteError(f"title profile lacks fields: {missing}")
+    return section
+
+
 def _sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
@@ -45,12 +73,12 @@ def _effective_bytes(obj: Any) -> bytes:
     return bytes(obj.data) if obj.data is not None else obj.get_raw_data()
 
 
-def _validate_outer(sprite: Any) -> None:
+def _validate_outer(sprite: Any, contract: dict[str, Any]) -> None:
     rd = sprite.m_RD
     if sprite.m_Name != "Title_Japanese":
-        raise TitleSpriteError("Sprite 14470 name mismatch")
-    if rd.texture.m_FileID != 0 or rd.texture.m_PathID != TEXTURE_PATH_ID:
-        raise TitleSpriteError("Sprite 14470 Texture2D reference mismatch")
+        raise TitleSpriteError("title Sprite name mismatch")
+    if rd.texture.m_FileID != 0 or rd.texture.m_PathID != contract["texture_path_id"]:
+        raise TitleSpriteError("title Sprite Texture2D reference mismatch")
     if _rect(sprite.m_Rect) != EXPECTED_RECT:
         raise TitleSpriteError("Sprite 14470 outer rect mismatch")
     if _vec2(sprite.m_Pivot) != EXPECTED_PIVOT:
@@ -67,26 +95,31 @@ def _validate_outer(sprite: Any) -> None:
         raise TitleSpriteError("Sprite 14470 unexpectedly uses alpha texture or atlas")
 
 
-def _validate_texture(serialized: Any) -> None:
+def _validate_texture(serialized: Any, contract: dict[str, Any]) -> None:
     try:
-        obj = serialized.objects[TEXTURE_PATH_ID]
+        obj = serialized.objects[contract["texture_path_id"]]
     except KeyError as exc:
-        raise TitleSpriteError("Texture2D 5467 is missing") from exc
+        raise TitleSpriteError("title Texture2D is missing") from exc
     if obj.type.name != "Texture2D":
         raise TitleSpriteError("PathID 5467 is not Texture2D")
     texture = obj.read()
+    expected = contract.get("texture", {})
     if (
-        texture.m_Name != "Title_Japanese"
-        or texture.m_Width != 640
-        or texture.m_Height != 360
-        or int(texture.m_TextureFormat) != 12
-        or texture.m_StreamData.offset != 2_307_466_956
-        or texture.m_StreamData.size != 230_400
+        texture.m_Name != expected.get("name", "Title_Japanese")
+        or texture.m_Width != expected.get("width", 640)
+        or texture.m_Height != expected.get("height", 360)
+        or int(texture.m_TextureFormat) != expected.get("format", 12)
+        or texture.m_StreamData.offset != contract["texture_stream_offset"]
+        or texture.m_StreamData.size != contract["texture_stream_size"]
+        or texture.m_StreamData.path != expected.get("stream_path", "resources.assets.resS")
     ):
         raise TitleSpriteError("Texture2D 5467 metadata mismatch")
+    expected_hash = expected.get("source_object_sha256")
+    if expected_hash and _sha256(obj.get_raw_data()) != expected_hash:
+        raise TitleSpriteError("title Texture2D object hash mismatch")
 
 
-def _validate_donor(donor: Any, target: Any) -> None:
+def _validate_donor(donor: Any, target: Any, contract: dict[str, Any]) -> None:
     rd = donor.m_RD
     vertex = rd.m_VertexData
     target_channels = [
@@ -98,7 +131,7 @@ def _validate_donor(donor: Any, target: Any) -> None:
         for item in vertex.m_Channels
     ]
     if (
-        donor.m_Name != "24_10_8_Chinese"
+        donor.m_Name != contract["quad_donor_name"]
         or vertex.m_VertexCount != 4
         or len(vertex.m_DataSize) != 208
         or list(struct.unpack("<6H", bytes(rd.m_IndexBuffer))) != [3, 0, 1, 2, 1, 0]
@@ -171,10 +204,10 @@ def _validate_full_quad(sprite: Any, version: Any) -> None:
         raise TitleSpriteError("quad donor localAABB convention changed")
 
 
-def _validation(before_hash: str, after_hash: str, *, idempotent: bool) -> dict[str, Any]:
+def _validation(before_hash: str, after_hash: str, contract: dict[str, Any], *, idempotent: bool) -> dict[str, Any]:
     return {
-        "sprite_path_id": SPRITE_PATH_ID,
-        "texture_path_id": TEXTURE_PATH_ID,
+        "sprite_path_id": contract["sprite_path_id"],
+        "texture_path_id": contract["texture_path_id"],
         "before_object_sha256": before_hash,
         "after_object_sha256": after_hash,
         "idempotent": idempotent,
@@ -195,46 +228,51 @@ def _validation(before_hash: str, after_hash: str, *, idempotent: bool) -> dict[
     }
 
 
-def patch_title_sprite(environment: Any) -> dict[str, Any]:
+def patch_title_sprite(environment: Any, profile: dict[str, Any] | None = None) -> dict[str, Any]:
     """Patch only Sprite 14470 and return changed IDs plus validation metadata."""
+    contract = _title_contract(profile)
     serialized = environment.file
+    sprite_path_id = int(contract["sprite_path_id"])
     try:
-        obj = serialized.objects[SPRITE_PATH_ID]
+        obj = serialized.objects[sprite_path_id]
     except KeyError as exc:
-        raise TitleSpriteError("Sprite 14470 is missing") from exc
+        raise TitleSpriteError("title Sprite is missing") from exc
     if obj.type.name != "Sprite":
         raise TitleSpriteError("PathID 14470 is not Sprite")
 
     effective = _effective_bytes(obj)
     effective_hash = _sha256(effective)
-    if PATCHED_OBJECT_SHA256 and effective_hash == PATCHED_OBJECT_SHA256:
+    if contract["patched_object_sha256"] and effective_hash == contract["patched_object_sha256"]:
         if obj.data is None:
             sprite = obj.read()
-            _validate_outer(sprite)
+            _validate_outer(sprite, contract)
             _validate_full_quad(sprite, serialized.version)
-        _validate_texture(serialized)
+        _validate_texture(serialized, contract)
         return {
             "changed_path_ids": [],
-            "validation": _validation(effective_hash, effective_hash, idempotent=True),
+            "validation": _validation(effective_hash, effective_hash, contract, idempotent=True),
         }
-    if effective_hash != ORIGINAL_OBJECT_SHA256:
-        raise TitleSpriteError(f"Sprite 14470 object hash mismatch: {effective_hash}")
+    if effective_hash != contract["original_object_sha256"]:
+        raise TitleSpriteError(f"title Sprite object hash mismatch: {effective_hash}")
 
     changed_before = {item.path_id for item in environment.objects if item.data is not None}
     sprite = obj.read()
-    _validate_outer(sprite)
-    _validate_texture(serialized)
+    _validate_outer(sprite, contract)
+    _validate_texture(serialized, contract)
     if _is_full_quad(sprite):
         raise TitleSpriteError("original hash unexpectedly contains the patched full quad")
 
     try:
-        donor_obj = serialized.objects[QUAD_DONOR_PATH_ID]
+        donor_obj = serialized.objects[int(contract["quad_donor_path_id"])]
     except KeyError as exc:
         raise TitleSpriteError("quad donor Sprite 9320 is missing") from exc
     if donor_obj.type.name != "Sprite":
         raise TitleSpriteError("quad donor PathID 9320 is not Sprite")
     donor = donor_obj.read()
-    _validate_donor(donor, sprite)
+    expected_donor_hash = contract.get("quad_donor_object_sha256")
+    if expected_donor_hash and _sha256(donor_obj.get_raw_data()) != expected_donor_hash:
+        raise TitleSpriteError("title quad donor object hash mismatch")
+    _validate_donor(donor, sprite, contract)
 
     rd = sprite.m_RD
     rd.textureRect.x = 0.0
@@ -247,18 +285,18 @@ def patch_title_sprite(environment: Any) -> dict[str, Any]:
     rd.m_SubMeshes = copy.deepcopy(donor.m_RD.m_SubMeshes)
     rd.m_VertexData = copy.deepcopy(donor.m_RD.m_VertexData)
     rd.m_VertexData.m_DataSize = _quad_vertex_data(bytes(rd.m_VertexData.m_DataSize))
-    _validate_outer(sprite)
+    _validate_outer(sprite, contract)
     _validate_full_quad(sprite, serialized.version)
     sprite.save()
 
     after = _effective_bytes(obj)
     after_hash = _sha256(after)
-    if PATCHED_OBJECT_SHA256 and after_hash != PATCHED_OBJECT_SHA256:
+    if contract["patched_object_sha256"] and after_hash != contract["patched_object_sha256"]:
         raise TitleSpriteError(f"patched Sprite object hash mismatch: {after_hash}")
     changed_after = {item.path_id for item in environment.objects if item.data is not None}
-    if changed_after - changed_before != {SPRITE_PATH_ID}:
+    if changed_after - changed_before != {sprite_path_id}:
         raise TitleSpriteError("patch changed an unexpected object")
     return {
-        "changed_path_ids": [SPRITE_PATH_ID],
-        "validation": _validation(effective_hash, after_hash, idempotent=False),
+        "changed_path_ids": [sprite_path_id],
+        "validation": _validation(effective_hash, after_hash, contract, idempotent=False),
     }

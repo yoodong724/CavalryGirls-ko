@@ -1,17 +1,19 @@
 # 철기 소녀 한글패치
 
-Steam Cavalry Girls 2.6.2859 / 빌드 24639430 / Windows x64용 비공식 한국어 패치입니다. 일본어 언어 슬롯을 한국어로 대체합니다.
+Steam Cavalry Girls 3.0.2950 / 빌드 25429822 / Windows x64용 비공식 한국어 패치입니다. 일본어 언어 슬롯을 한국어로 대체합니다.
 
 Codex를 이용하여 제작된 패치이며, 검수가 완료되지 않은 상태임을 밝힙니다.
 
-설치 파일은 이 저장소의 **Releases**에서 `CavalryGirls-Korean-2.6.2859-build24639430-r05-public1.zip`을 내려받으세요. GitHub의 자동 생성 `Source code (zip)`은 설치 파일이 아닙니다.
+설치 파일은 이 저장소의 [3.0.2950 사전 릴리스](https://github.com/yoodong724/CavalryGirls-ko/releases/tag/3.0.2950-build25429822)에서 `CavalryGirls-Korean-3.0.2950-build25429822.zip`을 내려받으세요. GitHub의 자동 생성 `Source code (zip)`은 설치 파일이 아닙니다.
 
-설치와 복원은 [설치 안내](release/installer/README.ko.md), 변경 사항과 확인 범위는 [r05 릴리스 노트](RELEASE-r05.md)를 참고하세요.
+설치와 복원은 [설치 안내](release/installer/README.ko.md), 변경 사항과 확인 범위는 [3.0.2950 릴리스 노트](RELEASE-r06.md)를 참고하세요.
+
+3.0.2950은 게임 실행·화면·저장/불러오기 확인이 남은 테스트 후보입니다. 이전 게임 버전용 패치는 [r05 릴리스](https://github.com/yoodong724/CavalryGirls-ko/releases/tag/r05-public1)에서 받을 수 있습니다.
 
 ## 소스 구성
 
-- `localization/`: 승인 번역 8,774개와 재삽입에 필요한 원문 대조·위치 데이터.
-- `release/reference/ui-r05.json`: 추가 고정 UI 4개 검수본과 레이아웃 수정 레시피. 총 번역 대상은 8,778개입니다.
+- `localization/`: 3.0.2950 원문 대조·위치 데이터와 번역 10,279개 레코드.
+- `release/reference/3.0.2950/build-profile.json`: 버전별 빌드 입력과 검수 자료·UI 레시피 연결.
 - `adapters/`, `tools/maintenance/`: 원본 검사, 텍스트·폰트·타이틀·UI 패치, 차분 패키징.
 - `release/installer/`: Windows 설치·복원 도구, xdelta3 및 라이선스.
 - `release/assets/`: 한국어 타이틀 이미지와 적용용 DXT5 자산.

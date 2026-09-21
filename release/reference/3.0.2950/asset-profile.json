@@ -1,0 +1,292 @@
+{
+  "schema_version": "1.0.0",
+  "game_version": "3.0.2950",
+  "source": {
+    "resources_assets_sha256": "5ce95b6762ada10c0d9e30aac7b36c9c86c04662e53e60485c781122e344ec30",
+    "resources_assets_size": 1708091136,
+    "object_count": 763599,
+    "unity_version": "2019.4f1",
+    "previous_resources_assets_sha256": "d275481b891eef752e5d4279c587b564db4c5ef5e0291cc80af82a089d793838",
+    "previous_resources_assets_size": 1603926360,
+    "previous_object_count": 351126
+  },
+  "fonts": {
+    "font_bundle_sha256": "2e368c9433b53dd6746c0cfa2ac36bc8e0a2fc1fb5e787ba0ebac20fdd89e858",
+    "tmp_font_type_hash": "300fd99066f8c288e85f5e81ce65fe34",
+    "korean_font": {
+      "path_id": 674686,
+      "name": "SourceHanSansKR",
+      "source_object_sha256": "b88122205e36bdeb7cc3bd7a8de31a385636fbd369398a74d133d5054a7a67d3",
+      "character_count": 11844,
+      "hangul_syllables": 11172
+    },
+    "targets": [
+      {
+        "path_id": 674685,
+        "name": "Main SDF",
+        "reason": "dominant TextMeshProUGUI font (61 observed local PPtr references)",
+        "source_object_sha256": "7e3ebb5d4fa2dd15fc67c11c49a1f61d425055e8153b813e64d611e8c669979a",
+        "patched_object_sha256": "d82165d8e029a193748b4e0b5475898e853f76fdcbd85de0438bdb844ae1b0a8"
+      },
+      {
+        "path_id": 674687,
+        "name": "RuiZiZhenYanTiMianFeiShangYong-2 SDF",
+        "reason": "secondary TextMeshProUGUI font (23 observed local PPtr references)",
+        "source_object_sha256": "446b5e3761e2a2c067bec3aecc67bcf8b80e3918e2b67602cd2186eebc251237",
+        "patched_object_sha256": "57c0bde38eba33d351ba08a150fab8c97aa83c6ebc5a67e50c9d04d96064b14d"
+      },
+      {
+        "path_id": 674688,
+        "name": "ZiTiChuanQiTeZhanTi-MianFeiShangYong-2 SDF",
+        "reason": "TextMeshProUGUI font (1 observed local PPtr reference)",
+        "source_object_sha256": "7a7541a32e82b7fad8e5ddbb81828b7ce889731833f39e36b620709ed1bab04d",
+        "patched_object_sha256": "070977fa9a582cf7e34e7e275ba6547a1b908f6f4218f49b9ac4c5e0a0fa5db4"
+      },
+      {
+        "path_id": 674689,
+        "name": "素材集市社会体 SDF",
+        "reason": "TextMeshPro font (12 observed local PPtr references)",
+        "source_object_sha256": "21b6719b1689cabae4d09f72b7068cd000ecc28c96c007bb62f3d60ad3b530a8",
+        "patched_object_sha256": "7f87be9f456d29e58ab450e45579a86eefb22a822969d5f544490d6e78ddc353"
+      },
+      {
+        "path_id": 674690,
+        "name": "腾祥细潮黑简 SDF",
+        "reason": "TextMeshProUGUI font (1 observed local PPtr reference)",
+        "source_object_sha256": "4bd6dfbef38079342bdbe897f586f799f3a4c4d0c226e35d3fd9511d8775c059",
+        "patched_object_sha256": "588201f47c4bd7c86a35b5ce94a561db7cc769272d7a11d96826cf39a89806ee"
+      }
+    ]
+  },
+  "title": {
+    "sprite_path_id": 17173,
+    "texture_path_id": 6135,
+    "quad_donor_path_id": 11404,
+    "original_object_sha256": "b956ee20e58768c24a267e40047319df5252f927af8cfc962be6f150ab7b5725",
+    "patched_object_sha256": "426dc16287471ae4bf8074d9ce2185c3ac5e22e9f80ebe4489c261a88a837d8c",
+    "texture_stream_offset": 2688420320,
+    "texture_stream_size": 230400,
+    "quad_donor_name": "24_10_8_Chinese",
+    "texture": {
+      "name": "Title_Japanese",
+      "width": 640,
+      "height": 360,
+      "format": 12,
+      "stream_path": "resources.assets.resS",
+      "source_object_sha256": "cc3d01198fc467adf3bb6b1a1f7df1ac48ecd9c8ce65cbc49fbafc6825e16ac1"
+    },
+    "quad_donor_object_sha256": "51b325c7391fd335e0e9eacc3a92c31a9421b6e58836aab08c3b1e22cb1bfaa2",
+    "replacement_payload": {
+      "sha256": "646b631b7bc1b4399f52fc673ee2f9c2f26c8d0600a47c8a8e096107ba303daf",
+      "size": 230400
+    }
+  },
+  "hud": {
+    "text_path_id": 707267,
+    "gameobject_path_id": 106078,
+    "hierarchy": "FrameUI/MainContent/HUDHHint",
+    "script_pointer": [
+      1,
+      1051
+    ],
+    "source_font": {
+      "path_id": 11184,
+      "name": "SourceHanSerifCN-Heavy-4",
+      "sha256": "78101f93fb76951da79728a7ece95a974fb8f95f2024fa50792bc79627951a07"
+    },
+    "target_font": {
+      "path_id": 11185,
+      "name": "SourceHanSansKR-Regular",
+      "sha256": "061c9a55b6b731af2a4667f06efb82ed7c80ba99d5350c1bba76f80472ea304f"
+    },
+    "original_object_sha256": "c68d92756dfe79aa0192f45fd745bbb15ae510c364dad1f970b1340e40a39a10",
+    "original_object_hex": "000000005e9e01000000000001000000010000001b0400000000000000000000000000000000000000000000c1782b3fc1782b3fc1782b3f0000803f01000000010000000000000000000000b02b000000000000120000000000000000000000010000002800000003000000000000000100000001000000010000000000803f33000000e698bee7a4bae68898e69697485544205b485d2020202020e59cb0e59bbee4bca0e98081205b4d5d202020202020202020202000",
+    "source_text": "显示战斗HUD [H]     地图传送 [M]           ",
+    "rect_width": 561.0524291992188,
+    "font_size": 18
+  },
+  "ui_identities": [
+    {
+      "old_path_id": 312174,
+      "path_id": 680647,
+      "gameobject_path_id": 226422,
+      "hierarchy": "WeaponOperateUI/Pivot/WeaponOperatePivot/MainArea2/ReforgeArea/ReforgeInfo2",
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "source_object_sha256": "091804f1a01de1eb9dc063a0c47b80b351b3939a4b34da84e8d1d661217252dd"
+    },
+    {
+      "old_path_id": 313244,
+      "path_id": 682924,
+      "gameobject_path_id": 184341,
+      "hierarchy": "ItemBreifUI/TargetSub/Pannel8/UpgradePannel/Text",
+      "script_pointer": [
+        1,
+        2482
+      ],
+      "source_object_sha256": "1f4137c1a38553caf0a4f3e42bfe5c6df82e375c42a813c9d4a57be515f20fa1"
+    },
+    {
+      "old_path_id": 329595,
+      "path_id": 717858,
+      "gameobject_path_id": 137356,
+      "hierarchy": "WeaponOperateUI/Pivot/WeaponOperatePivot/MainArea2/DuplicateArea/DuplicateInfo2",
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "source_object_sha256": "a33471b84e7835cc38bb570d46682c10d93e3392726a97cf5c3d50085d6c489c"
+    },
+    {
+      "old_path_id": 331992,
+      "path_id": 722904,
+      "gameobject_path_id": 21618,
+      "hierarchy": "ItemBreifUISimple/TargetSub/Pannel8/UpgradePannel/Text",
+      "script_pointer": [
+        1,
+        2482
+      ],
+      "source_object_sha256": "2cdacaf6120e364b381ab0fe5deec7a9714dbe88cd243c205efa8bfd4303bede"
+    },
+    {
+      "old_path_id": 323048,
+      "path_id": 704074,
+      "gameobject_path_id": 89873,
+      "hierarchy": "ItemBreifUI/TargetSub/ExtendPanel/Pannel2/PlusText",
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "source_object_sha256": "e16e3353dd3b48107344b1fb51e9b512ca7d3dadff687848673821d652c25247"
+    },
+    {
+      "old_path_id": 349023,
+      "path_id": 759153,
+      "gameobject_path_id": 234432,
+      "hierarchy": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel2/PlusText",
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "source_object_sha256": "e12da28021668a3eead38e5fe9b1df5b63d56be1f4e481ba6fe9688229fbb022"
+    },
+    {
+      "old_path_id": 337984,
+      "path_id": 735757,
+      "gameobject_path_id": 86606,
+      "hierarchy": "ItemBreifUI/TargetSub/ExtendPanel/Pannel5/HintText1",
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "source_object_sha256": "cef6be76b8835ec150cf962466074d88cbbc217314185cd959d7d13e02875cba"
+    },
+    {
+      "old_path_id": 312291,
+      "path_id": 680915,
+      "gameobject_path_id": 229138,
+      "hierarchy": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel5/HintText1",
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "source_object_sha256": "f5c92b25c40e6110571f6cbfc82682fcea97d3ec6a5e502598310213751f1472"
+    },
+    {
+      "old_path_id": 325914,
+      "path_id": 709744,
+      "gameobject_path_id": 192411,
+      "hierarchy": "ItemBreifUI/TargetSub/ExtendPanel/Pannel7/HintText2",
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "source_object_sha256": "de4967cf68e6a69bf66f4c57afa9271e6f2c254dce47f2ba7a1693e6a1a4d1b7"
+    },
+    {
+      "old_path_id": 340986,
+      "path_id": 742068,
+      "gameobject_path_id": 110226,
+      "hierarchy": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel7/HintText2",
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "source_object_sha256": "cc4b7501348a5f05a1adcbc0c2d8bc9179ae74e33c1e4239fff92c4c822e5a1b"
+    },
+    {
+      "old_path_id": 338491,
+      "path_id": 736863,
+      "gameobject_path_id": 178565,
+      "hierarchy": "ItemBreifUI/TargetSub/Pannel1",
+      "script_pointer": [
+        1,
+        995
+      ],
+      "source_object_sha256": "f497ff3e89b00edb2215d38429cdfa964623c353d7955289f282326fb250f38b"
+    },
+    {
+      "old_path_id": 313127,
+      "path_id": 682659,
+      "gameobject_path_id": 39285,
+      "hierarchy": "ItemBreifUISimple/TargetSub/Pannel1",
+      "script_pointer": [
+        1,
+        995
+      ],
+      "source_object_sha256": "b734641ce83cfd7f8e5ed7900f754e88ede0263cf0719fabd36ae93126472420"
+    },
+    {
+      "old_path_id": 349586,
+      "path_id": 760296,
+      "gameobject_path_id": 218666,
+      "hierarchy": "ItemBreifUI/TargetSub/Pannel1/ContentText",
+      "script_pointer": [
+        1,
+        2482
+      ],
+      "source_object_sha256": "8b2ac0f0c6ea560e165369a78ba5157582c636b2d23cf3513c3cdba868afd8b6"
+    },
+    {
+      "old_path_id": 323591,
+      "path_id": 705213,
+      "gameobject_path_id": 75945,
+      "hierarchy": "ItemBreifUISimple/TargetSub/Pannel1/ContentText",
+      "script_pointer": [
+        1,
+        2482
+      ],
+      "source_object_sha256": "f914813c4995a3229c7809f2319c3dff8d62b2cd33cd53a9195bf2f313a26680"
+    },
+    {
+      "old_path_id": null,
+      "path_id": 720673,
+      "gameobject_path_id": 52954,
+      "hierarchy": "ItemBreifUISimpleTitle/TargetSub/Pannel8/UpgradePannel/Text",
+      "script_pointer": [
+        1,
+        2482
+      ],
+      "source_object_sha256": "889b86a8a9f3e7bc939d0d1fb8aa722568b4100de65f59b9cf26d802405a6915",
+      "remap_basis": "new active-root sibling variant; payload identical except GameObject PPtr"
+    }
+  ],
+  "promoted_fixed_ui_candidates": [
+    {
+      "old_path_id": null,
+      "path_id": 720673,
+      "gameobject_path_id": 52954,
+      "hierarchy": "ItemBreifUISimpleTitle/TargetSub/Pannel8/UpgradePannel/Text",
+      "script_pointer": [
+        1,
+        2482
+      ],
+      "source_object_sha256": "889b86a8a9f3e7bc939d0d1fb8aa722568b4100de65f59b9cf26d802405a6915",
+      "remap_basis": "new active-root sibling variant; payload identical except GameObject PPtr"
+    }
+  ],
+  "new_fixed_ui_candidates": [],
+  "runtime_verified": false
+}

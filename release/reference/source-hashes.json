@@ -1,17 +1,2627 @@
 {
+  "algorithm": "sha256",
   "source_revision": "f1c8fc8f5e5f7470da9ca0ad5a90bca21ab4d75c71e65509b2ffaf75b579eb6a",
+  "revision_scope": "all original files except Save/ and Log/; canonical sorted path/sha256 JSON",
   "files": [
     {
       "path": "AssetBundles/fonts_assets_all.bundle",
+      "size": 120593340,
+      "mtime_ns": 1787822652771988100,
+      "original_sha256": "8c278b63786f5477ed82229a52184e8fdae81b8aedbf4f0434a1843423da4146",
       "copy_sha256": "8c278b63786f5477ed82229a52184e8fdae81b8aedbf4f0434a1843423da4146"
     },
     {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0_1.controller_a03d38ed1c2332c187e87f10631f82cc.bundle",
+      "size": 6457751,
+      "mtime_ns": 1787822652778986500,
+      "original_sha256": "55743d9d518a0f8132e299c9c1aa518a4ba2cc58b48e47179d69796493cec38b",
+      "copy_sha256": "55743d9d518a0f8132e299c9c1aa518a4ba2cc58b48e47179d69796493cec38b"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0_2.controller_f7ffefe3d2b45b54704826647cd10a82.bundle",
+      "size": 6593125,
+      "mtime_ns": 1787822652778986500,
+      "original_sha256": "179c08741c4d30e613649e0f7ccecc0c58b6938dfb54af217ca7aa83fb863979",
+      "copy_sha256": "179c08741c4d30e613649e0f7ccecc0c58b6938dfb54af217ca7aa83fb863979"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0advanced_1.controller_2cbac57810c88b1574fcd918ee3bc55b.bundle",
+      "size": 7719642,
+      "mtime_ns": 1787822652772987800,
+      "original_sha256": "13d56dabbed1043165699daa97c20105e2a3aa35bd9a90dec78a7b5a59d430c8",
+      "copy_sha256": "13d56dabbed1043165699daa97c20105e2a3aa35bd9a90dec78a7b5a59d430c8"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0advanced_2.controller_0a152842a526ac716d4ff0181ed6e4b7.bundle",
+      "size": 8417164,
+      "mtime_ns": 1787822652773990200,
+      "original_sha256": "d59a04c7a00e5e4590ae68ae74712876c86103b4f09f54e4bf2b1ecbbada7363",
+      "copy_sha256": "d59a04c7a00e5e4590ae68ae74712876c86103b4f09f54e4bf2b1ecbbada7363"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0miko_1.controller_1774c24fce61bb528b46a0fedba74a4c.bundle",
+      "size": 9078458,
+      "mtime_ns": 1787822652773990200,
+      "original_sha256": "1d290f9102d71fa02835291d2b4a6a401b9ca75f2960952d9a200a1a6817eae8",
+      "copy_sha256": "1d290f9102d71fa02835291d2b4a6a401b9ca75f2960952d9a200a1a6817eae8"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0miko_2.controller_c98f53d367c549620d6026c1d763a45a.bundle",
+      "size": 9233552,
+      "mtime_ns": 1787822652774989300,
+      "original_sha256": "7fdc99bfc6bb9e1a1cb0e827ed77032290e8beb938d16ccb680adc06d7391066",
+      "copy_sha256": "7fdc99bfc6bb9e1a1cb0e827ed77032290e8beb938d16ccb680adc06d7391066"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0outfit_1.controller_83a24b18fdd2588685811733ca659fa2.bundle",
+      "size": 8807337,
+      "mtime_ns": 1787822652775988700,
+      "original_sha256": "429d87088d83762f917bed38765c6a3187ddaeeab75bcd01c877de0bf020f189",
+      "copy_sha256": "429d87088d83762f917bed38765c6a3187ddaeeab75bcd01c877de0bf020f189"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0outfit_2.controller_41000e444f4ddf010e64729eedca74c6.bundle",
+      "size": 8198760,
+      "mtime_ns": 1787822652776988700,
+      "original_sha256": "c86c7375d42e55399627df84e614ededcac4ae791165adc0fdee4a0a080e7048",
+      "copy_sha256": "c86c7375d42e55399627df84e614ededcac4ae791165adc0fdee4a0a080e7048"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0outfitqipao_1.controller_97ade8b828eca0ea38ca373c678f95e4.bundle",
+      "size": 9420723,
+      "mtime_ns": 1787822652774989300,
+      "original_sha256": "2c461cb4a80a25a937af3e0fc1356b38d4d79520c20f6dd8177f88e738aec282",
+      "copy_sha256": "2c461cb4a80a25a937af3e0fc1356b38d4d79520c20f6dd8177f88e738aec282"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0outfitqipao_2.controller_daf91cf26b4dddc9ea965fc5e247cf7c.bundle",
+      "size": 9878860,
+      "mtime_ns": 1787822652775988700,
+      "original_sha256": "3b37865cd9971bd110e15249366a4f9fe35a8e9631679d350ae860b4b6721641",
+      "copy_sha256": "3b37865cd9971bd110e15249366a4f9fe35a8e9631679d350ae860b4b6721641"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0uniform_1.controller_0fa84e931cbdfbc88623b90d8d761db2.bundle",
+      "size": 9461155,
+      "mtime_ns": 1787822652777987300,
+      "original_sha256": "5f5ff2f8aa0f72e91b36189215033f9ed570e0af412e7c7f3e7a0135a06c91f3",
+      "copy_sha256": "5f5ff2f8aa0f72e91b36189215033f9ed570e0af412e7c7f3e7a0135a06c91f3"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/0uniform_2.controller_75ea7fa4479d748b53692154fa5b70ad.bundle",
+      "size": 9523395,
+      "mtime_ns": 1787822652777987300,
+      "original_sha256": "b9e66133f6308db2f9e6184bedd316a7f78830e5a769defc174ac75b14037a0a",
+      "copy_sha256": "b9e66133f6308db2f9e6184bedd316a7f78830e5a769defc174ac75b14037a0a"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1_1.controller_fa2fa849bd17852b9bce4ef07e4f4ece.bundle",
+      "size": 6070090,
+      "mtime_ns": 1787822652787990700,
+      "original_sha256": "5d5868cdee07eb17a726f75b97fb25a920c1966ada0cb466be41545502160c2b",
+      "copy_sha256": "5d5868cdee07eb17a726f75b97fb25a920c1966ada0cb466be41545502160c2b"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1_2.controller_03f93154c3defc96c99fc4c0c4fb6770.bundle",
+      "size": 6235345,
+      "mtime_ns": 1787822652787990700,
+      "original_sha256": "2ea234e5e1aeca8db1625bf89d4d269d99a3bb7a6f3c0899ff59cbb0c919ad6f",
+      "copy_sha256": "2ea234e5e1aeca8db1625bf89d4d269d99a3bb7a6f3c0899ff59cbb0c919ad6f"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1advanced_1.controller_cba74676900a111487130f2da77b785e.bundle",
+      "size": 6247922,
+      "mtime_ns": 1787822652779987300,
+      "original_sha256": "5448c03915297d1c24c1e47c45f13b35b0eaa79b9683156a65100724260ccae8",
+      "copy_sha256": "5448c03915297d1c24c1e47c45f13b35b0eaa79b9683156a65100724260ccae8"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1advanced_2.controller_e66faac0a2215697f2a6226ab456d438.bundle",
+      "size": 6229637,
+      "mtime_ns": 1787822652779987300,
+      "original_sha256": "9fb522a73b5ee7acf9bdbddd3a1e572d69acd74cde08799ae61ecc180591f901",
+      "copy_sha256": "9fb522a73b5ee7acf9bdbddd3a1e572d69acd74cde08799ae61ecc180591f901"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1idle_1.controller_ee1a178260f90b9ae67f50ab74ce89bb.bundle",
+      "size": 6057196,
+      "mtime_ns": 1787822652780990500,
+      "original_sha256": "6ca3bd390024b4a2ef4f2e6e2f955c72582d1001b0832832c61c8f7ee4110ec7",
+      "copy_sha256": "6ca3bd390024b4a2ef4f2e6e2f955c72582d1001b0832832c61c8f7ee4110ec7"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1idle_2.controller_61439b32ba513a2da15f932ee0ded864.bundle",
+      "size": 6483760,
+      "mtime_ns": 1787822652780990500,
+      "original_sha256": "589cc7240e24760bb41f7c1c096a752ef700bd86a54bdbb665d03d547a75dc2c",
+      "copy_sha256": "589cc7240e24760bb41f7c1c096a752ef700bd86a54bdbb665d03d547a75dc2c"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1magical_1.controller_6a1ecad8f53f39cf06eaeca1f0e2adce.bundle",
+      "size": 9025851,
+      "mtime_ns": 1787822652781988400,
+      "original_sha256": "a0cbe6c8aabd0e57b4f9ac4b12599773c5b19ac08b8b8042b4add4818580e472",
+      "copy_sha256": "a0cbe6c8aabd0e57b4f9ac4b12599773c5b19ac08b8b8042b4add4818580e472"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1magical_2.controller_d1fe760c754662b1cbb4ce64448263da.bundle",
+      "size": 8365203,
+      "mtime_ns": 1787822652782987300,
+      "original_sha256": "b0d42c04f26c4ea27731d987d53461abd80a09eda47bc14e36de66470d4c09a7",
+      "copy_sha256": "b0d42c04f26c4ea27731d987d53461abd80a09eda47bc14e36de66470d4c09a7"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1outfit_1.controller_ed254604e10add75950dfa3b3ce5c39d.bundle",
+      "size": 6871427,
+      "mtime_ns": 1787822652784987800,
+      "original_sha256": "3a187dbf7b46d0927f7e72f90b9c79200207e8a35218ac37e0095009f5d2b28a",
+      "copy_sha256": "3a187dbf7b46d0927f7e72f90b9c79200207e8a35218ac37e0095009f5d2b28a"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1outfit_2.controller_22e9af94efed00886685da56a3fca4ec.bundle",
+      "size": 6452825,
+      "mtime_ns": 1787822652785988800,
+      "original_sha256": "d607d8192b738313134ae836e20efe3f64f520a82d0c1cde9d29d79765df3da2",
+      "copy_sha256": "d607d8192b738313134ae836e20efe3f64f520a82d0c1cde9d29d79765df3da2"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1outfitcoat_1.controller_2e51dd0935142fd91290cab751d8bb5d.bundle",
+      "size": 8498269,
+      "mtime_ns": 1787822652782987300,
+      "original_sha256": "1a38fd3bc0d3ef997f755af534e4cf236bf319bffadc8520162a85305ea13e1d",
+      "copy_sha256": "1a38fd3bc0d3ef997f755af534e4cf236bf319bffadc8520162a85305ea13e1d"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1outfitcoat_2.controller_057bd775e8fa0f07f839597f86005892.bundle",
+      "size": 8797177,
+      "mtime_ns": 1787822652783987000,
+      "original_sha256": "b13cde537a4ea9ca4abbe64464ffda68de220e84a71fbb4495051cb1ed7eb5ea",
+      "copy_sha256": "b13cde537a4ea9ca4abbe64464ffda68de220e84a71fbb4495051cb1ed7eb5ea"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1outfiturban_1.controller_82e702158ef9d2d4aef027ad25c07a7b.bundle",
+      "size": 7886600,
+      "mtime_ns": 1787822652783987000,
+      "original_sha256": "df787eca246916efb5dedaa49af9d7de36b908fa6ce0e2ab4843cca0dbed66dc",
+      "copy_sha256": "df787eca246916efb5dedaa49af9d7de36b908fa6ce0e2ab4843cca0dbed66dc"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1outfiturban_2.controller_6cb002fbd74d3ea733153bcb7e6e16df.bundle",
+      "size": 8801376,
+      "mtime_ns": 1787822652784987800,
+      "original_sha256": "8d78f2c083dad4af24b61e1b5c3cedc607826da97ddab064fcfd549d871c6389",
+      "copy_sha256": "8d78f2c083dad4af24b61e1b5c3cedc607826da97ddab064fcfd549d871c6389"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1schnabel_1.controller_8b305f99b0f5ef9cded7f360e6b68ea1.bundle",
+      "size": 7739158,
+      "mtime_ns": 1787822652786987300,
+      "original_sha256": "510d8a61792f9a577ebd531e97341c964b56a40526bd12937b6af031e287e435",
+      "copy_sha256": "510d8a61792f9a577ebd531e97341c964b56a40526bd12937b6af031e287e435"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/1schnabel_2.controller_3a5a292061ff7b997608bf00f4e51dc0.bundle",
+      "size": 8853122,
+      "mtime_ns": 1787822652786987300,
+      "original_sha256": "0a665189d52d1bb4dc5ac8f9fcbb80d034ee42e087a632e3e7864af691c257da",
+      "copy_sha256": "0a665189d52d1bb4dc5ac8f9fcbb80d034ee42e087a632e3e7864af691c257da"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/2_1.controller_34cebae1429251f2b1a314e8fa8c9697.bundle",
+      "size": 8092924,
+      "mtime_ns": 1787822652792989100,
+      "original_sha256": "fb9b3f5b0fe29e5cce38c94c403a397655c55424c7ca23bbff4536a21f87c1a7",
+      "copy_sha256": "fb9b3f5b0fe29e5cce38c94c403a397655c55424c7ca23bbff4536a21f87c1a7"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/2_2.controller_a4f085dcd757e635681dddfa824bc65b.bundle",
+      "size": 8093565,
+      "mtime_ns": 1787822652793987600,
+      "original_sha256": "f6779a3b019aa26f3830fecd667ac811c64f36dc34e3602412a67931aea3aeb9",
+      "copy_sha256": "f6779a3b019aa26f3830fecd667ac811c64f36dc34e3602412a67931aea3aeb9"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/2advanced_1.controller_81a94698cc25d0b2f5fe058798b02b51.bundle",
+      "size": 10287118,
+      "mtime_ns": 1787822652788987300,
+      "original_sha256": "00eac3ab23aadc9965f67ec5c908786ff686191f2c0318868e1677a8f282e089",
+      "copy_sha256": "00eac3ab23aadc9965f67ec5c908786ff686191f2c0318868e1677a8f282e089"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/2advanced_2.controller_dfa3a87f3698f372fea99819a3d7be4e.bundle",
+      "size": 9492108,
+      "mtime_ns": 1787822652788987300,
+      "original_sha256": "e00b8e7bf896fca486832913caa5faff010486695c72bf12d12cc8d9c5502837",
+      "copy_sha256": "e00b8e7bf896fca486832913caa5faff010486695c72bf12d12cc8d9c5502837"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/2idle_1.controller_4a42ac2c9243c5bb1a1f3f4b2c305eee.bundle",
+      "size": 10902712,
+      "mtime_ns": 1787822652789988500,
+      "original_sha256": "34a4e6699d5f8a5f2ff15b87a7821ae7919c7519403234da4c0fce0092b385fe",
+      "copy_sha256": "34a4e6699d5f8a5f2ff15b87a7821ae7919c7519403234da4c0fce0092b385fe"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/2idle_2.controller_69dff2f89a805012fa40bdf4f11b04bd.bundle",
+      "size": 10669252,
+      "mtime_ns": 1787822652789988500,
+      "original_sha256": "f036f0c28009a6007e53e6d447a75f60d471404275e63ca5f4891ab4ebdeccb8",
+      "copy_sha256": "f036f0c28009a6007e53e6d447a75f60d471404275e63ca5f4891ab4ebdeccb8"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/2outfit_1.controller_90e833a630e523dc3724fb3e13f69738.bundle",
+      "size": 7334560,
+      "mtime_ns": 1787822652791988800,
+      "original_sha256": "81a075fab005479ba8bb483d75abdcea91e675290b392aa164e4b27720a2c854",
+      "copy_sha256": "81a075fab005479ba8bb483d75abdcea91e675290b392aa164e4b27720a2c854"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/2outfit_2.controller_f1414d8d1ebe2bf26230cea5f037c8e5.bundle",
+      "size": 8869311,
+      "mtime_ns": 1787822652792989100,
+      "original_sha256": "fb557ee6bf289d2a243354b580423fad423389f199fe1c86124ee79d452acf92",
+      "copy_sha256": "fb557ee6bf289d2a243354b580423fad423389f199fe1c86124ee79d452acf92"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/2outfitol_1.controller_5100301a306178729229f9b859aa1b7f.bundle",
+      "size": 7841051,
+      "mtime_ns": 1787822652790988700,
+      "original_sha256": "f9e697699238003a5019fd1f5efd4673b2902b14692ba9136db5b97d7ebaed25",
+      "copy_sha256": "f9e697699238003a5019fd1f5efd4673b2902b14692ba9136db5b97d7ebaed25"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/2outfitol_2.controller_a63725e1619305573de05a7ae01e7c6c.bundle",
+      "size": 9352370,
+      "mtime_ns": 1787822652790988700,
+      "original_sha256": "6fb0b1c0d68de25c7cddbd02ca86872a551d764f37fbffc83208a14fa3e09fb9",
+      "copy_sha256": "6fb0b1c0d68de25c7cddbd02ca86872a551d764f37fbffc83208a14fa3e09fb9"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3_1.controller_113a6544348f21713368cb72c73564ef.bundle",
+      "size": 6069619,
+      "mtime_ns": 1787822652799990000,
+      "original_sha256": "cf1c14b0d55030792fd447ce1993548bccda4724fe39472996fb34f91e7b2b81",
+      "copy_sha256": "cf1c14b0d55030792fd447ce1993548bccda4724fe39472996fb34f91e7b2b81"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3_2.controller_fa1a82dba6449d6706da515672453398.bundle",
+      "size": 7074787,
+      "mtime_ns": 1787822652800986900,
+      "original_sha256": "315996e424816c78eba7ff85366d65b1c077050a24d6de39ffd8fbd39ee82e20",
+      "copy_sha256": "315996e424816c78eba7ff85366d65b1c077050a24d6de39ffd8fbd39ee82e20"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3advanced_1.controller_f46acd15f8bf9c7ec9ffc8daf832da12.bundle",
+      "size": 7340732,
+      "mtime_ns": 1787822652793987600,
+      "original_sha256": "bd5969edd4c3ae4986c183e9e02e11e2f28c8ab62042bcb4ae0a81eeaa47fa52",
+      "copy_sha256": "bd5969edd4c3ae4986c183e9e02e11e2f28c8ab62042bcb4ae0a81eeaa47fa52"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3advanced_2.controller_cfb1c76a2b573f7c64c07e822a234e6c.bundle",
+      "size": 7231370,
+      "mtime_ns": 1787822652794987400,
+      "original_sha256": "90779f3b90354040e0f3a0d51a645d40676c32b96c505bccd9890579fa1cffd8",
+      "copy_sha256": "90779f3b90354040e0f3a0d51a645d40676c32b96c505bccd9890579fa1cffd8"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3beret_1.controller_7280b8be94806829b5b07b6a2e2a8a6c.bundle",
+      "size": 7412578,
+      "mtime_ns": 1787822652794987400,
+      "original_sha256": "fdb8ab16b0fcbf5be70e87f2884dbea080620a3a4b93aea59884a1a0e4592d82",
+      "copy_sha256": "fdb8ab16b0fcbf5be70e87f2884dbea080620a3a4b93aea59884a1a0e4592d82"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3beret_2.controller_454a0d1f976bf00024d59bc326c250e0.bundle",
+      "size": 7796760,
+      "mtime_ns": 1787822652795990600,
+      "original_sha256": "b18ef072792c400259d905df6dd21b9c50a2b000048d53eac3c3aeca7f6468ac",
+      "copy_sha256": "b18ef072792c400259d905df6dd21b9c50a2b000048d53eac3c3aeca7f6468ac"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3outfit_1.controller_a6574083d9ef8b9911b4313d3ca6ac03.bundle",
+      "size": 6294646,
+      "mtime_ns": 1787822652797987900,
+      "original_sha256": "9249944c1d68a2a5a07c942074f8d740733324a4eeccb8a265db915a1c9625b6",
+      "copy_sha256": "9249944c1d68a2a5a07c942074f8d740733324a4eeccb8a265db915a1c9625b6"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3outfit_2.controller_fb69dd8800ca3502b719f508c4f8acc9.bundle",
+      "size": 6280474,
+      "mtime_ns": 1787822652798987200,
+      "original_sha256": "90716b2af936727ad59cbe1c7b9ffac55457d3ca7c962fc90b040821bea15ef5",
+      "copy_sha256": "90716b2af936727ad59cbe1c7b9ffac55457d3ca7c962fc90b040821bea15ef5"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3outfitcoat_1.controller_c2de741491cabe403cb674541eeaec7c.bundle",
+      "size": 6861939,
+      "mtime_ns": 1787822652795990600,
+      "original_sha256": "7b3a9fe6b66ce156a6fc8e80605af70451de44c3e1045b2f870911ce874db43c",
+      "copy_sha256": "7b3a9fe6b66ce156a6fc8e80605af70451de44c3e1045b2f870911ce874db43c"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3outfitcoat_2.controller_7b6dfa5b996b1b3b9ab4a2b579c0dbbd.bundle",
+      "size": 7690209,
+      "mtime_ns": 1787822652796990000,
+      "original_sha256": "8448d72399dfa71b82d60631baf0b44463e0179307700ebbc82d218c7ccd51fc",
+      "copy_sha256": "8448d72399dfa71b82d60631baf0b44463e0179307700ebbc82d218c7ccd51fc"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3outfitwarmth_1.controller_4c6304e71fce95aaedcfbb20f99cefbb.bundle",
+      "size": 7208385,
+      "mtime_ns": 1787822652796990000,
+      "original_sha256": "38d2f5d7b72da1e82ddb3556c5d30c338b6bdf22f489f1b767c925093b0b634d",
+      "copy_sha256": "38d2f5d7b72da1e82ddb3556c5d30c338b6bdf22f489f1b767c925093b0b634d"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3outfitwarmth_2.controller_2349a69ba13cc20c561a79e45e1d5d02.bundle",
+      "size": 7170539,
+      "mtime_ns": 1787822652797987900,
+      "original_sha256": "b1f2d198936e2a918a69c3c27aa1a7a82897e0d949240cd8f101ab2a5109940b",
+      "copy_sha256": "b1f2d198936e2a918a69c3c27aa1a7a82897e0d949240cd8f101ab2a5109940b"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3suit_1.controller_9189917bbae6a15ecbed0786eb045dfb.bundle",
+      "size": 6588428,
+      "mtime_ns": 1787822652798987200,
+      "original_sha256": "ada5d89b4d42665b0df953038def015532edb770a4f446004351904063aa7f39",
+      "copy_sha256": "ada5d89b4d42665b0df953038def015532edb770a4f446004351904063aa7f39"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/3suit_2.controller_4cd94568f297673444453505f91f6757.bundle",
+      "size": 7014625,
+      "mtime_ns": 1787822652799990000,
+      "original_sha256": "a0fd1108019e5565c02a7d755623065900da722e94889bb9d43a43ea617a71bc",
+      "copy_sha256": "a0fd1108019e5565c02a7d755623065900da722e94889bb9d43a43ea617a71bc"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/4_1.controller_4c2cc5e5761e590e4bf5b39d2f5ad30c.bundle",
+      "size": 7423842,
+      "mtime_ns": 1787822652804987700,
+      "original_sha256": "7410927648e3faea0b884caa92f2641e4604501daa3973c78948c71435b55ff2",
+      "copy_sha256": "7410927648e3faea0b884caa92f2641e4604501daa3973c78948c71435b55ff2"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/4_2.controller_b032e72a7eece627f69e9221f5295594.bundle",
+      "size": 7269616,
+      "mtime_ns": 1787822652804987700,
+      "original_sha256": "ffd2e28bf6083ad9634f01c6b0cc85bab5b4d94ce105ef4bed31cf899c766e34",
+      "copy_sha256": "ffd2e28bf6083ad9634f01c6b0cc85bab5b4d94ce105ef4bed31cf899c766e34"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/4advanced_1.controller_803962d6fc7e5f1d100434c6bf7f90d2.bundle",
+      "size": 8957521,
+      "mtime_ns": 1787822652800986900,
+      "original_sha256": "4105113d1095e92b3784b3a64ab29ba3cbdf60dccdec16e99815674b0e955fb3",
+      "copy_sha256": "4105113d1095e92b3784b3a64ab29ba3cbdf60dccdec16e99815674b0e955fb3"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/4advanced_2.controller_7e744e453220e8742810a9a8bfc7ffef.bundle",
+      "size": 8497825,
+      "mtime_ns": 1787822652801990400,
+      "original_sha256": "9b0c5c64c8f66e6ed872c0ede91b948c3a6923d0d2cc73eabb4eb3f6d9ea6427",
+      "copy_sha256": "9b0c5c64c8f66e6ed872c0ede91b948c3a6923d0d2cc73eabb4eb3f6d9ea6427"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/4camouflage_1.controller_e8f152d53a5fde6c4a6ff216e2b1b8df.bundle",
+      "size": 10313559,
+      "mtime_ns": 1787822652801990400,
+      "original_sha256": "c6cbaa1d51b1a16bf330d865aa9f58ce455d312d7604647d3ac1b11d295199ad",
+      "copy_sha256": "c6cbaa1d51b1a16bf330d865aa9f58ce455d312d7604647d3ac1b11d295199ad"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/4camouflage_2.controller_85c05e7e847dfd454d8667e5bb270563.bundle",
+      "size": 10633756,
+      "mtime_ns": 1787822652802986900,
+      "original_sha256": "b5cc26ff396e6fae02696682bb979663a13364af793599717fce1629321d62fd",
+      "copy_sha256": "b5cc26ff396e6fae02696682bb979663a13364af793599717fce1629321d62fd"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/4outfit_1.controller_c368941dc3c5d07a43d532cb64e9c64f.bundle",
+      "size": 7997982,
+      "mtime_ns": 1787822652802986900,
+      "original_sha256": "3eda2d3f29d5b2d0983bc32b99e91783302987f79f46cc30c87fda3e9bc813cf",
+      "copy_sha256": "3eda2d3f29d5b2d0983bc32b99e91783302987f79f46cc30c87fda3e9bc813cf"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halfidleanimation_assets_assets/assetbundles/controller/halfidle/4outfit_2.controller_385b8e583754c8923ef8ab56089a83e4.bundle",
+      "size": 8715520,
+      "mtime_ns": 1787822652803987900,
+      "original_sha256": "c8c78b054c1f26256b0d5274b23ed9aef750e85e346d10733a3a01c378d33a88",
+      "copy_sha256": "c8c78b054c1f26256b0d5274b23ed9aef750e85e346d10733a3a01c378d33a88"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0advancedtalk_1.controller_e68983675f6f6a1af77e61dfcfa5dc5d.bundle",
+      "size": 7465935,
+      "mtime_ns": 1787822652805988700,
+      "original_sha256": "1ce829e61031f1fc9d50d556fc5cecc78bfa4dd7a686cd8688841ed32d474ffa",
+      "copy_sha256": "1ce829e61031f1fc9d50d556fc5cecc78bfa4dd7a686cd8688841ed32d474ffa"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0advancedtalk_2.controller_0abf0954af4418fcdb948ff1dd40678e.bundle",
+      "size": 8546583,
+      "mtime_ns": 1787822652806987400,
+      "original_sha256": "0b1f6beaf109313ece4b09a58608d2eef3d88e4e67c02a3baaf7063412181df3",
+      "copy_sha256": "0b1f6beaf109313ece4b09a58608d2eef3d88e4e67c02a3baaf7063412181df3"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0mikotalk_1.controller_14915d7e8e9452d2e5cd0c3ffd10dd78.bundle",
+      "size": 9442836,
+      "mtime_ns": 1787822652806987400,
+      "original_sha256": "0314222bb181c0ee2979d28cb7f5da02427eb1423d28ec0e8e2a5ebf8dc6cb03",
+      "copy_sha256": "0314222bb181c0ee2979d28cb7f5da02427eb1423d28ec0e8e2a5ebf8dc6cb03"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0mikotalk_2.controller_aeb9911983158142af24f667456672cf.bundle",
+      "size": 8815387,
+      "mtime_ns": 1787822652807987900,
+      "original_sha256": "76b6e6b1a8c33a006cb79af3dfe4bb31b7177544f8929fe7f75d17b52d7777f5",
+      "copy_sha256": "76b6e6b1a8c33a006cb79af3dfe4bb31b7177544f8929fe7f75d17b52d7777f5"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0outfitqipaotalk_1.controller_e18bf816decb3b65650c8a079a5a1627.bundle",
+      "size": 10276239,
+      "mtime_ns": 1787822652807987900,
+      "original_sha256": "1c140438d6741c6acacea27dd7e2618832c8372edb6bb34e75fd8ee9d72b26f7",
+      "copy_sha256": "1c140438d6741c6acacea27dd7e2618832c8372edb6bb34e75fd8ee9d72b26f7"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0outfitqipaotalk_2.controller_73512dc6fb3e4a86d710c3bcba8ff1c5.bundle",
+      "size": 10487121,
+      "mtime_ns": 1787822652808987400,
+      "original_sha256": "7ea878db9449ea0fce9aab7c21d6c0e644a6c346d1c92d90f752a157f9c00e61",
+      "copy_sha256": "7ea878db9449ea0fce9aab7c21d6c0e644a6c346d1c92d90f752a157f9c00e61"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0outfittalk_1.controller_cd34724dd20333dd9953ad1ee7a9affb.bundle",
+      "size": 8642896,
+      "mtime_ns": 1787822652808987400,
+      "original_sha256": "2c1c7dbdd5c0d436f815dbe4b0645ab8550fbbf0dfc760ff7dd04859ac72c9ce",
+      "copy_sha256": "2c1c7dbdd5c0d436f815dbe4b0645ab8550fbbf0dfc760ff7dd04859ac72c9ce"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0outfittalk_2.controller_c990d764d7cce5dc5477a9979bb3eb29.bundle",
+      "size": 7936711,
+      "mtime_ns": 1787822652809990600,
+      "original_sha256": "f645b39863837acc54ef0a2f772832a31f65ac788c09b1d9607d4b876a9d6b45",
+      "copy_sha256": "f645b39863837acc54ef0a2f772832a31f65ac788c09b1d9607d4b876a9d6b45"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0talk_1.controller_19e28908d1fde2c46c129a3be71a8d58.bundle",
+      "size": 6734267,
+      "mtime_ns": 1787822652809990600,
+      "original_sha256": "005aef9efb29070880ba751dbf9cab2c9e7773f980054a8d699c10682b12f2e6",
+      "copy_sha256": "005aef9efb29070880ba751dbf9cab2c9e7773f980054a8d699c10682b12f2e6"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0talk_2.controller_a94300a3a4b9b4ee32a704b363f19845.bundle",
+      "size": 6804730,
+      "mtime_ns": 1787822652810986500,
+      "original_sha256": "5330a986bfa286e097a6cd44a87410c6a86c32a223989cd4610dcb7d7da2201c",
+      "copy_sha256": "5330a986bfa286e097a6cd44a87410c6a86c32a223989cd4610dcb7d7da2201c"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0uniformtalk_1.controller_78213827507382e88054d496d358cb24.bundle",
+      "size": 9552492,
+      "mtime_ns": 1787822652810986500,
+      "original_sha256": "7818a740240867eb94da9d716c06bf8600d6363a685c05391eda54db1dd71151",
+      "copy_sha256": "7818a740240867eb94da9d716c06bf8600d6363a685c05391eda54db1dd71151"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/0uniformtalk_2.controller_b615611c0dfde01d17686437234f0fd5.bundle",
+      "size": 9572652,
+      "mtime_ns": 1787822652811988200,
+      "original_sha256": "afc694c3f7d717144bdad9af901efadc581364fdb59dd72e7f1efe9136c8c0ff",
+      "copy_sha256": "afc694c3f7d717144bdad9af901efadc581364fdb59dd72e7f1efe9136c8c0ff"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1advancedtalk_1.controller_7a16ef6a3279f88915638240f73d82ab.bundle",
+      "size": 6485473,
+      "mtime_ns": 1787822652811988200,
+      "original_sha256": "e158aea6737e4a6de5c1e02189761aae1430530c47a7a0d4a83b7d0951613330",
+      "copy_sha256": "e158aea6737e4a6de5c1e02189761aae1430530c47a7a0d4a83b7d0951613330"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1advancedtalk_2.controller_72c233d7fb464be6175ffc3f8ba11387.bundle",
+      "size": 6010420,
+      "mtime_ns": 1787822652812987300,
+      "original_sha256": "1bda745667442b5a8a9fbcfac9587e09b9365d4e9e2426f1b1c0c12c52697fa5",
+      "copy_sha256": "1bda745667442b5a8a9fbcfac9587e09b9365d4e9e2426f1b1c0c12c52697fa5"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1idletalk_1.controller_7dc399b44bb466a3fab5d655ad2fb10a.bundle",
+      "size": 6551667,
+      "mtime_ns": 1787822652812987300,
+      "original_sha256": "4692babc73627f40154d3a8779547eb6b03f6875502ab09d3e3334af62ee2bf5",
+      "copy_sha256": "4692babc73627f40154d3a8779547eb6b03f6875502ab09d3e3334af62ee2bf5"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1idletalk_2.controller_dfd8329c73edc475687292cb8e78aa6a.bundle",
+      "size": 6417133,
+      "mtime_ns": 1787822652813987500,
+      "original_sha256": "f9f1815d9f99ad88ebabaaf8ba653ca8f734527a5a74b111eeb2bc5681f4f885",
+      "copy_sha256": "f9f1815d9f99ad88ebabaaf8ba653ca8f734527a5a74b111eeb2bc5681f4f885"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1magicaltalk_1.controller_3944d311ee6330c32c988898326fc720.bundle",
+      "size": 9134311,
+      "mtime_ns": 1787822652814990400,
+      "original_sha256": "3466c4595700fcc3894b12844690798572a42658bf93ebabc9e2fb4b2c8769dc",
+      "copy_sha256": "3466c4595700fcc3894b12844690798572a42658bf93ebabc9e2fb4b2c8769dc"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1magicaltalk_2.controller_65763f42c9e9a17581ae8ffb679b148f.bundle",
+      "size": 8916056,
+      "mtime_ns": 1787822652814990400,
+      "original_sha256": "0fb9dff3e6f76a62cf26baf4a31868c47adc1203917512b63c0a11c6f89d6e5b",
+      "copy_sha256": "0fb9dff3e6f76a62cf26baf4a31868c47adc1203917512b63c0a11c6f89d6e5b"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1outfitcoattalk_1.controller_310801a05f6bbd553139c41144fb8b4e.bundle",
+      "size": 8223282,
+      "mtime_ns": 1787822652815987800,
+      "original_sha256": "4e6559a388fe56190bccf1aaf22a60c55a94ecb5c6606b325aad5e180a2a91a5",
+      "copy_sha256": "4e6559a388fe56190bccf1aaf22a60c55a94ecb5c6606b325aad5e180a2a91a5"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1outfitcoattalk_2.controller_31057f51a2a00086e0982f06da96d09b.bundle",
+      "size": 8111667,
+      "mtime_ns": 1787822652815987800,
+      "original_sha256": "506436a844a0b954f84ae4dcbad33bfb5ecbdde5030ed7f4b4d3f1ef0a126d72",
+      "copy_sha256": "506436a844a0b954f84ae4dcbad33bfb5ecbdde5030ed7f4b4d3f1ef0a126d72"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1outfittalk_1.controller_cc62dbc0b4c2cfc969e82e21f225598a.bundle",
+      "size": 6516726,
+      "mtime_ns": 1787822652816986800,
+      "original_sha256": "68a0f3963f96236319d42af2529c353ddc8f69a80ab07a0091f138cd3d6416cd",
+      "copy_sha256": "68a0f3963f96236319d42af2529c353ddc8f69a80ab07a0091f138cd3d6416cd"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1outfittalk_2.controller_d9a8ac985775cfbc84127ed869ef7a72.bundle",
+      "size": 6619487,
+      "mtime_ns": 1787822652816986800,
+      "original_sha256": "19b8bec6753aa9a34ac20609f36bba862e97e04ab9fd54fd0a99ecbed18abbc0",
+      "copy_sha256": "19b8bec6753aa9a34ac20609f36bba862e97e04ab9fd54fd0a99ecbed18abbc0"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1outfiturbantalk_1.controller_1681822667ab32e48fb58bff182e238f.bundle",
+      "size": 8590944,
+      "mtime_ns": 1787822652817987700,
+      "original_sha256": "c3e089d44542d04c2ffbe2575650b337a6c3d5612c43f47b2b3b5eb675c1de38",
+      "copy_sha256": "c3e089d44542d04c2ffbe2575650b337a6c3d5612c43f47b2b3b5eb675c1de38"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1outfiturbantalk_2.controller_c8294ed14b5d4812041a21e093955771.bundle",
+      "size": 9031391,
+      "mtime_ns": 1787822652818987500,
+      "original_sha256": "3343ccf434d96a677936ba1f87b715c195834ea30c02fc354ef625d7861765a1",
+      "copy_sha256": "3343ccf434d96a677936ba1f87b715c195834ea30c02fc354ef625d7861765a1"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1schnabeltalk_1.controller_71b930d67b1351c78144912623eb038f.bundle",
+      "size": 8650108,
+      "mtime_ns": 1787822652818987500,
+      "original_sha256": "a19ae472d3560d68050cf86ce3339e3513cdcb894b62f8cc3a836b03c1b6cc92",
+      "copy_sha256": "a19ae472d3560d68050cf86ce3339e3513cdcb894b62f8cc3a836b03c1b6cc92"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1schnabeltalk_2.controller_c5af432203064d836502e87033703d7f.bundle",
+      "size": 9010391,
+      "mtime_ns": 1787822652818987500,
+      "original_sha256": "9652f29230f175e032f07e21fe3cca1f8480e51f1ce6f3ee8d354e623b4ec38e",
+      "copy_sha256": "9652f29230f175e032f07e21fe3cca1f8480e51f1ce6f3ee8d354e623b4ec38e"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1talk_1.controller_9ddf7fdafd24911ae2e710ef4b9da60d.bundle",
+      "size": 6058933,
+      "mtime_ns": 1787822652819987500,
+      "original_sha256": "f3ccf4eeab23bdcb066a26b2fbac37070c5dbef4986031a3ca1175c16040fe75",
+      "copy_sha256": "f3ccf4eeab23bdcb066a26b2fbac37070c5dbef4986031a3ca1175c16040fe75"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/1talk_2.controller_6800b6ec184679b081ee87a01610e2b5.bundle",
+      "size": 5964353,
+      "mtime_ns": 1787822652819987500,
+      "original_sha256": "aaf16ac227f91562e1baa173ebf72ab6a89389b7feabc5693449f7f06d67fcf5",
+      "copy_sha256": "aaf16ac227f91562e1baa173ebf72ab6a89389b7feabc5693449f7f06d67fcf5"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/2advancedtalk_1.controller_a73871374a205efc20b95cf414294f31.bundle",
+      "size": 10728024,
+      "mtime_ns": 1787822652820988700,
+      "original_sha256": "837f238000807dca6d0e13bb4df783c6d6497199275731ca7a7de4493a7bb47d",
+      "copy_sha256": "837f238000807dca6d0e13bb4df783c6d6497199275731ca7a7de4493a7bb47d"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/2advancedtalk_2.controller_aa4367c16eb94171d780829656df4f26.bundle",
+      "size": 10383078,
+      "mtime_ns": 1787822652821987400,
+      "original_sha256": "e5d7671184a1ef9556bb5e58a02d4e05b02204732b1d67c7369ea6e76b706873",
+      "copy_sha256": "e5d7671184a1ef9556bb5e58a02d4e05b02204732b1d67c7369ea6e76b706873"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/2idletalk_1.controller_4353687235bce88336e282221d6d0e6c.bundle",
+      "size": 10094754,
+      "mtime_ns": 1787822652821987400,
+      "original_sha256": "c99bf87915f1fcbb7cff80a2c47d32aa2b0b1a53beb3f4a40d6030713d9df66e",
+      "copy_sha256": "c99bf87915f1fcbb7cff80a2c47d32aa2b0b1a53beb3f4a40d6030713d9df66e"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/2idletalk_2.controller_94c2375eb775b33dbef61db97b1ce0cd.bundle",
+      "size": 12114277,
+      "mtime_ns": 1787822652822987900,
+      "original_sha256": "46048b5e2633276f46ee8d46e1d1117419cb5e4b1d50a0c4320f31ed6a3a7cf3",
+      "copy_sha256": "46048b5e2633276f46ee8d46e1d1117419cb5e4b1d50a0c4320f31ed6a3a7cf3"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/2outfitoltalk_1.controller_07ac52dc4eed8faf4073d27313841ae4.bundle",
+      "size": 9435198,
+      "mtime_ns": 1787822652822987900,
+      "original_sha256": "cc1b2d975dfefbf711dca5263234aec64be408f8d80ad0123409f578bd06b770",
+      "copy_sha256": "cc1b2d975dfefbf711dca5263234aec64be408f8d80ad0123409f578bd06b770"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/2outfitoltalk_2.controller_35f32f87fccb2ef00b4b7fbdb68265bb.bundle",
+      "size": 9523124,
+      "mtime_ns": 1787822652823990500,
+      "original_sha256": "dd5c3f60399bf3edeeb3d96b116d4d74b63e46645dea0e9e5f816c51b97af718",
+      "copy_sha256": "dd5c3f60399bf3edeeb3d96b116d4d74b63e46645dea0e9e5f816c51b97af718"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/2outfittalk_1.controller_9cf4a5105b7376cc473c8e4739720ac9.bundle",
+      "size": 7882576,
+      "mtime_ns": 1787822652823990500,
+      "original_sha256": "ec35ee1b4dd402a54282855fbc7160c8418323d0fa07509303be763a473c0925",
+      "copy_sha256": "ec35ee1b4dd402a54282855fbc7160c8418323d0fa07509303be763a473c0925"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/2outfittalk_2.controller_989508b9c821847faa4bbac07a878fd8.bundle",
+      "size": 8857011,
+      "mtime_ns": 1787822652824991000,
+      "original_sha256": "7daa1f02429cb06f1bcbda156dc3f99bc73c11f942671591b2a4a928d5f03114",
+      "copy_sha256": "7daa1f02429cb06f1bcbda156dc3f99bc73c11f942671591b2a4a928d5f03114"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/2talk_1.controller_5d965d21b262ee8dbc468ef4c774fc0d.bundle",
+      "size": 7583350,
+      "mtime_ns": 1787822652824991000,
+      "original_sha256": "452cbe0b77915d9bcb12e0084db03643de8470c4b7208b38cbdc566ee3f98b94",
+      "copy_sha256": "452cbe0b77915d9bcb12e0084db03643de8470c4b7208b38cbdc566ee3f98b94"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/2talk_2.controller_886393c955b98287f253bb52544b8d92.bundle",
+      "size": 7581848,
+      "mtime_ns": 1787822652825989400,
+      "original_sha256": "e7e6473e69cea090a2bf61ec29fee899900a96fc194960041335b27858523a03",
+      "copy_sha256": "e7e6473e69cea090a2bf61ec29fee899900a96fc194960041335b27858523a03"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3advancedtalk_1.controller_61731594bb39e232bfc9bd1aac77b33e.bundle",
+      "size": 7245202,
+      "mtime_ns": 1787822652825989400,
+      "original_sha256": "d0cb1d9692f7cb16e741af962ddae7b365a03f41ff1d66dfb8cd079d4f9c8516",
+      "copy_sha256": "d0cb1d9692f7cb16e741af962ddae7b365a03f41ff1d66dfb8cd079d4f9c8516"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3advancedtalk_2.controller_54002d0ccc0b2902c55cec37c8da252a.bundle",
+      "size": 7266990,
+      "mtime_ns": 1787822652826987500,
+      "original_sha256": "a9ed9539e7008d0e2cceb76c342f069f7e9496c5325c4104aee260857c3a6eca",
+      "copy_sha256": "a9ed9539e7008d0e2cceb76c342f069f7e9496c5325c4104aee260857c3a6eca"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3berettalk_1.controller_a475e67ae55c7a4eac0415c165ee9184.bundle",
+      "size": 9126439,
+      "mtime_ns": 1787822652826987500,
+      "original_sha256": "4ea203e32224b0b9a267f2cf3ac478569f5f267fe2a2e6def4d7d644b27025e5",
+      "copy_sha256": "4ea203e32224b0b9a267f2cf3ac478569f5f267fe2a2e6def4d7d644b27025e5"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3berettalk_2.controller_de1b3473c0b7d20caad29dff876b5b77.bundle",
+      "size": 8121048,
+      "mtime_ns": 1787822652827986700,
+      "original_sha256": "39216fdb07e8daf5f0632a9d08e3f15612e7f6014790539cf207a8a152ec50f4",
+      "copy_sha256": "39216fdb07e8daf5f0632a9d08e3f15612e7f6014790539cf207a8a152ec50f4"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3outfitcoattalk_1.controller_1bb6fd409c9271f8ad3d269c6ad23fcd.bundle",
+      "size": 7286555,
+      "mtime_ns": 1787822652827986700,
+      "original_sha256": "2740c944cc74cc05103d37e811ee7ea2806aa5b7dcc63bd4ecc607acf15c9e2c",
+      "copy_sha256": "2740c944cc74cc05103d37e811ee7ea2806aa5b7dcc63bd4ecc607acf15c9e2c"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3outfitcoattalk_2.controller_ce72ac1fb93b198d50dad0100458d3ce.bundle",
+      "size": 6928138,
+      "mtime_ns": 1787822652828989300,
+      "original_sha256": "0a13455413df8f41b58c2d6ff37809d027e34f3e2775037172484dc2c57febf3",
+      "copy_sha256": "0a13455413df8f41b58c2d6ff37809d027e34f3e2775037172484dc2c57febf3"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3outfittalk_1.controller_ec527fd6664e62ba0fce6fd2f95336db.bundle",
+      "size": 6896470,
+      "mtime_ns": 1787822652829987500,
+      "original_sha256": "0f64533a3fc10d456d4d12fc5ee8fb601d903ad7a38a52c052c247b0d486b907",
+      "copy_sha256": "0f64533a3fc10d456d4d12fc5ee8fb601d903ad7a38a52c052c247b0d486b907"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3outfittalk_2.controller_b09e3567a2ce825d10adb18be3ba9e59.bundle",
+      "size": 6821586,
+      "mtime_ns": 1787822652829987500,
+      "original_sha256": "b5f42b7e50442e8d04040beb1c25122b2a88c6793e51eb6b75b046c56e7426f6",
+      "copy_sha256": "b5f42b7e50442e8d04040beb1c25122b2a88c6793e51eb6b75b046c56e7426f6"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3outfitwarmthtalk_1.controller_be13241b5d01bf8202e3650f6439eb25.bundle",
+      "size": 7645546,
+      "mtime_ns": 1787822652830987200,
+      "original_sha256": "f064e79c87f5beb06476090df38e7df7a1f2d4c3d856f7efc26a6c8028fa5f43",
+      "copy_sha256": "f064e79c87f5beb06476090df38e7df7a1f2d4c3d856f7efc26a6c8028fa5f43"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3outfitwarmthtalk_2.controller_f675229aa549d8be8d3b2b5d3a3098a4.bundle",
+      "size": 7116557,
+      "mtime_ns": 1787822652830987200,
+      "original_sha256": "e65bd4f72348780beabf74fc79da95b8cdee13df3e56890a784df941d0e233ca",
+      "copy_sha256": "e65bd4f72348780beabf74fc79da95b8cdee13df3e56890a784df941d0e233ca"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3suittalk_1.controller_2fe3e0d3b50923ef13e4e5c205d3e43f.bundle",
+      "size": 7124948,
+      "mtime_ns": 1787822652831987700,
+      "original_sha256": "6c5af7054534bb15fd0fa8de5a6d6bd3a53d0a5a4d0d55c7bcbcf392ad1fc2b2",
+      "copy_sha256": "6c5af7054534bb15fd0fa8de5a6d6bd3a53d0a5a4d0d55c7bcbcf392ad1fc2b2"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3suittalk_2.controller_94b3579f6e155d3c084680c9376493f1.bundle",
+      "size": 6989923,
+      "mtime_ns": 1787822652831987700,
+      "original_sha256": "090eed7fa56d063dfaf95e679c4e1ec387e8620acfbf8bde5b4cd4389e14deac",
+      "copy_sha256": "090eed7fa56d063dfaf95e679c4e1ec387e8620acfbf8bde5b4cd4389e14deac"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3talk_1.controller_14ec73b28da80fe05edc2c3ea46e5bc6.bundle",
+      "size": 6174372,
+      "mtime_ns": 1787822652832990800,
+      "original_sha256": "3db20236d5ce38b63a4c512bc2e8593ddb89d3e96ecc2eedb3a1089dd6184579",
+      "copy_sha256": "3db20236d5ce38b63a4c512bc2e8593ddb89d3e96ecc2eedb3a1089dd6184579"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/3talk_2.controller_99e26a4f1d86baf68cd8bb5e09a8c044.bundle",
+      "size": 6438553,
+      "mtime_ns": 1787822652833987700,
+      "original_sha256": "39d628af1be838ad26704fc3d6637c3aecba61924c6796699e9e42eb147a9dc0",
+      "copy_sha256": "39d628af1be838ad26704fc3d6637c3aecba61924c6796699e9e42eb147a9dc0"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/4advancedtalk_1.controller_e1c903716ec6c8830da1e726c12aac3c.bundle",
+      "size": 8515677,
+      "mtime_ns": 1787822652833987700,
+      "original_sha256": "4a1054e184f83c02cebab9de52e62561dc79b8910dcc295c0ec3d9f44308da3d",
+      "copy_sha256": "4a1054e184f83c02cebab9de52e62561dc79b8910dcc295c0ec3d9f44308da3d"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/4advancedtalk_2.controller_bcc463f298062d2b9c3abd9040963bca.bundle",
+      "size": 8816267,
+      "mtime_ns": 1787822652834987300,
+      "original_sha256": "ac2ab4ee21849b7cf1d6769611ce39c398611bcdceb86def39dd7c9505113aba",
+      "copy_sha256": "ac2ab4ee21849b7cf1d6769611ce39c398611bcdceb86def39dd7c9505113aba"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/4camouflagetalk_1.controller_9c2ad53439370acfb182a4c73980aa65.bundle",
+      "size": 10493274,
+      "mtime_ns": 1787822652834987300,
+      "original_sha256": "5bc0d4cf130aa23c4ac6119a7c9c05b3212a94e5895a0213bfbffcd42c418722",
+      "copy_sha256": "5bc0d4cf130aa23c4ac6119a7c9c05b3212a94e5895a0213bfbffcd42c418722"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/4camouflagetalk_2.controller_ba5717ee40e1819c98f03e54ae137f94.bundle",
+      "size": 10546351,
+      "mtime_ns": 1787822652835987100,
+      "original_sha256": "3692ff3c05e8d855a9ae2fe8fc0624c392267558ff175515f5fe5f92c5861a4f",
+      "copy_sha256": "3692ff3c05e8d855a9ae2fe8fc0624c392267558ff175515f5fe5f92c5861a4f"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/4outfittalk_1.controller_0fcac3cf027a19098b55bfbac5bd2bd9.bundle",
+      "size": 7961023,
+      "mtime_ns": 1787822652835987100,
+      "original_sha256": "e1143ca60b377c2c411281f04f631646bf0405f9c45c7f1c74ba6ec0866e4c78",
+      "copy_sha256": "e1143ca60b377c2c411281f04f631646bf0405f9c45c7f1c74ba6ec0866e4c78"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/4outfittalk_2.controller_02fb7df3fa81a21a40a794810ae0dc6e.bundle",
+      "size": 8565550,
+      "mtime_ns": 1787822652836988700,
+      "original_sha256": "8d4c77f0d5c7c812b46f588b1843bc66c7a421b26b0896e8c5d7ecc848e6b1e2",
+      "copy_sha256": "8d4c77f0d5c7c812b46f588b1843bc66c7a421b26b0896e8c5d7ecc848e6b1e2"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/4talk_1.controller_4b797e5d3aea07ccf08bf38f84dccac2.bundle",
+      "size": 7012845,
+      "mtime_ns": 1787822652836988700,
+      "original_sha256": "9ba40d8dbb3ab49e41402d026ab08f984a0a6fe7eda74f2126e063c3506ba730",
+      "copy_sha256": "9ba40d8dbb3ab49e41402d026ab08f984a0a6fe7eda74f2126e063c3506ba730"
+    },
+    {
+      "path": "AssetBundles/frameanimation-halftalkanimation_assets_assets/assetbundles/controller/halftalk/4talk_2.controller_cbedd3a847b38efd9474ba6061e5d51a.bundle",
+      "size": 7668152,
+      "mtime_ns": 1787822652837989100,
+      "original_sha256": "aef066d78d168f02be7bc33a6dfbb4281a30a9b385e1e3a97eb3834ad50e8dc1",
+      "copy_sha256": "aef066d78d168f02be7bc33a6dfbb4281a30a9b385e1e3a97eb3834ad50e8dc1"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0-battle1.controller_199ca8b4942f634fb4444f2ebc146f4f.bundle",
+      "size": 9220231,
+      "mtime_ns": 1787822652838990700,
+      "original_sha256": "f44d93efadea6836efd45f01669a6ef2db2f6ab1eaa5d69e5f248daffb83f7b6",
+      "copy_sha256": "f44d93efadea6836efd45f01669a6ef2db2f6ab1eaa5d69e5f248daffb83f7b6"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0-battle2.controller_8e8f6f5f11c328996425019b2516ac48.bundle",
+      "size": 9602530,
+      "mtime_ns": 1787822652838990700,
+      "original_sha256": "bd547603abf09fb6754dd18551e28300c1efb1bd6f45335bb3f8831656d06fdc",
+      "copy_sha256": "bd547603abf09fb6754dd18551e28300c1efb1bd6f45335bb3f8831656d06fdc"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0-damage1.controller_f2d2fa782d20607af255e48c61f2d155.bundle",
+      "size": 13006043,
+      "mtime_ns": 1787822652839989900,
+      "original_sha256": "88271de4874326249a1eb0e990be4bdfb7880056a8cca66797d9fe65ed8600d6",
+      "copy_sha256": "88271de4874326249a1eb0e990be4bdfb7880056a8cca66797d9fe65ed8600d6"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0-damage2.controller_725323cb6fcd2644cde1ffbfa959a5b8.bundle",
+      "size": 12820322,
+      "mtime_ns": 1787822652840988800,
+      "original_sha256": "48ea2a369fc437eabdb53e3f6d6876ce6c971339fa9cf848a36152d270369500",
+      "copy_sha256": "48ea2a369fc437eabdb53e3f6d6876ce6c971339fa9cf848a36152d270369500"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0-vic1.controller_b6113d05a31e50d776dc43bd228dd863.bundle",
+      "size": 10349962,
+      "mtime_ns": 1787822652840988800,
+      "original_sha256": "e086caeb0708658b11e085bdc9a9ab523ce624a5cd3ed8d72d30b7ef7c91f5b3",
+      "copy_sha256": "e086caeb0708658b11e085bdc9a9ab523ce624a5cd3ed8d72d30b7ef7c91f5b3"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0-vic2.controller_108c1098650d425fa7a2ca399e97a851.bundle",
+      "size": 9216132,
+      "mtime_ns": 1787822652841991000,
+      "original_sha256": "a33ea545d49e1151f8d5cda750b1ecb7e3e491f8dd2b2837b79609fb0cc8821d",
+      "copy_sha256": "a33ea545d49e1151f8d5cda750b1ecb7e3e491f8dd2b2837b79609fb0cc8821d"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0advanced-battle1.controller_bc2d3969f78bdae807942c2ea434f13a.bundle",
+      "size": 9898347,
+      "mtime_ns": 1787822652841991000,
+      "original_sha256": "2e128c064655022826e42152d1a370abfc5baaa57d89bd25fb2e663feac878af",
+      "copy_sha256": "2e128c064655022826e42152d1a370abfc5baaa57d89bd25fb2e663feac878af"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0advanced-battle2.controller_41dda51c4ae9a2917458619641439eb8.bundle",
+      "size": 10976360,
+      "mtime_ns": 1787822652842987500,
+      "original_sha256": "758fe7da45992037810aac7f3ceb3f16d60e1e633f67791a7b578a55ef9b1b9b",
+      "copy_sha256": "758fe7da45992037810aac7f3ceb3f16d60e1e633f67791a7b578a55ef9b1b9b"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0advanced-damage1.controller_0af77b66e0de06c3532969271e8edf6e.bundle",
+      "size": 10466395,
+      "mtime_ns": 1787822652842987500,
+      "original_sha256": "b647ce71b0b9adb8bb63c5fb15a473187c955d000147aa7cae9db57a7e171bf9",
+      "copy_sha256": "b647ce71b0b9adb8bb63c5fb15a473187c955d000147aa7cae9db57a7e171bf9"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0advanced-damage2.controller_71ac1d527a6994ed22c00fb3dcc6ea6e.bundle",
+      "size": 10616328,
+      "mtime_ns": 1787822652843990700,
+      "original_sha256": "347b3ef2357455391c43cc1d4f72a376065ff1bf921cc7fa4a003d89b357bc1f",
+      "copy_sha256": "347b3ef2357455391c43cc1d4f72a376065ff1bf921cc7fa4a003d89b357bc1f"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0advanced-vic1.controller_f3bf8a1a4ec606cf476657315467988c.bundle",
+      "size": 10104377,
+      "mtime_ns": 1787822652843990700,
+      "original_sha256": "1519b67713fb2b0ad88c7f555b7305f56ef0c5daf96df0807ce3adde0a999140",
+      "copy_sha256": "1519b67713fb2b0ad88c7f555b7305f56ef0c5daf96df0807ce3adde0a999140"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0advanced-vic2.controller_123aac7c8cbbb2d59238c713e85e72c4.bundle",
+      "size": 10364844,
+      "mtime_ns": 1787822652844987400,
+      "original_sha256": "505d438cfcc43c987111f7e94d51fff740671e382c561e7492ab323b30fbc3e2",
+      "copy_sha256": "505d438cfcc43c987111f7e94d51fff740671e382c561e7492ab323b30fbc3e2"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0miko-battle1.controller_6ef5584571c174150ca644b5e1fe0019.bundle",
+      "size": 9630180,
+      "mtime_ns": 1787822652844987400,
+      "original_sha256": "8ed3ea231ffee2e583f928880f638c9d536a0acb877968d4302235ac7ecb5c43",
+      "copy_sha256": "8ed3ea231ffee2e583f928880f638c9d536a0acb877968d4302235ac7ecb5c43"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0miko-battle2.controller_f9c655bf1360a41d00bc07737975bbcc.bundle",
+      "size": 10064942,
+      "mtime_ns": 1787822652845987400,
+      "original_sha256": "da7431e9601ec1879cd58970466092fdbe49885e90a45202f80a56ed2a5b8717",
+      "copy_sha256": "da7431e9601ec1879cd58970466092fdbe49885e90a45202f80a56ed2a5b8717"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0miko-damage1.controller_85a74631082473d4db5e4e68c86ea2a6.bundle",
+      "size": 11197472,
+      "mtime_ns": 1787822652845987400,
+      "original_sha256": "4d863b39d515524aeb754c4e5dd0c8596262a8357a5d846e55926cb4df3fd160",
+      "copy_sha256": "4d863b39d515524aeb754c4e5dd0c8596262a8357a5d846e55926cb4df3fd160"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0miko-damage2.controller_d63a35f5c1befdcfbe6de6703418f54f.bundle",
+      "size": 10902905,
+      "mtime_ns": 1787822652846987700,
+      "original_sha256": "23108bf25751f746f2d28837dd5279cbea3455d4053674fa07bc5d70e41673f1",
+      "copy_sha256": "23108bf25751f746f2d28837dd5279cbea3455d4053674fa07bc5d70e41673f1"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0miko-vic1.controller_d4f08895bd5308fbec9e3194d87dba3b.bundle",
+      "size": 8832528,
+      "mtime_ns": 1787822652846987700,
+      "original_sha256": "90a4579aa291d727b447376da88a32c994de495f8bf29dd3f8342a43593f0048",
+      "copy_sha256": "90a4579aa291d727b447376da88a32c994de495f8bf29dd3f8342a43593f0048"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0miko-vic2.controller_32bb7d157dcef140fb1b69d91b14da3f.bundle",
+      "size": 10887026,
+      "mtime_ns": 1787822652847987300,
+      "original_sha256": "f752333ff50f302c9f85e38712c971d930bf919071fb05ab1ab571733ac3a820",
+      "copy_sha256": "f752333ff50f302c9f85e38712c971d930bf919071fb05ab1ab571733ac3a820"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0uniform-battle1.controller_310eb3b8c125aed4fdc601182d8e81a0.bundle",
+      "size": 10634056,
+      "mtime_ns": 1787822652848988700,
+      "original_sha256": "d08873df088b73dfe7bb1532717b4cf29227e8acac7be83b8d441ad2c88538ce",
+      "copy_sha256": "d08873df088b73dfe7bb1532717b4cf29227e8acac7be83b8d441ad2c88538ce"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0uniform-battle2.controller_087d0461c155d980ee6f11620d245394.bundle",
+      "size": 11058381,
+      "mtime_ns": 1787822652848988700,
+      "original_sha256": "3408968a5ff2116c17e39944eb2b1f26b10bc183a758b77ca6484988d971a160",
+      "copy_sha256": "3408968a5ff2116c17e39944eb2b1f26b10bc183a758b77ca6484988d971a160"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0uniform-damage1.controller_e5a7acac33c0f04546c5876f006e9958.bundle",
+      "size": 11630403,
+      "mtime_ns": 1787822652849987400,
+      "original_sha256": "c6d10f078f24173aab7f0a2de761a2ebc4924460efaaf20342754a15a507c6c5",
+      "copy_sha256": "c6d10f078f24173aab7f0a2de761a2ebc4924460efaaf20342754a15a507c6c5"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0uniform-damage2.controller_276a54b928b07bef534b6daeaa8e734e.bundle",
+      "size": 12460408,
+      "mtime_ns": 1787822652849987400,
+      "original_sha256": "a211e20f1f7f4a419a7f4c81b3270320930f78247d23df47c2c0a063d0c92f2d",
+      "copy_sha256": "a211e20f1f7f4a419a7f4c81b3270320930f78247d23df47c2c0a063d0c92f2d"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0uniform-vic1.controller_672949d41e55182ecd4087a43f17db11.bundle",
+      "size": 12853303,
+      "mtime_ns": 1787822652850987200,
+      "original_sha256": "c2d2d71345ce5fedc8efb45c9f1fc3001c25a9a760a961ac8ed8a9cee12d48e5",
+      "copy_sha256": "c2d2d71345ce5fedc8efb45c9f1fc3001c25a9a760a961ac8ed8a9cee12d48e5"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/0uniform-vic2.controller_41a46348f2e9f50ae107412ba3a8e264.bundle",
+      "size": 11894464,
+      "mtime_ns": 1787822652850987200,
+      "original_sha256": "8e2c4d44fce5f02a425be2c65710aaefedd400c0830c04bd2b39c382d7ea9df2",
+      "copy_sha256": "8e2c4d44fce5f02a425be2c65710aaefedd400c0830c04bd2b39c382d7ea9df2"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1-battle1.controller_0ca46dd9f9f5a44ba168e9b6bbca322f.bundle",
+      "size": 7900520,
+      "mtime_ns": 1787822652851991700,
+      "original_sha256": "6b683c4474091fbc03e8917c2443ede1f9d9be935096cc47b0d575523ff7cebc",
+      "copy_sha256": "6b683c4474091fbc03e8917c2443ede1f9d9be935096cc47b0d575523ff7cebc"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1-battle2.controller_6e37c7dd9578b41a0a9945f8b331fc1a.bundle",
+      "size": 6951487,
+      "mtime_ns": 1787822652851991700,
+      "original_sha256": "5aa64f5a65e19136d604c6cf9b59d54e8f4a668e7cddd5359cabd451bbd63f8e",
+      "copy_sha256": "5aa64f5a65e19136d604c6cf9b59d54e8f4a668e7cddd5359cabd451bbd63f8e"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1-damage1.controller_4d9876fdd35e803e4c6fd7a8c7df0a92.bundle",
+      "size": 9594679,
+      "mtime_ns": 1787822652852987300,
+      "original_sha256": "8158b47afe30276c18d7d9a1d609dabc1e8527cad65dc42ab1f5ec9b18fbad8d",
+      "copy_sha256": "8158b47afe30276c18d7d9a1d609dabc1e8527cad65dc42ab1f5ec9b18fbad8d"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1-damage2.controller_9db2b3e7462a1a6458efbd4473ed6089.bundle",
+      "size": 9433547,
+      "mtime_ns": 1787822652852987300,
+      "original_sha256": "e5bfc66135023b0b8cd5a44a4351f7691ebad8a68770d6af4926b90d015ccbc0",
+      "copy_sha256": "e5bfc66135023b0b8cd5a44a4351f7691ebad8a68770d6af4926b90d015ccbc0"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1-vic1.controller_a777159b1fdb547aef8f232b91f64191.bundle",
+      "size": 7112881,
+      "mtime_ns": 1787822652853990200,
+      "original_sha256": "20d1f517a5968379c9384acb0723a5a878cbb400a6e37746061ca6b445291fdb",
+      "copy_sha256": "20d1f517a5968379c9384acb0723a5a878cbb400a6e37746061ca6b445291fdb"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1-vic2.controller_84ace39e6a41751fdb4daf9a4cd36640.bundle",
+      "size": 6701261,
+      "mtime_ns": 1787822652853990200,
+      "original_sha256": "8a7205d7f634e9b4836a34676af1f9bb2af47e9abfd07da380d1002528b52aba",
+      "copy_sha256": "8a7205d7f634e9b4836a34676af1f9bb2af47e9abfd07da380d1002528b52aba"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1advanced-battle1.controller_661200ffb9be54f38239f2937cb7b560.bundle",
+      "size": 7652461,
+      "mtime_ns": 1787822652854990600,
+      "original_sha256": "bbd329efea91fe42e2a5dd1aa95407cf7d02d943709980983343e87f29f116da",
+      "copy_sha256": "bbd329efea91fe42e2a5dd1aa95407cf7d02d943709980983343e87f29f116da"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1advanced-battle2.controller_fbe4285db73de9df70b901414959d9e6.bundle",
+      "size": 6928719,
+      "mtime_ns": 1787822652854990600,
+      "original_sha256": "cda71929cfb6460f7b51b0dc8cdaf87130e1ea3e0d9e53853b714de26b3f8e4b",
+      "copy_sha256": "cda71929cfb6460f7b51b0dc8cdaf87130e1ea3e0d9e53853b714de26b3f8e4b"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1advanced-damage1.controller_3f6d78a80b13640b86a4041bcf84bcd3.bundle",
+      "size": 9883284,
+      "mtime_ns": 1787822652855987200,
+      "original_sha256": "f978555c2c73f9d08dd2d29aa053a8669cacfd14e6211b87ffad6117e9fe2c65",
+      "copy_sha256": "f978555c2c73f9d08dd2d29aa053a8669cacfd14e6211b87ffad6117e9fe2c65"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1advanced-damage2.controller_c6a454c206287ccbc07815e2b7c07078.bundle",
+      "size": 9899368,
+      "mtime_ns": 1787822652855987200,
+      "original_sha256": "522a4e17ed08ba9870cf102666c6e63b7c4f98227c34a4a5a31ed7f574ffe603",
+      "copy_sha256": "522a4e17ed08ba9870cf102666c6e63b7c4f98227c34a4a5a31ed7f574ffe603"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1advanced-vic1.controller_a3481863c17c1eab877306d63b24d162.bundle",
+      "size": 8369858,
+      "mtime_ns": 1787822652856986900,
+      "original_sha256": "dc647eec275cf147c277d4a91a1baad124faadaa5b68592d9af43d4964e1cd43",
+      "copy_sha256": "dc647eec275cf147c277d4a91a1baad124faadaa5b68592d9af43d4964e1cd43"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1advanced-vic2.controller_1a89cde1d0503078163f185b84360657.bundle",
+      "size": 8245943,
+      "mtime_ns": 1787822652856986900,
+      "original_sha256": "596ea516490ec7b10f2cf96759e5ed4683bd53a55e8a351e166e2392e1d41d63",
+      "copy_sha256": "596ea516490ec7b10f2cf96759e5ed4683bd53a55e8a351e166e2392e1d41d63"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1idle-battle1.controller_a2a4510e6873b5ba9b4cbf5e68404b01.bundle",
+      "size": 5552087,
+      "mtime_ns": 1787822652857987000,
+      "original_sha256": "40e0a5455ea8a6ccc0afe403a6a656c54d0ff0ee312bfda12a7aae91471922d0",
+      "copy_sha256": "40e0a5455ea8a6ccc0afe403a6a656c54d0ff0ee312bfda12a7aae91471922d0"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1idle-battle2.controller_13538bf6ff52893bbeb465e3f9e8d63b.bundle",
+      "size": 7579774,
+      "mtime_ns": 1787822652857987000,
+      "original_sha256": "ffb0604cf7d4b6e2d49ddb92d568759a877487f892d3d58cd4d84c50c77ffc63",
+      "copy_sha256": "ffb0604cf7d4b6e2d49ddb92d568759a877487f892d3d58cd4d84c50c77ffc63"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1idle-damage1.controller_279836f47ea28819f3de37a29c3250dc.bundle",
+      "size": 9151124,
+      "mtime_ns": 1787822652858990400,
+      "original_sha256": "ef8a44ab0e4e942ff2f443d7de142b0c75f3cae277b6e4a96d3e540c3ccbc28c",
+      "copy_sha256": "ef8a44ab0e4e942ff2f443d7de142b0c75f3cae277b6e4a96d3e540c3ccbc28c"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1idle-damage2.controller_073bf68f481f10ed0f35fb387030157e.bundle",
+      "size": 9392219,
+      "mtime_ns": 1787822652859988800,
+      "original_sha256": "268b070ea39280afb78c4771cd7c78e8b62be74102912cfde322d6b1a9d59bf6",
+      "copy_sha256": "268b070ea39280afb78c4771cd7c78e8b62be74102912cfde322d6b1a9d59bf6"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1idle-vic1.controller_dfa65bf04016f6c8b1bef57a29d1aacc.bundle",
+      "size": 6945861,
+      "mtime_ns": 1787822652859988800,
+      "original_sha256": "8e891cb0e4b8ccfb0ad239a8f810051e5fcec586c6800396bd9eb72e3a1d768f",
+      "copy_sha256": "8e891cb0e4b8ccfb0ad239a8f810051e5fcec586c6800396bd9eb72e3a1d768f"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1idle-vic2.controller_9ceda2747244ce3d78647993a24d8051.bundle",
+      "size": 7288763,
+      "mtime_ns": 1787822652860987100,
+      "original_sha256": "d35074546a0184ff8972d205abac2dcfc47232d5a8c9bc488452184eb6de6fff",
+      "copy_sha256": "d35074546a0184ff8972d205abac2dcfc47232d5a8c9bc488452184eb6de6fff"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1magical-battle1.controller_ed932bba45da14d77e0c0cf454747204.bundle",
+      "size": 9368739,
+      "mtime_ns": 1787822652860987100,
+      "original_sha256": "0c66cc89cd812e379e52de21d6f0d49f8ccd70599c76c5c16450b7d7b99750b2",
+      "copy_sha256": "0c66cc89cd812e379e52de21d6f0d49f8ccd70599c76c5c16450b7d7b99750b2"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1magical-battle2.controller_af41a29008f875df3c912d9e86ff10d6.bundle",
+      "size": 8558318,
+      "mtime_ns": 1787822652861987500,
+      "original_sha256": "061b512309d353e727a386abb240c865037009f12f48b796c13f0b89d0effb5f",
+      "copy_sha256": "061b512309d353e727a386abb240c865037009f12f48b796c13f0b89d0effb5f"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1magical-damage1.controller_603898af50b1890974b2ac1ed7cf319c.bundle",
+      "size": 9081453,
+      "mtime_ns": 1787822652861987500,
+      "original_sha256": "25323ab4e6002d85451d9f1218c1feb17c8f824b64165a7db912a837ba734c80",
+      "copy_sha256": "25323ab4e6002d85451d9f1218c1feb17c8f824b64165a7db912a837ba734c80"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1magical-damage2.controller_af101bed2f682efe45f58659dc26b2f3.bundle",
+      "size": 9257346,
+      "mtime_ns": 1787822652862990600,
+      "original_sha256": "b496b9219544308b8b26e65161ac159cc80780028783d69462cf4a488173f3d7",
+      "copy_sha256": "b496b9219544308b8b26e65161ac159cc80780028783d69462cf4a488173f3d7"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1magical-vic1.controller_4f93b7ecfff98ef287e042c9f384c3c7.bundle",
+      "size": 8073881,
+      "mtime_ns": 1787822652862990600,
+      "original_sha256": "363b693cf29edcbb50d440c857ca27d35533e6b6e66e62ee56564d6e0ea82c0d",
+      "copy_sha256": "363b693cf29edcbb50d440c857ca27d35533e6b6e66e62ee56564d6e0ea82c0d"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1magical-vic2.controller_5ece9ea4fcfbe2c792c58924f33a6e81.bundle",
+      "size": 8481375,
+      "mtime_ns": 1787822652863990600,
+      "original_sha256": "92cfbcd06103b30ded58d20f05c132fa914b008668a45073df17a4c391d86724",
+      "copy_sha256": "92cfbcd06103b30ded58d20f05c132fa914b008668a45073df17a4c391d86724"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1schnabel-battle1.controller_6629b59311131e947b788aeaefb1c875.bundle",
+      "size": 6536272,
+      "mtime_ns": 1787822652863990600,
+      "original_sha256": "ee30ea24da7a20980428bfb62e489f0a25c506a76571e266ae5b8fc434b227f7",
+      "copy_sha256": "ee30ea24da7a20980428bfb62e489f0a25c506a76571e266ae5b8fc434b227f7"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1schnabel-battle2.controller_c90f673ff725e0a12ad9ab151559d9c6.bundle",
+      "size": 6798923,
+      "mtime_ns": 1787822652864989300,
+      "original_sha256": "1441a0fc3e99cd8914f6934d67d0bb6d3e0cc56a295c6e4152952e512eec1936",
+      "copy_sha256": "1441a0fc3e99cd8914f6934d67d0bb6d3e0cc56a295c6e4152952e512eec1936"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1schnabel-damage1.controller_b014ca43c582f140660d2dc32c33b91c.bundle",
+      "size": 9060133,
+      "mtime_ns": 1787822652864989300,
+      "original_sha256": "c9c4f24f5bf221a653047e3ffb27f599cdb0be72508db6dd612ba6d39ad80d96",
+      "copy_sha256": "c9c4f24f5bf221a653047e3ffb27f599cdb0be72508db6dd612ba6d39ad80d96"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1schnabel-damage2.controller_c46f27a86e306489d41f50a16bec78b9.bundle",
+      "size": 8839651,
+      "mtime_ns": 1787822652865987300,
+      "original_sha256": "a8ab4775a239664869fef21ce9ce217a5f266580d6dc5e2d40256963e3b1e6f3",
+      "copy_sha256": "a8ab4775a239664869fef21ce9ce217a5f266580d6dc5e2d40256963e3b1e6f3"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1schnabel-vic1.controller_ae4b76f1abb00a43e9ee9395c385e01f.bundle",
+      "size": 7541647,
+      "mtime_ns": 1787822652865987300,
+      "original_sha256": "f6b2bc8077d832a4281d77185796c1ce0ef3635e52398d006eb7797efb53d0b1",
+      "copy_sha256": "f6b2bc8077d832a4281d77185796c1ce0ef3635e52398d006eb7797efb53d0b1"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/1schnabel-vic2.controller_4466337c3d7cb07d858ec15335f8389a.bundle",
+      "size": 8065372,
+      "mtime_ns": 1787822652866987200,
+      "original_sha256": "f6df17b4234729171694c7f154cee43a1379f83c4e3b5bea70a17cc78f22d0a2",
+      "copy_sha256": "f6df17b4234729171694c7f154cee43a1379f83c4e3b5bea70a17cc78f22d0a2"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2-battle1.controller_20b5e5ac97e741c17a5d6f9d659704cf.bundle",
+      "size": 7961462,
+      "mtime_ns": 1787822652866987200,
+      "original_sha256": "079e8f3ab5f691efd62ff99d286ff0e8f4ed6e2162470804d76dfe3b9151f707",
+      "copy_sha256": "079e8f3ab5f691efd62ff99d286ff0e8f4ed6e2162470804d76dfe3b9151f707"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2-battle2.controller_c5b65778444d52e9cf001e54af68f5ab.bundle",
+      "size": 8705403,
+      "mtime_ns": 1787822652867986900,
+      "original_sha256": "317fc75da1deeef5c4321cb4b99007363c8088f74fe43ea0b9a0aeefe198333b",
+      "copy_sha256": "317fc75da1deeef5c4321cb4b99007363c8088f74fe43ea0b9a0aeefe198333b"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2-damage1.controller_539b8c1255b4d5a90919fa9a94877331.bundle",
+      "size": 11242124,
+      "mtime_ns": 1787822652867986900,
+      "original_sha256": "050c7392c9d9e42ef0789847d56360fe65c43cb6f144736eb076319658969f57",
+      "copy_sha256": "050c7392c9d9e42ef0789847d56360fe65c43cb6f144736eb076319658969f57"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2-damage2.controller_d2a7360f4fcf433f56730f00cbe1c159.bundle",
+      "size": 10937333,
+      "mtime_ns": 1787822652868991000,
+      "original_sha256": "91697ddf7aca9b78e1d8a1630df9728167a2d84aee031b696bde0115ee1e922f",
+      "copy_sha256": "91697ddf7aca9b78e1d8a1630df9728167a2d84aee031b696bde0115ee1e922f"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2-vic1.controller_39baf855809ed62b17be3408d82d9452.bundle",
+      "size": 9213426,
+      "mtime_ns": 1787822652868991000,
+      "original_sha256": "007686b08e4d18175a9fb61638e9ce818a465c1f276781d8c4d7e38c71926c33",
+      "copy_sha256": "007686b08e4d18175a9fb61638e9ce818a465c1f276781d8c4d7e38c71926c33"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2-vic2.controller_f2feae620321bede16de99e7e8e99ef5.bundle",
+      "size": 8832756,
+      "mtime_ns": 1787822652869991600,
+      "original_sha256": "df2f8c8325fb01fe147b88d39f7ed111854ca52cd7ec1a50fac324d9b86bf7e5",
+      "copy_sha256": "df2f8c8325fb01fe147b88d39f7ed111854ca52cd7ec1a50fac324d9b86bf7e5"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2advanced-battle1.controller_8291c8b228cb957f365f690f1508048b.bundle",
+      "size": 7386844,
+      "mtime_ns": 1787822652869991600,
+      "original_sha256": "d96cdc9ec75d61cb8bf4b3d236808b75ae087f5a074aa117272151b8c6831d0c",
+      "copy_sha256": "d96cdc9ec75d61cb8bf4b3d236808b75ae087f5a074aa117272151b8c6831d0c"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2advanced-battle2.controller_5a9e408c168824d00cc860c4c199d28b.bundle",
+      "size": 8902721,
+      "mtime_ns": 1787822652870987200,
+      "original_sha256": "f2f365fd1c77c213a1358f6ab88c1b7ad5a1e05a21f66da27e6eb0b76fc9a69c",
+      "copy_sha256": "f2f365fd1c77c213a1358f6ab88c1b7ad5a1e05a21f66da27e6eb0b76fc9a69c"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2advanced-damage1.controller_d5203e2445d3da2f3637e909781fc72f.bundle",
+      "size": 12103541,
+      "mtime_ns": 1787822652870987200,
+      "original_sha256": "58fd6b97929a4a03cb68a97ad4a7193b1e012bd1d2feb3fa35bd37ae8fd927ae",
+      "copy_sha256": "58fd6b97929a4a03cb68a97ad4a7193b1e012bd1d2feb3fa35bd37ae8fd927ae"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2advanced-damage2.controller_bcb4da351dbc0e4522415922203c9258.bundle",
+      "size": 10975749,
+      "mtime_ns": 1787822652871987100,
+      "original_sha256": "0e48999ffcf942d7948bfa37ae92fe0bf5dc9ef461c68a795308f603e5530e8f",
+      "copy_sha256": "0e48999ffcf942d7948bfa37ae92fe0bf5dc9ef461c68a795308f603e5530e8f"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2advanced-vic1.controller_1441e78b7a6186a6e3caa61f1f26046e.bundle",
+      "size": 8979262,
+      "mtime_ns": 1787822652871987100,
+      "original_sha256": "77fab21aeaea854e1b8338f981b937f44e1598c36f2dc1b1522bab6bb98c8942",
+      "copy_sha256": "77fab21aeaea854e1b8338f981b937f44e1598c36f2dc1b1522bab6bb98c8942"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2advanced-vic2.controller_2ae096f9244204223b9ca815af436dca.bundle",
+      "size": 8946224,
+      "mtime_ns": 1787822652871987100,
+      "original_sha256": "67e63ba0e8129a18b5c3fd7cbaa9a356dabbd127eb58cf4123f320cff6789589",
+      "copy_sha256": "67e63ba0e8129a18b5c3fd7cbaa9a356dabbd127eb58cf4123f320cff6789589"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2idle-battle1.controller_370ea2f29600c1ce88034d0822940a3f.bundle",
+      "size": 8919835,
+      "mtime_ns": 1787822652872987100,
+      "original_sha256": "271a700e872007f0c80cad65ec36df2cb6c34c0965bffb8e84c905cf08f04376",
+      "copy_sha256": "271a700e872007f0c80cad65ec36df2cb6c34c0965bffb8e84c905cf08f04376"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2idle-battle2.controller_b88dbec39bc074d33e398a6ef01d843b.bundle",
+      "size": 7117683,
+      "mtime_ns": 1787822652873989100,
+      "original_sha256": "6255a596bfce20d0678be82a562eac8d5066b5c6de831a9a1e7be87eae63719a",
+      "copy_sha256": "6255a596bfce20d0678be82a562eac8d5066b5c6de831a9a1e7be87eae63719a"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2idle-damage1.controller_2be416bb6c2126fa84700d6654119246.bundle",
+      "size": 11910429,
+      "mtime_ns": 1787822652873989100,
+      "original_sha256": "10890983c76e97d3c3e5577bb084cd50266337620bdaf9eb690b5ccd56551e81",
+      "copy_sha256": "10890983c76e97d3c3e5577bb084cd50266337620bdaf9eb690b5ccd56551e81"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2idle-damage2.controller_ab810710afd8e4259b724fa6f464e582.bundle",
+      "size": 11031848,
+      "mtime_ns": 1787822652874990100,
+      "original_sha256": "6f4e97aaf4c9a59b6bc94563bab202cb8366e4ed0a2b7b5c7dfca4f5bec31e71",
+      "copy_sha256": "6f4e97aaf4c9a59b6bc94563bab202cb8366e4ed0a2b7b5c7dfca4f5bec31e71"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2idle-vic1.controller_415fcb9a5587ab7aa2c7832a978b1d47.bundle",
+      "size": 9292439,
+      "mtime_ns": 1787822652874990100,
+      "original_sha256": "f2a432518db4b8fa9d2be0d25fcac99037c09dfc9a05d8ec9daa24f3fe4feba4",
+      "copy_sha256": "f2a432518db4b8fa9d2be0d25fcac99037c09dfc9a05d8ec9daa24f3fe4feba4"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/2idle-vic2.controller_3a40a2e1a0b00fbf81225e3124647637.bundle",
+      "size": 8188407,
+      "mtime_ns": 1787822652875990600,
+      "original_sha256": "0179840014a83dc1bf926079d2e84e60281d5bf627423f3c78dcb4bc31e61ad2",
+      "copy_sha256": "0179840014a83dc1bf926079d2e84e60281d5bf627423f3c78dcb4bc31e61ad2"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3-battle1.controller_a50f01159cac367a8eece5c89152099f.bundle",
+      "size": 6851022,
+      "mtime_ns": 1787822652875990600,
+      "original_sha256": "6883b238c5b06ed823988025650b31a8cb886199e880130dd3723c9b222e3292",
+      "copy_sha256": "6883b238c5b06ed823988025650b31a8cb886199e880130dd3723c9b222e3292"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3-battle2.controller_91fcfdc6ee87782c9ae2816aef761475.bundle",
+      "size": 6770942,
+      "mtime_ns": 1787822652876990800,
+      "original_sha256": "fc59de9f26d25bfcfb7367769eac9ac8ec311ed67a09723c52034f28aac22a5d",
+      "copy_sha256": "fc59de9f26d25bfcfb7367769eac9ac8ec311ed67a09723c52034f28aac22a5d"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3-damage1.controller_a43be19863c3f9d28d12dce2fe26d383.bundle",
+      "size": 9888081,
+      "mtime_ns": 1787822652876990800,
+      "original_sha256": "0c3d63e79d5aadf58f4fb4dabf36d0a01cdd149141f8493ffa3e30ed48316a80",
+      "copy_sha256": "0c3d63e79d5aadf58f4fb4dabf36d0a01cdd149141f8493ffa3e30ed48316a80"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3-damage2.controller_171ecb47c17ed762ac5e528590abc50e.bundle",
+      "size": 10647350,
+      "mtime_ns": 1787822652877990600,
+      "original_sha256": "b40eb3b0371739c3ad9c770e235f475202cdc75327e0a2189d746eaf322490ed",
+      "copy_sha256": "b40eb3b0371739c3ad9c770e235f475202cdc75327e0a2189d746eaf322490ed"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3-vic1.controller_0683d325d87ba0b22d80e5007fe04d5a.bundle",
+      "size": 7437901,
+      "mtime_ns": 1787822652877990600,
+      "original_sha256": "8b6c2232659c41f1919158c19e37eedb4bf60a5797dbcaccefd45d7ab16e783d",
+      "copy_sha256": "8b6c2232659c41f1919158c19e37eedb4bf60a5797dbcaccefd45d7ab16e783d"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3-vic2.controller_287c74d6a5048be7e0604281b50333f4.bundle",
+      "size": 7973854,
+      "mtime_ns": 1787822652877990600,
+      "original_sha256": "9e2e2f0c9e36f311cec72ff940cdc1a710b871392cd2e4ae17d70cc2442283d8",
+      "copy_sha256": "9e2e2f0c9e36f311cec72ff940cdc1a710b871392cd2e4ae17d70cc2442283d8"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3advanced-battle1.controller_f3a190493ae304d4fa459de413a6429a.bundle",
+      "size": 6599842,
+      "mtime_ns": 1787822652878991100,
+      "original_sha256": "cf9ff1c230a9e383e00a2dc98c47b8419d68647cb47d0dd9307c58d0123a657e",
+      "copy_sha256": "cf9ff1c230a9e383e00a2dc98c47b8419d68647cb47d0dd9307c58d0123a657e"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3advanced-battle2.controller_28c193e618356dbefa9394dbfa6bdf90.bundle",
+      "size": 6658654,
+      "mtime_ns": 1787822652878991100,
+      "original_sha256": "3c0243c06e7ae7a6ecdc5dee23ee563752923663a53ea233ea6aa70a3579ee8a",
+      "copy_sha256": "3c0243c06e7ae7a6ecdc5dee23ee563752923663a53ea233ea6aa70a3579ee8a"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3advanced-damage1.controller_db49d3187d42da101217a59ad3aabdb7.bundle",
+      "size": 9470696,
+      "mtime_ns": 1787822652879991000,
+      "original_sha256": "4e88e0685a467ca48bbd9323d6c82c2d5c8a0342bb064cc9dc8cce1d6feb8b9f",
+      "copy_sha256": "4e88e0685a467ca48bbd9323d6c82c2d5c8a0342bb064cc9dc8cce1d6feb8b9f"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3advanced-damage2.controller_7eaf2734f9e5dc690f92be6cb9d6cec5.bundle",
+      "size": 9713713,
+      "mtime_ns": 1787822652880987400,
+      "original_sha256": "fc929a2466a9ee0c31e37eeb8261d7b5208619fa36bef4de7439bf93d0cd034a",
+      "copy_sha256": "fc929a2466a9ee0c31e37eeb8261d7b5208619fa36bef4de7439bf93d0cd034a"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3advanced-vic1.controller_b3fe500b9dd99859c99cbcd63e9dfee4.bundle",
+      "size": 7833246,
+      "mtime_ns": 1787822652880987400,
+      "original_sha256": "321be02af9549cfe243c35a6ec11909062cfd1a6fea71b0ea383da5492fb1cb6",
+      "copy_sha256": "321be02af9549cfe243c35a6ec11909062cfd1a6fea71b0ea383da5492fb1cb6"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3advanced-vic2.controller_7437c1ac352b34e65d1424b438a98f2a.bundle",
+      "size": 7784111,
+      "mtime_ns": 1787822652881988400,
+      "original_sha256": "8e81742e00e36d0570e2edede66a5d01e7b66bfb278604fec4261de3dfcd27da",
+      "copy_sha256": "8e81742e00e36d0570e2edede66a5d01e7b66bfb278604fec4261de3dfcd27da"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3beret-battle1.controller_c0d0e0afeda37c083b865d1c23013a70.bundle",
+      "size": 6237045,
+      "mtime_ns": 1787822652881988400,
+      "original_sha256": "54b80aeb26562cac25cb17df9d90e91221c2611edc0ba9b3024370331f82812c",
+      "copy_sha256": "54b80aeb26562cac25cb17df9d90e91221c2611edc0ba9b3024370331f82812c"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3beret-battle2.controller_90cef17734926a7321365c102b70c854.bundle",
+      "size": 6468023,
+      "mtime_ns": 1787822652882988900,
+      "original_sha256": "fe410ff1f747a33e7267468197de160227543cdee32d96a90438d961c8fb7c15",
+      "copy_sha256": "fe410ff1f747a33e7267468197de160227543cdee32d96a90438d961c8fb7c15"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3beret-damage1.controller_4c5fa306d9dff3f1cd072a4194af6745.bundle",
+      "size": 10697309,
+      "mtime_ns": 1787822652882988900,
+      "original_sha256": "b62f395c5622e784dc86e079457734e943e6bbba32ac316c36d920f1c6343a53",
+      "copy_sha256": "b62f395c5622e784dc86e079457734e943e6bbba32ac316c36d920f1c6343a53"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3beret-damage2.controller_c8f5455268d488f0d2878b010124f0e7.bundle",
+      "size": 9995857,
+      "mtime_ns": 1787822652883988500,
+      "original_sha256": "2ac87f11f99a3fa93c027ad8858a75c66c0b0da4e6c8ab23aa2c17babb7211f0",
+      "copy_sha256": "2ac87f11f99a3fa93c027ad8858a75c66c0b0da4e6c8ab23aa2c17babb7211f0"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3beret-vic1.controller_cb4962656bd3fe5432d544bbc748d9f2.bundle",
+      "size": 8306435,
+      "mtime_ns": 1787822652883988500,
+      "original_sha256": "a2e8eab58f320aedf2e06bfa021285de255c46a6a276f2d703b7cfcd694c20f4",
+      "copy_sha256": "a2e8eab58f320aedf2e06bfa021285de255c46a6a276f2d703b7cfcd694c20f4"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3beret-vic2.controller_315ce46e1b45b4c046c7a9c41ee3da63.bundle",
+      "size": 8168623,
+      "mtime_ns": 1787822652884991000,
+      "original_sha256": "4e6cd985d12cb09fc08a926db70f34e739e7d20a40b55d8929d004ed0d697c07",
+      "copy_sha256": "4e6cd985d12cb09fc08a926db70f34e739e7d20a40b55d8929d004ed0d697c07"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3suit-battle1.controller_1979a00850fad24c421d276f5f174919.bundle",
+      "size": 7322502,
+      "mtime_ns": 1787822652884991000,
+      "original_sha256": "3b38a522d5dcc7d7a80def8b3e39f78dd27d544d58fe735f9305ca71058319cd",
+      "copy_sha256": "3b38a522d5dcc7d7a80def8b3e39f78dd27d544d58fe735f9305ca71058319cd"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3suit-battle2.controller_89cd8d5fa20fba88871e516d9b98fa04.bundle",
+      "size": 6939336,
+      "mtime_ns": 1787822652885990600,
+      "original_sha256": "7d6acf2154977007a1ba83e33acd68ca5f7ec4cd24ac299951c0e4cb89727688",
+      "copy_sha256": "7d6acf2154977007a1ba83e33acd68ca5f7ec4cd24ac299951c0e4cb89727688"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3suit-damage1.controller_6cfdf3da7c798991030ad257c7ca159e.bundle",
+      "size": 9523333,
+      "mtime_ns": 1787822652885990600,
+      "original_sha256": "945b66e6fe2985a4a031d2305c5d6367dd4bfb135242559f6f116a1c2b7f767b",
+      "copy_sha256": "945b66e6fe2985a4a031d2305c5d6367dd4bfb135242559f6f116a1c2b7f767b"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3suit-damage2.controller_d618c11030042489285b8720ab879f9f.bundle",
+      "size": 9534607,
+      "mtime_ns": 1787822652886990600,
+      "original_sha256": "03bb851a7253b2bd617cddca97707056ebb7dcc2f25058f790ac8517cbfe692a",
+      "copy_sha256": "03bb851a7253b2bd617cddca97707056ebb7dcc2f25058f790ac8517cbfe692a"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3suit-vic1.controller_9732d5aa7675581bc932110644ab18e3.bundle",
+      "size": 8573064,
+      "mtime_ns": 1787822652886990600,
+      "original_sha256": "0060066294272a7879db903061416b1ee8dfeaebc698f5e2996b3d84c457ac3e",
+      "copy_sha256": "0060066294272a7879db903061416b1ee8dfeaebc698f5e2996b3d84c457ac3e"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/3suit-vic2.controller_e373689a059a202ec1e20ee8a27253db.bundle",
+      "size": 8351418,
+      "mtime_ns": 1787822652887990700,
+      "original_sha256": "7d09da9a8bb898293e2f766c4eed39a2e7e560f0f83343913be0338c0238047c",
+      "copy_sha256": "7d09da9a8bb898293e2f766c4eed39a2e7e560f0f83343913be0338c0238047c"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4-battle1.controller_c3dd7dee4e2e6e73de96b357d3d0949e.bundle",
+      "size": 9083237,
+      "mtime_ns": 1787822652887990700,
+      "original_sha256": "c4f8fa0295ec6ed3974e355c7bb34659f66a8e8634a56402b3762a06b21ed542",
+      "copy_sha256": "c4f8fa0295ec6ed3974e355c7bb34659f66a8e8634a56402b3762a06b21ed542"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4-battle2.controller_52906d6529ad55e70ddaea787bcebf31.bundle",
+      "size": 8865800,
+      "mtime_ns": 1787822652888991200,
+      "original_sha256": "085cef72a3047cc50bb1d6cf8b3051bf8f72759bb87c9342ba416b9f52cc16b4",
+      "copy_sha256": "085cef72a3047cc50bb1d6cf8b3051bf8f72759bb87c9342ba416b9f52cc16b4"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4-damage1.controller_fce71943b40e092fca528b1c7b27dbf2.bundle",
+      "size": 9502412,
+      "mtime_ns": 1787822652889989400,
+      "original_sha256": "d349c3dd7dd3a165721d59f37de9d51d1cc42fbdaed5e030e3261605b1a8a692",
+      "copy_sha256": "d349c3dd7dd3a165721d59f37de9d51d1cc42fbdaed5e030e3261605b1a8a692"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4-damage2.controller_4e3af699f848df7997f9a808da666cf6.bundle",
+      "size": 9695894,
+      "mtime_ns": 1787822652889989400,
+      "original_sha256": "1af31891f2ac223de7db95146e5b581abf94122aa26ad922906794f9c8d8eb37",
+      "copy_sha256": "1af31891f2ac223de7db95146e5b581abf94122aa26ad922906794f9c8d8eb37"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4-vic1.controller_3e722d8ee1cfe5ab03016b8f728ce9c3.bundle",
+      "size": 8804170,
+      "mtime_ns": 1787822652890988000,
+      "original_sha256": "81c86b0ed5baa70196e36dce4e9750aec581d37fd73782face93eaeb093adcb6",
+      "copy_sha256": "81c86b0ed5baa70196e36dce4e9750aec581d37fd73782face93eaeb093adcb6"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4-vic2.controller_cbd783ceacf26cbd57fc74779816ec0e.bundle",
+      "size": 7580869,
+      "mtime_ns": 1787822652890988000,
+      "original_sha256": "99fa436279d7a4a7e7b1748110009079494aa65b6af34ccea2cef658d6eca5b6",
+      "copy_sha256": "99fa436279d7a4a7e7b1748110009079494aa65b6af34ccea2cef658d6eca5b6"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4advanced-battle1.controller_f5505f5d2be9c233af482be59a6ed3b1.bundle",
+      "size": 9223351,
+      "mtime_ns": 1787822652891988200,
+      "original_sha256": "14f0413b2acaaea3511ecff2a10bc63819f5b2a1775e3b013747cc3fee6292dc",
+      "copy_sha256": "14f0413b2acaaea3511ecff2a10bc63819f5b2a1775e3b013747cc3fee6292dc"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4advanced-battle2.controller_c93ae94044dcd21c4191fca58e65cea7.bundle",
+      "size": 8368280,
+      "mtime_ns": 1787822652892988200,
+      "original_sha256": "909cb0b390ac179a91520eaaebe66582d62d9277a5cd2ad89dd7bed87894e3cc",
+      "copy_sha256": "909cb0b390ac179a91520eaaebe66582d62d9277a5cd2ad89dd7bed87894e3cc"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4advanced-damage1.controller_72f157a745bb2208305c5eab879a8472.bundle",
+      "size": 9968287,
+      "mtime_ns": 1787822652892988200,
+      "original_sha256": "d4fd57efa3cab31540c17106d34236997c7d9203b1da090d52676a4a401452bb",
+      "copy_sha256": "d4fd57efa3cab31540c17106d34236997c7d9203b1da090d52676a4a401452bb"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4advanced-damage2.controller_f5e21d8a7de87ad1df615622633ddb30.bundle",
+      "size": 9983356,
+      "mtime_ns": 1787822652893987200,
+      "original_sha256": "38b6b5e44be621057984ec626d78b5b2410f222e9af113a3e9691f2e658b4fcd",
+      "copy_sha256": "38b6b5e44be621057984ec626d78b5b2410f222e9af113a3e9691f2e658b4fcd"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4advanced-vic1.controller_4e45702a31f5aff97182a071f96cfd83.bundle",
+      "size": 7467362,
+      "mtime_ns": 1787822652894987600,
+      "original_sha256": "6719a69bae29738c79e192c925bdb3406e93da79c3ae5cd4be9ec3f984506da3",
+      "copy_sha256": "6719a69bae29738c79e192c925bdb3406e93da79c3ae5cd4be9ec3f984506da3"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4advanced-vic2.controller_5963bac9244130c7dbd2290c0e35973d.bundle",
+      "size": 10292949,
+      "mtime_ns": 1787822652894987600,
+      "original_sha256": "20f54f1c90839cf2ba1da72d8a8ed83489487b036e82524d66b353ff2d41e4a1",
+      "copy_sha256": "20f54f1c90839cf2ba1da72d8a8ed83489487b036e82524d66b353ff2d41e4a1"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4camouflage-battle1.controller_8e53c52b63b213321b8b6570c1819b94.bundle",
+      "size": 8960398,
+      "mtime_ns": 1787822652895989500,
+      "original_sha256": "6a970d86ad9ada08b1a29b43a9e21f03e8fd45cee8ebc9f292c8b0c37127b87b",
+      "copy_sha256": "6a970d86ad9ada08b1a29b43a9e21f03e8fd45cee8ebc9f292c8b0c37127b87b"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4camouflage-battle2.controller_2978c225fa42f4499afdac74050486b3.bundle",
+      "size": 9145512,
+      "mtime_ns": 1787822652895989500,
+      "original_sha256": "752fd0d9c6cba4ef6751a233d06afc1f06a3a72178013da5bd2d11af103a2166",
+      "copy_sha256": "752fd0d9c6cba4ef6751a233d06afc1f06a3a72178013da5bd2d11af103a2166"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4camouflage-damage1.controller_a3a788ea520304bbdf179f271fb08646.bundle",
+      "size": 10866492,
+      "mtime_ns": 1787822652896989600,
+      "original_sha256": "69974cd12b84e5fc227f00a644dd5dc27d46bba70853a4ff7c7a084f51920c77",
+      "copy_sha256": "69974cd12b84e5fc227f00a644dd5dc27d46bba70853a4ff7c7a084f51920c77"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4camouflage-damage2.controller_d4fc6e83f755ca40deb99f52bd853ccd.bundle",
+      "size": 10204432,
+      "mtime_ns": 1787822652897987500,
+      "original_sha256": "315108763ea1058971cd57adbe082c6d50b99047f5bd8da1f35264144f193695",
+      "copy_sha256": "315108763ea1058971cd57adbe082c6d50b99047f5bd8da1f35264144f193695"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4camouflage-vic1.controller_be9ad7ee23fab52b1d5348b2914a4756.bundle",
+      "size": 9865567,
+      "mtime_ns": 1787822652897987500,
+      "original_sha256": "988889c9929558e734848de2782d9265fe197e1b003f199263938db85507fe3b",
+      "copy_sha256": "988889c9929558e734848de2782d9265fe197e1b003f199263938db85507fe3b"
+    },
+    {
+      "path": "AssetBundles/frameanimation-head2animation_assets_assets/assetbundles/controller/head2/4camouflage-vic2.controller_f0c2512291fb8e9820ba08e1490600e2.bundle",
+      "size": 9417288,
+      "mtime_ns": 1787822652898987500,
+      "original_sha256": "8feb3e75f1bf90342628d42c79c0a5821ed911f95a15206c6c6a6967c007c558",
+      "copy_sha256": "8feb3e75f1bf90342628d42c79c0a5821ed911f95a15206c6c6a6967c007c558"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot0a.prefab.bundle",
+      "size": 7500021,
+      "mtime_ns": 1787822652899989600,
+      "original_sha256": "888ea9ff668944d1cc1fef0676c9c98ee6fa7bd31e0e056b8d794d0236c757d5",
+      "copy_sha256": "888ea9ff668944d1cc1fef0676c9c98ee6fa7bd31e0e056b8d794d0236c757d5"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot0b.prefab.bundle",
+      "size": 11363586,
+      "mtime_ns": 1787822652900987000,
+      "original_sha256": "27c98e1247241e5e8f44ab16e69de3738e0788c25d8f7dc230c8175033fc885b",
+      "copy_sha256": "27c98e1247241e5e8f44ab16e69de3738e0788c25d8f7dc230c8175033fc885b"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot1.prefab.bundle",
+      "size": 13632874,
+      "mtime_ns": 1787822652900987000,
+      "original_sha256": "024b171e8db3707e9c72496b1832f87ee4e55d81ac71e3e2952d4fa9c72fba81",
+      "copy_sha256": "024b171e8db3707e9c72496b1832f87ee4e55d81ac71e3e2952d4fa9c72fba81"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot10a.prefab.bundle",
+      "size": 4856629,
+      "mtime_ns": 1787822652901988100,
+      "original_sha256": "d89c168246b8a0c7656f2b7849af322f22da3e43d550d4b6922e263326bb11d0",
+      "copy_sha256": "d89c168246b8a0c7656f2b7849af322f22da3e43d550d4b6922e263326bb11d0"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot10b.prefab.bundle",
+      "size": 4304023,
+      "mtime_ns": 1787822652902988400,
+      "original_sha256": "9e9c0f0e1ded530dc341704e94852e9935b52debfe3e53788bd672cea1e48bdd",
+      "copy_sha256": "9e9c0f0e1ded530dc341704e94852e9935b52debfe3e53788bd672cea1e48bdd"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot12.prefab.bundle",
+      "size": 17872960,
+      "mtime_ns": 1787822652902988400,
+      "original_sha256": "583b0b155cd91260318d5943898de7b62dc8b663abe6467c7d80c9ae5ea26b2f",
+      "copy_sha256": "583b0b155cd91260318d5943898de7b62dc8b663abe6467c7d80c9ae5ea26b2f"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot13.prefab.bundle",
+      "size": 7365783,
+      "mtime_ns": 1787822652903988200,
+      "original_sha256": "077fba24fd2fe33a2b832e3be0e9a8fe151b2170814b5daf645005fc70e2d0bd",
+      "copy_sha256": "077fba24fd2fe33a2b832e3be0e9a8fe151b2170814b5daf645005fc70e2d0bd"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot14.prefab.bundle",
+      "size": 10797328,
+      "mtime_ns": 1787822652903988200,
+      "original_sha256": "6a55ebde0e3231dd3ea207697896a936d44fc7825f1d21ca7703e235efd8482d",
+      "copy_sha256": "6a55ebde0e3231dd3ea207697896a936d44fc7825f1d21ca7703e235efd8482d"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot15.prefab.bundle",
+      "size": 20460095,
+      "mtime_ns": 1787822652904987400,
+      "original_sha256": "333f3d294415ec79ccd4262c6966c5b3269febbc44661bdff6c97ef4888c61c7",
+      "copy_sha256": "333f3d294415ec79ccd4262c6966c5b3269febbc44661bdff6c97ef4888c61c7"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot1a.prefab.bundle",
+      "size": 19862696,
+      "mtime_ns": 1787822652904987400,
+      "original_sha256": "ae242fc39efa88f039daa126ef23d99ab32b814ed6025d4f2e410a7a26ec1b32",
+      "copy_sha256": "ae242fc39efa88f039daa126ef23d99ab32b814ed6025d4f2e410a7a26ec1b32"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot1c.prefab.bundle",
+      "size": 5439456,
+      "mtime_ns": 1787822652905988200,
+      "original_sha256": "0cbf19366982f6359bc05d43b2dd8654805f34e8f063323990ce2b41bd10629d",
+      "copy_sha256": "0cbf19366982f6359bc05d43b2dd8654805f34e8f063323990ce2b41bd10629d"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot1d.prefab.bundle",
+      "size": 3273894,
+      "mtime_ns": 1787822652906987700,
+      "original_sha256": "82999e4ff328173d4df906afe019acf1c5d232e02c72291e0e545717b9569ebe",
+      "copy_sha256": "82999e4ff328173d4df906afe019acf1c5d232e02c72291e0e545717b9569ebe"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot2.prefab.bundle",
+      "size": 17652966,
+      "mtime_ns": 1787822652906987700,
+      "original_sha256": "a1bb4fdb5212231663c600a5d7a758fe40e947e1b1bd4bbb473b98c31c9d8db4",
+      "copy_sha256": "a1bb4fdb5212231663c600a5d7a758fe40e947e1b1bd4bbb473b98c31c9d8db4"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot2a.prefab.bundle",
+      "size": 18253205,
+      "mtime_ns": 1787822652907987900,
+      "original_sha256": "1715c742e257c5f38043fa06e0844b3ce0cf396900bc547a8e3c9d1e3e6e9f8e",
+      "copy_sha256": "1715c742e257c5f38043fa06e0844b3ce0cf396900bc547a8e3c9d1e3e6e9f8e"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot2c.prefab.bundle",
+      "size": 7291896,
+      "mtime_ns": 1787822652907987900,
+      "original_sha256": "acdad304a3314a729900e6c50ed1d5e02073dbd1db40b84ebf85cb53e2cb8022",
+      "copy_sha256": "acdad304a3314a729900e6c50ed1d5e02073dbd1db40b84ebf85cb53e2cb8022"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot2d.prefab.bundle",
+      "size": 3589091,
+      "mtime_ns": 1787822652908987900,
+      "original_sha256": "72129894da72cc53ba6330d69ff3cdee53057c357b56ae7ee293b2a2d04259aa",
+      "copy_sha256": "72129894da72cc53ba6330d69ff3cdee53057c357b56ae7ee293b2a2d04259aa"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot3.prefab.bundle",
+      "size": 10572540,
+      "mtime_ns": 1787822652908987900,
+      "original_sha256": "0cf5aba44e9501770a96d895078518b45f135c0b8a713694e3043f0ea630d374",
+      "copy_sha256": "0cf5aba44e9501770a96d895078518b45f135c0b8a713694e3043f0ea630d374"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot3a.prefab.bundle",
+      "size": 14861998,
+      "mtime_ns": 1787822652909987900,
+      "original_sha256": "8fff4afff11ecdc08b4e7d013c5ab51ae19c3fd10fcb86ee74050dffceae7969",
+      "copy_sha256": "8fff4afff11ecdc08b4e7d013c5ab51ae19c3fd10fcb86ee74050dffceae7969"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot3c.prefab.bundle",
+      "size": 5124317,
+      "mtime_ns": 1787822652909987900,
+      "original_sha256": "97f0fe4eec625ed052872c117f4b8a519c31c7687b55937b99a42b5a81400fe1",
+      "copy_sha256": "97f0fe4eec625ed052872c117f4b8a519c31c7687b55937b99a42b5a81400fe1"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot3d.prefab.bundle",
+      "size": 2165864,
+      "mtime_ns": 1787822652910988400,
+      "original_sha256": "5afe7db39aeefcb432b419bace5d0fa50113828904021e6a69fd8ca1af79195b",
+      "copy_sha256": "5afe7db39aeefcb432b419bace5d0fa50113828904021e6a69fd8ca1af79195b"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot4.prefab.bundle",
+      "size": 16058273,
+      "mtime_ns": 1787822652910988400,
+      "original_sha256": "6b0f914ae3abcdb8e1a00bfef9aea4a86005c57281261015b91fdc1e914dbb5a",
+      "copy_sha256": "6b0f914ae3abcdb8e1a00bfef9aea4a86005c57281261015b91fdc1e914dbb5a"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot4a.prefab.bundle",
+      "size": 17316539,
+      "mtime_ns": 1787822652911987700,
+      "original_sha256": "2841e084dbf62c5413f10778e64726f2cdb82f7c00a2265904223ca000a8cb9f",
+      "copy_sha256": "2841e084dbf62c5413f10778e64726f2cdb82f7c00a2265904223ca000a8cb9f"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot4c.prefab.bundle",
+      "size": 8589584,
+      "mtime_ns": 1787822652911987700,
+      "original_sha256": "c2d72823af8dc32f8e68c036e6c463570f6d5315e7d65d61264ab6232785da12",
+      "copy_sha256": "c2d72823af8dc32f8e68c036e6c463570f6d5315e7d65d61264ab6232785da12"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plot4d.prefab.bundle",
+      "size": 2439718,
+      "mtime_ns": 1787822652912987900,
+      "original_sha256": "2c0b913f5c094d3dedc52a672c969e1e2cf203132be49e80b5adf03e4c81f07b",
+      "copy_sha256": "2c0b913f5c094d3dedc52a672c969e1e2cf203132be49e80b5adf03e4c81f07b"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotca1.prefab.bundle",
+      "size": 14163388,
+      "mtime_ns": 1787822652912987900,
+      "original_sha256": "6fe96697329d90ead5da0a59d2906d0bb740aa5f6f4aab28c6788e82315b6ed5",
+      "copy_sha256": "6fe96697329d90ead5da0a59d2906d0bb740aa5f6f4aab28c6788e82315b6ed5"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotca2.prefab.bundle",
+      "size": 9199921,
+      "mtime_ns": 1787822652913987600,
+      "original_sha256": "c104775774b75437a398aaf402452ae177206ff99fa08e9c1a9a09d619223834",
+      "copy_sha256": "c104775774b75437a398aaf402452ae177206ff99fa08e9c1a9a09d619223834"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotca3.prefab.bundle",
+      "size": 5871181,
+      "mtime_ns": 1787822652913987600,
+      "original_sha256": "ebff8f9c0d89825275bd8a76f839c173559006de8758bc7c74a629a6f5da0c48",
+      "copy_sha256": "ebff8f9c0d89825275bd8a76f839c173559006de8758bc7c74a629a6f5da0c48"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotca4.prefab.bundle",
+      "size": 16650881,
+      "mtime_ns": 1787822652914988300,
+      "original_sha256": "3682be3cfe8cbaebec7570b9371d4bcbd279786d01d1c01b666a060172ebe953",
+      "copy_sha256": "3682be3cfe8cbaebec7570b9371d4bcbd279786d01d1c01b666a060172ebe953"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotca5.prefab.bundle",
+      "size": 8802719,
+      "mtime_ns": 1787822652915987400,
+      "original_sha256": "3e1f03c145b8b9f86b368332de92f04da08e1c663d709379ee9bf43665a747c6",
+      "copy_sha256": "3e1f03c145b8b9f86b368332de92f04da08e1c663d709379ee9bf43665a747c6"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotca6.prefab.bundle",
+      "size": 11798524,
+      "mtime_ns": 1787822652915987400,
+      "original_sha256": "3091a8ad7cfc1f7fcc00deab9ba02694bd487afc7b3e8682fd9e0dab4684c39a",
+      "copy_sha256": "3091a8ad7cfc1f7fcc00deab9ba02694bd487afc7b3e8682fd9e0dab4684c39a"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb10.prefab.bundle",
+      "size": 11523684,
+      "mtime_ns": 1787822652916988700,
+      "original_sha256": "e2b7dfddc1253a1263a8fe3a484fa7ecd809d2eeb2df1afeb2d80063617b75b7",
+      "copy_sha256": "e2b7dfddc1253a1263a8fe3a484fa7ecd809d2eeb2df1afeb2d80063617b75b7"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb11a.prefab.bundle",
+      "size": 2268947,
+      "mtime_ns": 1787822652917988000,
+      "original_sha256": "1eb691b223deb6a25fa00d22086d160c42272c2106a09c6aee80091f77803d4b",
+      "copy_sha256": "1eb691b223deb6a25fa00d22086d160c42272c2106a09c6aee80091f77803d4b"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb11b.prefab.bundle",
+      "size": 3452749,
+      "mtime_ns": 1787822652918987300,
+      "original_sha256": "7ddc2f936a297a2511e59777ebed494f857fcfcfa608f66169b18cdf98b8f070",
+      "copy_sha256": "7ddc2f936a297a2511e59777ebed494f857fcfcfa608f66169b18cdf98b8f070"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb12a.prefab.bundle",
+      "size": 3912343,
+      "mtime_ns": 1787822652918987300,
+      "original_sha256": "0f082092881dd39aade7cbde61bedf56077412c054ac6e9aea49ca0e1a7e92fe",
+      "copy_sha256": "0f082092881dd39aade7cbde61bedf56077412c054ac6e9aea49ca0e1a7e92fe"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb12b.prefab.bundle",
+      "size": 11273090,
+      "mtime_ns": 1787822652919987700,
+      "original_sha256": "ad709b6525fa3297e9db55d36db51e19f57adc17e0f4f59e087e1af6d1ec8002",
+      "copy_sha256": "ad709b6525fa3297e9db55d36db51e19f57adc17e0f4f59e087e1af6d1ec8002"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb12c.prefab.bundle",
+      "size": 8244129,
+      "mtime_ns": 1787822652919987700,
+      "original_sha256": "0992116e981a4bae5def6944f6e9b8fb86695fadb02d07ec93597c7bfe8778fc",
+      "copy_sha256": "0992116e981a4bae5def6944f6e9b8fb86695fadb02d07ec93597c7bfe8778fc"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb13a.prefab.bundle",
+      "size": 21123060,
+      "mtime_ns": 1787822652920987600,
+      "original_sha256": "0cb4babb6fa204922c539bc611b174061b300d6a49f6ff12e32f66094164e218",
+      "copy_sha256": "0cb4babb6fa204922c539bc611b174061b300d6a49f6ff12e32f66094164e218"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb13b.prefab.bundle",
+      "size": 10266171,
+      "mtime_ns": 1787822652920987600,
+      "original_sha256": "ca03d7e0154f94cfd562fe203791b6ccba1be76f8d2fbfce46394f32be3fc0ea",
+      "copy_sha256": "ca03d7e0154f94cfd562fe203791b6ccba1be76f8d2fbfce46394f32be3fc0ea"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb1a.prefab.bundle",
+      "size": 6909323,
+      "mtime_ns": 1787822652921987900,
+      "original_sha256": "f60cbc24a62605d7f038e06227a20afe549ca94786eeb5022ab4e39558bb15ac",
+      "copy_sha256": "f60cbc24a62605d7f038e06227a20afe549ca94786eeb5022ab4e39558bb15ac"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb1b.prefab.bundle",
+      "size": 13949551,
+      "mtime_ns": 1787822652922987300,
+      "original_sha256": "cf25ae7e72dc2f951d88b154d7aaa7ef098808113ecef929267d7e5d67b70b5f",
+      "copy_sha256": "cf25ae7e72dc2f951d88b154d7aaa7ef098808113ecef929267d7e5d67b70b5f"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb2.prefab.bundle",
+      "size": 3851204,
+      "mtime_ns": 1787822652922987300,
+      "original_sha256": "a2bae61f9fe43cd6f80f6a8311449d19f4841ab3502af5a4da610886e9e4096d",
+      "copy_sha256": "a2bae61f9fe43cd6f80f6a8311449d19f4841ab3502af5a4da610886e9e4096d"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb3.prefab.bundle",
+      "size": 6382957,
+      "mtime_ns": 1787822652923987600,
+      "original_sha256": "6eabcbf5b8968b13d26823820fe393ec44d212988d842cbb378d17fdce4545c8",
+      "copy_sha256": "6eabcbf5b8968b13d26823820fe393ec44d212988d842cbb378d17fdce4545c8"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb4.prefab.bundle",
+      "size": 10946920,
+      "mtime_ns": 1787822652923987600,
+      "original_sha256": "e53fda72dad03d4133b133cbc0457c0398ee9deabaa817c754047f46a8316bb4",
+      "copy_sha256": "e53fda72dad03d4133b133cbc0457c0398ee9deabaa817c754047f46a8316bb4"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb5.prefab.bundle",
+      "size": 13214963,
+      "mtime_ns": 1787822652924987200,
+      "original_sha256": "f39366a782d7e031b827fadbe98c05aff659d98c5441544e528942282d0c6b6b",
+      "copy_sha256": "f39366a782d7e031b827fadbe98c05aff659d98c5441544e528942282d0c6b6b"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb6.prefab.bundle",
+      "size": 10131750,
+      "mtime_ns": 1787822652924987200,
+      "original_sha256": "cf44649240f4b9f29baf8bebc21a3926888a7b721bf44c195c5ce8670244116e",
+      "copy_sha256": "cf44649240f4b9f29baf8bebc21a3926888a7b721bf44c195c5ce8670244116e"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb7.prefab.bundle",
+      "size": 2641267,
+      "mtime_ns": 1787822652925987900,
+      "original_sha256": "292a927c34a6c6f24e92e58ce31797420ce85065ffe409b9887a9ce411d31413",
+      "copy_sha256": "292a927c34a6c6f24e92e58ce31797420ce85065ffe409b9887a9ce411d31413"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb8.prefab.bundle",
+      "size": 5520874,
+      "mtime_ns": 1787822652926990100,
+      "original_sha256": "d9467cc6b5546dbceddd3920af2f14fe564a97e51685e21994d11a106d1764e6",
+      "copy_sha256": "d9467cc6b5546dbceddd3920af2f14fe564a97e51685e21994d11a106d1764e6"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotcb9.prefab.bundle",
+      "size": 7045100,
+      "mtime_ns": 1787822652926990100,
+      "original_sha256": "8b92eafd250dc190d0167bd76ff8f7d4040f6f1175327a4818fe62d527a76e80",
+      "copy_sha256": "8b92eafd250dc190d0167bd76ff8f7d4040f6f1175327a4818fe62d527a76e80"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/ploted1.prefab.bundle",
+      "size": 6743661,
+      "mtime_ns": 1787822652927989100,
+      "original_sha256": "5442511d187e727cb5c0525321c7de2a8de198acc6e65003bf479776943dd776",
+      "copy_sha256": "5442511d187e727cb5c0525321c7de2a8de198acc6e65003bf479776943dd776"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/ploted2.prefab.bundle",
+      "size": 3518523,
+      "mtime_ns": 1787822652927989100,
+      "original_sha256": "bbd642396cc794221e114c834980b11492fa05657d4fc851c81c290e9a7818d2",
+      "copy_sha256": "bbd642396cc794221e114c834980b11492fa05657d4fc851c81c290e9a7818d2"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/ploted3.prefab.bundle",
+      "size": 22136747,
+      "mtime_ns": 1787822652928988200,
+      "original_sha256": "e5bed3186a4c6d5e3e6d2b429c47b4ba0c01479159702874d145fa9c24759043",
+      "copy_sha256": "e5bed3186a4c6d5e3e6d2b429c47b4ba0c01479159702874d145fa9c24759043"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotmodle.prefab.bundle",
+      "size": 800676,
+      "mtime_ns": 1787822652928988200,
+      "original_sha256": "a41dc4be24b4ba2d03c0dd5013a5390c68190da934194588ac2b29c506547c37",
+      "copy_sha256": "a41dc4be24b4ba2d03c0dd5013a5390c68190da934194588ac2b29c506547c37"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plots0.prefab.bundle",
+      "size": 6359287,
+      "mtime_ns": 1787822652929988400,
+      "original_sha256": "aa281239a2e9ae2e4dbc97aa223c5234e12d82efb4547f41c2db5b59cec0934f",
+      "copy_sha256": "aa281239a2e9ae2e4dbc97aa223c5234e12d82efb4547f41c2db5b59cec0934f"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plots1.prefab.bundle",
+      "size": 5075527,
+      "mtime_ns": 1787822652930988500,
+      "original_sha256": "2e3368815b77845612df0da64fe64bfcf765210f419a3c3fcf234cce9f84ea3d",
+      "copy_sha256": "2e3368815b77845612df0da64fe64bfcf765210f419a3c3fcf234cce9f84ea3d"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plots2.prefab.bundle",
+      "size": 5173488,
+      "mtime_ns": 1787822652930988500,
+      "original_sha256": "a43d0e17d6058d94a41e7934fc545c0e141f29ed945271433942983126c48760",
+      "copy_sha256": "a43d0e17d6058d94a41e7934fc545c0e141f29ed945271433942983126c48760"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plots3.prefab.bundle",
+      "size": 3732658,
+      "mtime_ns": 1787822652931988400,
+      "original_sha256": "566926d121af60d1cb51c22527e891c5ae419b64deab4bef4f4f9d55f5705ab3",
+      "copy_sha256": "566926d121af60d1cb51c22527e891c5ae419b64deab4bef4f4f9d55f5705ab3"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plots4.prefab.bundle",
+      "size": 5566928,
+      "mtime_ns": 1787822652932987500,
+      "original_sha256": "c3fd9102c37b041007c40adf37ff877dbefdd0d4e8285ae2c8bfa375c6ce3458",
+      "copy_sha256": "c3fd9102c37b041007c40adf37ff877dbefdd0d4e8285ae2c8bfa375c6ce3458"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotsa0.prefab.bundle",
+      "size": 6204336,
+      "mtime_ns": 1787822652932987500,
+      "original_sha256": "3b7df7466138863e72170af9a98316eeb90fe3f1ed8521be67d59b9e6bd13b5b",
+      "copy_sha256": "3b7df7466138863e72170af9a98316eeb90fe3f1ed8521be67d59b9e6bd13b5b"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotsa1.prefab.bundle",
+      "size": 5105279,
+      "mtime_ns": 1787822652933987800,
+      "original_sha256": "c192d99ef317a0d7e1a2d08f97069b238f4cffbff7921d88cb7ebd00bbe4696d",
+      "copy_sha256": "c192d99ef317a0d7e1a2d08f97069b238f4cffbff7921d88cb7ebd00bbe4696d"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotsa2.prefab.bundle",
+      "size": 10864118,
+      "mtime_ns": 1787822652933987800,
+      "original_sha256": "6c42c56ce6819efbccbc61df0e1598ec8f1332ecdfe4b41ef30a4430ced3c981",
+      "copy_sha256": "6c42c56ce6819efbccbc61df0e1598ec8f1332ecdfe4b41ef30a4430ced3c981"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotsa3.prefab.bundle",
+      "size": 5518978,
+      "mtime_ns": 1787822652934987600,
+      "original_sha256": "de7fd720589b6b19666a995bf6e6d8ccd473c82df106394214ec54e48d2bc863",
+      "copy_sha256": "de7fd720589b6b19666a995bf6e6d8ccd473c82df106394214ec54e48d2bc863"
+    },
+    {
+      "path": "AssetBundles/plots_assets_assets/assetbundles/prefabs/ui/plots/plotsa4.prefab.bundle",
+      "size": 10338100,
+      "mtime_ns": 1787822652934987600,
+      "original_sha256": "3df43a87a1c9ac57d82bdc12b237977f4a3bd7484ad6a8e283ada1d0ac9d55d5",
+      "copy_sha256": "3df43a87a1c9ac57d82bdc12b237977f4a3bd7484ad6a8e283ada1d0ac9d55d5"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomchara.bundle",
+      "size": 7314285,
+      "mtime_ns": 1787822652935986700,
+      "original_sha256": "00bd4d2569e6ae6412f1961843a1817434c1a235171ed750bbd0ab1269b8e7f4",
+      "copy_sha256": "00bd4d2569e6ae6412f1961843a1817434c1a235171ed750bbd0ab1269b8e7f4"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharaadvanced.bundle",
+      "size": 9070658,
+      "mtime_ns": 1787822652936986400,
+      "original_sha256": "ef1c6deb84a532eace9c0af202ee213e549c084da0714086d8db242e98c3ea5d",
+      "copy_sha256": "ef1c6deb84a532eace9c0af202ee213e549c084da0714086d8db242e98c3ea5d"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharaberet.bundle",
+      "size": 1442509,
+      "mtime_ns": 1787822652936986400,
+      "original_sha256": "138132eb34d42e4e59963aac35519b85ae69578d2d440e6e9cb6b270fc5bc2a1",
+      "copy_sha256": "138132eb34d42e4e59963aac35519b85ae69578d2d440e6e9cb6b270fc5bc2a1"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharacamouflage.bundle",
+      "size": 2239940,
+      "mtime_ns": 1787822652937986400,
+      "original_sha256": "62f809c6dab0f24da8cb808cb07b7982f040a4b8ddea2518209991bff7702af1",
+      "copy_sha256": "62f809c6dab0f24da8cb808cb07b7982f040a4b8ddea2518209991bff7702af1"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharaidle.bundle",
+      "size": 3061113,
+      "mtime_ns": 1787822652937986400,
+      "original_sha256": "f014261908091d32ee5c4bed14b1cad7b24eef80f645f49dde94a7f5279060af",
+      "copy_sha256": "f014261908091d32ee5c4bed14b1cad7b24eef80f645f49dde94a7f5279060af"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharamagical.bundle",
+      "size": 1974447,
+      "mtime_ns": 1787822652938986300,
+      "original_sha256": "9c2b6e07cb6d4b92957e3a8e9f5638dc20f20c8d8f83688e1c847b44a3fec07e",
+      "copy_sha256": "9c2b6e07cb6d4b92957e3a8e9f5638dc20f20c8d8f83688e1c847b44a3fec07e"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharamiko.bundle",
+      "size": 2523197,
+      "mtime_ns": 1787822652939986300,
+      "original_sha256": "71e47ecdd35f0d94e8d8e393384d458116edd9088ac1bb0761a76dd70df1d4cf",
+      "copy_sha256": "71e47ecdd35f0d94e8d8e393384d458116edd9088ac1bb0761a76dd70df1d4cf"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharaoutfit.bundle",
+      "size": 4898617,
+      "mtime_ns": 1787822652939986300,
+      "original_sha256": "19d5e7b4db1ddbfe975ea702e605cfcf048174c5bc6102a85155cdabaded9122",
+      "copy_sha256": "19d5e7b4db1ddbfe975ea702e605cfcf048174c5bc6102a85155cdabaded9122"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharaoutfitcoat.bundle",
+      "size": 2206315,
+      "mtime_ns": 1787822652940990700,
+      "original_sha256": "1f49a7a697479ace7568972b6e705e7aed1d7b31b0464480b2ddb3874257854f",
+      "copy_sha256": "1f49a7a697479ace7568972b6e705e7aed1d7b31b0464480b2ddb3874257854f"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharaoutfitol.bundle",
+      "size": 864413,
+      "mtime_ns": 1787822652940990700,
+      "original_sha256": "4328ce7acdd5bedd2eb5cae5de0ff538eeafb8b2498ca51f413015c35d1feaf7",
+      "copy_sha256": "4328ce7acdd5bedd2eb5cae5de0ff538eeafb8b2498ca51f413015c35d1feaf7"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharaoutfitqipao.bundle",
+      "size": 1076153,
+      "mtime_ns": 1787822652941990800,
+      "original_sha256": "5deba5af05c89293824f97a622f48c12fcc4b88f0145c0cd6afa0149f23f77cf",
+      "copy_sha256": "5deba5af05c89293824f97a622f48c12fcc4b88f0145c0cd6afa0149f23f77cf"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharaoutfiturban.bundle",
+      "size": 918663,
+      "mtime_ns": 1787822652942987100,
+      "original_sha256": "b4ff6d2bf26411de2c6fb56ae03b221597a6068bb2177ace6e633d95796c80fd",
+      "copy_sha256": "b4ff6d2bf26411de2c6fb56ae03b221597a6068bb2177ace6e633d95796c80fd"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharaoutfitwarmth.bundle",
+      "size": 859460,
+      "mtime_ns": 1787822652943991100,
+      "original_sha256": "72f1a003c18a54682f253a5db166dd101c36667dc1c5eccb422ab14c3dcaafe4",
+      "copy_sha256": "72f1a003c18a54682f253a5db166dd101c36667dc1c5eccb422ab14c3dcaafe4"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharaschnabel.bundle",
+      "size": 1772285,
+      "mtime_ns": 1787822652943991100,
+      "original_sha256": "f039075d6cc11e03f6c15f0187779cc00f22795daf78377cb34dc0caa79b085c",
+      "copy_sha256": "f039075d6cc11e03f6c15f0187779cc00f22795daf78377cb34dc0caa79b085c"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharasuit.bundle",
+      "size": 1328213,
+      "mtime_ns": 1787822652944987800,
+      "original_sha256": "9ad435ef4ef324f4344132fda4fa652cf36f372f0353612759a78665ecfbe656",
+      "copy_sha256": "9ad435ef4ef324f4344132fda4fa652cf36f372f0353612759a78665ecfbe656"
+    },
+    {
+      "path": "AssetBundles/room_assets_assets/assetbundles/texture/room/roomcharauniform.bundle",
+      "size": 1333070,
+      "mtime_ns": 1787822652944987800,
+      "original_sha256": "7e83e2ffe0ef07034a2be1937b530000fce92445416bc837cc774106d3fade0f",
+      "copy_sha256": "7e83e2ffe0ef07034a2be1937b530000fce92445416bc837cc774106d3fade0f"
+    },
+    {
+      "path": "AssetBundles/videos_assets_assets/assetbundles/video/street_a1dac159da0825c8bb601c2027118269.bundle",
+      "size": 184289711,
+      "mtime_ns": 1787822652945987000,
+      "original_sha256": "b9de6fc209c41fbf416a3d312b0657f4558d6ec776a70531f93cbe9e4bcc63a5",
+      "copy_sha256": "b9de6fc209c41fbf416a3d312b0657f4558d6ec776a70531f93cbe9e4bcc63a5"
+    },
+    {
+      "path": "CavalryGirls.exe",
+      "size": 650752,
+      "mtime_ns": 1787822652946987300,
+      "original_sha256": "5945ff6a72edb7b0b21a7b49cdd4bcbcae0a44e1fd1614a146741c80a90b8a8d",
+      "copy_sha256": "5945ff6a72edb7b0b21a7b49cdd4bcbcae0a44e1fd1614a146741c80a90b8a8d"
+    },
+    {
+      "path": "CavalryGirls_Data/Log/20260831181236.txt",
+      "size": 22107,
+      "mtime_ns": 1788167580981981500,
+      "original_sha256": "82f0ee2e0ce10bab9c3cf37f21795b88f8886037a8595f428a76589708353e48",
+      "copy_sha256": "82f0ee2e0ce10bab9c3cf37f21795b88f8886037a8595f428a76589708353e48"
+    },
+    {
+      "path": "CavalryGirls_Data/Log/20260831181321.txt",
+      "size": 21807,
+      "mtime_ns": 1788167609027902700,
+      "original_sha256": "88b581411a331244b9fb138233a12068dba4ca1aa5b84d33ca97b70fe32168d1",
+      "copy_sha256": "88b581411a331244b9fb138233a12068dba4ca1aa5b84d33ca97b70fe32168d1"
+    },
+    {
+      "path": "CavalryGirls_Data/Log/20260831195150.txt",
+      "size": 21807,
+      "mtime_ns": 1788173518120291400,
+      "original_sha256": "c451eba62656750a1d2acd2e3296dfffc525421016400972a33eef34a85d1d8f",
+      "copy_sha256": "c451eba62656750a1d2acd2e3296dfffc525421016400972a33eef34a85d1d8f"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/Steamworks.NET.txt",
+      "size": 239,
+      "mtime_ns": 1787822703503481000,
+      "original_sha256": "5219e537d2fa411d5bbfdf3a4711070a7cbaf76548810c461da8778b35b03002",
+      "copy_sha256": "5219e537d2fa411d5bbfdf3a4711070a7cbaf76548810c461da8778b35b03002"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/x86_64/QxContext.dll",
+      "size": 12288,
+      "mtime_ns": 1787822699247483800,
+      "original_sha256": "979d17690c0bb5ffdc1b160843e017212591cbdf7ac06f80d61330729ffc52c1",
+      "copy_sha256": "979d17690c0bb5ffdc1b160843e017212591cbdf7ac06f80d61330729ffc52c1"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/x86_64/Rewired_DirectInput.dll",
+      "size": 12800,
+      "mtime_ns": 1787822710095482400,
+      "original_sha256": "9989b282d43621259160954f3c2191afc3e3a13adb0091c3f60be228831858ad",
+      "copy_sha256": "9989b282d43621259160954f3c2191afc3e3a13adb0091c3f60be228831858ad"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/x86_64/lib_burst_generated.dll",
+      "size": 31232,
+      "mtime_ns": 1787822683550383700,
+      "original_sha256": "d6b4b2b509059210b585fc2adef64d112d31b33ac3906678bd9f8b2de4fe9975",
+      "copy_sha256": "d6b4b2b509059210b585fc2adef64d112d31b33ac3906678bd9f8b2de4fe9975"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/x86_64/lib_burst_generated.txt",
+      "size": 49564,
+      "mtime_ns": 1787822683487382500,
+      "original_sha256": "f7004eef34c2c0f0dcb4c8097655c63b3416bad39c823fd1be8ea4e4d381edb9",
+      "copy_sha256": "f7004eef34c2c0f0dcb4c8097655c63b3416bad39c823fd1be8ea4e4d381edb9"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/x86_64/pdfrenderer.dll",
+      "size": 3615232,
+      "mtime_ns": 1787822652952986500,
+      "original_sha256": "7408aea62d072dc88b9d3bcc58949f4024f048287a9b47bab45da90c232d6898",
+      "copy_sha256": "7408aea62d072dc88b9d3bcc58949f4024f048287a9b47bab45da90c232d6898"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/x86_64/rail_api.dll",
+      "size": 15898080,
+      "mtime_ns": 1787822652953988100,
+      "original_sha256": "c0094678b3cf3a026413f3fcddab3982e3381f1f34ece3473bdb865f8184cad1",
+      "copy_sha256": "c0094678b3cf3a026413f3fcddab3982e3381f1f34ece3473bdb865f8184cad1"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/x86_64/rail_api64.dll",
+      "size": 20112864,
+      "mtime_ns": 1787822652953988100,
+      "original_sha256": "e5a7f21572d4face6590d03bf12e94916a3882deac037d5c68e05c95e3bc8f42",
+      "copy_sha256": "e5a7f21572d4face6590d03bf12e94916a3882deac037d5c68e05c95e3bc8f42"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/x86_64/rail_wrapper.dll",
+      "size": 1071584,
+      "mtime_ns": 1787822652954986400,
+      "original_sha256": "38aa6e90154f362d98fdc3c806de3a3e99892fd11f885ade3c7e5907694f99e9",
+      "copy_sha256": "38aa6e90154f362d98fdc3c806de3a3e99892fd11f885ade3c7e5907694f99e9"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/x86_64/rail_wrapper64.dll",
+      "size": 1382880,
+      "mtime_ns": 1787822652954986400,
+      "original_sha256": "016816a60c589ffde1a474579b3b228808af20a2156832356b071bac5bfa0872",
+      "copy_sha256": "016816a60c589ffde1a474579b3b228808af20a2156832356b071bac5bfa0872"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/x86_64/steam_api64.dll",
+      "size": 265504,
+      "mtime_ns": 1787822652955986700,
+      "original_sha256": "ca1fa9a7609ab10b7926400559cf073e5888423cc156af72c6027d72a89eea73",
+      "copy_sha256": "ca1fa9a7609ab10b7926400559cf073e5888423cc156af72c6027d72a89eea73"
+    },
+    {
+      "path": "CavalryGirls_Data/Plugins/x86_64/xlua.dll",
+      "size": 525824,
+      "mtime_ns": 1787822652955986700,
+      "original_sha256": "f80b9a5f5e70633262bc638a8656ee163f949a3fb4fe1d297d4abc51a7ea6dae",
+      "copy_sha256": "f80b9a5f5e70633262bc638a8656ee163f949a3fb4fe1d297d4abc51a7ea6dae"
+    },
+    {
+      "path": "CavalryGirls_Data/Resources/unity default resources",
+      "size": 3837020,
+      "mtime_ns": 1787822652958990800,
+      "original_sha256": "28f34dd870e9ef576828fca791d86a90f932a3d6814b947dc191fbed2354b888",
+      "copy_sha256": "28f34dd870e9ef576828fca791d86a90f932a3d6814b947dc191fbed2354b888"
+    },
+    {
+      "path": "CavalryGirls_Data/Resources/unity_builtin_extra",
+      "size": 412464,
+      "mtime_ns": 1787822652958990800,
+      "original_sha256": "c7984669428e557c9f3e8cd84f50df9ce2924433517ab0a5e71b8cc2e971a184",
+      "copy_sha256": "c7984669428e557c9f3e8cd84f50df9ce2924433517ab0a5e71b8cc2e971a184"
+    },
+    {
+      "path": "CavalryGirls_Data/Save/Save_2X426BK37LKSJRSGYZGXJS4I5I.sav",
+      "size": 10896,
+      "mtime_ns": 1752407673000000000,
+      "original_sha256": "29a27345df2285692c623dc74f80f4590704c68bd0823fb0d08449e77fed52fa",
+      "copy_sha256": "29a27345df2285692c623dc74f80f4590704c68bd0823fb0d08449e77fed52fa"
+    },
+    {
+      "path": "CavalryGirls_Data/Save/Save_BX32A2PVXQEUGIH5II5RYERZIY.sav",
+      "size": 10576,
+      "mtime_ns": 1752407552000000000,
+      "original_sha256": "cac7b0aff5689fb4a82413998aa7b0afb0e7b24136643f1d52e8f26e9c0ba0ff",
+      "copy_sha256": "cac7b0aff5689fb4a82413998aa7b0afb0e7b24136643f1d52e8f26e9c0ba0ff"
+    },
+    {
+      "path": "CavalryGirls_Data/Save/Save_G6TNPHY2VCMYZ4PYLZJ4OQDNJQ.sav",
+      "size": 10864,
+      "mtime_ns": 1752407673000000000,
+      "original_sha256": "78f2f1ccbcc662029108d7e40b890204c0e7871edf7a1fc97dd54bbab80cc28f",
+      "copy_sha256": "78f2f1ccbcc662029108d7e40b890204c0e7871edf7a1fc97dd54bbab80cc28f"
+    },
+    {
+      "path": "CavalryGirls_Data/Save/Save_P7H6AWO32FMSEE2BCESBZ5LNAA.sav",
+      "size": 1584,
+      "mtime_ns": 1788173518091738400,
+      "original_sha256": "b312a55495623ddb5c010904ad32e9f743f27ed61267a22f305e4a87a98ffe6e",
+      "copy_sha256": "b312a55495623ddb5c010904ad32e9f743f27ed61267a22f305e4a87a98ffe6e"
+    },
+    {
+      "path": "CavalryGirls_Data/Save/steam_autocloud.vdf",
+      "size": 51,
+      "mtime_ns": 1788173504784051200,
+      "original_sha256": "05c110851e5dc281b8718ce51c95f04da02faaada1715f47245818cb835ead55",
+      "copy_sha256": "05c110851e5dc281b8718ce51c95f04da02faaada1715f47245818cb835ead55"
+    },
+    {
+      "path": "CavalryGirls_Data/StreamingAssets/aa/AddressablesLink/link.xml",
+      "size": 3792,
+      "mtime_ns": 1787822718748484600,
+      "original_sha256": "c471936e2d29316c34e079665319b4cc4d4f7b9b2ea98465dc7e779b3e090ca1",
+      "copy_sha256": "c471936e2d29316c34e079665319b4cc4d4f7b9b2ea98465dc7e779b3e090ca1"
+    },
+    {
+      "path": "CavalryGirls_Data/StreamingAssets/aa/catalog.json",
+      "size": 2624441,
+      "mtime_ns": 1787822652959991000,
+      "original_sha256": "ba105994ff2b7f8ea6989d244c8efbe8cfc9e02691d42d1c2c2064e898084671",
+      "copy_sha256": "ba105994ff2b7f8ea6989d244c8efbe8cfc9e02691d42d1c2c2064e898084671"
+    },
+    {
+      "path": "CavalryGirls_Data/StreamingAssets/aa/settings.json",
+      "size": 812,
+      "mtime_ns": 1787822712942482900,
+      "original_sha256": "6a0faee1292462cbfaef008221aab3fcde03d4aaec3c6eaa628e4685a647ffd9",
+      "copy_sha256": "6a0faee1292462cbfaef008221aab3fcde03d4aaec3c6eaa628e4685a647ffd9"
+    },
+    {
+      "path": "CavalryGirls_Data/app.info",
+      "size": 24,
+      "mtime_ns": 1787822683487382500,
+      "original_sha256": "38ff5d83587b956af16f3af827fa03348157d67f567cc5feb24fcbd3cc94f6e1",
+      "copy_sha256": "38ff5d83587b956af16f3af827fa03348157d67f567cc5feb24fcbd3cc94f6e1"
+    },
+    {
+      "path": "CavalryGirls_Data/boot.config",
+      "size": 113,
+      "mtime_ns": 1787822717635481600,
+      "original_sha256": "0b4c38a644e101164b17acdc2b9876c4b7f7fe50a69c035bb7f896cc3a080eb6",
+      "copy_sha256": "0b4c38a644e101164b17acdc2b9876c4b7f7fe50a69c035bb7f896cc3a080eb6"
+    },
+    {
+      "path": "CavalryGirls_Data/globalgamemanagers",
+      "size": 16893916,
+      "mtime_ns": 1787822652946987300,
+      "original_sha256": "aee8e5ee99d71793bd8c5f1e7b24c8f3735be4d98434c354139532df274547b2",
+      "copy_sha256": "aee8e5ee99d71793bd8c5f1e7b24c8f3735be4d98434c354139532df274547b2"
+    },
+    {
+      "path": "CavalryGirls_Data/globalgamemanagers.assets",
+      "size": 344432,
+      "mtime_ns": 1787822652947986300,
+      "original_sha256": "e5082120ce20ec6b95cee3ebd0bf274aeca0e9f58aa7b5bab1fca1ad7b2bea5d",
+      "copy_sha256": "e5082120ce20ec6b95cee3ebd0bf274aeca0e9f58aa7b5bab1fca1ad7b2bea5d"
+    },
+    {
+      "path": "CavalryGirls_Data/globalgamemanagers.assets.resS",
+      "size": 1179648,
+      "mtime_ns": 1787822652947986300,
+      "original_sha256": "2fc9f2bc7e57d1defed3dda2e6623ad5c201ff1cfb7c17af0b1804ca2d5b6a29",
+      "copy_sha256": "2fc9f2bc7e57d1defed3dda2e6623ad5c201ff1cfb7c17af0b1804ca2d5b6a29"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/Metadata/global-metadata.dat",
+      "size": 13260356,
+      "mtime_ns": 1787822652951987500,
+      "original_sha256": "f3a06e23911f1a3357a2e8506623d430bcbdd8511ac1b374293a15dea17de40a",
+      "copy_sha256": "f3a06e23911f1a3357a2e8506623d430bcbdd8511ac1b374293a15dea17de40a"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/Resources/System.Data.dll-resources.dat",
+      "size": 93718,
+      "mtime_ns": 1787822704058483300,
+      "original_sha256": "98a7950ec6de3242c2e190dfa630188dfa32511a125542b94baa952d1c757d49",
+      "copy_sha256": "98a7950ec6de3242c2e190dfa630188dfa32511a125542b94baa952d1c757d49"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/Resources/mscorlib.dll-resources.dat",
+      "size": 337563,
+      "mtime_ns": 1787822652951987500,
+      "original_sha256": "c5baa176a5b72cd545266340e42102d393a5e43d38c95796bc828918bb95277f",
+      "copy_sha256": "c5baa176a5b72cd545266340e42102d393a5e43d38c95796bc828918bb95277f"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/2.0/Browsers/Compat.browser",
+      "size": 1605,
+      "mtime_ns": 1787822683487382500,
+      "original_sha256": "8a1082057ac5681dcd4e9c227ed7fb8eb42ac1618963b5de3b65739dd77e2741",
+      "copy_sha256": "8a1082057ac5681dcd4e9c227ed7fb8eb42ac1618963b5de3b65739dd77e2741"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
+      "size": 60575,
+      "mtime_ns": 1787822705852482400,
+      "original_sha256": "751861040b69ea63a3827507b7c8da9c7f549dc181c1c8af4b7ca78cc97d710a",
+      "copy_sha256": "751861040b69ea63a3827507b7c8da9c7f549dc181c1c8af4b7ca78cc97d710a"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/2.0/machine.config",
+      "size": 29116,
+      "mtime_ns": 1787822703503481000,
+      "original_sha256": "edc5bcf685d930a607bc097927260a3f9ac7f52dd809db68158298bfd934b7ce",
+      "copy_sha256": "edc5bcf685d930a607bc097927260a3f9ac7f52dd809db68158298bfd934b7ce"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/2.0/settings.map",
+      "size": 2622,
+      "mtime_ns": 1787822703504484000,
+      "original_sha256": "49c6160f9d54af4270a3b4e997fc4a8301f79b9e2070118fa46ddbcbbc44f9a2",
+      "copy_sha256": "49c6160f9d54af4270a3b4e997fc4a8301f79b9e2070118fa46ddbcbbc44f9a2"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/2.0/web.config",
+      "size": 11686,
+      "mtime_ns": 1787822705725483100,
+      "original_sha256": "3c1a76a5849074b437d297656a208a3bef6d84b982153542b9c797046c601dfc",
+      "copy_sha256": "3c1a76a5849074b437d297656a208a3bef6d84b982153542b9c797046c601dfc"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/4.0/Browsers/Compat.browser",
+      "size": 1605,
+      "mtime_ns": 1787822683487382500,
+      "original_sha256": "8a1082057ac5681dcd4e9c227ed7fb8eb42ac1618963b5de3b65739dd77e2741",
+      "copy_sha256": "8a1082057ac5681dcd4e9c227ed7fb8eb42ac1618963b5de3b65739dd77e2741"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
+      "size": 60575,
+      "mtime_ns": 1787822705852482400,
+      "original_sha256": "751861040b69ea63a3827507b7c8da9c7f549dc181c1c8af4b7ca78cc97d710a",
+      "copy_sha256": "751861040b69ea63a3827507b7c8da9c7f549dc181c1c8af4b7ca78cc97d710a"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/4.0/machine.config",
+      "size": 33648,
+      "mtime_ns": 1787822699247483800,
+      "original_sha256": "6919d5af506aae0d93e91bd83418a81895a5554b9f54cf94aad20d025a4db664",
+      "copy_sha256": "6919d5af506aae0d93e91bd83418a81895a5554b9f54cf94aad20d025a4db664"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/4.0/settings.map",
+      "size": 2622,
+      "mtime_ns": 1787822683488383900,
+      "original_sha256": "ce1db1ad8a9512073164e3eccdc193f7eda036e1a9733caec4635de21b2865c8",
+      "copy_sha256": "ce1db1ad8a9512073164e3eccdc193f7eda036e1a9733caec4635de21b2865c8"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/4.0/web.config",
+      "size": 18848,
+      "mtime_ns": 1787822688365484400,
+      "original_sha256": "f1a6416eeedd9d040387fd85dcf7d6e074b6644c6829d08be220ff9fc32efb31",
+      "copy_sha256": "f1a6416eeedd9d040387fd85dcf7d6e074b6644c6829d08be220ff9fc32efb31"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/4.5/Browsers/Compat.browser",
+      "size": 1605,
+      "mtime_ns": 1787822683487382500,
+      "original_sha256": "8a1082057ac5681dcd4e9c227ed7fb8eb42ac1618963b5de3b65739dd77e2741",
+      "copy_sha256": "8a1082057ac5681dcd4e9c227ed7fb8eb42ac1618963b5de3b65739dd77e2741"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
+      "size": 60575,
+      "mtime_ns": 1787822705851483000,
+      "original_sha256": "751861040b69ea63a3827507b7c8da9c7f549dc181c1c8af4b7ca78cc97d710a",
+      "copy_sha256": "751861040b69ea63a3827507b7c8da9c7f549dc181c1c8af4b7ca78cc97d710a"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/4.5/machine.config",
+      "size": 34106,
+      "mtime_ns": 1787822688365484400,
+      "original_sha256": "ef9b9387168fd1dd6c996f96c134d9c44f8eb06f9587004bf997252a520182d6",
+      "copy_sha256": "ef9b9387168fd1dd6c996f96c134d9c44f8eb06f9587004bf997252a520182d6"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/4.5/settings.map",
+      "size": 2622,
+      "mtime_ns": 1787822683487382500,
+      "original_sha256": "ce1db1ad8a9512073164e3eccdc193f7eda036e1a9733caec4635de21b2865c8",
+      "copy_sha256": "ce1db1ad8a9512073164e3eccdc193f7eda036e1a9733caec4635de21b2865c8"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/4.5/web.config",
+      "size": 18857,
+      "mtime_ns": 1787822697018482900,
+      "original_sha256": "15a2c7a9242bf54d3ccb3e07fa6d8f84ba8b303d8877243787a1103009941bdb",
+      "copy_sha256": "15a2c7a9242bf54d3ccb3e07fa6d8f84ba8b303d8877243787a1103009941bdb"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/browscap.ini",
+      "size": 311984,
+      "mtime_ns": 1787822652950987100,
+      "original_sha256": "4ddd50f31fb968f30bedefc253a46dc3f2890192d05cdaa9e0a64a056eee807e",
+      "copy_sha256": "4ddd50f31fb968f30bedefc253a46dc3f2890192d05cdaa9e0a64a056eee807e"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/config",
+      "size": 3276,
+      "mtime_ns": 1787822706715481700,
+      "original_sha256": "60099cf91bb1a5717fc1f2d23cf36a61d3bfb70d9489fbb6f4bae98c560bf3d5",
+      "copy_sha256": "60099cf91bb1a5717fc1f2d23cf36a61d3bfb70d9489fbb6f4bae98c560bf3d5"
+    },
+    {
+      "path": "CavalryGirls_Data/il2cpp_data/etc/mono/mconfig/config.xml",
+      "size": 25817,
+      "mtime_ns": 1787822705725483100,
+      "original_sha256": "0c56e34c69124510fa8c19e7b4c2ca6c1c4ff460ae19f798dd0ca035809e396d",
+      "copy_sha256": "0c56e34c69124510fa8c19e7b4c2ca6c1c4ff460ae19f798dd0ca035809e396d"
+    },
+    {
+      "path": "CavalryGirls_Data/level0",
+      "size": 19580,
+      "mtime_ns": 1787822683487382500,
+      "original_sha256": "6a2cdede47c7309bf25763f00a2e2b3842b40398ac0ea19bfee3fa3e9a13d5c3",
+      "copy_sha256": "6a2cdede47c7309bf25763f00a2e2b3842b40398ac0ea19bfee3fa3e9a13d5c3"
+    },
+    {
       "path": "CavalryGirls_Data/resources.assets",
+      "size": 1603926360,
+      "mtime_ns": 1787822652956987800,
+      "original_sha256": "d275481b891eef752e5d4279c587b564db4c5ef5e0291cc80af82a089d793838",
       "copy_sha256": "d275481b891eef752e5d4279c587b564db4c5ef5e0291cc80af82a089d793838"
     },
     {
       "path": "CavalryGirls_Data/resources.assets.resS",
+      "size": 2502901096,
+      "mtime_ns": 1787822652957989000,
+      "original_sha256": "8d60f1b9828c759f6483fa1998def795c9ed84dd0cd653950e2ee12b2acc6026",
       "copy_sha256": "8d60f1b9828c759f6483fa1998def795c9ed84dd0cd653950e2ee12b2acc6026"
+    },
+    {
+      "path": "CavalryGirls_Data/resources.resource",
+      "size": 482996963,
+      "mtime_ns": 1787822652957989000,
+      "original_sha256": "4d959022c9f5177a992866ceafdf0755c2290dd89c3e5def6177caf02bc46f23",
+      "copy_sha256": "4d959022c9f5177a992866ceafdf0755c2290dd89c3e5def6177caf02bc46f23"
+    },
+    {
+      "path": "CavalryGirls_Data/sharedassets0.assets",
+      "size": 2834352,
+      "mtime_ns": 1787822652959991000,
+      "original_sha256": "bd1012fb9c7a5848f48712048d2acf34ff32c888c526c3686bdf8cf71943d346",
+      "copy_sha256": "bd1012fb9c7a5848f48712048d2acf34ff32c888c526c3686bdf8cf71943d346"
+    },
+    {
+      "path": "GameAssembly.dll",
+      "size": 47815168,
+      "mtime_ns": 1787822652960990900,
+      "original_sha256": "240b066b913bc7efeb2dda073be715404ac55b503ae5ca9e1836be5a8bdff235",
+      "copy_sha256": "240b066b913bc7efeb2dda073be715404ac55b503ae5ca9e1836be5a8bdff235"
+    },
+    {
+      "path": "UnityCrashHandler64.exe",
+      "size": 1094536,
+      "mtime_ns": 1787822652960990900,
+      "original_sha256": "c56ad09dabdd16030c13184a26f5258f560d0158cf6ef5e3ddc90512596b6c08",
+      "copy_sha256": "c56ad09dabdd16030c13184a26f5258f560d0158cf6ef5e3ddc90512596b6c08"
+    },
+    {
+      "path": "UnityPlayer.dll",
+      "size": 26030984,
+      "mtime_ns": 1787822652961990600,
+      "original_sha256": "697b57d82f97326c5410a819a1abfe4a8c13fdcbeea7808ae1254ddbdeb4e744",
+      "copy_sha256": "697b57d82f97326c5410a819a1abfe4a8c13fdcbeea7808ae1254ddbdeb4e744"
     }
-  ]
+  ],
+  "copy_extra_paths": [],
+  "mismatches": []
 }

@@ -10,6 +10,7 @@ from __future__ import annotations
 from copy import deepcopy
 from hashlib import sha256
 from os import PathLike
+from pathlib import Path
 from typing import Any, Iterable
 
 import UnityPy
@@ -44,6 +45,40 @@ TARGETS = {
         "TextMeshProUGUI font (1 observed local PPtr reference)",
     ),
 }
+
+
+def _profile_section(profile: dict[str, Any] | None) -> dict[str, Any] | None:
+    """Return a validated ``fonts`` section from a merged or direct profile."""
+    if profile is None:
+        return None
+    if not isinstance(profile, dict):
+        raise FontPatchError("font profile must be a mapping")
+    section = profile.get("fonts", profile)
+    if not isinstance(section, dict):
+        raise FontPatchError("font profile section must be a mapping")
+    return section
+
+
+def _font_contract(profile: dict[str, Any] | None) -> tuple[int, str, dict[int, tuple[str, str]], dict[str, Any] | None]:
+    section = _profile_section(profile)
+    if section is None:
+        return KOREAN_FONT_PATH_ID, KOREAN_FONT_NAME, TARGETS, None
+    korean = section.get("korean_font")
+    rows = section.get("targets")
+    if not isinstance(korean, dict) or not isinstance(rows, list) or not rows:
+        raise FontPatchError("font profile lacks korean_font or targets")
+    try:
+        korean_id = int(korean["path_id"])
+        korean_name = str(korean["name"])
+        targets = {
+            int(row["path_id"]): (str(row["name"]), str(row["reason"]))
+            for row in rows
+        }
+    except (KeyError, TypeError, ValueError) as exc:
+        raise FontPatchError("invalid font profile target") from exc
+    if len(targets) != len(rows) or korean_id in targets:
+        raise FontPatchError("duplicate font target or fallback self-reference")
+    return korean_id, korean_name, targets, section
 
 
 class FontPatchError(RuntimeError):
@@ -138,7 +173,11 @@ def _path_exists(graph: dict[int, Iterable[int]], start: int, goal: int) -> bool
     return False
 
 
-def patch_fonts(env: Any, font_bundle_path: str | PathLike[str]) -> dict[str, Any]:
+def patch_fonts(
+    env: Any,
+    font_bundle_path: str | PathLike[str],
+    profile: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Attach the existing static Korean TMP atlas as a local fallback.
 
     Parameters
@@ -161,9 +200,16 @@ def patch_fonts(env: Any, font_bundle_path: str | PathLike[str]) -> dict[str, An
         If identities, coverage, exact no-op round-trips, PPtrs, or cycle
         checks fail. No asset file is saved by this function.
     """
+    korean_font_path_id, korean_font_name, targets, section = _font_contract(profile)
+    if section is not None:
+        expected_bundle_hash = section.get("font_bundle_sha256")
+        if expected_bundle_hash:
+            bundle_hash = _digest(Path(font_bundle_path).read_bytes())
+            if bundle_hash != expected_bundle_hash:
+                raise FontPatchError(f"font bundle hash mismatch: {bundle_hash}")
     node = _load_font_node(font_bundle_path)
     objects = _resource_font_objects(env)
-    required_ids = {KOREAN_FONT_PATH_ID, *TARGETS}
+    required_ids = {korean_font_path_id, *targets}
     missing = sorted(required_ids - objects.keys())
     if missing:
         raise FontPatchError(f"resources.assets is missing TMP FontAsset PathIDs: {missing}")
@@ -185,8 +231,8 @@ def patch_fonts(env: Any, font_bundle_path: str | PathLike[str]) -> dict[str, An
         originals[path_id] = raw
         roundtrip_ids.append(path_id)
 
-    expected_names = {KOREAN_FONT_PATH_ID: KOREAN_FONT_NAME}
-    expected_names.update({path_id: value[0] for path_id, value in TARGETS.items()})
+    expected_names = {korean_font_path_id: korean_font_name}
+    expected_names.update({path_id: value[0] for path_id, value in targets.items()})
     for path_id, expected_name in expected_names.items():
         actual_name = trees[path_id].get("m_Name")
         if actual_name != expected_name:
@@ -195,7 +241,11 @@ def patch_fonts(env: Any, font_bundle_path: str | PathLike[str]) -> dict[str, An
                 f"found {actual_name!r}"
             )
 
-    korean_tree = trees[KOREAN_FONT_PATH_ID]
+    korean_tree = trees[korean_font_path_id]
+    if section is not None:
+        expected_korean_hash = section["korean_font"].get("source_object_sha256")
+        if expected_korean_hash and _digest(originals[korean_font_path_id]) != expected_korean_hash:
+            raise FontPatchError("Korean TMP FontAsset object hash mismatch")
     if korean_tree.get("m_AtlasPopulationMode") != 0:
         raise FontPatchError("SourceHanSansKR is not a static TMP FontAsset")
     unicodes = {
@@ -210,21 +260,28 @@ def patch_fonts(env: Any, font_bundle_path: str | PathLike[str]) -> dict[str, An
     graph = {
         path_id: _local_fallback_ids(tree) for path_id, tree in trees.items()
     }
-    for path_id in TARGETS:
-        if path_id == KOREAN_FONT_PATH_ID or _path_exists(
-            graph, KOREAN_FONT_PATH_ID, path_id
+    for path_id in targets:
+        if path_id == korean_font_path_id or _path_exists(
+            graph, korean_font_path_id, path_id
         ):
             raise FontPatchError(
-                f"adding {path_id} -> {KOREAN_FONT_PATH_ID} would create a fallback cycle"
+                f"adding {path_id} -> {korean_font_path_id} would create a fallback cycle"
             )
 
     proposed: dict[int, tuple[dict[str, Any], bytes]] = {}
     unchanged: list[dict[str, Any]] = []
-    for path_id, (name, reason) in TARGETS.items():
+    profile_rows = {
+        int(row["path_id"]): row for row in section.get("targets", [])
+    } if section is not None else {}
+    for path_id, (name, reason) in targets.items():
         old_tree = trees[path_id]
         old_hash = _digest(originals[path_id])
         fallback_ids = _local_fallback_ids(old_tree)
-        if KOREAN_FONT_PATH_ID in fallback_ids:
+        row = profile_rows.get(path_id, {})
+        if korean_font_path_id in fallback_ids:
+            expected_patched_hash = row.get("patched_object_sha256")
+            if expected_patched_hash and old_hash != expected_patched_hash:
+                raise FontPatchError(f"patched font object hash mismatch for {path_id}")
             unchanged.append(
                 {
                     "path_id": path_id,
@@ -236,9 +293,13 @@ def patch_fonts(env: Any, font_bundle_path: str | PathLike[str]) -> dict[str, An
             continue
         new_tree = deepcopy(old_tree)
         new_tree["m_FallbackFontAssetTable"].append(
-            {"m_FileID": 0, "m_PathID": KOREAN_FONT_PATH_ID}
+            {"m_FileID": 0, "m_PathID": korean_font_path_id}
         )
         new_data = _serialize_typetree(objects[path_id], new_tree, node)
+        if row.get("source_object_sha256") and old_hash != row["source_object_sha256"]:
+            raise FontPatchError(f"source font object hash mismatch for {path_id}")
+        if row.get("patched_object_sha256") and _digest(new_data) != row["patched_object_sha256"]:
+            raise FontPatchError(f"generated font object hash mismatch for {path_id}")
         proposed[path_id] = (new_tree, new_data)
 
     changed: list[dict[str, Any]] = []
@@ -251,21 +312,21 @@ def patch_fonts(env: Any, font_bundle_path: str | PathLike[str]) -> dict[str, An
             pointers = saved_tree.get("m_FallbackFontAssetTable", [])
             if not any(
                 pointer.get("m_FileID") == 0
-                and pointer.get("m_PathID") == KOREAN_FONT_PATH_ID
+                and pointer.get("m_PathID") == korean_font_path_id
                 for pointer in pointers
             ):
                 raise FontPatchError(f"serialized fallback PPtr verification failed for {path_id}")
-            if objects[KOREAN_FONT_PATH_ID].assets_file is not obj.assets_file:
+            if objects[korean_font_path_id].assets_file is not obj.assets_file:
                 raise FontPatchError(f"fallback PPtr for {path_id} is not file-local")
-            if obj.assets_file.objects.get(KOREAN_FONT_PATH_ID) is not objects[KOREAN_FONT_PATH_ID]:
+            if obj.assets_file.objects.get(korean_font_path_id) is not objects[korean_font_path_id]:
                 raise FontPatchError(f"fallback PPtr for {path_id} does not resolve to SourceHanSansKR")
             changed.append(
                 {
                     "path_id": path_id,
-                    "name": TARGETS[path_id][0],
+                    "name": targets[path_id][0],
                     "before_sha256": _digest(before),
                     "after_sha256": _digest(new_data),
-                    "reason": TARGETS[path_id][1],
+                    "reason": targets[path_id][1],
                 }
             )
     except Exception:
@@ -277,8 +338,8 @@ def patch_fonts(env: Any, font_bundle_path: str | PathLike[str]) -> dict[str, An
         "font_type_hash": TMP_FONT_TYPE_HASH,
         "fallback": {
             "m_FileID": 0,
-            "m_PathID": KOREAN_FONT_PATH_ID,
-            "name": KOREAN_FONT_NAME,
+            "m_PathID": korean_font_path_id,
+            "name": korean_font_name,
         },
         "changed": changed,
         "changed_path_ids": [item["path_id"] for item in changed],

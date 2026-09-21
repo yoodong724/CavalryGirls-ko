@@ -40,6 +40,36 @@ class HudPatchError(RuntimeError):
     """Raised when the fixed object, replacement text, or embedded font is invalid."""
 
 
+def _hud_contract(profile: dict[str, Any] | None) -> dict[str, Any]:
+    if profile is None:
+        return {
+            "text_path_id": TEXT_PATH_ID,
+            "gameobject_path_id": GAMEOBJECT_PATH_ID,
+            "script_pointer": [SCRIPT_FILE_ID, SCRIPT_PATH_ID],
+            "source_font": {"path_id": SOURCE_FONT_PATH_ID, "name": "SourceHanSerifCN-Heavy-4", "sha256": SOURCE_FONT_SHA256},
+            "target_font": {"path_id": TARGET_FONT_PATH_ID, "name": "SourceHanSansKR-Regular", "sha256": TARGET_FONT_SHA256},
+            "original_object_sha256": ORIGINAL_OBJECT_SHA256,
+            "original_object_hex": ORIGINAL_OBJECT_BYTES.hex(),
+            "source_text": SOURCE_TEXT,
+            "rect_width": RECT_WIDTH,
+            "font_size": FONT_SIZE,
+        }
+    if not isinstance(profile, dict):
+        raise HudPatchError("HUD profile must be a mapping")
+    section = profile.get("hud", profile)
+    if not isinstance(section, dict):
+        raise HudPatchError("HUD profile section must be a mapping")
+    required = {
+        "text_path_id", "gameobject_path_id", "script_pointer", "source_font",
+        "target_font", "original_object_sha256", "original_object_hex",
+        "source_text", "rect_width", "font_size",
+    }
+    missing = sorted(required - section.keys())
+    if missing:
+        raise HudPatchError(f"HUD profile lacks fields: {missing}")
+    return section
+
+
 def _sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
@@ -64,19 +94,19 @@ def _validate_ko(ko: str) -> bytes:
     return ko.encode("utf-8")
 
 
-def _validate_original(raw: bytes) -> None:
+def _validate_original(raw: bytes, contract: dict[str, Any]) -> None:
     if len(raw) != 184:
         raise HudPatchError("HUD Text original object size mismatch")
-    if struct.unpack_from("<iq", raw, 0) != (0, GAMEOBJECT_PATH_ID):
+    if struct.unpack_from("<iq", raw, 0) != (0, contract["gameobject_path_id"]):
         raise HudPatchError("HUD Text GameObject pointer mismatch")
-    if struct.unpack_from("<iq", raw, 16) != (SCRIPT_FILE_ID, SCRIPT_PATH_ID):
+    if struct.unpack_from("<iq", raw, 16) != tuple(contract["script_pointer"]):
         raise HudPatchError("HUD Text script pointer mismatch")
-    if struct.unpack_from("<iq", raw, FONT_POINTER_OFFSET) != (0, SOURCE_FONT_PATH_ID):
+    if struct.unpack_from("<iq", raw, FONT_POINTER_OFFSET) != (0, contract["source_font"]["path_id"]):
         raise HudPatchError("HUD Text source font pointer mismatch")
-    if struct.unpack_from("<i", raw, FONT_SIZE_OFFSET)[0] != FONT_SIZE:
+    if struct.unpack_from("<i", raw, FONT_SIZE_OFFSET)[0] != contract["font_size"]:
         raise HudPatchError("HUD Text font size mismatch")
     length = struct.unpack_from("<i", raw, TEXT_LENGTH_OFFSET)[0]
-    source = SOURCE_TEXT.encode("utf-8")
+    source = contract["source_text"].encode("utf-8")
     if length != len(source) or raw[TEXT_PAYLOAD_OFFSET : TEXT_PAYLOAD_OFFSET + length] != source:
         raise HudPatchError("HUD Text source literal mismatch")
     aligned_end = TEXT_PAYLOAD_OFFSET + _align4(length)
@@ -120,8 +150,8 @@ def _font_record(serialized: Any, path_id: int, expected_name: str, expected_has
     }
 
 
-def _patched_bytes(original: bytes, ko_bytes: bytes) -> bytes:
-    old_length = len(SOURCE_TEXT.encode("utf-8"))
+def _patched_bytes(original: bytes, ko_bytes: bytes, source_text: str = SOURCE_TEXT, target_font_path_id: int = TARGET_FONT_PATH_ID) -> bytes:
+    old_length = len(source_text.encode("utf-8"))
     old_end = TEXT_PAYLOAD_OFFSET + _align4(old_length)
     padding = b"\0" * (_align4(len(ko_bytes)) - len(ko_bytes))
     patched = bytearray(original[:TEXT_LENGTH_OFFSET])
@@ -129,16 +159,16 @@ def _patched_bytes(original: bytes, ko_bytes: bytes) -> bytes:
     patched.extend(ko_bytes)
     patched.extend(padding)
     patched.extend(original[old_end:])
-    struct.pack_into("<iq", patched, FONT_POINTER_OFFSET, 0, TARGET_FONT_PATH_ID)
+    struct.pack_into("<iq", patched, FONT_POINTER_OFFSET, 0, target_font_path_id)
     return bytes(patched)
 
 
-def _validate_patched(raw: bytes, ko_bytes: bytes) -> None:
-    if struct.unpack_from("<iq", raw, 0) != (0, GAMEOBJECT_PATH_ID):
+def _validate_patched(raw: bytes, ko_bytes: bytes, contract: dict[str, Any]) -> None:
+    if struct.unpack_from("<iq", raw, 0) != (0, contract["gameobject_path_id"]):
         raise HudPatchError("patched GameObject pointer changed")
-    if struct.unpack_from("<iq", raw, 16) != (SCRIPT_FILE_ID, SCRIPT_PATH_ID):
+    if struct.unpack_from("<iq", raw, 16) != tuple(contract["script_pointer"]):
         raise HudPatchError("patched script pointer changed")
-    if struct.unpack_from("<iq", raw, FONT_POINTER_OFFSET) != (0, TARGET_FONT_PATH_ID):
+    if struct.unpack_from("<iq", raw, FONT_POINTER_OFFSET) != (0, contract["target_font"]["path_id"]):
         raise HudPatchError("patched destination font pointer mismatch")
     if struct.unpack_from("<i", raw, TEXT_LENGTH_OFFSET)[0] != len(ko_bytes):
         raise HudPatchError("patched UTF-8 byte length mismatch")
@@ -151,64 +181,72 @@ def _validate_patched(raw: bytes, ko_bytes: bytes) -> None:
         raise HudPatchError("patched object size is not four-byte aligned")
 
 
-def patch_hud(environment: Any, ko: str) -> dict[str, Any]:
+def patch_hud(environment: Any, ko: str, profile: dict[str, Any] | None = None) -> dict[str, Any]:
     """Patch only Text PathID 324693 and return changed IDs plus validation."""
     ko_bytes = _validate_ko(ko)
+    contract = _hud_contract(profile)
     serialized = environment.file
     try:
-        obj = serialized.objects[TEXT_PATH_ID]
+        obj = serialized.objects[int(contract["text_path_id"])]
     except KeyError as exc:
         raise HudPatchError("HUD Text PathID 324693 is missing") from exc
     if obj.type.name != "MonoBehaviour":
         raise HudPatchError("HUD Text PathID 324693 is not MonoBehaviour")
 
-    if _sha256(ORIGINAL_OBJECT_BYTES) != ORIGINAL_OBJECT_SHA256:
+    try:
+        original_object = bytes.fromhex(contract["original_object_hex"])
+    except (TypeError, ValueError) as exc:
+        raise HudPatchError("HUD original_object_hex is invalid") from exc
+    if _sha256(original_object) != contract["original_object_sha256"]:
         raise HudPatchError("embedded original HUD object guard is internally inconsistent")
-    _validate_original(ORIGINAL_OBJECT_BYTES)
-    expected = _patched_bytes(ORIGINAL_OBJECT_BYTES, ko_bytes)
+    _validate_original(original_object, contract)
+    expected = _patched_bytes(
+        original_object, ko_bytes, contract["source_text"], contract["target_font"]["path_id"]
+    )
     expected_hash = _sha256(expected)
     effective = _effective_bytes(obj)
     effective_hash = _sha256(effective)
 
-    source_font = _font_record(serialized, SOURCE_FONT_PATH_ID, "SourceHanSerifCN-Heavy-4", SOURCE_FONT_SHA256, ko)
-    target_font = _font_record(serialized, TARGET_FONT_PATH_ID, "SourceHanSansKR-Regular", TARGET_FONT_SHA256, ko)
+    source_spec, target_spec = contract["source_font"], contract["target_font"]
+    source_font = _font_record(serialized, source_spec["path_id"], source_spec["name"], source_spec["sha256"], ko)
+    target_font = _font_record(serialized, target_spec["path_id"], target_spec["name"], target_spec["sha256"], ko)
     if not source_font["missing_glyphs"]:
         raise HudPatchError("source CN font unexpectedly covers every Korean glyph")
     if target_font["missing_glyphs"]:
         raise HudPatchError(f"destination KR font is missing glyphs: {target_font['missing_glyphs']}")
-    if target_font["estimated_width_at_18px"] > RECT_WIDTH:
+    if target_font["estimated_width_at_18px"] > contract["rect_width"]:
         raise HudPatchError("Korean HUD hint exceeds the fixed RectTransform width")
 
     validation = {
-        "object_path_id": TEXT_PATH_ID,
-        "gameobject_path_id": GAMEOBJECT_PATH_ID,
-        "script_pointer": [SCRIPT_FILE_ID, SCRIPT_PATH_ID],
-        "source_object_sha256": ORIGINAL_OBJECT_SHA256,
+        "object_path_id": contract["text_path_id"],
+        "gameobject_path_id": contract["gameobject_path_id"],
+        "script_pointer": list(contract["script_pointer"]),
+        "source_object_sha256": contract["original_object_sha256"],
         "patched_object_sha256": expected_hash,
-        "source_object_size": len(ORIGINAL_OBJECT_BYTES),
+        "source_object_size": len(original_object),
         "patched_object_size": len(expected),
         "text_utf8_bytes": len(ko_bytes),
         "alignment": 4,
-        "font_pointer_before": [0, SOURCE_FONT_PATH_ID],
-        "font_pointer_after": [0, TARGET_FONT_PATH_ID],
+        "font_pointer_before": [0, source_spec["path_id"]],
+        "font_pointer_after": [0, target_spec["path_id"]],
         "source_font": source_font,
         "target_font": target_font,
-        "rect_width": RECT_WIDTH,
+        "rect_width": contract["rect_width"],
         "width_fits": True,
         "runtime_verified": False,
     }
     if effective_hash == expected_hash:
-        _validate_patched(effective, ko_bytes)
+        _validate_patched(effective, ko_bytes, contract)
         validation["idempotent"] = True
         return {"changed_path_ids": [], "validation": validation}
-    if effective_hash != ORIGINAL_OBJECT_SHA256 or effective != ORIGINAL_OBJECT_BYTES:
+    if effective_hash != contract["original_object_sha256"] or effective != original_object:
         raise HudPatchError(f"HUD Text object is an unknown version: {effective_hash}")
 
     changed_before = {item.path_id for item in environment.objects if item.data is not None}
     obj.set_raw_data(expected)
-    _validate_patched(_effective_bytes(obj), ko_bytes)
+    _validate_patched(_effective_bytes(obj), ko_bytes, contract)
     changed_after = {item.path_id for item in environment.objects if item.data is not None}
-    if changed_after - changed_before != {TEXT_PATH_ID}:
+    if changed_after - changed_before != {contract["text_path_id"]}:
         raise HudPatchError("HUD adapter changed an unexpected object")
     validation["idempotent"] = False
-    return {"changed_path_ids": [TEXT_PATH_ID], "validation": validation}
+    return {"changed_path_ids": [contract["text_path_id"]], "validation": validation}

@@ -1,0 +1,662 @@
+{
+  "schema_version": "1.0.0",
+  "source_revision": "f341ed52b0f2a51c24488de4f7b4bf32404c943244fe0263dde3f5d36a1f15ab",
+  "patch_revision": "r06",
+  "localized_record_count": 11,
+  "runtime_verified": false,
+  "raw_font": {
+    "path_id": 11185,
+    "name": "SourceHanSansKR-Regular",
+    "sha256": "061c9a55b6b731af2a4667f06efb82ed7c80ba99d5350c1bba76f80472ea304f"
+  },
+  "objects": [
+    {
+      "path_id": 680647,
+      "kind": "raw_text",
+      "source_sha256": "091804f1a01de1eb9dc063a0c47b80b351b3939a4b34da84e8d1d661217252dd",
+      "source_hex": "00000000767403000000000001000000010000001b0400000000000000000000000000000000000000000000a426183fa426183fa426183f0000803f01000000010000000000000000000000b62b000000000000100000000000000000000000010000002800000004000000000000000100000000000000010000000000803f21000000e5a48de588b6e6aca1e695b0efbc9a330ae789a9e59381e7ad89e7baa7efbc9a32000000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 128,
+          "before": "复制次数：3\n物品等级：2",
+          "after": "복제 횟수: 3\n아이템 레벨: 2"
+        },
+        {
+          "type": "pptr",
+          "offset": 72,
+          "before": [
+            0,
+            11190
+          ],
+          "after": [
+            0,
+            11185
+          ]
+        }
+      ],
+      "font_size": 16,
+      "rect_width": 132.87295532226562,
+      "path": "WeaponOperateUI/Pivot/WeaponOperatePivot/MainArea2/ReforgeArea/ReforgeInfo2",
+      "gameobject_path_id": 226422,
+      "script_pointer": [
+        1,
+        1051
+      ]
+    },
+    {
+      "path_id": 682924,
+      "kind": "tmp_text",
+      "source_sha256": "1f4137c1a38553caf0a4f3e42bfe5c6df82e375c42a813c9d4a57be515f20fa1",
+      "source_hex": "0000000015d00200000000000100000001000000b209000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f01000000010000000000000015000000e58d87e7baa7e58f8ae694b9e980a0e59e8be58fb700000000000000000000007d4b0a000000000000000000b5000000000000000000000000000000000000000000000000000000909090ffdae7103fdae7103fdae7103f0000803f00000000030000000000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f00000000000000000000000000000000a64b0a000000000000000000000000000000000000000000f35075b900000000ffffffff000088410000884190010000000000000000904100009042000000000200000000020000ffff000000000000000000000000000000000000000000000000000001000000cdcccc3e000000000000000000000000000000000000000000000000000000000100000000000000000000000100000001000000010000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 72,
+          "before": "升级及改造型号",
+          "after": "업그레이드 및 개조 모델"
+        }
+      ],
+      "path": "ItemBreifUI/TargetSub/Pannel8/UpgradePannel/Text",
+      "gameobject_path_id": 184341,
+      "script_pointer": [
+        1,
+        2482
+      ]
+    },
+    {
+      "path_id": 717858,
+      "kind": "raw_text",
+      "source_sha256": "a33471b84e7835cc38bb570d46682c10d93e3392726a97cf5c3d50085d6c489c",
+      "source_hex": "000000008c1802000000000001000000010000001b0400000000000000000000000000000000000000000000a426183fa426183fa426183f0000803f01000000010000000000000000000000b62b000000000000100000000000000000000000010000002800000004000000000000000100000000000000010000000000803f21000000e5a48de588b6e6aca1e695b0efbc9a330ae789a9e59381e7ad89e7baa7efbc9a32000000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 128,
+          "before": "复制次数：3\n物品等级：2",
+          "after": "복제 횟수: 3\n아이템 레벨: 2"
+        },
+        {
+          "type": "pptr",
+          "offset": 72,
+          "before": [
+            0,
+            11190
+          ],
+          "after": [
+            0,
+            11185
+          ]
+        }
+      ],
+      "font_size": 16,
+      "rect_width": 132.87295532226562,
+      "path": "WeaponOperateUI/Pivot/WeaponOperatePivot/MainArea2/DuplicateArea/DuplicateInfo2",
+      "gameobject_path_id": 137356,
+      "script_pointer": [
+        1,
+        1051
+      ]
+    },
+    {
+      "path_id": 722904,
+      "kind": "tmp_text",
+      "source_sha256": "2cdacaf6120e364b381ab0fe5deec7a9714dbe88cd243c205efa8bfd4303bede",
+      "source_hex": "0000000072540000000000000100000001000000b209000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f01000000010000000000000015000000e58d87e7baa7e58f8ae694b9e980a0e59e8be58fb700000000000000000000007d4b0a000000000000000000b5000000000000000000000000000000000000000000000000000000909090ffdae7103fdae7103fdae7103f0000803f00000000030000000000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f00000000000000000000000000000000a64b0a000000000000000000000000000000000000000000f35075b900000000ffffffff000088410000884190010000000000000000904100009042000000000200000000020000ffff000000000000000000000000000000000000000000000000000001000000cdcccc3e000000000000000000000000000000000000000000000000000000000100000000000000000000000100000001000000010000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 72,
+          "before": "升级及改造型号",
+          "after": "업그레이드 및 개조 모델"
+        }
+      ],
+      "path": "ItemBreifUISimple/TargetSub/Pannel8/UpgradePannel/Text",
+      "gameobject_path_id": 21618,
+      "script_pointer": [
+        1,
+        2482
+      ]
+    },
+    {
+      "path_id": 704074,
+      "kind": "layout",
+      "source_sha256": "e16e3353dd3b48107344b1fb51e9b512ca7d3dadff687848673821d652c25247",
+      "source_hex": "00000000115f01000000000001000000010000001b04000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f000000000100000000000000030000007627000000000000110000000000000000000000010000001400000000000000000000000100000000000000000000009a99993f48000000e6ada6e599a8e88081e58c96e7a88be5baa6efbc9a3630250a0a3c73697a653d31323ee59391e5bcb9e78e87efbc9a3230250ae58da1e5a3b3e78e87efbc9a35253c2f73697a653e",
+      "path": "ItemBreifUI/TargetSub/ExtendPanel/Pannel2/PlusText",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ],
+      "gameobject_path_id": 89873,
+      "script_pointer": [
+        1,
+        1051
+      ]
+    },
+    {
+      "path_id": 759153,
+      "kind": "layout",
+      "source_sha256": "e12da28021668a3eead38e5fe9b1df5b63d56be1f4e481ba6fe9688229fbb022",
+      "source_hex": "00000000c09303000000000001000000010000001b04000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f000000000100000000000000030000007627000000000000110000000000000000000000010000001400000000000000000000000100000000000000000000009a99993f48000000e6ada6e599a8e88081e58c96e7a88be5baa6efbc9a3630250a0a3c73697a653d31323ee59391e5bcb9e78e87efbc9a3230250ae58da1e5a3b3e78e87efbc9a35253c2f73697a653e",
+      "path": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel2/PlusText",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ],
+      "gameobject_path_id": 234432,
+      "script_pointer": [
+        1,
+        1051
+      ]
+    },
+    {
+      "path_id": 735757,
+      "kind": "layout",
+      "source_sha256": "cef6be76b8835ec150cf962466074d88cbbc217314185cd959d7d13e02875cba",
+      "source_hex": "000000004e5201000000000001000000010000001b04000000000000000000000000000000000000000000000ac65b3f0ac65b3f0ac65b3f0000803f0100000001000000000000000300000076270000000000001100000000000000000000000f0000001200000000000000000000000100000000000000000000009a99993fcd000000e6b2a1e69c89e789b9e6ae8ae69588e69e9cefbc8ce4bd86e698afe58fafe4bba5e4b88ee5a49ae7a78de58583e7b4a0e69588e69e9ce58f8de5ba94e380820a0a2be586b7e586bb3de586bbe7bb930a2be78783e783a73de892b8e6b1bde78886e782b80a2be9ab98e6b8a93de892b8e58f91efbc88e6b0b4e5b19ee680a7e78886e782b8efbc890a2be794b5e7a3813de6849fe794b5efbc88e794b5e5bca7e5b08fe4bca4e5aeb3efbc890a2be6b2b9e885bb3de6b885e699b0efbc88e5b19ee680a7e6b688e999a4efbc89000000",
+      "path": "ItemBreifUI/TargetSub/ExtendPanel/Pannel5/HintText1",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ],
+      "gameobject_path_id": 86606,
+      "script_pointer": [
+        1,
+        1051
+      ]
+    },
+    {
+      "path_id": 680915,
+      "kind": "layout",
+      "source_sha256": "f5c92b25c40e6110571f6cbfc82682fcea97d3ec6a5e502598310213751f1472",
+      "source_hex": "00000000127f03000000000001000000010000001b04000000000000000000000000000000000000000000000ac65b3f0ac65b3f0ac65b3f0000803f0100000001000000000000000300000076270000000000001100000000000000000000000f0000001200000000000000000000000100000000000000000000009a99993fcd000000e6b2a1e69c89e789b9e6ae8ae69588e69e9cefbc8ce4bd86e698afe58fafe4bba5e4b88ee5a49ae7a78de58583e7b4a0e69588e69e9ce58f8de5ba94e380820a0a2be586b7e586bb3de586bbe7bb930a2be78783e783a73de892b8e6b1bde78886e782b80a2be9ab98e6b8a93de892b8e58f91efbc88e6b0b4e5b19ee680a7e78886e782b8efbc890a2be794b5e7a3813de6849fe794b5efbc88e794b5e5bca7e5b08fe4bca4e5aeb3efbc890a2be6b2b9e885bb3de6b885e699b0efbc88e5b19ee680a7e6b688e999a4efbc89000000",
+      "path": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel5/HintText1",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ],
+      "gameobject_path_id": 229138,
+      "script_pointer": [
+        1,
+        1051
+      ]
+    },
+    {
+      "path_id": 709744,
+      "kind": "layout",
+      "source_sha256": "de4967cf68e6a69bf66f4c57afa9271e6f2c254dce47f2ba7a1693e6a1a4d1b7",
+      "source_hex": "000000009bef02000000000001000000010000001b04000000000000000000000000000000000000000000000ac65b3f0ac65b3f0ac65b3f0000803f0100000001000000000000000300000076270000000000001100000000000000000000000f0000001200000000000000000000000100000000000000000000009a99993fcd000000e6b2a1e69c89e789b9e6ae8ae69588e69e9cefbc8ce4bd86e698afe58fafe4bba5e4b88ee5a49ae7a78de58583e7b4a0e69588e69e9ce58f8de5ba94e380820a0a2be586b7e586bb3de586bbe7bb930a2be78783e783a73de892b8e6b1bde78886e782b80a2be9ab98e6b8a93de892b8e58f91efbc88e6b0b4e5b19ee680a7e78886e782b8efbc890a2be794b5e7a3813de6849fe794b5efbc88e794b5e5bca7e5b08fe4bca4e5aeb3efbc890a2be6b2b9e885bb3de6b885e699b0efbc88e5b19ee680a7e6b688e999a4efbc89000000",
+      "path": "ItemBreifUI/TargetSub/ExtendPanel/Pannel7/HintText2",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ],
+      "gameobject_path_id": 192411,
+      "script_pointer": [
+        1,
+        1051
+      ]
+    },
+    {
+      "path_id": 742068,
+      "kind": "layout",
+      "source_sha256": "cc4b7501348a5f05a1adcbc0c2d8bc9179ae74e33c1e4239fff92c4c822e5a1b",
+      "source_hex": "0000000092ae01000000000001000000010000001b04000000000000000000000000000000000000000000000ac65b3f0ac65b3f0ac65b3f0000803f0100000001000000000000000300000076270000000000001100000000000000000000000f0000001200000000000000000000000100000000000000000000009a99993fcd000000e6b2a1e69c89e789b9e6ae8ae69588e69e9cefbc8ce4bd86e698afe58fafe4bba5e4b88ee5a49ae7a78de58583e7b4a0e69588e69e9ce58f8de5ba94e380820a0a2be586b7e586bb3de586bbe7bb930a2be78783e783a73de892b8e6b1bde78886e782b80a2be9ab98e6b8a93de892b8e58f91efbc88e6b0b4e5b19ee680a7e78886e782b8efbc890a2be794b5e7a3813de6849fe794b5efbc88e794b5e5bca7e5b08fe4bca4e5aeb3efbc890a2be6b2b9e885bb3de6b885e699b0efbc88e5b19ee680a7e6b688e999a4efbc89000000",
+      "path": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel7/HintText2",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 124,
+          "before": 1.2,
+          "after": 1.0
+        }
+      ],
+      "gameobject_path_id": 110226,
+      "script_pointer": [
+        1,
+        1051
+      ]
+    },
+    {
+      "path_id": 736863,
+      "kind": "layout",
+      "source_sha256": "f497ff3e89b00edb2215d38429cdfa964623c353d7955289f282326fb250f38b",
+      "source_hex": "0000000085b90200000000000100000001000000e303000000000000000000002a0000002a0000001e000000050000000100000000009041010000000000000001000000010000000000000001000000",
+      "path": "ItemBreifUI/TargetSub/Pannel1",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 52,
+          "before": 18.0,
+          "after": 8.0
+        }
+      ],
+      "gameobject_path_id": 178565,
+      "script_pointer": [
+        1,
+        995
+      ]
+    },
+    {
+      "path_id": 682659,
+      "kind": "layout",
+      "source_sha256": "b734641ce83cfd7f8e5ed7900f754e88ede0263cf0719fabd36ae93126472420",
+      "source_hex": "0000000075990000000000000100000001000000e303000000000000000000000a0000000a0000000a000000f6ffffff0100000000009041010000000000000001000000010000000000000001000000",
+      "path": "ItemBreifUISimple/TargetSub/Pannel1",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 52,
+          "before": 18.0,
+          "after": 8.0
+        }
+      ],
+      "gameobject_path_id": 39285,
+      "script_pointer": [
+        1,
+        995
+      ]
+    },
+    {
+      "path_id": 760296,
+      "kind": "layout",
+      "source_sha256": "8b2ac0f0c6ea560e165369a78ba5157582c636b2d23cf3513c3cdba868afd8b6",
+      "source_hex": "000000002a560300000000000100000001000000b209000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f0100000001000000000000002c060000e4bdbfe794a8e99abee5baa6efbc9ae280bb5c6ee58fafe4bba5e59ca8e58991e5bda2e68081e5928ce69eaae5bda2e68081e58887e68da2e79a84e6ada6e599a8e38082e58991e5bda2e68081e7a0b4e7bbbde8be83e5b08fefbc8ce69eaae5bda2e68081e694bbe587bbe58a9be69bb4e5bcbae38082e5bda2e68081e79a84e58887e68da2e99c80e8a681e4bdbfe794a8e2809ce58f98e5bda2e696a9e2809de8bf99e4b880e58aa8e4bd9cefbc8ce58f98e59e8be696a9e58fafe4bba5e59ca8e4bbbbe6848fe999a4e4ba86e58f98e59e8be696a9e79a84e58aa8e4bd9ce79a84e694b6e68b9be983a8e58886e6b4bee7949fe380825c6e3c623ee58991e5bda2e680813c2f623e5c6e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463eefbc9ae696bde5b195e5bfabe9809fe79a84e4b889e8bf9ee587bbe38082e694bbe587bbe697b6e68c89e4bd8fe5898de8bf9be5afb9e5ba94e696b9e59091e58fafe4bba5e7a7bbe58aa8e69bb4e8bf9ce79a84e8b79de7a6bbe380825c6e3c737072697465206e616d653d226d6f757365522220636f6c6f723d234646464646463eefbc9a3c753ee6a0bce68ca13c2f753ee69da5e887aae99da2e5898de79a84e694bbe587bbefbc8ce99c80e8a681e6b688e88097e4bd93e58a9be38082e6a0bce68ca1e694bbe587bbe4b98be5908eefbc8ce58fafe4bba5e6b4bee7949fe5a881e58a9be8be83e9ab98e79a84e8bfbde587bbe696a9e380825c6e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f757365522220636f6c6f723d234646464646463eefbc88e5908ce697b6efbc89efbc9ae58f98e59e8be696a9efbc8ce4bdbfe794a8e6ada4e58aa8e4bd9ce5908ee4bc9ae58f98e4b8bae69eaae5bda2e68081e38082e59ca8e8bf9ee587bbe79a84e7acace4b889e6aeb5e4bba5e58f8ae5bcb9e58f8de68890e58a9fe5908eefbc8ce5b086e6b4bee7949fe5a881e58a9be8be83e9ab98e79a84e9ab98e587bae58a9be58f98e59e8be696a9efbc8ce585b6e4bb96e68385e586b5e5b086e6b4bee7949fe58fafe4bba5e59091e4bbbbe6848fe696b9e59091e7a7bbe58aa8e79a84e699aee9809ae58f98e5bda2e696a9e380825c6e3c623ee69eaae5bda2e680813c2f623e5c6e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463eefbc9ae696bde5b195e5a881e58a9be8be83e9ab98e79a84e8bf9ee587bbe38082e694bbe587bbe697b6e68c89e4bd8fe5898de8bf9be5afb9e5ba94e696b9e59091e58fafe4bba5e7a7bbe58aa8e69bb4e8bf9ce79a84e8b79de7a6bbe380825c6e3c737072697465206e616d653d226d6f757365522220636f6c6f723d234646464646463eefbc88e995bfe68c89efbc89efbc9ae6978be9a38ee696a9efbc8ce68c81e7bbade68c89e4bd8fe58fb3e994aee58fafe4bba5e4bf9de68c81e6978be9a38ee696a9e79a84e58aa8e4bd9ce38082e99c80e8a681e6b688e88097e4bd93e58a9be380825c6e3c737072697465206e616d653d226d6f7573654c2220636f6c6f723d234646464646463e3c737072697465206e616d653d226d6f757365522220636f6c6f723d234646464646463eefbc88e5908ce697b6efbc89efbc9ae58f98e59e8be59b9ee6978be7aa81e588baefbc8ce4bdbfe794a8e6ada4e58aa8e4bd9ce5908ee4bc9ae58f98e4b8bae58991e5bda2e68081e38082e6ada4e58aa8e4bd9ce5bc80e5a78be697b6e4bc9ae88eb7e5be97e4b880e5b08fe6aeb53c753ee997aae981bf3c2f753ee588a4e5ae9aefbc8ce99c80e8a681e6b688e88097e4bd93e58a9be380825c6e3c636f6c6f723d234646433543353ee38090e8ada6e5918aefbc9a4169e697a0e6b395e4bdbfe794a8e8afa5e6ada6e599a8e380913c2f636f6c6f723e0a00000000000000007d4b0a000000000000000000b5000000000000000000000000000000000000000000000000000000ffffffff0000803f0000803f0000803f0000803f00000000030000000000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f00000000000000000000000000000000a64b0a000000000000000000000000000000000000000000f35075b900000000ffffffff0000a0410000a04190010000000000000000904100009042000000000100000000020000ffff000000000000000000000000000000000000000000000000000001000000cdcccc3e000000000000000000000000000000000000000000000000000000000100000000000000000000000100000001000000010000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "path": "ItemBreifUI/TargetSub/Pannel1/ContentText",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 1896,
+          "before": 0.0,
+          "after": -21.42964744567871
+        }
+      ],
+      "gameobject_path_id": 218666,
+      "script_pointer": [
+        1,
+        2482
+      ]
+    },
+    {
+      "path_id": 705213,
+      "kind": "layout",
+      "source_sha256": "f914813c4995a3229c7809f2319c3dff8d62b2cd33cd53a9195bf2f313a26680",
+      "source_hex": "00000000a9280100000000000100000001000000b209000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f01000000010000000000000009000000e6a1a3e6a188e5aea400000000000000000000007d4b0a000000000000000000b5000000000000000000000000000000000000000000000000000000ffffffff0000803f0000803f0000803f0000803f00000000030000000000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f00000000000000000000000000000000a64b0a000000000000000000000000000000000000000000f35075b900000000ffffffff0000a0410000a04190010000000000000000904100009042000000000100000000020000ffff000000000000000000000000000000000000000000000000000001000000cdcccc3e000000000000000000000000000000000000000000000000000000000100000000000000000000000100000001000000010000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "path": "ItemBreifUISimple/TargetSub/Pannel1/ContentText",
+      "fields": [
+        {
+          "type": "float32",
+          "offset": 328,
+          "before": 0.0,
+          "after": -21.42964744567871
+        }
+      ],
+      "gameobject_path_id": 75945,
+      "script_pointer": [
+        1,
+        2482
+      ]
+    },
+    {
+      "path_id": 720673,
+      "kind": "tmp_text",
+      "source_sha256": "889b86a8a9f3e7bc939d0d1fb8aa722568b4100de65f59b9cf26d802405a6915",
+      "source_hex": "00000000dace0000000000000100000001000000b209000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f01000000010000000000000015000000e58d87e7baa7e58f8ae694b9e980a0e59e8be58fb700000000000000000000007d4b0a000000000000000000b5000000000000000000000000000000000000000000000000000000909090ffdae7103fdae7103fdae7103f0000803f00000000030000000000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f0000803f00000000000000000000000000000000a64b0a000000000000000000000000000000000000000000f35075b900000000ffffffff000088410000884190010000000000000000904100009042000000000200000000020000ffff000000000000000000000000000000000000000000000000000001000000cdcccc3e000000000000000000000000000000000000000000000000000000000100000000000000000000000100000001000000010000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 72,
+          "before": "升级及改造型号",
+          "after": "업그레이드 및 개조 모델"
+        }
+      ],
+      "path": "ItemBreifUISimpleTitle/TargetSub/Pannel8/UpgradePannel/Text",
+      "gameobject_path_id": 52954,
+      "script_pointer": [
+        1,
+        2482
+      ],
+      "review_status": "candidate_requires_fresh_qa_l1_l2",
+      "usage_evidence": {
+        "root_active": true,
+        "pannel8_serialized_active": false,
+        "same_component_payload_except_gameobject_pptr_as": 722904,
+        "same_component_script_set_as_existing_simple_variant": true
+      }
+    },
+    {
+      "path_id": 700767,
+      "kind": "raw_text",
+      "source_sha256": "6363c1f1f0be0a2e51ea4f0ed9b501c0c409844ac759c5959383d8ea17606776",
+      "source_hex": "00000000ac9b02000000000001000000010000001b04000000000000000000000000000000000000000000000000000000000000000000000000803f01000000010000000000000000000000af2b0000000000001a0000000000000001000000020000001a00000004000000000000000100000000000000000000000000803f12000000e59ca8e7a9bae68a95e4bb93e69fa5e79c8b0000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 128,
+          "before": "在空投仓查看",
+          "after": "공중 투하 포드에서 확인"
+        },
+        {
+          "type": "pptr",
+          "offset": 72,
+          "before": [
+            0,
+            11183
+          ],
+          "after": [
+            0,
+            11185
+          ]
+        }
+      ],
+      "path": "MainBaseUI_Cooperative/Pivot/BtnGroup/SeeInDefense/SeeInDefenseTxt",
+      "gameobject_path_id": 170924,
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "font_size": 26,
+      "width_check": {
+        "mode": "deferred_dynamic_layout",
+        "reason": "stretched to parent 658607; parent serialized width is layout-controlled (sizeDelta.x=0), so no fixed width is statically available",
+        "debt_id": "ui700767_dynamic_width",
+        "nominal_required_width": 256.6611328125,
+        "evidence": {
+          "text_source_sha256": "6363c1f1f0be0a2e51ea4f0ed9b501c0c409844ac759c5959383d8ea17606776",
+          "rect_transform_path_id": 652914,
+          "rect_transform_sha256": "24ab1b77466bf2d3333bdcb8913716ae490b55234e004a2356f9ee2669ac41be",
+          "anchor_min": [
+            0.0,
+            0.0
+          ],
+          "anchor_max": [
+            1.0,
+            1.0
+          ],
+          "size_delta": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "path_id": 709143,
+      "kind": "raw_text",
+      "source_sha256": "dbfe366782543ecd04eaba3ee2904584cb887cb0febf7a29a3a210aaebf4fa6a",
+      "source_hex": "00000000afaf02000000000001000000010000001b04000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f01000000010000000000000000000000af2b000000000000370000000000000000000000030000004c00000004000000000000000100000000000000000000000000803fa6000000436173745c6e0a5c6e3c73697a653d34343ee78e9be4b8bd202020202020e5b08fe6bea4e381bfe381aee3828a0a5c6ee5ba93e7bd97e5ba93202020202020e697a9e780ace6b0b4e99fb30a5c6ee6a191202020202020e99d92e69ca8e79c9fe790b30a5c6ee8b5ade79fb3e889b2202020202020e69ca8e58d97e59091e891b50a5c6ee5858be88eb1e5b094202020202020e586b7e6b0b4e584aae69e9c3c2f73697a653e0000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 128,
+          "before": "Cast\\n\n\\n<size=44>玛丽      小澤みのり\n\\n库罗库      早瀬水音\n\\n桑      青木真琳\n\\n赭石色      木南向葵\n\\n克莱尔      冷水優果</size>",
+          "after": "출연진\\n\n\\n<size=44>메리      小澤みのり\n\\n쿠로쿠      早瀬水音\n\\n산      青木真琳\n\\n오커      木南向葵\n\\n클레어      冷水優果</size>"
+        },
+        {
+          "type": "pptr",
+          "offset": 72,
+          "before": [
+            0,
+            11183
+          ],
+          "after": [
+            0,
+            11188
+          ]
+        }
+      ],
+      "path": "Cast3/MaskText/TextMain",
+      "gameobject_path_id": 176047,
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "font_size": 55,
+      "rect_width": 512.0,
+      "raw_font": {
+        "path_id": 11188,
+        "name": "SourceHanSansSC-Regular-2",
+        "sha256": "84bbd4ace91d327b3ad1a581c688196278a4e41308520176f419180064e4af2b"
+      }
+    },
+    {
+      "path_id": 738621,
+      "kind": "raw_text",
+      "source_sha256": "a670475d136fbd1d5f0ddc2b3adc3e998ba71bdea35586c1f4edf23acc0cf3e6",
+      "source_hex": "00000000608100000000000001000000010000001b04000000000000000000000000000000000000000000000000000000000000000000000000803f00000000010000000000000000000000af2b0000000000000e0000000000000001000000010000000e00000004000000000000000100000000000000000000000000803f2a000000e382b7e38386e382a3e38387e382a3e38395e382a7e383b3e382b9e381aee4b8ade38292e8a68be3828b0000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 128,
+          "before": "シティディフェンスの中を見る",
+          "after": "도시 방어에서 보기"
+        },
+        {
+          "type": "pptr",
+          "offset": 72,
+          "before": [
+            0,
+            11183
+          ],
+          "after": [
+            0,
+            11185
+          ]
+        }
+      ],
+      "path": "MainBaseUI_Cannon/Pivot/AreaD/DefenseBtn/DefenseBtnTxt",
+      "gameobject_path_id": 33120,
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "font_size": 14,
+      "rect_width": 192.9199981689453
+    },
+    {
+      "path_id": 746862,
+      "kind": "raw_text",
+      "source_sha256": "ed4026a69cc64329ac91bb4527c41d7a6e804b030df2e974b086db757a09ea57",
+      "source_hex": "000000008f0901000000000001000000010000001b04000000000000000000000000000000000000000000000000003f0000003f0000003f0000803f01000000010000000000000000000000af2b000000000000120000000000000001000000010000001200000003000000000000000100000000000000000000000000803f06000000e5a5bde6849f0000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 128,
+          "before": "好感",
+          "after": "호감도"
+        },
+        {
+          "type": "pptr",
+          "offset": 72,
+          "before": [
+            0,
+            11183
+          ],
+          "after": [
+            0,
+            11185
+          ]
+        }
+      ],
+      "path": "DefenseSetUI/MainCargoArea/MainCargoUI/MainPanel/Btns/AutoBtn/PresTog/PresText",
+      "gameobject_path_id": 67983,
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "font_size": 18,
+      "rect_width": 53.99713134765625
+    },
+    {
+      "path_id": 748845,
+      "kind": "raw_text",
+      "source_sha256": "69c873ac6a4e9f61238ee5881597338b98ede3a18bd83d4dcb04a89b1681142a",
+      "source_hex": "0000000090e100000000000001000000010000001b04000000000000000000000000000000000000000000000000003f0000003f0000003f0000803f01000000010000000000000000000000af2b000000000000120000000000000001000000010000001200000003000000000000000100000000000000000000000000803f06000000e5a5bde6849f0000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 128,
+          "before": "好感",
+          "after": "호감도"
+        },
+        {
+          "type": "pptr",
+          "offset": 72,
+          "before": [
+            0,
+            11183
+          ],
+          "after": [
+            0,
+            11185
+          ]
+        }
+      ],
+      "path": "MainCargoUI/Panel/Btns/AutoBtn/PresTog/PresText",
+      "gameobject_path_id": 57744,
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "font_size": 18,
+      "rect_width": 53.99713134765625
+    },
+    {
+      "path_id": 756831,
+      "kind": "raw_text",
+      "source_sha256": "0558838de3f5513dfce88fb80420807e82cc33e5ee21463ab6eaccb12b5acca0",
+      "source_hex": "00000000f14202000000000001000000010000001b04000000000000000000000000000000000000000000000000803f0000803f0000803f0000803f01000000010000000000000000000000b62b000000000000120000000000000000000000010000002800000007000000000000000100000000000000000000009a99193f09000000e5b7b2e99481e5ae9a000000",
+      "fields": [
+        {
+          "type": "string",
+          "offset": 128,
+          "before": "已锁定",
+          "after": "록온 완료"
+        },
+        {
+          "type": "pptr",
+          "offset": 72,
+          "before": [
+            0,
+            11190
+          ],
+          "after": [
+            0,
+            11185
+          ]
+        }
+      ],
+      "path": "TargetFrameSnipeLocked/Text",
+      "gameobject_path_id": 148209,
+      "script_pointer": [
+        1,
+        1051
+      ],
+      "font_size": 18,
+      "rect_width": 101.9140625
+    }
+  ],
+  "known_debt": [
+    "r05 calibrated detail line spacing requires human checks for overlap and clipping; other r04 fixes user reports okay."
+  ],
+  "layout": {
+    "scope": "ItemBreifUI and ItemBreifUISimple detail popups; may also be used by non-weapon items. No global font metrics changed.",
+    "main_text_line_spacing": {
+      "before": 0,
+      "after": -21.42964744567871,
+      "prior_r04": -5,
+      "target_visual_line_ratio": 1.125,
+      "calibration": {
+        "screenshot": "screenshot/20260906203108_1.jpg",
+        "screenshot_sha256": "dbff043d0b457019069450d916ccfd55c3067c2b9e6e6aaf84312b18ad42fc19",
+        "pixel_dimensions": [
+          2560,
+          1440
+        ],
+        "observed_line_advance_px": 41.07142857142857,
+        "observed_median_ink_height_px": 22,
+        "target_line_advance_px": 24.75,
+        "korean_face_line_height_em": 1.4482421875,
+        "assumed_base_point_size": 32,
+        "prior_estimated_advance_em": 1.2919921875,
+        "formula": "base_point_size * (target_visual_ratio * observed_ink_height / observed_advance * prior_estimated_advance_em - korean_face_line_height_em)",
+        "estimated_final_advance_px": 24.74999929810559,
+        "runtime_font_and_rich_text_assumptions_unverified": true
+      },
+      "rationale": "r04 absolute -5 adjustment insufficient in user screenshot; calibrate to the observed baseline/ink ratio, not nominal font metrics alone."
+    },
+    "supplementary_text_line_spacing": {
+      "before": 1.2,
+      "after": 1.0
+    },
+    "title_body_gap": {
+      "before": 18,
+      "after": 8
+    },
+    "paragraph_spacing": "unchanged at 0",
+    "research_report_sha256": "46fda6fb4d067339b748dbca05bb9124fc9de3040cec12d9d9e864b2bfef2f56",
+    "final_metrics_check_sha256": "02647eed8a57f7b44db840e2cdef64c88518aebd3a69a79dfa396b54bda13a30"
+  },
+  "reviewed_localized_record_count": 4,
+  "pending_fresh_review_count": 1,
+  "source_asset": {
+    "resources_assets_sha256": "5ce95b6762ada10c0d9e30aac7b36c9c86c04662e53e60485c781122e344ec30",
+    "resources_assets_size": 1708091136,
+    "object_count": 763599,
+    "unity_version": "2019.4f1",
+    "previous_resources_assets_sha256": "d275481b891eef752e5d4279c587b564db4c5ef5e0291cc80af82a089d793838",
+    "previous_resources_assets_size": 1603926360,
+    "previous_object_count": 351126
+  },
+  "remapped_from": "release/reference/ui-r05.json",
+  "release_scope": "stage8_local_candidate",
+  "metrics_evidence": {
+    "path": "work/update-3.0.2950/ui-extra-metrics-a02.json",
+    "sha256": "d809b8ec571a8fc0d4a16d0adb5d8f4d44595d7c9024808ecd8517bd87944929"
+  },
+  "cast_font_evidence": {
+    "path": "work/update-3.0.2950/cast3-font-resolution.json",
+    "sha256": "c3085fa81abdd29a626a286793bff5586c50e597e50bc7e76f7dfd6488eacf31"
+  },
+  "translation_validation": {
+    "source": {
+      "path": "localization/corpus/3.0.2950/ui-all-static-source.jsonl",
+      "sha256": "19cf994caac96c74297f09b1888cf73cd7088744b5cf09498cf46b6de85bb5ac"
+    },
+    "snapshot": {
+      "path": "work/update-3.0.2950/final-a02/locally-reviewed.jsonl",
+      "sha256": "2e2f96d7406927c9a6060e5e5b65f9b0ff947cf510ea91ac5d62645c99004aa5"
+    },
+    "reviews": {
+      "path": "work/update-3.0.2950/final-a02/reviews.jsonl",
+      "sha256": "f8ddf69bdc7b6e41d96233a2fb9e2a9868a75adfa8e2c2ee1481540f00ebcafa"
+    },
+    "global_review": {
+      "path": "work/update-3.0.2950/final-a02/global-l2.json",
+      "sha256": "84937af28f9c4406dc9b4d820722ee34cce07dd602f81d22e0eb7d181b0c3d38"
+    },
+    "count": 11,
+    "runtime_verified": false
+  }
+}

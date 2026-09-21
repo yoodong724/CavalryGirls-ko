@@ -1,0 +1,80 @@
+{
+  "game_version": "3.0.2950",
+  "steam_build_id": "25429822",
+  "runtime_verified": false,
+  "release_status": "local_candidate_only",
+  "checks": [
+    {
+      "id": "boot_title_fonts",
+      "status": "unverified",
+      "owner": "human",
+      "trigger": "Install candidate into exact clean 3.0.2950 copy and launch",
+      "due_gate": "public release",
+      "fallback": "Restore pristine files and return screenshot/log for affected adapter repair",
+      "scope": "Boot/title/language Japanese slot replaced by Korean; Hangul Text/TMP"
+    },
+    {
+      "id": "new_ui_layout",
+      "status": "unverified",
+      "owner": "human",
+      "trigger": "Open assembly/gift/crafting/search/filter/combat UI and inventory detail panes",
+      "due_gate": "public release",
+      "fallback": "Repair affected string/layout and rebuild after fresh affected reviews",
+      "scope": "2560x1440 clipping, wrapping, spacing; fixed raw UI12 including credits, affinity and locked hints; dynamic localized text"
+    },
+    {
+      "id": "dlc3_intro_translaters",
+      "status": "unverified",
+      "owner": "human",
+      "trigger": "First access to each DLC3 intro plot, including after DLC unlock",
+      "due_gate": "public release of DLC3 coverage",
+      "fallback": "Investigate original duplicate Translater callbacks; do not claim intro is fixed until observed",
+      "scope": "DLCPlot1/2/3 contain both invalid 0a-0-0 and valid DLC3StartPlot keys on enabled components. Serialized ordering alone does not prove final display."
+    },
+    {
+      "id": "dlc3_malformed_source_row",
+      "status": "unverified",
+      "owner": "human",
+      "trigger": "Display DLC3StartPlot3 in Japanese/Korean slot",
+      "due_gate": "public release of DLC3 coverage",
+      "fallback": "Restore baseline and inspect native parser/display with exact scene evidence",
+      "scope": "Minimal appended Japanese cell on originally four-field DLC3StartPlot3 row; adjacent malformed fragments retained exactly"
+    },
+    {
+      "id": "dialogue_choices_variables",
+      "status": "unverified",
+      "owner": "human",
+      "trigger": "Play accessible new and carried dialogue/choice branches",
+      "due_gate": "public release",
+      "fallback": "Correct affected text/path mapping then QA/L1/L2 and rebuilt patch",
+      "scope": "Ocher/Lena/Rein/Azure narrative, control sequences and variable substitution; preloaded unavailable DLC requires later access"
+    },
+    {
+      "id": "save_load",
+      "status": "unverified",
+      "owner": "human",
+      "trigger": "Create separate test save, reload and continue in candidate build",
+      "due_gate": "public release",
+      "fallback": "Restore original files; preserve original saves; report observed failure",
+      "scope": "Existing save loading and new progress without original save modification by agent"
+    },
+    {
+      "id": "ui700767_dynamic_width",
+      "status": "unverified",
+      "owner": "human",
+      "trigger": "Open cooperative main-base SeeInDefense hint after actual layout settles at2560x1440",
+      "due_gate": "public release",
+      "fallback": "Record actual minimum width/best-fit result; adjust affected layout and rebuild if clipped",
+      "scope": "Path700767 nominal glyph advance256.661px at26px; Text bestFit2..26 with parent-layout-controlled zero serialized width. No static fit success claimed."
+    },
+    {
+      "id": "cast3_mixed_script_font",
+      "status": "unverified",
+      "owner": "human",
+      "trigger": "Open Cast3 credits and inspect Korean names plus original Japanese actor names",
+      "due_gate": "public release",
+      "fallback": "Capture glyph/wrapping problem and revise font binding/metrics after exact source review",
+      "scope": "Text709143 binds embedded Font11188 SourceHanSansSC-Regular-2 to cover 瀬 and Korean; actual size44 rich text, LF and literal backslash-n display still needs human observation."
+    }
+  ]
+}
