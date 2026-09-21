@@ -1,22 +1,13 @@
 # 철기 소녀 한글패치
 
-Steam Cavalry Girls 3.0.2950 / 빌드 25429822 / Windows x64용 비공식 한국어 패치입니다. 일본어 언어 슬롯을 한국어로 대체합니다.
+Steam Cavalry Girls **3.0.2952 / 빌드 25437878 / Windows x64**용 비공식 패치입니다.
 
-Codex를 이용하여 제작된 패치이며, 검수가 완료되지 않은 상태임을 밝힙니다.
+[패치 다운로드](https://github.com/yoodong724/CavalryGirls-ko/releases/download/3.0.2952-build25437878/CavalryGirls-Korean-3.0.2952-build25437878.zip) · `Source code (zip)`은 설치 파일이 아닙니다.
 
-설치 파일은 이 저장소의 [3.0.2950 사전 릴리스](https://github.com/yoodong724/CavalryGirls-ko/releases/tag/3.0.2950-build25429822)에서 `CavalryGirls-Korean-3.0.2950-build25429822.zip`을 내려받으세요. GitHub의 자동 생성 `Source code (zip)`은 설치 파일이 아닙니다.
+1. 게임을 종료하세요. 기존 패치를 사용했다면 Steam 파일 무결성 검사로 최신 원본을 준비하고, `.cavalry-girls-ko-backup` 폴더는 다른 이름으로 보관하세요.
+2. ZIP에서 나온 `CavalryGirls-Korean-r07` 폴더를 `CavalryGirls.exe`가 있는 게임 폴더에 넣으세요.
+3. 패치 폴더의 `install.cmd`를 실행한 뒤 게임에서 **한국어**를 선택하세요.
 
-설치와 복원은 [설치 안내](release/installer/README.ko.md), 변경 사항과 확인 범위는 [3.0.2950 릴리스 노트](RELEASE-r06.md)를 참고하세요.
+복원은 게임을 종료한 뒤 같은 폴더의 `restore.cmd`를 실행하세요. 게임 업데이트 후에는 이전 백업 대신 Steam 파일 무결성 검사를 이용하세요.
 
-3.0.2950은 게임 실행·화면·저장/불러오기 확인이 남은 테스트 후보입니다. 이전 게임 버전용 패치는 [r05 릴리스](https://github.com/yoodong724/CavalryGirls-ko/releases/tag/r05-public1)에서 받을 수 있습니다.
-
-## 소스 구성
-
-- `localization/`: 3.0.2950 원문 대조·위치 데이터와 번역 10,279개 레코드.
-- `release/reference/3.0.2950/build-profile.json`: 버전별 빌드 입력과 검수 자료·UI 레시피 연결.
-- `adapters/`, `tools/maintenance/`: 원본 검사, 텍스트·폰트·타이틀·UI 패치, 차분 패키징.
-- `release/installer/`: Windows 설치·복원 도구, xdelta3 및 라이선스.
-- `release/assets/`: 한국어 타이틀 이미지와 적용용 DXT5 자산.
-- `schemas/`, `tools/l10n.py`, `tests/`: 빌드 시 필요한 검증 코드와 회귀 검사.
-
-[빌드 안내](BUILD.md)의 절차로 별도 게임 사본에서 재빌드할 수 있습니다. 게임 실행 파일과 전체 자산, 개발 작업 이력은 포함하지 않습니다. 소스 공개 범위와 제삼자 자료는 [권리 안내](RIGHTS.md)를 참고하세요.
+Codex로 제작한 테스트판입니다. 실제 게임에서의 표시·동작은 미검증이며, 일부 이미지 속 글자는 번역되지 않습니다.
