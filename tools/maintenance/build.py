@@ -4,11 +4,14 @@
 from __future__ import annotations
 
 import argparse
+import base64
+import binascii
 import gc
 import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import re
 import shutil
 import sys
 import tempfile
@@ -123,6 +126,79 @@ def unique_index(rows: Iterable[dict[str, Any]], label: str) -> dict[str, dict[s
             raise BuildError(f"duplicate {label} id: {identifier}")
         result[identifier] = row
     return result
+
+
+def validate_table_patch_addresses(
+    segments: dict[str, dict[str, Any]],
+    patches: dict[str, dict[str, Any]],
+    asset_path_ids: dict[str, int],
+) -> None:
+    """Bind each table ID, source locator and target cell before any edit is made."""
+    if not isinstance(asset_path_ids, dict) or not asset_path_ids:
+        raise BuildError("profile has no named TextAsset target addresses")
+    seen_locators: set[tuple[int, str, int, str]] = set()
+    seen_cells: set[tuple[int, int, str]] = set()
+    for identifier, patch in patches.items():
+        source = segments.get(identifier)
+        if source is None:
+            raise BuildError(f"{identifier}: source segment missing for address guard")
+        match = re.fullmatch(r"cg:([^:]+):(.+):o([0-9]+):([^:]+)", identifier)
+        if match is None:
+            raise BuildError(f"{identifier}: unrecognized table ID")
+        table, encoded_key, occurrence, field = match.groups()
+        key = encoded_key
+        if encoded_key.startswith("u_"):
+            try:
+                raw = encoded_key[2:]
+                key = base64.b64decode(raw + "=" * (-len(raw) % 4), altchars=b"-_", validate=True).decode("utf-8")
+                if "u_" + base64.urlsafe_b64encode(key.encode()).decode().rstrip("=") != encoded_key:
+                    raise ValueError("noncanonical encoded key")
+            except (ValueError, UnicodeError, binascii.Error) as exc:
+                raise BuildError(f"{identifier}: invalid encoded table key") from exc
+        source_info = source.get("source") or {}
+        source_file = re.fullmatch(
+            r"resources\.assets::TextAsset\[path_id=([0-9]+),name=([^]]+)\]",
+            str(source_info.get("file", "")),
+        )
+        locator = source_info.get("locator") or {}
+        allowed_source_names = {table, f"{table}_Japanese"} if table in {"Players", "Players2"} else {table}
+        if source_file is None or source_file.group(2) not in allowed_source_names or locator.get("kind") != "internal_key":
+            raise BuildError(f"{identifier}: unrecognized source asset or locator")
+        try:
+            source_address = json.loads(locator["value"])
+        except (KeyError, TypeError, ValueError, json.JSONDecodeError) as exc:
+            raise BuildError(f"{identifier}: invalid source locator") from exc
+        target = patch.get("target_locator")
+        if not isinstance(source_address, dict) or not isinstance(target, dict):
+            raise BuildError(f"{identifier}: invalid table address")
+        source_asset = int(source_file.group(1))
+        target_asset_name = table if table not in {"Players", "Players2"} else f"{table}_Japanese"
+        expected_target_asset = asset_path_ids.get(target_asset_name)
+        source_column = source_address.get("column")
+        expected_source_columns = {field} if table in {"Players", "Players2"} else {"Chinese", "Japanese"}
+        checks = (
+            type(source_address.get("asset_path_id")) is int and source_address["asset_path_id"] == source_asset,
+            type(patch.get("source_asset_path_id")) is int and patch["source_asset_path_id"] == source_asset,
+            source_address.get("key") == key,
+            type(source_address.get("occurrence")) is int and source_address["occurrence"] == int(occurrence),
+            type(source_address.get("row_index")) is int and source_address["row_index"] >= 0,
+            source_column in expected_source_columns and patch.get("source_column") == source_column,
+            type(expected_target_asset) is int and type(target.get("asset_path_id")) is int
+            and target["asset_path_id"] == expected_target_asset,
+            target.get("key") == key,
+            type(target.get("occurrence")) is int and target["occurrence"] == int(occurrence),
+            target.get("column") == field,
+            type(patch.get("target_row_index")) is int
+            and patch["target_row_index"] == source_address.get("row_index"),
+        )
+        if not all(checks):
+            raise BuildError(f"{identifier}: patch target is not bound to source ID/locator")
+        target_locator = (expected_target_asset, key, int(occurrence), field)
+        target_cell = (expected_target_asset, patch["target_row_index"], field)
+        if target_locator in seen_locators or target_cell in seen_cells:
+            raise BuildError(f"{identifier}: duplicate table target cell")
+        seen_locators.add(target_locator)
+        seen_cells.add(target_cell)
 
 
 def split_snapshot(
@@ -262,6 +338,11 @@ def validate_profile_snapshot(
         raise BuildError("profile corpus/translation count differs from table/HUD/static UI")
     if set(translation_index) != base_ids | {supplemental_id} | set(static_sources):
         raise BuildError("profile translation IDs differ from pinned corpus/map IDs")
+    validate_table_patch_addresses(
+        segment_index,
+        {identifier: patch_index[identifier] for identifier in base_ids},
+        profile_raw.get("asset_path_ids"),
+    )
     if static_sources:
         if not static_recipe or static_recipe.get("source_revision") != source_revision:
             raise BuildError("profile static recipe revision mismatch")
@@ -720,7 +801,7 @@ def build(
             "fonts": font_record,
             "title_sprite": title_record,
             "supplemental_ui": {"id": profile_spec.raw.get("supplemental_id", HUD_ID) if profile_spec is not None else HUD_ID, "patch": hud_record},
-            "patch_revision": "r06" if profile_spec is not None else (ui_revision if ui_fixes else "r03"),
+            "patch_revision": profile_spec.patch_revision if profile_spec is not None else (ui_revision if ui_fixes else "r03"),
             "total_localized_record_count": profile_total_count if profile_spec is not None else (8778 if ui_fixes else 8774),
             "external_title": {"offset": title_offset, "size": len(title), "payload_sha256": sha256_bytes(title), "outside_span_equal": True},
             "outputs": outputs,

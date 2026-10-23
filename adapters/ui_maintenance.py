@@ -155,7 +155,69 @@ def _deferred_width_result(
         raise UiPatchError("deferred raw UI width is limited to an unverified stage8 local candidate")
     if not isinstance(policy["reason"], str) or not policy["reason"].strip():
         raise UiPatchError("deferred raw UI width requires a reason")
-    if policy["debt_id"] != "ui700767_dynamic_width" or record.get("path_id") != 700767:
+    # Keep the debt identity stable while accepting only independently mapped
+    # objects from exact, hash-pinned sources. Layout evidence remains mandatory.
+    expected_path_id = 700767
+    revision = recipe.get("patch_revision")
+    if revision == "r07":
+        if (
+            recipe.get("source_revision") != "12789c6af1f7eca3bcff79264ca9dc10db4600d3886998893efa3306781b5806"
+            or recipe.get("source_asset", {}).get("resources_assets_sha256")
+            != "eee0347a2e0171dd525c2617ceeb94f16a7dd9a90985173b3214f13b2fe5f4d3"
+        ):
+            raise UiPatchError("unknown deferred raw UI width source")
+        expected_path_id = 700769
+    elif revision == "r08":
+        if (
+            recipe.get("source_revision") != "1d390e4f3310e1e4ddcdcad58596a603bc4c0b9ad0fa5b15b652e43941639378"
+            or recipe.get("source_asset", {}).get("resources_assets_sha256")
+            != "e786711f96330470558862265fe19992b6bd9bf88ab6aabbb99a668ad761fb06"
+        ):
+            raise UiPatchError("unknown deferred raw UI width source")
+        expected_path_id = 708301
+    elif revision == "r09":
+        if (
+            recipe.get("source_revision") != "a8ad4be66270b7842e6a542b6ac9efae0e819a5d6f28a3d13cda3b1dc66faecc"
+            or recipe.get("source_asset", {}).get("resources_assets_sha256")
+            != "4e13d637f210bf5b8298e3dece1984da9215255aca6cc5cd9339072f9ea3fcc4"
+        ):
+            raise UiPatchError("unknown deferred raw UI width source")
+        expected_path_id = 708299
+    elif revision == "r10":
+        if (
+            recipe.get("source_revision") != "6a877609e26f4f1724b841cdd961741fd83ea5687a4aa6616e7bc793817789f9"
+            or recipe.get("source_asset", {}).get("resources_assets_sha256")
+            != "f7616e824b1dbe4b5093c9fc94ecd658de9bd1c8649b4bdc52a6e9a40cd8cd67"
+        ):
+            raise UiPatchError("unknown deferred raw UI width source")
+        expected_path_id = 708299
+    elif revision == "r11":
+        if (
+            recipe.get("source_revision") != "e32f03d147f64edcc90f3886477a0ea74046b2bc579cf4620ad7c825c565a492"
+            or recipe.get("source_asset", {}).get("resources_assets_sha256")
+            != "0bcec801dd33d42acfedf8fc67d2b838faac63db40c668bf57e34ccef6ad5a5f"
+        ):
+            raise UiPatchError("unknown deferred raw UI width source")
+        expected_path_id = 708299
+    elif revision == "r12":
+        if (
+            recipe.get("source_revision") != "e237aea8c2e74601c671cf374a29013f5aa5abb54b14b868f42b25c5195453fe"
+            or recipe.get("source_asset", {}).get("resources_assets_sha256")
+            != "c44c800d6f5eb551a07dcf387e308dd3f0d59629962626cb247e2ab546060385"
+        ):
+            raise UiPatchError("unknown deferred raw UI width source")
+        expected_path_id = 708299
+    elif revision == "r13":
+        if (
+            recipe.get("source_revision") != "331dc45d5ec83307a508448c6e88cbc536ee9edb11a15f52287e626fe2918197"
+            or recipe.get("source_asset", {}).get("resources_assets_sha256")
+            != "9c1b4d279f23d2b38cd5d357bdd2c501b2c70835cc2ba18c8fde3a53af23e191"
+        ):
+            raise UiPatchError("unknown deferred raw UI width source")
+        expected_path_id = 708693
+    elif revision not in (None, "r06"):
+        raise UiPatchError("unknown deferred raw UI width patch revision")
+    if policy["debt_id"] != "ui700767_dynamic_width" or record.get("path_id") != expected_path_id:
         raise UiPatchError("unknown deferred raw UI width debt")
     nominal = policy["nominal_required_width"]
     measured = max(widths, default=0.0)
@@ -169,6 +231,8 @@ def _deferred_width_result(
         "text_source_sha256", "rect_transform_path_id", "rect_transform_sha256",
         "anchor_min", "anchor_max", "size_delta",
     }
+    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13"}:
+        evidence_keys |= {"parent_rect_transform_path_id", "parent_rect_transform_sha256"}
     if not isinstance(evidence, dict) or set(evidence) != evidence_keys:
         raise UiPatchError("invalid deferred raw UI layout evidence")
     if evidence["text_source_sha256"] != record.get("source_sha256"):
@@ -180,6 +244,19 @@ def _deferred_width_result(
     if rect.type.name != "RectTransform" or digest(rect.get_raw_data()) != evidence["rect_transform_sha256"]:
         raise UiPatchError("deferred raw UI RectTransform identity/hash mismatch")
     tree = rect.read_typetree()
+    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13"}:
+        parent_id = evidence["parent_rect_transform_path_id"]
+        if (
+            not isinstance(parent_id, int) or isinstance(parent_id, bool)
+            or tree.get("m_Father") != {"m_FileID": 0, "m_PathID": parent_id}
+        ):
+            raise UiPatchError("deferred raw UI parent RectTransform pointer mismatch")
+        parent = environment.file.objects.get(parent_id)
+        if (
+            parent is None or parent.type.name != "RectTransform"
+            or digest(parent.get_raw_data()) != evidence["parent_rect_transform_sha256"]
+        ):
+            raise UiPatchError("deferred raw UI parent RectTransform identity/hash mismatch")
     serialized = {
         "anchor_min": [tree["m_AnchorMin"][axis] for axis in ("x", "y")],
         "anchor_max": [tree["m_AnchorMax"][axis] for axis in ("x", "y")],

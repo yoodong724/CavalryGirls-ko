@@ -1,0 +1,22 @@
+{
+  "algorithm": "sha256",
+  "source_revision": "331dc45d5ec83307a508448c6e88cbc536ee9edb11a15f52287e626fe2918197",
+  "revision_scope": "public r13 build inputs only",
+  "files": [
+    {
+      "path": "AssetBundles/fonts_assets_all.bundle",
+      "size": 120601627,
+      "sha256": "8b39d8ad7be7f84037b9ce2fd37d759aa5314daca6644933a5e1f032f1b6bc7d"
+    },
+    {
+      "path": "CavalryGirls_Data/resources.assets",
+      "size": 1708679176,
+      "sha256": "9c1b4d279f23d2b38cd5d357bdd2c501b2c70835cc2ba18c8fde3a53af23e191"
+    },
+    {
+      "path": "CavalryGirls_Data/resources.assets.resS",
+      "size": 2946003248,
+      "sha256": "ed7cf5a64608600ee5f59fc0f9d87bf4ef9b1a62f7f347bf524d2dcf470a5523"
+    }
+  ]
+}

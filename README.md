@@ -1,13 +1,13 @@
-# 철기 소녀 한글패치
+# 철기 소녀 한글패치 3.1.3032
 
-Steam Cavalry Girls **3.0.2980 / 빌드 25646426 / Windows x64**용 비공식 한국어 패치 시험 배포본입니다.
+Steam Cavalry Girls 3.1.3032 / 빌드 26134654 / Windows x64용 비공식 한국어 패치입니다. 일본어 언어 슬롯을 한국어로 대체합니다. Codex를 이용해 제작했습니다. 표·고정 UI·HUD 10,348개 항목에 현재 원문 기준 QA와 두 단계 번역 검수를 적용했습니다.
 
-[패치 다운로드](https://github.com/yoodong724/CavalryGirls-ko/releases/download/3.0.2980-build25646426/CavalryGirls-Korean-3.0.2980-build25646426.zip) · [SHA-256 체크섬](https://github.com/yoodong724/CavalryGirls-ko/releases/download/3.0.2980-build25646426/CavalryGirls-Korean-3.0.2980-build25646426.zip.sha256) · `Source code (zip)`은 설치 파일이 아닙니다.
+게시 후에는 [3.1.3032-build26134654 시험 릴리스](https://github.com/yoodong724/CavalryGirls-ko/releases/tag/3.1.3032-build26134654)에서 `CavalryGirls-Korean-3.1.3032-build26134654.zip`과 같은 이름의 `.zip.sha256`을 받으세요. GitHub의 자동 생성 Source code ZIP은 설치 파일이 아닙니다.
 
-1. 게임을 종료하세요. 기존 패치를 사용했다면 Steam 파일 무결성 검사로 최신 원본을 준비하고, `.cavalry-girls-ko-backup` 폴더는 다른 이름으로 보관하세요.
-2. ZIP을 `CavalryGirls.exe`가 있는 게임 폴더에 풀어 `CavalryGirls-Korean-r12` 폴더가 생기게 하세요.
-3. 그 폴더의 `install.cmd`를 실행한 뒤 게임에서 **한국어**를 선택하세요.
+Windows 격리 사본의 2560×1440 환경에서 타이틀·메뉴·MOD 설정·아이템·대원 관리·이벤트 대사와 선택지·변수·전투 HUD·저장 후 불러오기를 확인했습니다. 설치·중복 설치·원복, 두 독립 빌드의 출력 일치, 원본 파일·세이브 보존과 시험 전 사용자 상태 복원도 확인했습니다.
 
-복원은 게임을 종료한 뒤 같은 폴더의 `restore.cmd`를 실행하세요. 게임 업데이트 후에는 이전 백업 대신 Steam 파일 무결성 검사를 이용하세요.
+전체 콘텐츠 실기 검증은 완료하지 않았습니다. 공중 투하 포드 안내 폭, 재주조·복제·자동 조립 등의 드문 UI 상태, DLC 심층 대사·분기와 일부 효과 계산은 미확인입니다. 종료 시 음향 콜백 예외 2건과 분석 SDK 통신 오류를 기록했으며 패치와의 인과관계는 확인하지 못했습니다. 확인한 플레이와 저장·종료는 진행됐습니다. 자세한 범위는 실기 확인표를 참고하세요.
 
-게임 업데이트를 반영하고 일부 번역을 다듬었습니다. Codex로 제작했으며 기본 플레이·저장/불러오기와 설치·복원을 확인했습니다. 일부 DLC·세부 UI는 실제 화면을 확인하지 못했고, 일부 이미지 속 글자는 번역되지 않습니다.
+게임 원본·세이브·검수용 화면은 배포하지 않습니다. 이미지에 포함된 문자, 해독하지 않은 보너스 자료와 시작 중국어 로고는 번역 범위에서 제외합니다.
+
+[설치와 복원](release/installer/README.ko.md) · [소스 빌드](BUILD.md) · [실기 확인표](release/installer/MANUAL-TEST.ko.md)

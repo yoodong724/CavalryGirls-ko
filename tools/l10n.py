@@ -218,6 +218,11 @@ def qa(root: Path, sources: list[dict[str, Any]], translations: list[dict[str, A
             continue
         c = source["constraints"]
         original = source["source"]["text"]
+        if "::TextAsset[" in source["source"]["file"]:
+            if "," in text:
+                error("raw_table_comma", "ASCII comma splits a native raw table cell during reinsertion", sid)
+            if "\r" in text or "\n" in text:
+                error("raw_table_newline", "Actual CR/LF splits a native raw table row during reinsertion", sid)
         if not text and not c["allow_empty"]:
             error("empty_target", "An empty target is not allowed", sid)
         try:

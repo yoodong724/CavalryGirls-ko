@@ -35,8 +35,8 @@ INSTALLER_FILES = {
     "install.cmd": "f5ff7eb2337ee424c01a2315f8d1125ca13000bdb7d3340cc437c2db32db2c92",
     "restore.cmd": "8e58a4991dba06ccea6d1f6a0093b456be4d28afa3adb3cf32d6e2881fbcb402",
     "Test-Installer.ps1": "a921da8495e483721a581d3f93fb910f113fdffb9593bd4d8bd8aa13bfa626d4",
-    "README.ko.md": "7e729e1d43151d21d9d21814a1c619d69a00d2d53e7edbbb904e271a01968697",
-    "MANUAL-TEST.ko.md": "8b5bc95278efca41d07a4503f8677a4ffe4d2134db554e930668ca474018cfe9",
+    "README.ko.md": "7e149cf1d8533fde339cff20a3294d5c52d7fec0440a943ca188fcdc8815569b",
+    "MANUAL-TEST.ko.md": "64e8b27f01db6cecd12faaceb244d0aff910809920b8345054202423c7937a8b",
     "bin/xdelta3.exe": "53d90226615f217d3380c39892833311b4e24acd863e1ca01f14b5e772e2e6d0",
     "licenses/xdelta-LICENSE.txt": "6cf63d87586c7c25c3ab8e62eef5c75bbaa982b0a6f9c00c59e2720255aac9ec",
     "licenses/THIRD-PARTY.md": "80d96e3352dc7516b97c4de78f5dd3df31b095b0e939015a2246fe3be899d00a",
@@ -116,6 +116,11 @@ def validate_build(
     profile_mode = profile is not None
     profile_version = getattr(profile, "version", None)
     profile_revision = getattr(profile, "source_revision", None)
+    profile_patch_revision = getattr(profile, "patch_revision", None)
+    if profile_patch_revision is None and profile_version == "3.0.2950":
+        # Compatibility for already-validated r06 profile-like callers. Real
+        # profile files are version/revision checked by load_profile first.
+        profile_patch_revision = "r06"
     if profile_mode:
         expected_source_revision = profile_revision
         expected_total = profile.record_count
@@ -133,7 +138,7 @@ def validate_build(
         or manifest.get("release_scope") != "stage8_local_candidate"
         or manifest.get("source_protected_read_only") is not True
         or manifest.get("all_object_payloads_verified") is not True
-        or (revision not in {"r03", *UI_RECIPES} if not profile_mode else revision != "r06")
+        or (revision not in {"r03", *UI_RECIPES} if not profile_mode else revision != profile_patch_revision)
         or manifest.get("total_localized_record_count") != expected_total
         or (snapshot.get("record_count") != 8774 if not profile_mode else snapshot.get("record_count") != expected_total)
         or (snapshot.get("base_record_count") != 8773 if not profile_mode else snapshot.get("base_record_count") != expected_total - 1 - snapshot.get("static_ui_record_count", 0))
@@ -301,7 +306,7 @@ def package(
             readme = stage / "README.ko.md"
             readme.write_text(
                 "# Cavalry Girls 한국어 패치\n\n"
-                f"대상 게임 버전: {profile_spec.version} / Steam 빌드 {profile_spec.raw.get('steam_build_id')} / r06\n\n"
+                f"대상 게임 버전: {profile_spec.version} / Steam 빌드 {profile_spec.raw.get('steam_build_id')} / {profile_spec.patch_revision}\n\n"
                 "게임 업데이트와 한글패치 적용 후의 화면 확인을 위한 테스트 후보입니다. 미출시 DLC의 포함된 텍스트도 번역 대상에 포함합니다.\n\n"
                 "1. 게임을 종료하세요. 기존 패치가 남아 있다면 Steam 파일 무결성 검사로 최신 원본 파일을 준비하세요.\n"
                 "2. 기존 `.cavalry-girls-ko-backup` 폴더가 있다면 다른 이름으로 보관하세요. 이전 버전의 백업을 최신 게임에 복원하지 마세요.\n"
@@ -367,7 +372,7 @@ def package(
             if profile_spec is not None:
                 package_manifest["maintenance_ui"] = manifest["maintenance_ui"]
                 package_manifest["known_debt"].append(
-                    "r06: verify approved static UI strings and layout changes in runtime."
+                    f"{profile_spec.patch_revision}: verify approved static UI strings and layout changes in runtime."
                 )
             else:
                 package_manifest["maintenance_ui"] = manifest["maintenance_ui"]

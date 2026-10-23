@@ -18,8 +18,44 @@ from typing import Any, Iterable, Mapping
 
 
 ROOT = Path(__file__).resolve().parents[2]
+# Historical public-r06 export anchor. The exporter removes this exact private
+# workspace path from its staged source and fails closed if the anchor changes.
 PROFILE_VERSION = "3.0.2950"
 PROFILE_SOURCE_REVISION = "f341ed52b0f2a51c24488de4f7b4bf32404c943244fe0263dde3f5d36a1f15ab"
+SUPPORTED_PROFILE_RELEASES = {
+    PROFILE_VERSION: {
+        "source_revision": PROFILE_SOURCE_REVISION,
+        "patch_revision": "r06",
+    },
+    "3.0.2952": {
+        "source_revision": "12789c6af1f7eca3bcff79264ca9dc10db4600d3886998893efa3306781b5806",
+        "patch_revision": "r07",
+    },
+    "3.0.2970": {
+        "source_revision": "1d390e4f3310e1e4ddcdcad58596a603bc4c0b9ad0fa5b15b652e43941639378",
+        "patch_revision": "r08",
+    },
+    "3.0.2972": {
+        "source_revision": "a8ad4be66270b7842e6a542b6ac9efae0e819a5d6f28a3d13cda3b1dc66faecc",
+        "patch_revision": "r09",
+    },
+    "3.0.2976": {
+        "source_revision": "6a877609e26f4f1724b841cdd961741fd83ea5687a4aa6616e7bc793817789f9",
+        "patch_revision": "r10",
+    },
+    "3.0.2978": {
+        "source_revision": "e32f03d147f64edcc90f3886477a0ea74046b2bc579cf4620ad7c825c565a492",
+        "patch_revision": "r11",
+    },
+    "3.0.2980": {
+        "source_revision": "e237aea8c2e74601c671cf374a29013f5aa5abb54b14b868f42b25c5195453fe",
+        "patch_revision": "r12",
+    },
+    "3.1.3032": {
+        "source_revision": "331dc45d5ec83307a508448c6e88cbc536ee9edb11a15f52287e626fe2918197",
+        "patch_revision": "r13",
+    },
+}
 REQUIRED_SOURCE_PATHS = (
     "CavalryGirls_Data/resources.assets",
     "CavalryGirls_Data/resources.assets.resS",
@@ -274,6 +310,14 @@ class BuildProfile:
     artifacts: dict[str, dict[str, Any]]
     raw: dict[str, Any]
 
+    @property
+    def patch_revision(self) -> str:
+        """Return the release revision pinned by the validated profile version."""
+        release = SUPPORTED_PROFILE_RELEASES.get(self.version)
+        if release is None:
+            raise ProfileError(f"unsupported profile game version: {self.version}")
+        return release["patch_revision"]
+
     def source_path(self, relative: str) -> str:
         if relative not in self.source_hashes:
             raise ProfileError(f"profile source hash is missing: {relative}")
@@ -281,7 +325,7 @@ class BuildProfile:
 
 
 def load_profile(path: Path, *, root: Path = ROOT) -> BuildProfile:
-    """Load and validate a 3.0.2950 profile without executing profile data."""
+    """Load and validate a supported version profile without executing its data."""
     path = path.resolve()
     if not path.is_file() or not path.is_relative_to(root.resolve()):
         raise ProfileError("profile must be an existing file under the project root")
@@ -295,11 +339,18 @@ def load_profile(path: Path, *, root: Path = ROOT) -> BuildProfile:
     game = raw.get("game")
     if version is None and isinstance(game, Mapping):
         version = game.get("version")
-    if version != PROFILE_VERSION:
-        raise ProfileError(f"profile game version must be {PROFILE_VERSION}")
+    release = SUPPORTED_PROFILE_RELEASES.get(version)
+    if release is None:
+        supported = ", ".join(sorted(SUPPORTED_PROFILE_RELEASES))
+        raise ProfileError(f"profile game version is unsupported: {version!r}; expected one of {supported}")
     source_revision = raw.get("source_revision")
-    if source_revision != PROFILE_SOURCE_REVISION:
+    if source_revision != release["source_revision"]:
         raise ProfileError("profile source revision mismatch")
+    patch_revision = raw.get("patch_revision")
+    if patch_revision is None and version != PROFILE_VERSION:
+        raise ProfileError("profile patch revision is required")
+    if patch_revision is not None and patch_revision != release["patch_revision"]:
+        raise ProfileError("profile patch revision mismatch")
 
     manifest_spec = _first(raw, "source_hash_manifest", "source_manifest")
     if not isinstance(manifest_spec, Mapping):
@@ -481,6 +532,7 @@ __all__ = [
     "ProfileError",
     "REQUIRED_PROFILE_DEPENDENCIES",
     "REQUIRED_SOURCE_PATHS",
+    "SUPPORTED_PROFILE_RELEASES",
     "load_profile",
     "profile_paths",
     "sha256_file",
