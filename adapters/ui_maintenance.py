@@ -215,6 +215,18 @@ def _deferred_width_result(
         ):
             raise UiPatchError("unknown deferred raw UI width source")
         expected_path_id = 708693
+    elif revision == "r14":
+        source_hash = recipe.get("source_asset", {}).get("resources_assets_sha256")
+        previous_source = source_hash == "449f4ff5896e7ee55c93348977233ac355b9554e488c03d1ec27ff79b6ffbdb0"
+        current_source = (
+            source_hash == "e7e237fcb2973292a751fb5fd3f9b58fec7baf5eb06c85cefa2d5d31c384c1ac"
+            and recipe.get("distribution_source_revision")
+            == "d8734013c03e2340ad6472e5c73d614c67f850afa13896cf2e495d4b6741d5bc"
+        )
+        if (recipe.get("source_revision") != "8c8c7a868d776f158e2d7f0f2c494458676cac3607ea9308bb929f809e02de6c"
+                or not (previous_source or current_source)):
+            raise UiPatchError("unknown deferred raw UI width source")
+        expected_path_id = 708695
     elif revision not in (None, "r06"):
         raise UiPatchError("unknown deferred raw UI width patch revision")
     if policy["debt_id"] != "ui700767_dynamic_width" or record.get("path_id") != expected_path_id:
@@ -231,7 +243,7 @@ def _deferred_width_result(
         "text_source_sha256", "rect_transform_path_id", "rect_transform_sha256",
         "anchor_min", "anchor_max", "size_delta",
     }
-    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13"}:
+    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14"}:
         evidence_keys |= {"parent_rect_transform_path_id", "parent_rect_transform_sha256"}
     if not isinstance(evidence, dict) or set(evidence) != evidence_keys:
         raise UiPatchError("invalid deferred raw UI layout evidence")
@@ -244,7 +256,7 @@ def _deferred_width_result(
     if rect.type.name != "RectTransform" or digest(rect.get_raw_data()) != evidence["rect_transform_sha256"]:
         raise UiPatchError("deferred raw UI RectTransform identity/hash mismatch")
     tree = rect.read_typetree()
-    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13"}:
+    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14"}:
         parent_id = evidence["parent_rect_transform_path_id"]
         if (
             not isinstance(parent_id, int) or isinstance(parent_id, bool)

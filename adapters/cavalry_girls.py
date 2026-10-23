@@ -212,20 +212,30 @@ _PLAYERS_TOUCH2_IDENTITY = {
     "header": list(_PLAYERS_TOUCH2_SPEC.header),
     "editable_columns": list(range(1, 28)),
 }
+_PLAYERS_TOUCH2_R14_SPEC = TableSpec(
+    8333, _PLAYERS_TOUCH2_SPEC.header, _PLAYERS_TOUCH2_SPEC.editable_columns,
+)
+_PLAYERS_TOUCH2_R14_IDENTITY = {
+    **_PLAYERS_TOUCH2_IDENTITY,
+    "asset_path_id": 8333,
+}
+_PLAYERS_TOUCH2_IDENTITIES = (
+    (_PLAYERS_TOUCH2_IDENTITY, _PLAYERS_TOUCH2_SPEC),
+    (_PLAYERS_TOUCH2_R14_IDENTITY, _PLAYERS_TOUCH2_R14_SPEC),
+)
 
 
 def players_touch2_profile(asset: Mapping[str, Any]) -> dict[str, Any]:
-    """Pin the sole confirmed 28-column layout to its current asset evidence."""
-    if (
-        not isinstance(asset, Mapping)
-        or asset.get("name") != _PLAYERS_TOUCH2_IDENTITY["asset_name"]
-        or asset.get("path_id") != _PLAYERS_TOUCH2_IDENTITY["asset_path_id"]
-        or asset.get("sha256") != _PLAYERS_TOUCH2_IDENTITY["asset_sha256"]
-        or asset.get("catalog_paths") != [_PLAYERS_TOUCH2_IDENTITY["catalog_path"]]
-    ):
-        raise CellPatchError("Players_Japanese current asset identity mismatch")
-    return {key: value.copy() if isinstance(value, list) else value
-            for key, value in _PLAYERS_TOUCH2_IDENTITY.items()}
+    """Pin each confirmed 28-column layout to its exact asset evidence."""
+    if isinstance(asset, Mapping):
+        for identity, _ in _PLAYERS_TOUCH2_IDENTITIES:
+            if (asset.get("name") == identity["asset_name"]
+                    and asset.get("path_id") == identity["asset_path_id"]
+                    and asset.get("sha256") == identity["asset_sha256"]
+                    and asset.get("catalog_paths") == [identity["catalog_path"]]):
+                return {key: value.copy() if isinstance(value, list) else value
+                        for key, value in identity.items()}
+    raise CellPatchError("Players_Japanese current asset identity mismatch")
 
 
 def _profile_spec(header: tuple[str, ...], data: bytes,
@@ -237,14 +247,16 @@ def _profile_spec(header: tuple[str, ...], data: bytes,
         first = header[0] if header else ""
         raise CellPatchError(f"unrecognized or inexact header for {first!r}")
     layouts = profile.get("table_layouts")
-    expected = _PLAYERS_TOUCH2_IDENTITY
-    if not isinstance(layouts, list) or len(layouts) != 1 or layouts[0] != expected:
+    matches = [(identity, selected_spec) for identity, selected_spec in _PLAYERS_TOUCH2_IDENTITIES
+               if isinstance(layouts, list) and layouts == [identity]]
+    if len(matches) != 1:
         raise CellPatchError("current Players_Japanese layout profile is missing or inexact")
+    expected, selected_spec = matches[0]
     if _profile_asset_path_id(profile, "Players_Japanese") != expected["asset_path_id"]:
         raise CellPatchError("current Players_Japanese PathID mismatch")
     if validate_evidence and _sha256(data) != expected["asset_sha256"]:
         raise CellPatchError("current Players_Japanese asset hash mismatch")
-    return _PLAYERS_TOUCH2_SPEC
+    return selected_spec
 
 
 def _sha256(data: bytes) -> str:
@@ -437,7 +449,7 @@ def _parse_profile_table(
     dialect = _profile_exception(
         profile, asset_name=spec.asset_name, path_id=spec.asset_path_id
     )
-    if dialect is None and spec == _PLAYERS_TOUCH2_SPEC:
+    if dialect is None and spec in (_PLAYERS_TOUCH2_SPEC, _PLAYERS_TOUCH2_R14_SPEC):
         rows = tuple(tuple(RawCell(cell.start, cell.end, cell.logical_text) for cell in row)
                      for row in tokenized.cells)
         if any(len(row) != len(spec.header) for row in rows):

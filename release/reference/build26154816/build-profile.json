@@ -1,0 +1,724 @@
+{
+  "candidate_semantic_status": "old_Korean_values_reference_only_pending_fresh_review",
+  "fonts": {
+    "font_bundle_sha256": "8b39d8ad7be7f84037b9ce2fd37d759aa5314daca6644933a5e1f032f1b6bc7d",
+    "tmp_font_type_hash": "300fd99066f8c288e85f5e81ce65fe34",
+    "korean_font": {
+      "path_id": 682356,
+      "name": "SourceHanSansKR",
+      "source_object_sha256": "52f6efb97ba76516496c882aec7b2df4a1c3e15de812ab6c0bfc02bed71bcf5a",
+      "character_count": 11844,
+      "hangul_syllables": 11172
+    },
+    "targets": [
+      {
+        "path_id": 682355,
+        "name": "Main SDF",
+        "reason": "dominant TextMeshProUGUI font (61 observed local PPtr references)",
+        "source_object_sha256": "6abe08f1cfa044af4bda0ea9287145db497d184b9d9834589df4875945383389",
+        "patched_object_sha256": "bd082bee245607fb3b4210c9d4d0c716f1d95dddd7c3c0cb81e12d394c19874f"
+      },
+      {
+        "path_id": 682357,
+        "name": "RuiZiZhenYanTiMianFeiShangYong-2 SDF",
+        "reason": "secondary TextMeshProUGUI font (23 observed local PPtr references)",
+        "source_object_sha256": "ac3739e321cb9d32db0af19cf1395c0f25775934dcf25e994e08ccb9ba012d4d",
+        "patched_object_sha256": "e8a2dc6b7aeadef1c3dbd0e0bf88ff1929222fd5246303cec5ea42cf9ee0a1b7"
+      },
+      {
+        "path_id": 682358,
+        "name": "素材集市社会体 SDF",
+        "reason": "TextMeshPro font (12 observed local PPtr references)",
+        "source_object_sha256": "5bbe420a1222649397399c722d708b3d356782803492d97bb786c34e62676268",
+        "patched_object_sha256": "d8b06e23871c2d7e54f86fa56305a928763cbb88c5469fb74ce1e4f3af60a3ef"
+      },
+      {
+        "path_id": 682359,
+        "name": "腾祥细潮黑简 SDF",
+        "reason": "TextMeshProUGUI font (1 observed local PPtr reference)",
+        "source_object_sha256": "cc5900da69e7570d43ca1c9025cf024370e6e84d4ebb93bd8b95318ced634a16",
+        "patched_object_sha256": "1f85af2242e0ca9eb16ed398e8419fb2a81ae382b4d8a85ef3174426aeed501e"
+      }
+    ]
+  },
+  "game_version": "3.1.3048",
+  "hud": {
+    "text_path_id": 715270,
+    "gameobject_path_id": 107254,
+    "hierarchy": "FrameUI/MainContent/HUDHHint",
+    "script_pointer": [
+      1,
+      1097
+    ],
+    "source_font": {
+      "path_id": 11273,
+      "name": "SourceHanSerifCN-Heavy-4",
+      "sha256": "78101f93fb76951da79728a7ece95a974fb8f95f2024fa50792bc79627951a07"
+    },
+    "target_font": {
+      "path_id": 11274,
+      "name": "SourceHanSansKR-Regular",
+      "sha256": "061c9a55b6b731af2a4667f06efb82ed7c80ba99d5350c1bba76f80472ea304f"
+    },
+    "original_object_sha256": "1199e7094bdb98d6ca70b1cff26236381660c5f44856f360b81e3344ae3c9bb8",
+    "original_object_hex": "00000000f6a20100000000000100000001000000490400000000000000000000000000000000000000000000c1782b3fc1782b3fc1782b3f0000803f01000000010000000000000000000000092c000000000000120000000000000000000000010000002800000003000000000000000100000001000000010000000000803f33000000e698bee7a4bae68898e69697485544205b485d2020202020e59cb0e59bbee4bca0e98081205b4d5d202020202020202020202000",
+    "source_text": "显示战斗HUD [H]     地图传送 [M]           ",
+    "rect_width": 561.0524291992188,
+    "font_size": 18
+  },
+  "new_fixed_ui_candidates": [
+    {
+      "hierarchy": "CommandUI2/Target/LockedPoint/Text",
+      "matched_literal_sha256": "56cee9095850d2fad2cf11fe8b0b3e4a3d000e5d7e215d3d9e3541dc6815d303",
+      "path_id": 705041,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "source_object_sha256": "4b361f29b5bad0e2c5debe60929d39e3525f726883507f767b6b3d54238cd84f",
+      "status": "inventory_only_unpatched",
+      "old_path_id": 705039
+    },
+    {
+      "hierarchy": "Cast2/MaskText/TextMain",
+      "matched_literal_sha256": "d208eb2058d3de36509f1830f3a0b686b3a77f677781b04aaf1a3fc6e53c5ed8",
+      "path_id": 741881,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "source_object_sha256": "6aab5b6f1fcff7085179d6e025260843ffdbd006f59968bf6338c3dc0c6f979a",
+      "status": "inventory_only_unpatched",
+      "old_path_id": 741879
+    },
+    {
+      "hierarchy": "TargetLockedMelee/Text",
+      "matched_literal_sha256": "56cee9095850d2fad2cf11fe8b0b3e4a3d000e5d7e215d3d9e3541dc6815d303",
+      "path_id": 759219,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "source_object_sha256": "bb8aca04bc5d8eea0df499cf122dce9bcea60bd72dde37833b01c7cba625a653",
+      "status": "inventory_only_unpatched",
+      "old_path_id": 759217
+    },
+    {
+      "hierarchy": "TargetFrameLocked/Text",
+      "matched_literal_sha256": "56cee9095850d2fad2cf11fe8b0b3e4a3d000e5d7e215d3d9e3541dc6815d303",
+      "path_id": 759950,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "source_object_sha256": "00654cd4e62317c8c7eeaa617b66eee6b8e2d49d71159ba1f1132e67ffb934a7",
+      "status": "inventory_only_unpatched",
+      "old_path_id": 759948
+    }
+  ],
+  "patch_revision": "r14",
+  "promoted_fixed_ui_candidates": [],
+  "reference_asset_profile_sha256": "7c4636eea02dd4f27774666c9b425ec4a91474da3068d85bf95e2dafb86aed88",
+  "reference_ui_recipe_sha256": "cd39a2ae66fb9f28bba162908e7a35e462ad24848fb59debde6c360eb0a274c8",
+  "release_scope": "stage8_local_candidate",
+  "runtime_verified": false,
+  "schema_version": "1.0.0",
+  "source": {
+    "resources_assets_sha256": "e7e237fcb2973292a751fb5fd3f9b58fec7baf5eb06c85cefa2d5d31c384c1ac",
+    "resources_assets_size": 1708680128,
+    "object_count": 772198,
+    "unity_version": "2019.4f1",
+    "previous_resources_assets_sha256": "449f4ff5896e7ee55c93348977233ac355b9554e488c03d1ec27ff79b6ffbdb0",
+    "previous_resources_assets_size": 1708680128,
+    "previous_object_count": 772198,
+    "previous_unity_version": "2019.4f1",
+    "source_revision": "8c8c7a868d776f158e2d7f0f2c494458676cac3607ea9308bb929f809e02de6c"
+  },
+  "source_revision": "8c8c7a868d776f158e2d7f0f2c494458676cac3607ea9308bb929f809e02de6c",
+  "status": "verified_structural",
+  "title": {
+    "sprite_path_id": 17330,
+    "texture_path_id": 6226,
+    "quad_donor_path_id": 11494,
+    "original_object_sha256": "f3e2989e7b32fa45e921ae53dd57c6a35ea2add073f87c65be5ab9e5021ae619",
+    "patched_object_sha256": "62774d738a296878621950835cee17b0897b05154928f1ef3452eac5aeb509e0",
+    "texture_stream_offset": 2736259820,
+    "texture_stream_size": 230400,
+    "quad_donor_name": "24_10_8_Chinese",
+    "texture": {
+      "name": "Title_Japanese",
+      "width": 640,
+      "height": 360,
+      "format": 12,
+      "stream_path": "resources.assets.resS",
+      "source_object_sha256": "59603305c56d2eb41a7dae24798429c7e9d87e9245fd569e1790fd6a758e1f88"
+    },
+    "quad_donor_object_sha256": "9f4c44fc4a0bb0ede03a2fa4dc7fb2889b6448aa44f93a2b91437d02b607797d",
+    "offset": 2736259820,
+    "size": 230400,
+    "original_sha256": "084b9505d893ce23862fb8f3c0ed3a2fe496d807817155beaa3937f54c879fb1",
+    "original_stream_span_sha256": "084b9505d893ce23862fb8f3c0ed3a2fe496d807817155beaa3937f54c879fb1",
+    "payload_sha256": "646b631b7bc1b4399f52fc673ee2f9c2f26c8d0600a47c8a8e096107ba303daf",
+    "payload": {
+      "path": "release/assets/title-ko.dxt5",
+      "sha256": "646b631b7bc1b4399f52fc673ee2f9c2f26c8d0600a47c8a8e096107ba303daf"
+    },
+    "replacement_payload": {
+      "sha256": "646b631b7bc1b4399f52fc673ee2f9c2f26c8d0600a47c8a8e096107ba303daf",
+      "size": 230400
+    }
+  },
+  "ui_font_overrides": [
+    {
+      "hierarchy": "Cast3/MaskText/TextMain",
+      "id": "cg:UnityUI:resources:717169:m_Text",
+      "patched_font_pointer": [
+        0,
+        11277
+      ],
+      "per_record_font": {
+        "name": "SourceHanSansSC-Regular-2",
+        "path_id": 11277,
+        "sha256": "84bbd4ace91d327b3ad1a581c688196278a4e41308520176f419180064e4af2b"
+      },
+      "reason": "preserve Japanese cast-name glyphs together with Korean text",
+      "serialized_source_font_pointer": [
+        0,
+        11196
+      ]
+    }
+  ],
+  "ui_identities": [
+    {
+      "old_path_id": 688368,
+      "path_id": 688370,
+      "hierarchy": "WeaponOperateUI/Pivot/WeaponOperatePivot/MainArea2/ReforgeArea/ReforgeInfo2",
+      "gameobject_path_id": 229009,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "7111586973ab22345010d69afc970d6fd585886a3316f290fcc17fbfdcc9918b",
+      "source_object_sha256": "f34780518debf53094ef410817047d8e4f05fa9335b5035cfeaa21a968f41aff",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 690668,
+      "path_id": 690670,
+      "hierarchy": "ItemBreifUI/TargetSub/Pannel8/UpgradePannel/Text",
+      "gameobject_path_id": 186412,
+      "script_pointer": [
+        1,
+        2612
+      ],
+      "old_source_object_sha256": "2106bbfac17926c6628b82b7f814ec29e36ea013f78e85f64927e1e115f8f8d2",
+      "source_object_sha256": "c8c95f79d02753e1e2dd70d3703dd70280b8ad726368fd3173f902cdd1e239e8",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 725974,
+      "path_id": 725976,
+      "hierarchy": "WeaponOperateUI/Pivot/WeaponOperatePivot/MainArea2/DuplicateArea/DuplicateInfo2",
+      "gameobject_path_id": 138904,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "454fae3f7032d36e1505d495ac45625f765ba732595d5436b61e610fc6a1f2bf",
+      "source_object_sha256": "c77fb2d16de6d33e4f4f8528956d15d8dddf16ccbed844f041abcce1e17f1aa0",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 731079,
+      "path_id": 731081,
+      "hierarchy": "ItemBreifUISimple/TargetSub/Pannel8/UpgradePannel/Text",
+      "gameobject_path_id": 21825,
+      "script_pointer": [
+        1,
+        2612
+      ],
+      "old_source_object_sha256": "2ae8e1851f72b975289b546960aa057c579e91bf78dcb273ad7ecef4a45507fe",
+      "source_object_sha256": "53e55571db8a085ae72043994c4c7f92ef34b9f819d923d8d5ff5246da0bb3eb",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 712037,
+      "path_id": 712039,
+      "hierarchy": "ItemBreifUI/TargetSub/ExtendPanel/Pannel2/PlusText",
+      "gameobject_path_id": 90856,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "a99a3f42ed2b8fbc0d0468dcd4b14538af602b27f1cca7722ef1b0f6c7adf997",
+      "source_object_sha256": "1c3670c9f80ad1d0fccfa342eaf31b93c291f560b6b8930fd847f5a9147ef7ec",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 767696,
+      "path_id": 767698,
+      "hierarchy": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel2/PlusText",
+      "gameobject_path_id": 237106,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "d81ebcadc7cdf20fb2e4682fdfeab50e4694d62825806fc8dfc6b8b3ec2bce2f",
+      "source_object_sha256": "0eb340b9b3d7e914197b7cf667e28b15b1a9a5b3478f6e2d0dc75d94f81a59dc",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 744068,
+      "path_id": 744070,
+      "hierarchy": "ItemBreifUI/TargetSub/ExtendPanel/Pannel5/HintText1",
+      "gameobject_path_id": 87560,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "51c583b8c884869514996d3492d145145d22785265332d141ba0d5e147d144f4",
+      "source_object_sha256": "ede4c3ee923491ad1f0a639db57c16d4123ffedbf37ac23f3f9dd44345394c8f",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 688637,
+      "path_id": 688639,
+      "hierarchy": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel5/HintText1",
+      "gameobject_path_id": 231766,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "3f24dbb4567c6c3bbd7e799c970b74197099d7d93428220c3ac5b6df1ea1ed98",
+      "source_object_sha256": "064345f3659e4671f0c63d2756e956f1e8215b8f8e3c21b5bcf5ca9e77c3b412",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 717777,
+      "path_id": 717779,
+      "hierarchy": "ItemBreifUI/TargetSub/ExtendPanel/Pannel7/HintText2",
+      "gameobject_path_id": 194582,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "5b06cf547786f769223f9cad236fab69ba95e18498326467e618e4c62f764017",
+      "source_object_sha256": "b4eb8a92fa130098a2a7af8b4d5f6f453ce5b19ef315b62c89d4131da7d7ed2f",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 750440,
+      "path_id": 750442,
+      "hierarchy": "ItemBreifUISimple/TargetSub/ExtendPanel/Pannel7/HintText2",
+      "gameobject_path_id": 111460,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "ad417ce08a03b93d63592ba330b884ff91899d6e3ebc1342587f0165a271df7f",
+      "source_object_sha256": "a5032b98203798aecd4e1de9e719c9beeda018fe4283c30e81998123a64fad64",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 745175,
+      "path_id": 745177,
+      "hierarchy": "ItemBreifUI/TargetSub/Pannel1",
+      "gameobject_path_id": 180562,
+      "script_pointer": [
+        1,
+        1037
+      ],
+      "old_source_object_sha256": "bbb299965ce0299e8ac5d8662f852d10ba0cad5fd0271feb2127fd60201e381a",
+      "source_object_sha256": "65e3f05f1ad6bd772a7188d9c64885338870953b75aaac1a06111a308ca7ff29",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 690397,
+      "path_id": 690399,
+      "hierarchy": "ItemBreifUISimple/TargetSub/Pannel1",
+      "gameobject_path_id": 39683,
+      "script_pointer": [
+        1,
+        1037
+      ],
+      "old_source_object_sha256": "9d40c0cbb22f0343625471fce923695d4d4b25ec2ff8908411b02f941a5c7d54",
+      "source_object_sha256": "482007b93d466457a2699c3b7638f73ef6f50c7e218ba148735a4631a1b4d672",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 768849,
+      "path_id": 768851,
+      "hierarchy": "ItemBreifUI/TargetSub/Pannel1/ContentText",
+      "gameobject_path_id": 221157,
+      "script_pointer": [
+        1,
+        2612
+      ],
+      "old_source_object_sha256": "b4d2b88f3bb9264639a75f08c83e48c2a1ac76bd3ab4118a940f58e117643499",
+      "source_object_sha256": "25cde401f1c6fc8dcbf22b4246b369efadc85e1fc54d2e9383fbd8967e07e5d9",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 713190,
+      "path_id": 713192,
+      "hierarchy": "ItemBreifUISimple/TargetSub/Pannel1/ContentText",
+      "gameobject_path_id": 76786,
+      "script_pointer": [
+        1,
+        2612
+      ],
+      "old_source_object_sha256": "e8e5d942ff9640f817dfd43f3f038ae7ec33a8e083de444156c5ddfc8a5fba1f",
+      "source_object_sha256": "715cc714ff8c0cd0a404e538ab0fa25e8149b27c7aad3a39c89af1f828a312ae",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 728824,
+      "path_id": 728826,
+      "hierarchy": "ItemBreifUISimpleTitle/TargetSub/Pannel8/UpgradePannel/Text",
+      "gameobject_path_id": 53520,
+      "script_pointer": [
+        1,
+        2612
+      ],
+      "old_source_object_sha256": "b3c91bf2fd2253c1880bea9206320362ac62394c8b40b7513de604fc35dcf0b4",
+      "source_object_sha256": "247c11a6b5005c3c93f36d0e0c2aa049dac945e5553863d1371bd8dc3bc2ff8e",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 708693,
+      "path_id": 708695,
+      "hierarchy": "MainBaseUI_Cooperative/Pivot/BtnGroup/SeeInDefense/SeeInDefenseTxt",
+      "gameobject_path_id": 172839,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "aa9c418e49f1d9c32fad55b182486a3c743173a15f4c68a58e9c4e471d2975f0",
+      "source_object_sha256": "f1f2bf74ae93e26c18b7f725d0b9d234eb6691f82d3dc653d2fb9cc0733b21a8",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 717167,
+      "path_id": 717169,
+      "hierarchy": "Cast3/MaskText/TextMain",
+      "gameobject_path_id": 178017,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "d7bfaee3c80d2efadf4369e9428b6065171c65d79689c4b3823e6edf05853a8d",
+      "source_object_sha256": "b2c73c189a5d4cc97b0dd661ce11bb8e43d63a8e3220af332d916934d260c74d",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 746949,
+      "path_id": 746951,
+      "hierarchy": "MainBaseUI_Cannon/Pivot/AreaD/DefenseBtn/DefenseBtnTxt",
+      "gameobject_path_id": 33452,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "25a27dbc31b694b7c3e21d52aca51db01d8c476ffb8626676c67618b64f2b4b2",
+      "source_object_sha256": "d18a3810e0469d158cd071e065315a258179e2dca7868027416403ed1e9106ee",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 755290,
+      "path_id": 755292,
+      "hierarchy": "DefenseSetUI/MainCargoArea/MainCargoUI/MainPanel/Btns/AutoBtn/PresTog/PresText",
+      "gameobject_path_id": 68741,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "8076115341ca93ab2a845555c6440bcf5564e38e2d4fc9afdf9cd3c9b59a5b29",
+      "source_object_sha256": "bffad4acc957106ead07489c288641b0484daa8830ed2bd4814ec869a20c423d",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 757292,
+      "path_id": 757294,
+      "hierarchy": "MainCargoUI/Panel/Btns/AutoBtn/PresTog/PresText",
+      "gameobject_path_id": 58359,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "aac85160a84be0be9e8a56300d1ad5846ad8c09c82a0845ba1e060305680d9c0",
+      "source_object_sha256": "fb9f1d5c48ea6f8b9207c2883090ca36b799efa8f2316296992ec03c1ff357c2",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 765343,
+      "path_id": 765345,
+      "hierarchy": "TargetFrameSnipeLocked/Text",
+      "gameobject_path_id": 149882,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "0b96fc576e8e8a18781cd6579262f5ceb3cc564ea50a43b3e608dcf04e5a9f59",
+      "source_object_sha256": "fab56218fea05ba02d18a0e78fa0cdcb1a207d5c87076e495013cfab3206e566",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 689732,
+      "path_id": 689734,
+      "hierarchy": "ChoosePersonDefendUI/Pannel/MainTxt2",
+      "gameobject_path_id": 46710,
+      "script_pointer": [
+        1,
+        2612
+      ],
+      "old_source_object_sha256": "d7e128087389ca55cc56d25f3b93f5377be75f0b5563bb12837b22c8f49c6469",
+      "source_object_sha256": "49a507c72bbc904e5224b37e9e163dc60dd4f93ed3eb2a5f542a3f97ee1b378c",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 689364,
+      "path_id": 689366,
+      "hierarchy": "ModUI/TitleBar/TitleTxt2",
+      "gameobject_path_id": 74216,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "35379956e8fad2f05e0ce458d13159e9bbbb900f48b4cc099cbfebc68b82d088",
+      "source_object_sha256": "da6a24c3343194378401a4f9e0c64fd8c34e64b40b96dd7a6d1acc6fc57aa24c",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    },
+    {
+      "old_path_id": 740078,
+      "path_id": 740080,
+      "hierarchy": "BasementUI2/Pannel/DayPanel/Group/LoopBtn/Txt",
+      "gameobject_path_id": 102876,
+      "script_pointer": [
+        1,
+        1097
+      ],
+      "old_source_object_sha256": "1244187d48b21474c65455aa694ee6ea3e1cf9133d3761d21bddbc6ed8059058",
+      "source_object_sha256": "be7c0e5cdb0a35f635998cbc98321204d5bb91f230d9c06a67a2134e6eb49725",
+      "identity_basis": "unique_hierarchy_script_and_exact_source_text"
+    }
+  ],
+  "distribution_source_revision": "d8734013c03e2340ad6472e5c73d614c67f850afa13896cf2e495d4b6741d5bc",
+  "canonical_equivalence": {
+    "path": "release/reference/build26154816/canonical-equivalence.json",
+    "sha256": "927ac921b84cf73e59606c4492922243e34f7cf8d838dc48c09e9e7e8ef5ab4c"
+  },
+  "canonical_source_manifest": {
+    "path": "localization/corpus/build26150116/source-manifest.json",
+    "sha256": "23f17017398c9738e7a7fa59efb17f8ad791a5bac0d05f1c0318e96993d8c11a"
+  },
+  "steam_build_id": "26154816",
+  "app_id": "2055050",
+  "source_hash_manifest": {
+    "path": "release/reference/build26154816/source-hashes.json",
+    "sha256": "dad0adb20d1a70fc35636c4fd555463f9a9e4c8374d782a214c90329e89a8da9"
+  },
+  "bound_source_hashes": {
+    "CavalryGirls_Data/resources.assets": "e7e237fcb2973292a751fb5fd3f9b58fec7baf5eb06c85cefa2d5d31c384c1ac",
+    "CavalryGirls_Data/resources.assets.resS": "1ab940cd3e002c0559f8a038f815036c4417394cdb91bea504be65657b0c0bad",
+    "AssetBundles/fonts_assets_all.bundle": "8b39d8ad7be7f84037b9ce2fd37d759aa5314daca6644933a5e1f032f1b6bc7d"
+  },
+  "text_target_ids": [
+    8327,
+    8480,
+    8439,
+    8333,
+    8367
+  ],
+  "record_count": 10349,
+  "asset_path_ids": {
+    "Descriptions": 8327,
+    "ConditionEvents": 8480,
+    "SpecialMod": 8439,
+    "Players_Japanese": 8333,
+    "Players2_Japanese": 8367
+  },
+  "table_layouts": [
+    {
+      "asset_name": "Players_Japanese",
+      "asset_path_id": 8333,
+      "catalog_path": "Text/Table/Players_Japanese",
+      "asset_sha256": "7bb7af86171728932f104597bdaf06b03354b34cde951709f05a15504d5ad66e",
+      "header": [
+        "Players_Japanese",
+        "BattleRetreat",
+        "Damage2",
+        "Death",
+        "Change",
+        "ChangeSec",
+        "ChangeLast",
+        "ChangeSuccess",
+        "VicBad",
+        "VicNormal",
+        "VicPerfect",
+        "StartBad",
+        "StartNormal",
+        "StartPerfect",
+        "GiftDis",
+        "GiftNormal",
+        "GiftLike",
+        "GiftPerfect",
+        "CommandRefuse",
+        "Entrance",
+        "Exit",
+        "Refuse",
+        "Meet",
+        "Battle",
+        "Promoting",
+        "Touch",
+        "Touch2",
+        "Login"
+      ],
+      "editable_columns": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ]
+    }
+  ],
+  "table_exceptions": [
+    {
+      "asset_path_id": 8327,
+      "asset_sha256": "0a72a05d4ee55f6c41980836e771561025a25783172620fdb82d91308789f61c",
+      "dialect": "native-raw-comma-newline-v1",
+      "repaired_rows": [
+        {
+          "row_index": 7621,
+          "key": "DLC3StartPlot3",
+          "raw_sha256": "184a7042917c48f5973bd23e3e5d14dd18a7724ce9d29d9c69ec59fd706c9f6e",
+          "target_column": "Japanese",
+          "inserted_value": "",
+          "input_width": 4
+        }
+      ],
+      "orphan_rows": [
+        {
+          "row_index": 7622,
+          "key": "Reading it is pointless. Hurry up\"",
+          "raw_sha256": "4f26551140c91c3a9d504efd2ca0ed56847e9c962e63096d6f7b49ba1e00df7a",
+          "width": 2
+        },
+        {
+          "row_index": 7623,
+          "key": "読んでも無駄だ。早くしろ\"",
+          "raw_sha256": "eff64f123e15e0b690ec5ff3163040f2b62d5b3d6895396c88f355f9975316e1",
+          "width": 1
+        }
+      ]
+    }
+  ],
+  "blockers": [],
+  "coverage": {
+    "qa": {
+      "complete": true,
+      "count": 10349
+    },
+    "l1": {
+      "complete": true,
+      "count": 10349
+    },
+    "l2": {
+      "complete": true,
+      "count": 10349
+    }
+  },
+  "dependencies": {
+    "adapters/cavalry_girls.py": "bc87b02cf68f891ac8a794e1dc93ee883881915dad8d963a63095c12e8c94038",
+    "tools/maintenance/package.py": "eeaf4fa6ff2d3dbac9763505e7439c8c64f214302d56c8e4c254391bc7ce9d2f",
+    "tools/maintenance/build.py": "d40c4f949d6aaa7c5158c7190645f583b7d1efd93460df25315e224a36aab4fa",
+    "tools/maintenance/profile.py": "c3879675e754725b1336128727a544e83704d3ccc030da84ba24edbf06ee205a",
+    "tools/l10n.py": "cac344c0956aa6ec06e4cd7e9bf2afba426edf3425415024c046cf066e3ba3dd",
+    "adapters/title_sprite.py": "0126a4d09bed1a4c9ba67a409bd30bd39d4e236839d450b675497dfd5b33236d",
+    "adapters/font_adapter.py": "ea41e64e4341a11611d9f594420c6f27d09866bdb1ebdaa64bd36ff505edf613",
+    "adapters/hud_adapter.py": "a15d1c3fc8bd157b4b23bd0bffdcc6aa56967bb3dd6e1fcc5ce605590c8c2344",
+    "adapters/ui_maintenance.py": "bb7b454221a069058a683826e3919bfeed39654872969685313273ade184c8de",
+    "adapters/table_dialect.py": "e921f34102486d5d391641b3cc6ed5bb7f5dfa87863ee9dbf849a25c487129e6"
+  },
+  "supplemental_id": "cg:UnityUI:resources:715270:m_Text",
+  "digests": {
+    "corpus": {
+      "path": "localization/corpus/build26150116/all-segments.jsonl",
+      "sha256": "e3732fa5e818380e0396b0221cfb87ef1a60a0a6b162edf31c6d8aa752f86c73"
+    },
+    "maps": {
+      "path": "localization/corpus/build26150116/patch-map.jsonl",
+      "sha256": "fd0a60c654c21a7c5e7bbde0aa1c5dcc0ab73886ffc51eb7316a35662ce8b524"
+    },
+    "snapshot": {
+      "path": "localization/translations/build26150116/locally-reviewed.jsonl",
+      "sha256": "c429d68acabab7aaf90b59468066fc2c46094a76bdfe3fec17ae1a8cb351c60b"
+    },
+    "reviews": {
+      "path": "release/reference/build26154816/reviews.jsonl",
+      "sha256": "6c681b188ac7542015b4e157f97c7d7cfb01989b0d78da162f08b1f9991a745f"
+    },
+    "profile": {
+      "path": "release/reference/build26154816/asset-profile.json",
+      "sha256": "0f608caf9fad3d63c146100207c4d2bc01d508a39ba21c6a7355b9a64c8548ce"
+    }
+  },
+  "translations": {
+    "path": "localization/translations/build26150116/locally-reviewed.jsonl",
+    "sha256": "c429d68acabab7aaf90b59468066fc2c46094a76bdfe3fec17ae1a8cb351c60b"
+  },
+  "segments": {
+    "path": "localization/corpus/build26150116/segments.jsonl",
+    "sha256": "6dca5ba6541c77adef491d2e601ffe53767086139139a750b93757a1128ad940"
+  },
+  "patch_map": {
+    "path": "localization/corpus/build26150116/patch-map.jsonl",
+    "sha256": "fd0a60c654c21a7c5e7bbde0aa1c5dcc0ab73886ffc51eb7316a35662ce8b524"
+  },
+  "ui_source": {
+    "path": "localization/corpus/build26150116/ui-hud-source.jsonl",
+    "sha256": "508e7eda76a6addb6313d5545ed3821c3f900172dcb884878cd86fdaa70f8bfa"
+  },
+  "ui_patch_map": {
+    "path": "localization/corpus/build26150116/ui-hud-patch-map.jsonl",
+    "sha256": "2ea911623dff62fb730fb9c492c2d7cb2987bcea87c9a428aa576ffe3f801eb4"
+  },
+  "ui_static_source": {
+    "path": "localization/corpus/build26150116/ui-all-static-source.jsonl",
+    "sha256": "1356ddb6afbb5b53f6dd757286fbf39caa638fd71d0ea6a24781ca3f1334f50a"
+  },
+  "ui_static_patch_map": {
+    "path": "localization/corpus/build26150116/ui-all-static-patch-map.jsonl",
+    "sha256": "922f7368adb0c62deecb87b790dfb03be6f4f4db572b2c25af79dab57c675f94"
+  },
+  "asset_profile": {
+    "path": "release/reference/build26154816/asset-profile.json",
+    "sha256": "0f608caf9fad3d63c146100207c4d2bc01d508a39ba21c6a7355b9a64c8548ce"
+  },
+  "ui_recipe": {
+    "path": "release/reference/build26154816/ui-recipe.json",
+    "sha256": "af17fff1f2fc78416cadf5922bdfdb88cc0ec0741598c70bfbfc5887cd24879e"
+  }
+}

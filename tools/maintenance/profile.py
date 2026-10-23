@@ -55,6 +55,17 @@ SUPPORTED_PROFILE_RELEASES = {
         "source_revision": "331dc45d5ec83307a508448c6e88cbc536ee9edb11a15f52287e626fe2918197",
         "patch_revision": "r13",
     },
+    "3.1.3040": {
+        "source_revision": "8c8c7a868d776f158e2d7f0f2c494458676cac3607ea9308bb929f809e02de6c",
+        "patch_revision": "r14",
+        "steam_build_id": "26150116",
+    },
+    "3.1.3048": {
+        "source_revision": "8c8c7a868d776f158e2d7f0f2c494458676cac3607ea9308bb929f809e02de6c",
+        "distribution_source_revision": "d8734013c03e2340ad6472e5c73d614c67f850afa13896cf2e495d4b6741d5bc",
+        "patch_revision": "r14",
+        "steam_build_id": "26154816",
+    },
 }
 REQUIRED_SOURCE_PATHS = (
     "CavalryGirls_Data/resources.assets",
@@ -311,6 +322,11 @@ class BuildProfile:
     raw: dict[str, Any]
 
     @property
+    def distribution_source_revision(self) -> str:
+        """Full distribution revision; legacy profiles use their canonical revision."""
+        return self.raw.get("distribution_source_revision", self.source_revision)
+
+    @property
     def patch_revision(self) -> str:
         """Return the release revision pinned by the validated profile version."""
         release = SUPPORTED_PROFILE_RELEASES.get(self.version)
@@ -346,11 +362,17 @@ def load_profile(path: Path, *, root: Path = ROOT) -> BuildProfile:
     source_revision = raw.get("source_revision")
     if source_revision != release["source_revision"]:
         raise ProfileError("profile source revision mismatch")
+    distribution_revision = release.get("distribution_source_revision", source_revision)
+    if "distribution_source_revision" in release and raw.get("distribution_source_revision") != distribution_revision:
+        raise ProfileError("profile distribution source revision mismatch")
     patch_revision = raw.get("patch_revision")
     if patch_revision is None and version != PROFILE_VERSION:
         raise ProfileError("profile patch revision is required")
     if patch_revision is not None and patch_revision != release["patch_revision"]:
         raise ProfileError("profile patch revision mismatch")
+    expected_build = release.get("steam_build_id")
+    if expected_build is not None and str(raw.get("steam_build_id")) != expected_build:
+        raise ProfileError("profile steam build mismatch")
 
     manifest_spec = _first(raw, "source_hash_manifest", "source_manifest")
     if not isinstance(manifest_spec, Mapping):
@@ -367,8 +389,13 @@ def load_profile(path: Path, *, root: Path = ROOT) -> BuildProfile:
     if sha256_file(manifest_path) != manifest_digest:
         raise ProfileError("source hash manifest digest mismatch")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest.get("source_revision") != source_revision or not isinstance(manifest.get("files"), list):
+    if manifest.get("source_revision") != distribution_revision or not isinstance(manifest.get("files"), list):
         raise ProfileError("source hash manifest revision/files mismatch")
+    if expected_build is not None and (
+        manifest.get("game_version") != version
+        or str(manifest.get("steam_build_id")) != expected_build
+    ):
+        raise ProfileError("source hash manifest game/build mismatch")
     source_hashes: dict[str, str] = {}
     for item in manifest["files"]:
         if not isinstance(item, Mapping):
@@ -380,6 +407,16 @@ def load_profile(path: Path, *, root: Path = ROOT) -> BuildProfile:
         if relative in source_hashes:
             raise ProfileError(f"source hash manifest has duplicate path: {relative}")
         source_hashes[relative] = digest
+    if "distribution_source_revision" in release:
+        revision_rows = [
+            {"path": relative, "sha256": digest}
+            for relative, digest in sorted(source_hashes.items())
+        ]
+        calculated_revision = _sha256_bytes(json.dumps(
+            revision_rows, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+        ).encode("utf-8"))
+        if calculated_revision != distribution_revision:
+            raise ProfileError("source hash manifest full distribution revision mismatch")
     if any(relative not in source_hashes for relative in REQUIRED_SOURCE_PATHS):
         raise ProfileError("source hash manifest lacks required build inputs")
     profile_hashes = raw.get("bound_source_hashes")
@@ -392,6 +429,37 @@ def load_profile(path: Path, *, root: Path = ROOT) -> BuildProfile:
         if not _valid_sha256(expected) or expected != source_hashes[relative]:
             raise ProfileError(f"profile source hash is not bound to manifest: {relative}")
     artifacts = _artifact_bindings(root, raw)
+    if "distribution_source_revision" in release:
+        equivalence_binding = _file_binding(root, raw.get("canonical_equivalence"), "canonical equivalence")
+        canonical_manifest_binding = _file_binding(root, raw.get("canonical_source_manifest"), "canonical source manifest")
+        try:
+            equivalence = json.loads(equivalence_binding["path"].read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise ProfileError("canonical equivalence is unreadable") from exc
+        required_evidence = {
+            "canonical_revision": source_revision,
+            "distribution_revision": distribution_revision,
+            "steam_build_id": expected_build,
+            "record_count": 10349,
+            "table_record_count": 10334,
+            "static_ui_record_count": 14,
+            "hud_record_count": 1,
+            "localized_objects_identical": True,
+            "corpus_sha256": artifacts["corpus"]["sha256"],
+            "map_sha256": artifacts["maps"]["sha256"],
+            "canonical_source_manifest_sha256": canonical_manifest_binding["sha256"],
+            "distribution_source_hash_manifest_sha256": manifest_digest,
+        }
+        if not isinstance(equivalence, Mapping) or any(
+            equivalence.get(key) != value for key, value in required_evidence.items()
+        ) or equivalence.get("localized_objects_identical") is not True:
+            raise ProfileError("canonical equivalence identity or artifact binding mismatch")
+        canonical_facts_hash = equivalence.get("canonical_localized_facts_sha256")
+        distribution_facts_hash = equivalence.get("distribution_localized_facts_sha256")
+        if not _valid_sha256(canonical_facts_hash) or distribution_facts_hash != canonical_facts_hash:
+            raise ProfileError("canonical equivalence localized fact comparison mismatch")
+        if _record_count(raw) != required_evidence["record_count"]:
+            raise ProfileError("canonical equivalence record count mismatch")
     coverage = _coverage(raw)
     normalized = BuildProfile(
         path=path,

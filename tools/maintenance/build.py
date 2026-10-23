@@ -808,6 +808,8 @@ def build(
             "runtime_verified": False,
             "release_scope": "stage8_local_candidate",
         }
+        if profile_spec is not None and profile_spec.distribution_source_revision != profile_spec.source_revision:
+            manifest["distribution_source_revision"] = profile_spec.distribution_source_revision
         if profile_spec is not None:
             manifest["profile"] = {
                 "path": str(profile_spec.path.relative_to(ROOT)),
@@ -821,6 +823,8 @@ def build(
                     key: value["sha256"] for key, value in profile_spec.artifacts.items()
                 },
             }
+            if profile_spec.distribution_source_revision != profile_spec.source_revision:
+                manifest["profile"]["distribution_source_revision"] = profile_spec.distribution_source_revision
         if repair_record is not None:
             manifest["maintenance_ui"] = {
                 "recipe_path": recipe_path.relative_to(ROOT).as_posix(),

@@ -35,8 +35,8 @@ INSTALLER_FILES = {
     "install.cmd": "f5ff7eb2337ee424c01a2315f8d1125ca13000bdb7d3340cc437c2db32db2c92",
     "restore.cmd": "8e58a4991dba06ccea6d1f6a0093b456be4d28afa3adb3cf32d6e2881fbcb402",
     "Test-Installer.ps1": "a921da8495e483721a581d3f93fb910f113fdffb9593bd4d8bd8aa13bfa626d4",
-    "README.ko.md": "7e149cf1d8533fde339cff20a3294d5c52d7fec0440a943ca188fcdc8815569b",
-    "MANUAL-TEST.ko.md": "64e8b27f01db6cecd12faaceb244d0aff910809920b8345054202423c7937a8b",
+    "README.ko.md": "61d843176fcd3ea9e1d69ab6ca4dbf1647978ec184c466c151828e50d1c1c610",
+    "MANUAL-TEST.ko.md": "c6241aab5c3af592475f4b4bbd49b7ecd6de7f3edb30c92f25f880e9661b9afe",
     "bin/xdelta3.exe": "53d90226615f217d3380c39892833311b4e24acd863e1ca01f14b5e772e2e6d0",
     "licenses/xdelta-LICENSE.txt": "6cf63d87586c7c25c3ab8e62eef5c75bbaa982b0a6f9c00c59e2720255aac9ec",
     "licenses/THIRD-PARTY.md": "80d96e3352dc7516b97c4de78f5dd3df31b095b0e939015a2246fe3be899d00a",
@@ -116,6 +116,7 @@ def validate_build(
     profile_mode = profile is not None
     profile_version = getattr(profile, "version", None)
     profile_revision = getattr(profile, "source_revision", None)
+    distribution_revision = getattr(profile, "distribution_source_revision", profile_revision)
     profile_patch_revision = getattr(profile, "patch_revision", None)
     if profile_patch_revision is None and profile_version == "3.0.2950":
         # Compatibility for already-validated r06 profile-like callers. Real
@@ -134,6 +135,8 @@ def validate_build(
         expected_targets = {row["name"]: row["source_sha256"] for row in TARGETS}
     if (
         manifest.get("source_revision") != expected_source_revision
+        or (profile_mode and distribution_revision != profile_revision
+            and manifest.get("distribution_source_revision") != distribution_revision)
         or manifest.get("runtime_verified") is not False
         or manifest.get("release_scope") != "stage8_local_candidate"
         or manifest.get("source_protected_read_only") is not True
@@ -151,6 +154,8 @@ def validate_build(
         bound = manifest.get("profile") or {}
         if bound.get("version") != profile_version or bound.get("source_revision") != profile_revision:
             raise PackageError("build profile identity mismatch")
+        if distribution_revision != profile_revision and bound.get("distribution_source_revision") != distribution_revision:
+            raise PackageError("build profile distribution revision mismatch")
         if bound.get("sha256") != sha256_file(profile.path):
             raise PackageError("build profile digest mismatch")
         if bound.get("source_hash_manifest_sha256") != profile.source_manifest_sha256:
@@ -366,6 +371,8 @@ def package(
             "game_version": profile_spec.version if profile_spec is not None else "2.6.2859", "steam_build_id": (profile_spec.raw.get("steam_build_id") if profile_spec is not None else "24639430"), "app_id": (profile_spec.raw.get("app_id") if profile_spec is not None else "2055050"), "runtime_verifier": "human",
             "known_debt": ["Final full-build gameplay/display/save reload requires human validation.", "Opaque Enc/ArtBook and non-title image text remain outside scope."],
         }
+        if profile_spec is not None and profile_spec.distribution_source_revision != profile_spec.source_revision:
+            package_manifest["distribution_source_revision"] = profile_spec.distribution_source_revision
         if manifest["patch_revision"] in UI_RECIPES or (
             profile_spec is not None and manifest.get("maintenance_ui") is not None
         ):
