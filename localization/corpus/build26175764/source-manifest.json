@@ -1,0 +1,163 @@
+{
+  "builder": {
+    "path": "tools/maintenance/corpus.py",
+    "python": "3",
+    "sha256": "4a6cdadde504641b75a87bec99e50eb4aac6be7b8fdfe1c6c7754ce71d29a752"
+  },
+  "container_sources": {
+    "catalog": {
+      "path": "CavalryGirls_Data/StreamingAssets/aa/catalog.json",
+      "sha256": "c2b58efc399e7ed3cfe18c00e77700969ddfa098a548862edcd3cfd6ca0f5593",
+      "size": 3445906
+    },
+    "resources_assets": {
+      "path": "CavalryGirls_Data/resources.assets",
+      "sha256": "d92a8106156cf2451bebe3e3959f0d61a496404768aae38207703bec6fa90520",
+      "size": 1708683752
+    },
+    "unitypy_version": "1.25.3"
+  },
+  "id_policy": {
+    "actual_key_component": "Literal for [A-Za-z0-9_.-]+ keys; otherwise u_ plus unpadded base64url of exact UTF-8 key.",
+    "content_hash_use": "Change detection only; never ID identity.",
+    "field": "Japanese for multilingual tables; actual payload field for parallel tables.",
+    "format": "cg:<namespace>:<actual-key-component>:o<zero-based-occurrence>:<field>",
+    "namespace": "Policy-declared multilingual asset or parallel family namespace.",
+    "occurrence": "Zero-based occurrence among exact duplicate keys in physical storage order."
+  },
+  "parallel_sidecar_assets": [
+    {
+      "catalog_paths": [
+        "Text/Table/Players"
+      ],
+      "name": "Players",
+      "path_id": 8480,
+      "role": "parallel_source_or_reference",
+      "sha256": "21c8d5e74219a8231781a988c89a3c8378717fb336ef8fcc544ec8ac45d0496c",
+      "size": 8613
+    },
+    {
+      "catalog_paths": [
+        "Text/Table/Players_English"
+      ],
+      "name": "Players_English",
+      "path_id": 8503,
+      "role": "parallel_source_or_reference",
+      "sha256": "3a2465c1e98bd042946323b9082c277080be6159738f6d1d4a2f414fc955e196",
+      "size": 9778
+    },
+    {
+      "catalog_paths": [
+        "Text/Table/Players2"
+      ],
+      "name": "Players2",
+      "path_id": 8485,
+      "role": "parallel_source_or_reference",
+      "sha256": "3749302ab8c88feaf22d8a66d7fb13bd888c40167f27d74242601a0d1aba4da8",
+      "size": 1129
+    },
+    {
+      "catalog_paths": [
+        "Text/Table/Players2_English"
+      ],
+      "name": "Players2_English",
+      "path_id": 8395,
+      "role": "parallel_source_or_reference",
+      "sha256": "16fa4eb01a2384b78c701e56cefb3369d4ee3c8af6d51275910259acc27fbd6d",
+      "size": 1420
+    }
+  ],
+  "schema_version": "1.0.0",
+  "selection": {
+    "dialect_exceptions": "Only hash-pinned native trailing-cell repairs are included; hash-pinned orphan rows remain excluded.",
+    "empty_cells": "Retained when both selected source candidate and Japanese target are empty.",
+    "excluded": "All assets outside policy target_assets; opaque data remains outside core corpus scope.",
+    "included": "All Japanese patch cells in policy target assets.",
+    "multilingual_source": "Exact Chinese cell, except Japanese when Chinese is empty and Japanese is nonempty.",
+    "parallel_source": "Exact policy-declared source counterpart, except policy-listed Japanese variant-count cells."
+  },
+  "source_revision": "4335f6474476be86155c3c03a9e16ceaab54b2c249cd32953ea3ed5ecead4bdd",
+  "table_exceptions": [
+    {
+      "asset_path_id": 8331,
+      "asset_sha256": "b03c6bd2b5a00c88d598f391acbf479ce52395273ab5ae9ce6049c76ae4a0c10",
+      "dialect": "native-raw-comma-newline-v1",
+      "orphan_rows": [
+        {
+          "expected_width": 2,
+          "key": "Reading it is pointless. Hurry up\"",
+          "raw_sha256": "4f26551140c91c3a9d504efd2ca0ed56847e9c962e63096d6f7b49ba1e00df7a",
+          "row_index": 7626
+        },
+        {
+          "expected_width": 1,
+          "key": "読んでも無駄だ。早くしろ\"",
+          "raw_sha256": "eff64f123e15e0b690ec5ff3163040f2b62d5b3d6895396c88f355f9975316e1",
+          "row_index": 7627
+        }
+      ],
+      "repaired_rows": [
+        {
+          "expected_width": 4,
+          "inserted_value": "",
+          "key": "DLC3StartPlot3",
+          "raw_sha256": "184a7042917c48f5973bd23e3e5d14dd18a7724ce9d29d9c69ec59fd706c9f6e",
+          "row_index": 7625,
+          "target_column": "Japanese"
+        }
+      ]
+    }
+  ],
+  "target_assets": [
+    {
+      "catalog_paths": [
+        "Text/Table/Descriptions"
+      ],
+      "name": "Descriptions",
+      "path_id": 8331,
+      "role": "patch_target",
+      "sha256": "b03c6bd2b5a00c88d598f391acbf479ce52395273ab5ae9ce6049c76ae4a0c10",
+      "size": 2060182
+    },
+    {
+      "catalog_paths": [
+        "Text/Table/ConditionEvents"
+      ],
+      "name": "ConditionEvents",
+      "path_id": 8484,
+      "role": "patch_target",
+      "sha256": "42a7343d76f82bcbbf2cbdeb505adf552b59bd83a777a5d125ec0eb6d198bb32",
+      "size": 427415
+    },
+    {
+      "catalog_paths": [
+        "Text/Table/SpecialMod"
+      ],
+      "name": "SpecialMod",
+      "path_id": 8443,
+      "role": "patch_target",
+      "sha256": "f26d9a40bcdbdaa48ab14bb22f999e46b44b7e5af584dc627d6e6688b822f3e8",
+      "size": 1863
+    },
+    {
+      "catalog_paths": [
+        "Text/Table/Players_Japanese"
+      ],
+      "name": "Players_Japanese",
+      "path_id": 8337,
+      "role": "patch_target",
+      "sha256": "7bb7af86171728932f104597bdaf06b03354b34cde951709f05a15504d5ad66e",
+      "size": 12397
+    },
+    {
+      "catalog_paths": [
+        "Text/Table/Players2_Japanese"
+      ],
+      "name": "Players2_Japanese",
+      "path_id": 8371,
+      "role": "patch_target",
+      "sha256": "e39cd9ce3329078f2ec2281e61b29a504a66a69fc7bf636451aeddfad339f021",
+      "size": 1661
+    }
+  ]
+}

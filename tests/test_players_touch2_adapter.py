@@ -7,7 +7,7 @@ import unittest
 from adapters import cavalry_girls as cg
 
 ROOT = Path(__file__).resolve().parents[1]
-MAP = ROOT / "localization/corpus/build26134654/patch-map.jsonl"
+MAP = ROOT / "localization/corpus/build26175764/patch-map.jsonl"
 ASSET_SHA = "7bb7af86171728932f104597bdaf06b03354b34cde951709f05a15504d5ad66e"
 HEADER = (
     "Players_Japanese,BattleRetreat,Damage2,Death,Change,ChangeSec,ChangeLast,"
@@ -23,7 +23,7 @@ def reconstructed_players():
     for line in MAP.read_text(encoding="utf-8").splitlines():
         item = json.loads(line)
         locator = item["target_locator"]
-        if locator["asset_path_id"] != 8332:
+        if locator["asset_path_id"] != 8337:
             continue
         index, key, column = item["target_row_index"], locator["key"], locator["column"]
         if index not in range(1, 6) or key != str(index - 1) or locator["occurrence"] != 0:
@@ -49,7 +49,7 @@ class PlayersTouch2Tests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.data = reconstructed_players()
-        cls.asset = {"name": "Players_Japanese", "path_id": 8332,
+        cls.asset = {"name": "Players_Japanese", "path_id": 8337,
                      "catalog_paths": ["Text/Table/Players_Japanese"], "sha256": ASSET_SHA}
 
     def profile_for_current_asset(self):
@@ -66,7 +66,7 @@ class PlayersTouch2Tests(unittest.TestCase):
 
     def test_current_fixture_touch2_and_login_are_independent_cells(self):
         row = self.data.split(b"\r\n")[1].split(b",")
-        edits = [{"asset_path_id": 8332, "row_index": 1, "key": "0", "occurrence": 0,
+        edits = [{"asset_path_id": 8337, "row_index": 1, "key": "0", "occurrence": 0,
                   "column": name, "expected_sha256": hashlib.sha256(row[index]).hexdigest(),
                   "translation": value}
                  for name, index, value in (("Touch2", 26, "새 터치 대사|다른 터치 대사"),
@@ -81,7 +81,7 @@ class PlayersTouch2Tests(unittest.TestCase):
 
     def test_original_asset_noop_is_idempotent(self):
         row = self.data.split(b"\r\n")[1].split(b",")
-        edit = {"asset_path_id": 8332, "row_index": 1, "key": "0", "occurrence": 0,
+        edit = {"asset_path_id": 8337, "row_index": 1, "key": "0", "occurrence": 0,
                 "column": "Touch2", "expected_sha256": hashlib.sha256(row[26]).hexdigest(),
                 "translation": row[26].decode()}
         first, report = cg.patch_cells(self.data, [edit], profile=self.profile_for_current_asset())
@@ -97,14 +97,14 @@ class PlayersTouch2Tests(unittest.TestCase):
             (self.data.replace(b"Touch2", b"TouchX", 1), profile, []),
             (changed_payload, profile, []),
             (self.data, {**profile, "asset_path_ids": {"Players_Japanese": 6329}}, []),
-            (self.data, profile, [{"asset_path_id": 8332, "row_index": 1,
+            (self.data, profile, [{"asset_path_id": 8337, "row_index": 1,
                 "column": "Missing", "expected_text": "", "translation": "x"}]),
         ):
             with self.subTest(data=data[-1:], profile=profile, edit=edit):
                 with self.assertRaises(cg.CellPatchError):
                     cg.patch_cells(data, edit, profile=profile)
         with self.assertRaises(cg.CellPatchError):
-            cg.patch_cells(self.data, [], profile={"asset_path_ids": {"Players_Japanese": 8332}})
+            cg.patch_cells(self.data, [], profile={"asset_path_ids": {"Players_Japanese": 8337}})
         with self.assertRaises(cg.CellPatchError):
             cg.parse_raw_table(self.data)
         bad_layout = {**profile, "table_layouts": [{**profile["table_layouts"][0],
@@ -112,7 +112,7 @@ class PlayersTouch2Tests(unittest.TestCase):
         with self.assertRaises(cg.CellPatchError):
             cg.patch_cells(self.data, [], profile=bad_layout)
         with self.assertRaises(cg.CellPatchError):
-            cg.patch_cells(self.data, [{"asset_path_id": 8332, "row_index": 1,
+            cg.patch_cells(self.data, [{"asset_path_id": 8337, "row_index": 1,
                 "column": "Login", "expected_sha256": "0" * 64,
                 "translation": "새 로그인 대사"}], profile=profile)
         with self.assertRaises(cg.CellPatchError):

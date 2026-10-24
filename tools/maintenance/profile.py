@@ -66,6 +66,11 @@ SUPPORTED_PROFILE_RELEASES = {
         "patch_revision": "r14",
         "steam_build_id": "26154816",
     },
+    "3.1.3050": {
+        "source_revision": "4335f6474476be86155c3c03a9e16ceaab54b2c249cd32953ea3ed5ecead4bdd",
+        "patch_revision": "r15",
+        "steam_build_id": "26175764",
+    },
 }
 REQUIRED_SOURCE_PATHS = (
     "CavalryGirls_Data/resources.assets",

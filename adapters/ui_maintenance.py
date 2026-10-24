@@ -227,6 +227,14 @@ def _deferred_width_result(
                 or not (previous_source or current_source)):
             raise UiPatchError("unknown deferred raw UI width source")
         expected_path_id = 708695
+    elif revision == "r15":
+        if (
+            recipe.get("source_revision") != "4335f6474476be86155c3c03a9e16ceaab54b2c249cd32953ea3ed5ecead4bdd"
+            or recipe.get("source_asset", {}).get("resources_assets_sha256")
+            != "d92a8106156cf2451bebe3e3959f0d61a496404768aae38207703bec6fa90520"
+        ):
+            raise UiPatchError("unknown deferred raw UI width source")
+        expected_path_id = 708703
     elif revision not in (None, "r06"):
         raise UiPatchError("unknown deferred raw UI width patch revision")
     if policy["debt_id"] != "ui700767_dynamic_width" or record.get("path_id") != expected_path_id:
@@ -243,7 +251,7 @@ def _deferred_width_result(
         "text_source_sha256", "rect_transform_path_id", "rect_transform_sha256",
         "anchor_min", "anchor_max", "size_delta",
     }
-    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14"}:
+    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14", "r15"}:
         evidence_keys |= {"parent_rect_transform_path_id", "parent_rect_transform_sha256"}
     if not isinstance(evidence, dict) or set(evidence) != evidence_keys:
         raise UiPatchError("invalid deferred raw UI layout evidence")
@@ -256,7 +264,7 @@ def _deferred_width_result(
     if rect.type.name != "RectTransform" or digest(rect.get_raw_data()) != evidence["rect_transform_sha256"]:
         raise UiPatchError("deferred raw UI RectTransform identity/hash mismatch")
     tree = rect.read_typetree()
-    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14"}:
+    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14", "r15"}:
         parent_id = evidence["parent_rect_transform_path_id"]
         if (
             not isinstance(parent_id, int) or isinstance(parent_id, bool)
