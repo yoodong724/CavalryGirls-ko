@@ -235,6 +235,14 @@ def _deferred_width_result(
         ):
             raise UiPatchError("unknown deferred raw UI width source")
         expected_path_id = 708703
+    elif revision == "r16":
+        if (
+            recipe.get("source_revision") != "2528f66eaaaf86791762cc18980a30851ed7a5e6dea448167fdeb7898dd60a1e"
+            or recipe.get("source_asset", {}).get("resources_assets_sha256")
+            != "48566a74e7ad52b2ab03f30363dfc61a29fa3fa7ca13578b423c3151b0f102ad"
+        ):
+            raise UiPatchError("unknown deferred raw UI width source")
+        expected_path_id = 709394
     elif revision not in (None, "r06"):
         raise UiPatchError("unknown deferred raw UI width patch revision")
     if policy["debt_id"] != "ui700767_dynamic_width" or record.get("path_id") != expected_path_id:
@@ -251,7 +259,7 @@ def _deferred_width_result(
         "text_source_sha256", "rect_transform_path_id", "rect_transform_sha256",
         "anchor_min", "anchor_max", "size_delta",
     }
-    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14", "r15"}:
+    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14", "r15", "r16"}:
         evidence_keys |= {"parent_rect_transform_path_id", "parent_rect_transform_sha256"}
     if not isinstance(evidence, dict) or set(evidence) != evidence_keys:
         raise UiPatchError("invalid deferred raw UI layout evidence")
@@ -264,7 +272,7 @@ def _deferred_width_result(
     if rect.type.name != "RectTransform" or digest(rect.get_raw_data()) != evidence["rect_transform_sha256"]:
         raise UiPatchError("deferred raw UI RectTransform identity/hash mismatch")
     tree = rect.read_typetree()
-    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14", "r15"}:
+    if revision in {"r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14", "r15", "r16"}:
         parent_id = evidence["parent_rect_transform_path_id"]
         if (
             not isinstance(parent_id, int) or isinstance(parent_id, bool)

@@ -226,10 +226,18 @@ _PLAYERS_TOUCH2_R15_IDENTITY = {
     **_PLAYERS_TOUCH2_IDENTITY,
     "asset_path_id": 8337,
 }
+_PLAYERS_TOUCH2_R16_SPEC = TableSpec(
+    8348, _PLAYERS_TOUCH2_SPEC.header, _PLAYERS_TOUCH2_SPEC.editable_columns,
+)
+_PLAYERS_TOUCH2_R16_IDENTITY = {
+    **_PLAYERS_TOUCH2_IDENTITY,
+    "asset_path_id": 8348,
+}
 _PLAYERS_TOUCH2_IDENTITIES = (
     (_PLAYERS_TOUCH2_IDENTITY, _PLAYERS_TOUCH2_SPEC),
     (_PLAYERS_TOUCH2_R14_IDENTITY, _PLAYERS_TOUCH2_R14_SPEC),
     (_PLAYERS_TOUCH2_R15_IDENTITY, _PLAYERS_TOUCH2_R15_SPEC),
+    (_PLAYERS_TOUCH2_R16_IDENTITY, _PLAYERS_TOUCH2_R16_SPEC),
 )
 
 
@@ -457,7 +465,7 @@ def _parse_profile_table(
     dialect = _profile_exception(
         profile, asset_name=spec.asset_name, path_id=spec.asset_path_id
     )
-    if dialect is None and spec in (_PLAYERS_TOUCH2_SPEC, _PLAYERS_TOUCH2_R14_SPEC, _PLAYERS_TOUCH2_R15_SPEC):
+    if dialect is None and spec in tuple(item[1] for item in _PLAYERS_TOUCH2_IDENTITIES):
         rows = tuple(tuple(RawCell(cell.start, cell.end, cell.logical_text) for cell in row)
                      for row in tokenized.cells)
         if any(len(row) != len(spec.header) for row in rows):

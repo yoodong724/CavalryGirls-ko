@@ -71,6 +71,21 @@ class PatchTests(unittest.TestCase):
             + "dup,中2,繁2,One|Two,一|二\r\n".encode()
         )
 
+    def test_relocated_players_asset_requires_the_original_layout_and_hash(self):
+        from adapters.cavalry_girls import players_touch2_profile
+        from test_players_touch2_adapter import ASSET_SHA, reconstructed_players
+
+        data = reconstructed_players()
+        asset = {"name": "Players_Japanese", "path_id": 8348,
+                 "catalog_paths": ["Text/Table/Players_Japanese"], "sha256": ASSET_SHA}
+        profile = {"asset_path_ids": {asset["name"]: asset["path_id"]},
+                   "table_layouts": [players_touch2_profile(asset)]}
+        output, report = patch_cells(data, [], profile=profile)
+        self.assertEqual(output, data)
+        self.assertEqual(report["asset_path_id"], 8348)
+        with self.assertRaises(CellPatchError):
+            patch_cells(data + b"x", [], profile=profile)
+
     def test_span_patch_preserves_other_bytes_and_supports_aliases(self):
         source = "こんにちは <b>{0}\\n%s"
         target = "안녕하세요 <b>{0}\\n%s"

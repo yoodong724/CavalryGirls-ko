@@ -20,58 +20,31 @@ from typing import Any, Iterable, Mapping
 ROOT = Path(__file__).resolve().parents[2]
 # Historical public-r06 export anchor. The exporter removes this exact private
 # workspace path from its staged source and fails closed if the anchor changes.
-PROFILE_VERSION = "3.0.2950"
-PROFILE_SOURCE_REVISION = "f341ed52b0f2a51c24488de4f7b4bf32404c943244fe0263dde3f5d36a1f15ab"
-SUPPORTED_PROFILE_RELEASES = {
-    PROFILE_VERSION: {
-        "source_revision": PROFILE_SOURCE_REVISION,
-        "patch_revision": "r06",
-    },
-    "3.0.2952": {
-        "source_revision": "12789c6af1f7eca3bcff79264ca9dc10db4600d3886998893efa3306781b5806",
-        "patch_revision": "r07",
-    },
-    "3.0.2970": {
-        "source_revision": "1d390e4f3310e1e4ddcdcad58596a603bc4c0b9ad0fa5b15b652e43941639378",
-        "patch_revision": "r08",
-    },
-    "3.0.2972": {
-        "source_revision": "a8ad4be66270b7842e6a542b6ac9efae0e819a5d6f28a3d13cda3b1dc66faecc",
-        "patch_revision": "r09",
-    },
-    "3.0.2976": {
-        "source_revision": "6a877609e26f4f1724b841cdd961741fd83ea5687a4aa6616e7bc793817789f9",
-        "patch_revision": "r10",
-    },
-    "3.0.2978": {
-        "source_revision": "e32f03d147f64edcc90f3886477a0ea74046b2bc579cf4620ad7c825c565a492",
-        "patch_revision": "r11",
-    },
-    "3.0.2980": {
-        "source_revision": "e237aea8c2e74601c671cf374a29013f5aa5abb54b14b868f42b25c5195453fe",
-        "patch_revision": "r12",
-    },
-    "3.1.3032": {
-        "source_revision": "331dc45d5ec83307a508448c6e88cbc536ee9edb11a15f52287e626fe2918197",
-        "patch_revision": "r13",
-    },
-    "3.1.3040": {
-        "source_revision": "8c8c7a868d776f158e2d7f0f2c494458676cac3607ea9308bb929f809e02de6c",
-        "patch_revision": "r14",
-        "steam_build_id": "26150116",
-    },
-    "3.1.3048": {
-        "source_revision": "8c8c7a868d776f158e2d7f0f2c494458676cac3607ea9308bb929f809e02de6c",
-        "distribution_source_revision": "d8734013c03e2340ad6472e5c73d614c67f850afa13896cf2e495d4b6741d5bc",
-        "patch_revision": "r14",
-        "steam_build_id": "26154816",
-    },
-    "3.1.3050": {
-        "source_revision": "4335f6474476be86155c3c03a9e16ceaab54b2c249cd32953ea3ed5ecead4bdd",
-        "patch_revision": "r15",
-        "steam_build_id": "26175764",
-    },
-}
+SUPPORTED_RELEASES_PATH = ROOT / "release" / "builds" / "supported-releases.json"
+
+
+def _load_supported_releases(path: Path = SUPPORTED_RELEASES_PATH) -> tuple[str, dict[str, dict[str, Any]]]:
+    """Read the append-only build list; new game builds are data, not code edits."""
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"cannot read supported release list: {path}") from exc
+    releases = data.get("releases") if isinstance(data, dict) else None
+    default = data.get("legacy_default_version") if isinstance(data, dict) else None
+    if not isinstance(releases, dict) or not releases or default not in releases:
+        raise RuntimeError(f"malformed supported release list: {path}")
+    for version, release in releases.items():
+        if (
+            not isinstance(release, dict)
+            or not _valid_sha256(release.get("source_revision"))
+            or not isinstance(release.get("patch_revision"), str)
+            or ("distribution_source_revision" in release and not _valid_sha256(release["distribution_source_revision"]))
+            or ("steam_build_id" in release and not str(release["steam_build_id"]).isdigit())
+        ):
+            raise RuntimeError(f"malformed supported release entry: {version}")
+    return default, releases
+
+
 REQUIRED_SOURCE_PATHS = (
     "CavalryGirls_Data/resources.assets",
     "CavalryGirls_Data/resources.assets.resS",
@@ -147,6 +120,10 @@ def _valid_sha256(value: Any) -> bool:
         and len(value) == 64
         and all(character in "0123456789abcdef" for character in value)
     )
+
+
+PROFILE_VERSION, SUPPORTED_PROFILE_RELEASES = _load_supported_releases()
+PROFILE_SOURCE_REVISION = SUPPORTED_PROFILE_RELEASES[PROFILE_VERSION]["source_revision"]
 
 
 def _game_relative_path(value: Any, label: str) -> str:
@@ -441,14 +418,16 @@ def load_profile(path: Path, *, root: Path = ROOT) -> BuildProfile:
             equivalence = json.loads(equivalence_binding["path"].read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError) as exc:
             raise ProfileError("canonical equivalence is unreadable") from exc
+        counts = release.get("canonical_equivalence_counts")
+        if not isinstance(counts, Mapping) or set(counts) != {
+            "record_count", "table_record_count", "static_ui_record_count", "hud_record_count"
+        }:
+            raise ProfileError("supported release lacks canonical equivalence counts")
         required_evidence = {
             "canonical_revision": source_revision,
             "distribution_revision": distribution_revision,
             "steam_build_id": expected_build,
-            "record_count": 10349,
-            "table_record_count": 10334,
-            "static_ui_record_count": 14,
-            "hud_record_count": 1,
+            **counts,
             "localized_objects_identical": True,
             "corpus_sha256": artifacts["corpus"]["sha256"],
             "map_sha256": artifacts["maps"]["sha256"],
@@ -538,7 +517,15 @@ def verify_profile_approvals(profile: BuildProfile, *, root: Path = ROOT) -> dic
         raise ProfileError("profile approval corpus revision mismatch")
     if any(row.get("status") != "release_approved" for row in translations):
         raise ProfileError("profile snapshot is not fully reviewed")
-    report = module.qa(root, sources, translations, reviews, complete=True, require_stage="l2")
+    exemption_specs = profile.raw.get("l2_exemptions", [])
+    if not isinstance(exemption_specs, list):
+        raise ProfileError("profile l2_exemptions must be a list of path/sha256 bindings")
+    exemption_paths = [_file_binding(root, spec, "l2 exemption")["path"] for spec in exemption_specs]
+    try:
+        l2_exempt = module.read_l2_exemptions(exemption_paths)
+    except ValueError as exc:
+        raise ProfileError(str(exc)) from exc
+    report = module.qa(root, sources, translations, reviews, complete=True, require_stage="l2", l2_exempt=l2_exempt)
     if not report["ok"]:
         raise ProfileError("profile exact QA/L1/L2 coverage failed: " + json.dumps(report["errors"], ensure_ascii=False))
     # Operational inputs must be pinned too; otherwise an unrelated approved

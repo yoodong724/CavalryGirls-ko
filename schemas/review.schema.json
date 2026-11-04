@@ -103,6 +103,32 @@
       "items": {
         "type": "string"
       }
+    },
+    "carried_from": {
+      "description": "게임 업데이트 승인 이월 출처. 내용이 같은 레코드의 직전 승인을 새 source revision에 옮겼음을 뜻하며 새 검수가 아니다.",
+      "type": "object",
+      "properties": {
+        "source_revision": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        },
+        "review_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        }
+      },
+      "required": [
+        "source_revision",
+        "review_id"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [

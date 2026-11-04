@@ -156,7 +156,9 @@ def tokens(text: str, constraints: dict[str, Any]) -> list[str]:
 
 def qa(root: Path, sources: list[dict[str, Any]], translations: list[dict[str, Any]],
        reviews: list[dict[str, Any]] | None = None, complete: bool = False,
-       require_stage: str | None = None) -> dict[str, Any]:
+       require_stage: str | None = None, l2_exempt: Iterable[str] | None = None) -> dict[str, Any]:
+    """Deterministic QA. ``l2_exempt`` lists IDs whose recorded policy needs only L1."""
+    exempt = set(l2_exempt or [])
     errors: list[dict[str, Any]] = []
     warnings: list[dict[str, Any]] = []
 
@@ -252,12 +254,14 @@ def qa(root: Path, sources: list[dict[str, Any]], translations: list[dict[str, A
         if text and text == original:
             warning("unchanged", "Target equals source; review intentional retention", sid)
 
+    for sid in sorted(exempt - src.keys()):
+        error("unknown_l2_exempt", "L2 exemption names an ID outside the source", sid)
     # Review decisions are tied to the exact source, context and translation revision.
     if require_stage:
-        stages = ["l1"] if require_stage == "l1" else ["l1", "l2"]
         for sid, row in tr.items():
             if sid not in src or row["ko"] is None:
                 continue
+            stages = ["l1"] if require_stage == "l1" or sid in exempt else ["l1", "l2"]
             for stage in stages:
                 candidates = [r for r in (reviews or []) if r["id"] == sid and r["stage"] == stage]
                 matching = [r for r in candidates if (
@@ -518,13 +522,119 @@ def prepare_review(root: Path, source: list[dict[str, Any]], translations: list[
 
 
 def integrate(root: Path, source: list[dict[str, Any]], candidates: list[dict[str, Any]],
-              reviews: list[dict[str, Any]], stage: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-    report = qa(root, source, candidates, reviews, complete=True, require_stage="l2" if stage == "release" else "l1")
+              reviews: list[dict[str, Any]], stage: str,
+              l2_exempt: Iterable[str] | None = None) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    report = qa(root, source, candidates, reviews, complete=True,
+                require_stage="l2" if stage == "release" else "l1", l2_exempt=l2_exempt)
     if not report["ok"]:
         raise ValueError("Integration blocked: " + json.dumps(report["errors"], ensure_ascii=False))
     index = unique_index(candidates)
     out = [{**index[s["id"]], "status": "release_approved" if stage == "release" else "l1_approved"} for s in source]
     return out, report
+
+
+def read_l2_exemptions(paths: Iterable[Path]) -> set[str]:
+    """Read ``{"ids": [...], "reason": "..."}`` files; a reason is mandatory."""
+    ids: set[str] = set()
+    for path in paths:
+        data = read_json(path)
+        if not isinstance(data, dict) or not isinstance(data.get("ids"), list) \
+                or not all(isinstance(i, str) and i for i in data["ids"]) \
+                or not isinstance(data.get("reason"), str) or not data["reason"].strip():
+            raise ValueError(f"L2 exemption file needs ids and a nonempty reason: {path}")
+        if len(set(data["ids"])) != len(data["ids"]):
+            raise ValueError(f"Duplicate ID in L2 exemption file: {path}")
+        ids.update(data["ids"])
+    return ids
+
+
+def carry_forward(root: Path, old_source: list[dict[str, Any]], new_source: list[dict[str, Any]],
+                  old_translations: list[dict[str, Any]], old_reviews: list[dict[str, Any]],
+                  eligible_ids: list[str], id_map: dict[str, str] | None = None
+                  ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
+    """Move approvals of content-identical records to a new source revision.
+
+    Callers choose ``eligible_ids`` from a corpus comparison (same source, target,
+    reference and constraint; only locator may differ).  This function re-checks
+    the segment-level invariants and refuses anything else.  Outputs keep the
+    original review identity in ``carried_from``; they are not new reviews.
+    ``id_map`` (old ID -> new ID) covers records whose ID embeds a moved
+    object address, such as fixed UI; mapped new IDs are always checked.
+    """
+    for name, rows in [("segment", old_source), ("segment", new_source), ("translation", old_translations), ("review", old_reviews)]:
+        enforce_schema(root, name, rows)
+    old_src, new_src, old_tr = unique_index(old_source), unique_index(new_source), unique_index(old_translations)
+    unique_index(old_reviews, "review_id")
+    id_map = dict(id_map or {})
+    new_to_old = {new: old for old, new in id_map.items()}
+    if len(new_to_old) != len(id_map):
+        raise ValueError("ID map assigns two old IDs to one new ID")
+    eligible_ids = list(eligible_ids) + [sid for sid in sorted(new_to_old) if sid not in set(eligible_ids)]
+    if len(set(eligible_ids)) != len(eligible_ids):
+        raise ValueError("Duplicate eligible ID")
+    revisions = {row["source_revision"] for row in new_source}
+    if len(revisions) != 1:
+        raise ValueError("New source must have one source revision")
+    new_revision = revisions.pop()
+    by_id: dict[str, list[dict[str, Any]]] = {}
+    for review in old_reviews:
+        by_id.setdefault(review["id"], []).append(review)
+    problems: list[str] = []
+    translations, carried_reviews, without_l2, context_changed = [], [], [], []
+    context_fields = ("text_type", "speaker_id", "addressee_ids", "route_id", "phase_id", "scene_id", "previous_ids", "next_ids")
+    for sid in eligible_ids:
+        old_id = new_to_old.get(sid, sid)
+        if old_id != sid and sid in old_src:
+            problems.append(f"{sid}: mapped new ID also exists in the old source")
+            continue
+        old, new, row = old_src.get(old_id), new_src.get(sid), old_tr.get(old_id)
+        if old is None or new is None or row is None:
+            problems.append(f"{sid}: missing from old source, new source or old snapshot")
+            continue
+        if row["status"] != "release_approved" or row["ko"] is None:
+            problems.append(f"{sid}: old translation is not release_approved")
+            continue
+        if row["source_revision"] != old["source_revision"] or row["source_sha256"] != old["source"]["text_sha256"]:
+            problems.append(f"{sid}: old translation is stale against the old source")
+            continue
+        if new["source_revision"] == old["source_revision"]:
+            problems.append(f"{sid}: source revision did not change; reuse the snapshot as is")
+            continue
+        if (new["source"]["text"], new["source"]["text_sha256"], new["constraints"]) != \
+                (old["source"]["text"], old["source"]["text_sha256"], old["constraints"]):
+            problems.append(f"{sid}: source text or constraints changed")
+            continue
+        if any(new["context"][f] != old["context"][f] for f in context_fields):
+            context_changed.append(sid)
+        current = {}
+        for review in by_id.get(old_id, []):
+            if (review["source_revision"] == row["source_revision"] and review["source_sha256"] == row["source_sha256"]
+                    and review["context_pack_id"] == row["context_pack_id"]
+                    and review["context_pack_digest"] == row["context_pack_digest"]
+                    and review["reviewed_translation_revision"] == row["translation_revision"]
+                    and review["reviewed_translation_sha256"] == sha_text(row["ko"])):
+                current.setdefault(review["stage"], []).append(review)
+        if not current.get("l1") or any(r["verdict"] != "accept" for rs in current.values() for r in rs):
+            problems.append(f"{sid}: old snapshot lacks an accepted current L1 or has a non-accept decision")
+            continue
+        if not current.get("l2"):
+            without_l2.append(sid)
+        origin = {"source_revision": old["source_revision"]} | ({"id": old_id} if old_id != sid else {})
+        translations.append({**row, "id": sid, "source_revision": new_revision, "carried_from": origin})
+        for review in current.get("l1", []) + current.get("l2", []):
+            carried_reviews.append({**review, "id": sid, "review_id": f"cf-{new_revision[:12]}:{review['review_id']}",
+                                    "source_revision": new_revision,
+                                    "carried_from": origin | {"review_id": review["review_id"]}})
+    if problems:
+        raise ValueError(f"Carry-forward refused for {len(problems)} ID(s): " + "; ".join(problems[:20]))
+    enforce_schema(root, "translation", translations)
+    enforce_schema(root, "review", carried_reviews)
+    report = {"schema_version": VERSION, "ok": True, "new_source_revision": new_revision,
+              "carried_records": len(translations), "carried_reviews": len(carried_reviews),
+              "not_carried_ids": sorted(new_src.keys() - set(eligible_ids)),
+              "carried_without_l2_ids": without_l2, "context_changed_ids": context_changed,
+              "limits": "Carry-forward is not a new semantic review. Context changes are reported for the orchestrator."}
+    return translations, carried_reviews, report
 
 
 def evaluate_poc(root: Path, matrix: dict[str, Any]) -> dict[str, Any]:
@@ -581,7 +691,13 @@ def cli() -> int:
         if cmd != "check-task": p.add_argument("--owner", required=True)
     p = sub.add_parser("qa"); p.add_argument("--source", required=True); p.add_argument("--translations", required=True); p.add_argument("--reviews", nargs="*", default=[]); p.add_argument("--complete", action="store_true"); p.add_argument("--require-stage", choices=["l1", "l2"]); p.add_argument("--report")
     p = sub.add_parser("prepare-review"); p.add_argument("--source", required=True); p.add_argument("--translations", required=True); p.add_argument("--stage", choices=["l1", "l2"], required=True); p.add_argument("--role", required=True); p.add_argument("--prefix", required=True); p.add_argument("--out", required=True)
-    p = sub.add_parser("integrate"); p.add_argument("--source", required=True); p.add_argument("--translations", nargs="+", required=True); p.add_argument("--reviews", nargs="+", required=True); p.add_argument("--stage", choices=["l1", "release"], required=True); p.add_argument("--out", required=True)
+    p = sub.add_parser("integrate"); p.add_argument("--source", required=True); p.add_argument("--translations", nargs="+", required=True); p.add_argument("--reviews", nargs="+", required=True); p.add_argument("--stage", choices=["l1", "release"], required=True); p.add_argument("--out", required=True); p.add_argument("--l2-exempt", nargs="*", default=[])
+    p = sub.add_parser("carry-forward", help="Move approvals of content-identical records to a new source revision")
+    p.add_argument("--old-source", required=True); p.add_argument("--new-source", required=True); p.add_argument("--old-translations", required=True); p.add_argument("--old-reviews", nargs="+", required=True)
+    p.add_argument("--eligible", nargs="+", required=True, help="JSON lists of IDs and/or compare.py reports with carry_forward_eligible_ids")
+    p.add_argument("--out-translations", required=True); p.add_argument("--out-reviews", required=True); p.add_argument("--report", required=True)
+    p.add_argument("--out-l2-exempt", help="write carried IDs that had no L2 (previously exempt) as an exemption file")
+    p.add_argument("--id-map", help="JSON object old ID -> new ID for records whose ID embeds a moved address")
     p = sub.add_parser("evaluate-poc"); p.add_argument("--input", required=True)
     a = parser.parse_args()
     root = a.root.resolve()
@@ -630,8 +746,36 @@ def cli() -> int:
             raise ValueError("Integration must not overwrite its inputs")
         if target.exists() and target.stat().st_size:
             raise ValueError("Snapshot exists; select a new output revision")
-        records, report = integrate(root, rows(a.source), [r for p in a.translations for r in rows(p)], [r for p in a.reviews for r in rows(p)], a.stage)
+        exempt = read_l2_exemptions(path(p) for p in a.l2_exempt)
+        records, report = integrate(root, rows(a.source), [r for p in a.translations for r in rows(p)], [r for p in a.reviews for r in rows(p)], a.stage, exempt)
         write_rows(target, records); result = {"ok": True, "records": len(records), "output": a.out, "warnings": report["warnings"]}
+    elif a.cmd == "carry-forward":
+        outputs = [a.out_translations, a.out_reviews, a.report] + ([a.out_l2_exempt] if a.out_l2_exempt else [])
+        if len(set(outputs)) != len(outputs) or any(not o.startswith("work/") for o in outputs):
+            raise ValueError("Carry-forward outputs must be distinct paths under work/")
+        if any(path(o).exists() for o in outputs):
+            raise ValueError("Carry-forward output exists; choose a new attempt")
+        eligible = []
+        for item in a.eligible:
+            ids = read_json(path(item))
+            if isinstance(ids, dict):
+                ids = ids.get("carry_forward_eligible_ids")
+            if not isinstance(ids, list):
+                raise ValueError(f"--eligible must be a JSON list or contain carry_forward_eligible_ids: {item}")
+            eligible += ids
+        translations, carried, report = carry_forward(
+            root, rows(a.old_source), rows(a.new_source), rows(a.old_translations),
+            [r for p in a.old_reviews for r in rows(p)], eligible,
+            read_json(path(a.id_map)) if a.id_map else None)
+        if report["carried_without_l2_ids"] and not a.out_l2_exempt:
+            raise ValueError("Some carried IDs had no L2; pass --out-l2-exempt to record their carried exemption")
+        write_rows(path(a.out_translations), translations); write_rows(path(a.out_reviews), carried); write_json(path(a.report), report)
+        if a.out_l2_exempt and report["carried_without_l2_ids"]:
+            write_json(path(a.out_l2_exempt), {"ids": report["carried_without_l2_ids"],
+                                               "reason": "carried forward from a previous release where the ID was L2-exempt"})
+        result = {k: v for k, v in report.items() if not k.endswith("_ids")} | {
+            "not_carried": len(report["not_carried_ids"]), "carried_without_l2": len(report["carried_without_l2_ids"]),
+            "context_changed": len(report["context_changed_ids"])}
     elif a.cmd == "evaluate-poc":
         result = evaluate_poc(root, read_json(path(a.input)))
     print(json.dumps(result, ensure_ascii=False, indent=2))

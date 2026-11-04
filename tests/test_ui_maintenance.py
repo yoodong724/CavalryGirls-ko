@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+import hashlib
 import json
 from pathlib import Path
 import struct
@@ -8,7 +9,7 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
-from adapters.ui_maintenance import UiPatchError, expected_payload, patch_ui
+from adapters.ui_maintenance import UiPatchError, _deferred_width_result, expected_payload, patch_ui
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,6 +28,20 @@ class FakeObject:
 
     def set_raw_data(self, value):
         self.data = value
+
+
+class FakeRectTransform:
+    type = SimpleNamespace(name="RectTransform")
+
+    def __init__(self, raw, tree):
+        self.raw = raw
+        self.tree = tree
+
+    def get_raw_data(self):
+        return self.raw
+
+    def read_typetree(self):
+        return self.tree
 
 
 class UiMaintenanceTests(unittest.TestCase):
@@ -124,6 +139,82 @@ class UiMaintenanceTests(unittest.TestCase):
             r04_spacing = struct.unpack_from("<f", old[pid], offset)[0]
             old_ratio = observed_advance * (face_em + r04_spacing / 32) / (face_em - 5 / 32) / observed_ink
             self.assertGreater(old_ratio, 1.5)
+
+    def test_r16_deferred_width_accepts_only_pinned_source_and_full_stretch_layout(self):
+        recipe = {
+            "patch_revision": "r16",
+            "source_revision": "2528f66eaaaf86791762cc18980a30851ed7a5e6dea448167fdeb7898dd60a1e",
+            "source_asset": {"resources_assets_sha256": "48566a74e7ad52b2ab03f30363dfc61a29fa3fa7ca13578b423c3151b0f102ad"},
+            "release_scope": "stage8_local_candidate",
+            "runtime_verified": False,
+        }
+        record = {
+            "path_id": 709394, "source_sha256": "a" * 64,
+            "width_check": {
+                "mode": "deferred_dynamic_layout", "reason": "dynamic layout",
+                "debt_id": "ui700767_dynamic_width", "nominal_required_width": 256.0,
+                "evidence": {
+                    "text_source_sha256": "a" * 64,
+                    "rect_transform_path_id": 1, "rect_transform_sha256": "",
+                    "parent_rect_transform_path_id": 2, "parent_rect_transform_sha256": "",
+                    "anchor_min": [0.0, 0.0], "anchor_max": [1.0, 1.0], "size_delta": [0.0, 0.0],
+                },
+            },
+        }
+        evidence = record["width_check"]["evidence"]
+        rect_raw, parent_raw = b"r16-rect", b"r16-parent"
+        evidence["rect_transform_sha256"] = hashlib.sha256(rect_raw).hexdigest()
+        evidence["parent_rect_transform_sha256"] = hashlib.sha256(parent_raw).hexdigest()
+        tree = {
+            "m_Father": {"m_FileID": 0, "m_PathID": evidence["parent_rect_transform_path_id"]},
+            "m_AnchorMin": {"x": 0.0, "y": 0.0},
+            "m_AnchorMax": {"x": 1.0, "y": 1.0},
+            "m_SizeDelta": {"x": 0.0, "y": 0.0},
+        }
+        environment = SimpleNamespace(file=SimpleNamespace(objects={
+            evidence["rect_transform_path_id"]: FakeRectTransform(rect_raw, tree),
+            evidence["parent_rect_transform_path_id"]: FakeRectTransform(parent_raw, {}),
+        }))
+        measured = [record["width_check"]["nominal_required_width"]]
+
+        result = _deferred_width_result(environment, recipe, record, measured)
+        self.assertEqual(result["width_status"], "unverified")
+        self.assertFalse(result["runtime_verified"])
+        self.assertEqual(result["due_gate"], "public_release")
+        self.assertEqual(result["debt_id"], "ui700767_dynamic_width")
+
+        for mutation in (
+            "source", "asset", "path", "debt", "text", "rect_hash", "parent_hash",
+            "parent", "anchor", "nominal", "scope", "runtime",
+        ):
+            bad_recipe, bad_record, bad_environment = copy.deepcopy((recipe, record, environment))
+            bad_evidence = bad_record["width_check"]["evidence"]
+            if mutation == "source":
+                bad_recipe["source_revision"] = "0" * 64
+            elif mutation == "asset":
+                bad_recipe["source_asset"]["resources_assets_sha256"] = "0" * 64
+            elif mutation == "path":
+                bad_record["path_id"] = 708703
+            elif mutation == "debt":
+                bad_record["width_check"]["debt_id"] = "unknown"
+            elif mutation == "text":
+                bad_evidence["text_source_sha256"] = "0" * 64
+            elif mutation == "rect_hash":
+                bad_evidence["rect_transform_sha256"] = "0" * 64
+            elif mutation == "parent_hash":
+                bad_evidence["parent_rect_transform_sha256"] = "0" * 64
+            elif mutation == "parent":
+                bad_environment.file.objects[bad_evidence["rect_transform_path_id"]].tree["m_Father"]["m_PathID"] = 1
+            elif mutation == "anchor":
+                bad_evidence["anchor_max"] = [0.0, 0.0]
+            elif mutation == "nominal":
+                bad_record["width_check"]["nominal_required_width"] += 1
+            elif mutation == "scope":
+                bad_recipe["release_scope"] = "public_release"
+            else:
+                bad_recipe["runtime_verified"] = True
+            with self.subTest(mutation=mutation), self.assertRaises(UiPatchError):
+                _deferred_width_result(bad_environment, bad_recipe, bad_record, measured)
 
 
 if __name__ == "__main__":
