@@ -7,7 +7,7 @@ import unittest
 from adapters import cavalry_girls as cg
 
 ROOT = Path(__file__).resolve().parents[1]
-MAP = ROOT / "localization/corpus/build26425339/patch-map.jsonl"
+MAP = ROOT / "localization/corpus/build26426685/patch-map.jsonl"
 ASSET_SHA = "7bb7af86171728932f104597bdaf06b03354b34cde951709f05a15504d5ad66e"
 HEADER = (
     "Players_Japanese,BattleRetreat,Damage2,Death,Change,ChangeSec,ChangeLast,"

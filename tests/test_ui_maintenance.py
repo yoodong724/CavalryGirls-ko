@@ -216,6 +216,62 @@ class UiMaintenanceTests(unittest.TestCase):
             with self.subTest(mutation=mutation), self.assertRaises(UiPatchError):
                 _deferred_width_result(bad_environment, bad_recipe, bad_record, measured)
 
+    def test_r17_deferred_width_requires_pinned_source_and_parent_layout(self):
+        recipe = {
+            "patch_revision": "r17",
+            "source_revision": "3e5263667aff29f5e09657d118e3481436fa6d75bae8bcef9b97d73e5558ec23",
+            "source_asset": {"resources_assets_sha256": "2a45809d07d02f09f9e279eca46e80aa4cf06028018da262be6305489e42f05e"},
+            "release_scope": "stage8_local_candidate",
+            "runtime_verified": False,
+        }
+        record = {
+            "path_id": 709394,
+            "source_sha256": "e0868b8fd18cff1b52307564ae9f6df70d74ce035031e14fed4ee557e4073426",
+            "width_check": {
+                "mode": "deferred_dynamic_layout", "reason": "parent-controlled width",
+                "debt_id": "ui700767_dynamic_width", "nominal_required_width": 256.6611328125,
+                "evidence": {
+                    "text_source_sha256": "e0868b8fd18cff1b52307564ae9f6df70d74ce035031e14fed4ee557e4073426",
+                    "rect_transform_path_id": 660801, "rect_transform_sha256": hashlib.sha256(b"r17-rect").hexdigest(),
+                    "parent_rect_transform_path_id": 666632,
+                    "parent_rect_transform_sha256": hashlib.sha256(b"r17-parent").hexdigest(),
+                    "anchor_min": [0.0, 0.0], "anchor_max": [1.0, 1.0], "size_delta": [0.0, 0.0],
+                },
+            },
+        }
+        tree = {
+            "m_Father": {"m_FileID": 0, "m_PathID": 666632},
+            "m_AnchorMin": {"x": 0.0, "y": 0.0},
+            "m_AnchorMax": {"x": 1.0, "y": 1.0},
+            "m_SizeDelta": {"x": 0.0, "y": 0.0},
+        }
+        environment = SimpleNamespace(file=SimpleNamespace(objects={
+            660801: FakeRectTransform(b"r17-rect", tree),
+            666632: FakeRectTransform(b"r17-parent", {}),
+        }))
+        measured = [256.6611328125]
+
+        result = _deferred_width_result(environment, recipe, record, measured)
+        self.assertEqual((result["width_status"], result["runtime_verified"], result["due_gate"]),
+                         ("unverified", False, "public_release"))
+        for mutation in ("source", "asset", "path", "parent_hash", "parent_pointer", "layout"):
+            bad_recipe, bad_record, bad_environment = copy.deepcopy((recipe, record, environment))
+            evidence = bad_record["width_check"]["evidence"]
+            if mutation == "source":
+                bad_recipe["source_revision"] = "0" * 64
+            elif mutation == "asset":
+                bad_recipe["source_asset"]["resources_assets_sha256"] = "0" * 64
+            elif mutation == "path":
+                bad_record["path_id"] = 708703
+            elif mutation == "parent_hash":
+                evidence["parent_rect_transform_sha256"] = "0" * 64
+            elif mutation == "parent_pointer":
+                bad_environment.file.objects[660801].tree["m_Father"]["m_PathID"] = 660801
+            else:
+                bad_environment.file.objects[660801].tree["m_AnchorMax"]["x"] = 0.0
+            with self.subTest(mutation=mutation), self.assertRaises(UiPatchError):
+                _deferred_width_result(bad_environment, bad_recipe, bad_record, measured)
+
 
 if __name__ == "__main__":
     unittest.main()

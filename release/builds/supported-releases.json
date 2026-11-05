@@ -61,6 +61,11 @@
       "source_revision": "2528f66eaaaf86791762cc18980a30851ed7a5e6dea448167fdeb7898dd60a1e",
       "patch_revision": "r16",
       "steam_build_id": "26425339"
+    },
+    "3.1.3084": {
+      "source_revision": "3e5263667aff29f5e09657d118e3481436fa6d75bae8bcef9b97d73e5558ec23",
+      "patch_revision": "r17",
+      "steam_build_id": "26426685"
     }
   }
 }
